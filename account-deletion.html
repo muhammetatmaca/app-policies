@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Silme - CV Builder App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0C1811 0%, #1A2A1F 100%);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2BEE79 0%, #1DB954 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 36px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #2BEE79 0%, #1DB954 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            color: rgba(255,255,255,0.6);
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .card h2 {
+            color: #2BEE79;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+        }
+        
+        .card h3 {
+            color: #fff;
+            margin: 20px 0 10px;
+            font-size: 1.1rem;
+        }
+        
+        .card p, .card li {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 12px;
+        }
+        
+        .card ul, .card ol {
+            padding-left: 24px;
+        }
+        
+        .card li {
+            margin-bottom: 8px;
+        }
+        
+        .steps {
+            counter-reset: step;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 16px;
+            background: rgba(43, 238, 121, 0.05);
+            border-radius: 12px;
+            border-left: 3px solid #2BEE79;
+        }
+        
+        .step-number {
+            background: #2BEE79;
+            color: #0C1811;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 16px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        
+        .step-content p {
+            margin: 0;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        
+        .data-table th, .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .data-table th {
+            color: #2BEE79;
+            font-weight: 600;
+        }
+        
+        .data-table td {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .badge-deleted {
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+        }
+        
+        .badge-retained {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, rgba(43, 238, 121, 0.1) 0%, rgba(29, 185, 84, 0.1) 100%);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .contact-box a {
+            color: #2BEE79;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+        
+        .warning {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 20px;
+        }
+        
+        .warning-title {
+            color: #fbbf24;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #2BEE79;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📄</div>
+            <h1>CV Builder App</h1>
+            <p class="subtitle">Hesap Silme Talebi</p>
+        </div>
+        
+        <div class="card">
+            <h2>🗑️ Hesabınızı Silmek İçin Adımlar</h2>
+            <p>CV Builder App hesabınızı ve ilişkili tüm verilerinizi silmek için aşağıdaki adımları izleyin:</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Uygulamayı Açın</h4>
+                        <p>CV Builder App uygulamasını cihazınızda açın.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Profil Menüsüne Gidin</h4>
+                        <p>Ana sayfada sağ üstteki profil fotoğrafınıza veya ikonuna dokunun.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Hesabı Sil Seçeneğini Bulun</h4>
+                        <p>Açılan menüde "Hesabı Sil" veya "Delete Account" seçeneğine dokunun.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Silme İşlemini Onaylayın</h4>
+                        <p>Açılan onay penceresinde "Evet, Sil" butonuna dokunarak hesabınızı kalıcı olarak silin.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="warning">
+                <div class="warning-title">⚠️ Önemli Uyarı</div>
+                <p>Hesabınızı sildiğinizde bu işlem geri alınamaz. Tüm CV'leriniz, verileriniz ve ayarlarınız kalıcı olarak silinecektir.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>📊 Silinen ve Saklanan Veriler</h2>
+            <p>Hesabınız silindiğinde aşağıdaki veriler etkilenir:</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Veri Türü</th>
+                        <th>İşlem</th>
+                        <th>Süre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Profil Bilgileri (Ad, E-posta, Fotoğraf)</td>
+                        <td><span class="badge badge-deleted">Siliniyor</span></td>
+                        <td>Anında</td>
+                    </tr>
+                    <tr>
+                        <td>Oluşturulan CV'ler</td>
+                        <td><span class="badge badge-deleted">Siliniyor</span></td>
+                        <td>Anında</td>
+                    </tr>
+                    <tr>
+                        <td>Cloudinary'de Saklanan PDF'ler</td>
+                        <td><span class="badge badge-deleted">Siliniyor</span></td>
+                        <td>Anında</td>
+                    </tr>
+                    <tr>
+                        <td>Uygulama Ayarları</td>
+                        <td><span class="badge badge-deleted">Siliniyor</span></td>
+                        <td>Anında</td>
+                    </tr>
+                    <tr>
+                        <td>Premium Abonelik Geçmişi</td>
+                        <td><span class="badge badge-retained">Saklanıyor</span></td>
+                        <td>30 gün (yasal gereklilik)</td>
+                    </tr>
+                    <tr>
+                        <td>Anonim Kullanım İstatistikleri</td>
+                        <td><span class="badge badge-retained">Saklanıyor</span></td>
+                        <td>Anonim olarak kalır</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>📧 Alternatif: E-posta ile Talep</h2>
+            <p>Uygulamaya erişemiyorsanız veya manuel olarak hesap silme talebinde bulunmak istiyorsanız, aşağıdaki e-posta adresine yazabilirsiniz:</p>
+            
+            <div class="contact-box">
+                <p>📧 <a href="mailto:fastreadooffice@gmail.com?subject=Hesap%20Silme%20Talebi%20-%20CV%20Builder%20App">fastreadooffice@gmail.com</a></p>
+                <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-top: 8px;">
+                    E-posta konusu: "Hesap Silme Talebi - CV Builder App"<br>
+                    Kayıtlı e-posta adresinizi belirtiniz.
+                </p>
+            </div>
+            
+            <p style="margin-top: 16px; color: rgba(255,255,255,0.6);">
+                E-posta ile gönderilen talepler <strong>7 iş günü</strong> içinde işleme alınır ve onay e-postası gönderilir.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2>❓ Sıkça Sorulan Sorular</h2>
+            
+            <h3>Hesabımı sildikten sonra geri alabilir miyim?</h3>
+            <p>Hayır, hesap silme işlemi geri alınamaz. Tüm verileriniz kalıcı olarak silinir.</p>
+            
+            <h3>Premium aboneliğim ne olacak?</h3>
+            <p>Premium aboneliğiniz varsa, Google Play üzerinden aboneliğinizi ayrıca iptal etmeniz gerekmektedir. Hesap silme işlemi otomatik olarak aboneliği iptal etmez.</p>
+            
+            <h3>Silme işlemi ne kadar sürer?</h3>
+            <p>Uygulama içinden yapılan silme işlemleri anında gerçekleşir. E-posta ile yapılan talepler 7 iş günü içinde işleme alınır.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>CV Builder App © 2024 | <a href="privacy-policy.html">Gizlilik Politikası</a></p>
+        <p style="margin-top: 8px;">Son güncelleme: Aralık 2024</p>
+    </footer>
+</body>
+</html>
