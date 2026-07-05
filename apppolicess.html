@@ -1,0 +1,102 @@
+DocuQuery uygulaması için Google Play Store gereksinimlerine uygun, tüm yerel çalışma ve yapay zeka katmanlarını kapsayan profesyonel **Gizlilik Politikası (Privacy Policy)** sayfasını HTML formatında hazırladım kanka. 
+
+Bu kodu kopyalayıp bir `.html` dosyası olarak kaydedebilir veya web sitene doğrudan yapıştırabilirsin:
+
+```html
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuQuery - Gizlilik Politikası</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #555;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #eaeaea;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gizlilik Politikası</h1>
+        <p><strong>Son Güncelleme:</strong> 5 Temmuz 2026</p>
+        
+        <p>DocuQuery ("Uygulama") mobil uygulaması olarak gizliliğinize büyük önem veriyoruz. Bu gizlilik politikası, uygulamamızı kullandığınızda verilerinizin nasıl işlendiği ve korunduğu hakkında sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
+
+        <h2>1. Yerel Veri Depolama ve Gizlilik (Local-First)</h2>
+        <p>DocuQuery, "önce yerel" (local-first) prensibine göre tasarlanmıştır. Bu bağlamda:</p>
+        <ul>
+            <li><strong>Cihaz Kılavuzları ve Belgeler:</strong> Uygulamaya yüklediğiniz PDF, DOCX, TXT veya Markdown formatındaki belgeler ile taranan fotoğraflar tamamen cihazınızın yerel depolama alanında saklanır. Bu belgeler hiçbir harici sunucuya veya bulut ortamına yüklenmez.</li>
+            <li><strong>Metin Çıkarma ve OCR:</strong> Görsellerden veya belgelerden metin çıkarma (OCR) işlemleri Google ML Kit altyapısı kullanılarak tamamen cihazınız üzerinde (on-device) çevrimdışı olarak gerçekleştirilir.</li>
+            <li><strong>Sohbet Geçmişi:</strong> Yapay zeka ile yaptığınız soru-cevap geçmişi yalnızca cihazınızdaki yerel veritabanında (AsyncStorage) tutulur.</li>
+        </ul>
+
+        <h2>2. Yapay Zeka Hizmetleri ve API Kullanımı</h2>
+        <p>Sorularınızı yanıtlamak amacıyla harici büyük dil modeli (LLM) servis sağlayıcıları kullanılmaktadır:</p>
+        <ul>
+            <li><strong>Groq ve Gemini API:</strong> Sorduğunuz sorular ve ilgili kılavuzdan çıkarılan metin parçacıkları, yanıt üretilmesi amacıyla ilgili API servislerine (Groq ve Google Gemini) gönderilir.</li>
+            <li>Bu API'ler yalnızca isteğe yanıt oluşturmak amacıyla kullanılır. İlgili servislerin kendi gizlilik politikaları çerçevesinde verilerin güvenliği sağlanmaktadır.</li>
+        </ul>
+
+        <h2>3. Toplanan Kişisel Veriler</h2>
+        <p>Uygulamamız kullanıcı kaydı gerektirmez. Adınız, soyadınız, e-posta adresiniz veya telefon numaranız gibi doğrudan kimliğinizi belirten hiçbir kişisel veri toplanmaz ve işlenmez.</p>
+
+        <h2>4. Üçüncü Taraf Entegrasyonları ve Hata İzleme</h2>
+        <p>Uygulamanın kararlılığını sağlamak ve olası çökmeleri gidermek amacıyla aşağıdaki sistemler kullanılabilir:</p>
+        <ul>
+            <li><strong>Sentry:</strong> Uygulama içinde oluşabilecek çalışma zamanı hatalarını ve çökmeleri tespit etmek amacıyla kullanılır. Bu raporlar kimliksizleştirilmiş (anonim) teknik sistem verileridir.</li>
+        </ul>
+
+        <h2>5. Veri Güvenliği</h2>
+        <p>Cihazınızda saklanan tüm veriler, işletim sisteminin sunduğu güvenlik protokolleri ile korunmaktadır. Kendi güvenliğiniz için cihazınızın işletim sistemi güncellemelerini yapmanızı ve cihaz erişim şifrelerinizi korumanızı öneririz.</p>
+
+        <h2>6. Değişiklikler</h2>
+        <p>Bu gizlilik politikası zaman zaman güncellenebilir. Güncellemeler bu sayfa üzerinden yayınlandığı andan itibaren geçerlilik kazanır.</p>
+
+        <h2>7. İletişim</h2>
+        <p>Bu gizlilik politikası veya uygulamanın veri işleme süreçleri hakkında sorularınız için bizimle iletişime geçebilirsiniz:</p>
+        <p><strong>Geliştirici:</strong> Virelon<br>
+        <strong>E-posta:</strong> contact@virelon.com</p>
+
+        <div class="footer">
+            &copy; 2026 DocuQuery. Tüm hakları saklıdır.
+        </div>
+    </div>
+</body>
+</html>
+```
