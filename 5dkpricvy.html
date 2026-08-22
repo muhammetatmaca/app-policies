@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | 5D KLIK - Virelonsoft</title>
+  <meta name="description" content="Official Privacy Policy for 5D KLIK application developed by Virelonsoft.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-canvas: #04060A;
+      --bg-surface: #0A0E18;
+      --bg-card: #0F1626;
+      --border-subtle: #1C263C;
+      --border-accent: #00FF9D;
+      --text-primary: #FAF5FF;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      --accent-emerald: #00FF9D;
+      --accent-gold: #FFB800;
+      --accent-purple: #A855F7;
+      --accent-cyan: #38BDF8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      padding: 0;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .ambient-glow {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1000px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 255, 157, 0.08) 0%, rgba(168, 85, 247, 0.04) 50%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background-color: rgba(4, 6, 10, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 50;
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #10B981, #06B6D4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      color: #000;
+      box-shadow: 0 0 15px rgba(0, 255, 157, 0.4);
+    }
+
+    .brand-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.5px;
+      color: #FFF;
+    }
+
+    .brand-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 3px 8px;
+      background: rgba(0, 255, 157, 0.1);
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      color: var(--accent-emerald);
+      border-radius: 6px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .lang-switcher {
+      display: flex;
+      gap: 6px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 3px;
+      border-radius: 8px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-secondary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-emerald);
+      color: #000;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-box {
+      background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-canvas) 100%);
+      border: 1px solid var(--border-subtle);
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-box::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-emerald), var(--accent-gold), var(--accent-purple));
+    }
+
+    .meta-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .highlight-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .highlight-card .icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .highlight-card .title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .highlight-card .desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .content-section {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    .section-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--accent-emerald);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: #FFF;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 14.5px;
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      color: var(--text-secondary);
+      font-size: 14px;
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+    }
+
+    ul li::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: var(--accent-emerald);
+      font-size: 12px;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--accent-cyan);
+      margin-left: 8px;
+      font-weight: 700;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #0F172A 0%, #090E1A 100%);
+      border: 1.5px solid var(--accent-emerald);
+      border-radius: 20px;
+      padding: 32px;
+      margin-top: 40px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0, 255, 157, 0.08);
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent-emerald);
+      background: rgba(0, 255, 157, 0.1);
+      border: 1px solid var(--accent-emerald);
+      padding: 10px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      margin-top: 16px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .contact-email:hover {
+      background: var(--accent-emerald);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 32px 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .hero-box {
+        padding: 24px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .content-section {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ambient-glow"></div>
+
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">5D</div>
+        <span class="brand-text">5D KLIK</span>
+        <span class="brand-badge">VIRELONSOFT</span>
+      </a>
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- ENGLISH VERSION -->
+    <div id="content-en">
+      <div class="hero-box">
+        <span class="meta-tag">// LEGAL COMPLIANCE & PRIVACY STANDARD</span>
+        <h1>Privacy Policy</h1>
+        <p class="hero-subtitle">
+          At <strong>Virelonsoft</strong>, we believe privacy is a fundamental human right. <strong>5D KLIK</strong> is engineered from the ground up to respect your anonymity with zero user accounts, zero analytics tracking, and 100% offline-first architecture.
+        </p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted);">
+          Effective Date: August 22, 2026 &nbsp;|&nbsp; Developer: Virelonsoft &nbsp;|&nbsp; Application: 5D KLIK (v1.0.0)
+        </p>
+
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="icon">🛡️</div>
+            <div class="title">Zero Data Collection</div>
+            <div class="desc">No accounts, passwords, email sign-ups, or personal identity profiles required.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">⚡</div>
+            <div class="title">100% Local Storage</div>
+            <div class="desc">Reading progress and bookmarks reside strictly on your device via encrypted MMKV.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">🚫</div>
+            <div class="title">No Third-Party Ads</div>
+            <div class="desc">Zero ad networks, zero marketing trackers, zero behavioral profiling.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">🌐</div>
+            <div class="title">Anonymous Telemetry</div>
+            <div class="desc">Public Wikimedia feeds queried anonymously with no personal identifiers.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <div class="content-section">
+        <div class="section-num">01 // OVERVIEW & PHILOSOPHY</div>
+        <h2>Introduction and Core Architecture</h2>
+        <p>
+          This Privacy Policy describes how <strong>Virelonsoft</strong> ("we", "our", or "company") treats information collected, processed, and maintained through the mobile application <strong>5D KLIK</strong> (the "Application").
+        </p>
+        <p>
+          Unlike traditional modern applications that harvest behavioral metrics, 5D KLIK follows a strict <strong>Privacy-by-Design</strong> ethos. The application is completely functional without requiring any registration, telephone number, email, or third-party social login.
+        </p>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="content-section">
+        <div class="section-num">02 // DATA COLLECTION SPECIFICATIONS</div>
+        <h2>Information We Do NOT Collect</h2>
+        <p>We explicitly state that 5D KLIK does NOT collect, store, transmit, sell, or rent any of the following categories of data:</p>
+        <ul>
+          <li><strong>Personal Identifiable Information (PII):</strong> No names, home addresses, phone numbers, email addresses, or government IDs.</li>
+          <li><strong>Device Fingerprinting & Identifiers:</strong> No Advertising IDs (GAID/IDFA), IMEI numbers, MAC addresses, or persistent hardware identifiers.</li>
+          <li><strong>Location Data:</strong> No GPS, Wi-Fi tri-angulation, or cellular tower location data is ever accessed or requested.</li>
+          <li><strong>Biometrics & Camera/Microphone:</strong> 5D KLIK does not request or possess permissions to access your camera, microphone, or biometric sensors.</li>
+          <li><strong>Financial Information:</strong> We do not process or store credit cards, bank accounts, or billing data.</li>
+        </ul>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="content-section">
+        <div class="section-num">03 // ON-DEVICE STORAGE</div>
+        <h2>Local Data Storage (MMKV & Shared Preferences)</h2>
+        <p>
+          All your reading preferences, study streaks, bookmarked micro-lessons, and completion timestamps are stored exclusively on your local hardware device using ultra-fast, encrypted <strong>MMKV</strong> storage.
+        </p>
+        <p>
+          This data remains sandboxed inside your operating system’s secure application storage container. If you uninstall the application or clear app storage via Android Settings, all local data is immediately deleted. We have no remote copy, backup, or ability to access this data.
+        </p>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="content-section">
+        <div class="section-num">04 // NETWORK ACCESS & EXTERNAL SERVICES</div>
+        <h2>Public Archival Feeds (Wikimedia API)</h2>
+        <p>
+          The application contains an optional live archival radar component ("On This Day") that fetches public historical milestone events.
+        </p>
+        <ul>
+          <li><strong>Provider:</strong> Wikimedia REST API (api.wikimedia.org)</li>
+          <li><strong>Purpose:</strong> Querying public, read-only encyclopedic events for the current calendar date.</li>
+          <li><strong>Payload:</strong> Only the current month and day digits (e.g. <code>/08/22</code>) are transmitted. No user identifiers, cookies, or tracking headers are included.</li>
+          <li><strong>Offline Mode:</strong> When offline, 5D KLIK utilizes a rich built-in local database with zero network calls.</li>
+        </ul>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="content-section">
+        <div class="section-num">05 // DEVICE PERMISSIONS</div>
+        <h2>Device Permissions & Native Features</h2>
+        <p>5D KLIK requests only the minimum native permissions necessary to provide standard OS features:</p>
+        <ul>
+          <li><strong>POST_NOTIFICATIONS:</strong> Optional permission used solely to trigger local, scheduled on-device reminders (e.g. Daily 5-minute study alert). Notifications are generated locally by your phone's operating system without communicating with any push notification server.</li>
+          <li><strong>APP_WIDGET:</strong> Used to render the Android Home Screen Widget (2x2 and 4x2) directly from your phone's internal storage.</li>
+          <li><strong>VIBRATE & HAPTICS:</strong> Used to deliver tactile sensory feedback during button presses and quiz evaluations.</li>
+        </ul>
+      </div>
+
+      <!-- Section 6 -->
+      <div class="content-section">
+        <div class="section-num">06 // COMPLIANCE & RIGHTS</div>
+        <h2>GDPR, CCPA & Children's Privacy Compliance</h2>
+        <p>
+          Because 5D KLIK does not collect, process, or transmit personal data to remote servers, our application inherently complies with major international data privacy frameworks, including the European Union <strong>GDPR</strong>, California <strong>CCPA/CPRA</strong>, and Turkish <strong>KVKK</strong>.
+        </p>
+        <p>
+          <strong>Children’s Online Privacy Protection (COPPA):</strong> 5D KLIK contains no harmful content and is suitable for all ages. We do not knowingly collect information from children under 13 or any age group.
+        </p>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="contact-card">
+        <div class="section-num" style="color: var(--accent-emerald);">07 // DEVELOPER CONTACT</div>
+        <h2 style="margin-bottom: 8px;">Questions or Privacy Inquiries?</h2>
+        <p style="max-width: 540px; margin: 0 auto; color: var(--text-secondary);">
+          If you have any questions regarding this Privacy Policy or our software practices at Virelonsoft, feel free to reach out directly to our lead developer:
+        </p>
+        <a href="mailto:muhammetatmaca79@gmail.com" class="contact-email">
+          ✉️ muhammetatmaca79@gmail.com
+        </a>
+        <p style="margin-top: 14px; font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+          Virelonsoft Software Development Studio &nbsp;|&nbsp; Istanbul, Turkey
+        </p>
+      </div>
+    </div>
+
+    <!-- TURKISH VERSION -->
+    <div id="content-tr" class="hidden">
+      <div class="hero-box">
+        <span class="meta-tag">// YASAL UYUMLULUK VE GİZLİLİK STANDARDI</span>
+        <h1>Gizlilik Politikası</h1>
+        <p class="hero-subtitle">
+          <strong>Virelonsoft</strong> olarak gizliliğin temel bir insan hakkı olduğuna inanıyoruz. <strong>5D KLİK</strong>, sıfır kullanıcı kaydı, sıfır analitik izleme ve %100 çevrimdışı öncelikli mimariyle tam gizliliğinizi korumak üzere geliştirilmiştir.
+        </p>
+        <p style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted);">
+          Yürürlük Tarihi: 22 Ağustos 2026 &nbsp;|&nbsp; Geliştirici: Virelonsoft &nbsp;|&nbsp; Uygulama: 5D KLİK (v1.0.0)
+        </p>
+
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="icon">🛡️</div>
+            <div class="title">Sıfır Veri Toplama</div>
+            <div class="desc">Üyelik, e-posta kaydı, şifre veya kimlik profili gerektirmez.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">⚡</div>
+            <div class="title">%100 Yerel Depolama</div>
+            <div class="desc">Okuma geçmişi ve seriler yalnızca cihazınızdaki şifreli MMKV'de tutulur.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">🚫</div>
+            <div class="title">Reklamsız Deneyim</div>
+            <div class="desc">Üçüncü taraf reklam ağları ve davranışsal profil çıkarıcılar bulunmaz.</div>
+          </div>
+          <div class="highlight-card">
+            <div class="icon">🌐</div>
+            <div class="title">Anonim Telemetri</div>
+            <div class="desc">Kamuya açık Vikipedi verileri hiçbir kişisel bilgi gönderilmeden çekilir.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bölüm 1 -->
+      <div class="content-section">
+        <div class="section-num">01 // GENEL BAKIŞ VE FELSEFE</div>
+        <h2>Giriş ve Temel Mimari</h2>
+        <p>
+          Bu Gizlilik Politikası, <strong>Virelonsoft</strong> ("biz", "şirketimiz") tarafından sunulan <strong>5D KLİK</strong> mobil uygulaması kapsamında bilgilerin nasıl işlendiğini açıklar.
+        </p>
+        <p>
+          Kullanıcı verilerini toplayan klasik uygulamaların aksine, 5D KLİK <strong>Tasarım İtibarıyla Gizlilik</strong> (Privacy-by-Design) ilkesine sadıktır. Uygulama hiçbir telefon numarası, e-posta veya sosyal medya girişi gerektirmeksizin eksiksiz çalışır.
+        </p>
+      </div>
+
+      <!-- Bölüm 2 -->
+      <div class="content-section">
+        <div class="section-num">02 // TOPLANMAYAN VERİLER</div>
+        <h2>Toplanmayan Bilgiler</h2>
+        <p>5D KLİK aşağıdaki veri kategorilerinin hiçbirini toplamaz, saklamaz, işlemez, satmaz veya üçüncü taraflarla paylaşmaz:</p>
+        <ul>
+          <li><strong>Kişisel Kimlik Bilgileri:</strong> İsim, soyisim, adres, telefon numarası, T.C. kimlik no veya e-posta.</li>
+          <li><strong>Cihaz Tanımlayıcıları:</strong> Reklam Kimlikleri (GAID/IDFA), IMEI, MAC adresi veya donanım parmak izi.</li>
+          <li><strong>Konum Bilgileri:</strong> GPS veya baz istasyonu konum verilerine asla erişilmez veya talep edilmez.</li>
+          <li><strong>Kamera / Mikrofon / Biyometri:</strong> Uygulama kamera veya mikrofona erişim iznine sahip değildir.</li>
+          <li><strong>Finansal Bilgiler:</strong> Kredi kartı, banka hesabı veya ödeme verisi işlenmez.</li>
+        </ul>
+      </div>
+
+      <!-- Bölüm 3 -->
+      <div class="content-section">
+        <div class="section-num">03 // CİHAZ İÇİ DEPOLAMA</div>
+        <h2>Yerel Depolama (MMKV & Tercihler)</h2>
+        <p>
+          Tamamlanan dersleriniz, okuma serileriniz, yer işaretleriniz ve dil tercihleriniz yalnızca kendi telefonunuzun güvenli dahili hafızasında ultra hızlı <strong>MMKV</strong> ile saklanır.
+        </p>
+        <p>
+          Bu veriler işletim sisteminin korumalı uygulama kum havuzunda (sandbox) kalır. Uygulamayı sildiğinizde veya cihaz ayarlarından verileri temizlediğinizde tüm yerel kayıtlar anında yok olur; sunucularımızda hiçbir yedek bulunmaz.
+        </p>
+      </div>
+
+      <!-- Bölüm 4 -->
+      <div class="content-section">
+        <div class="section-num">04 // AĞ VE HARİCİ SERVİSLER</div>
+        <h2>Kamuya Açık Ansiklopedi Akışı (Wikimedia API)</h2>
+        <p>
+          Uygulama, "Tarihte Bugün" canlı takvim radarını beslemek için kamuya açık Vikipedi REST API'sini kullanır.
+        </p>
+        <ul>
+          <li><strong>Sağlayıcı:</strong> Wikimedia REST API (api.wikimedia.org)</li>
+          <li><strong>Amaç:</strong> Günün tarihine ait kamuya açık ansiklopedik olayları getirmek.</li>
+          <li><strong>Veri İletimi:</strong> Yalnızca gün ve ay sayıları (örneğin <code>/08/22</code>) sorgulanır. Hiçbir çerez veya kullanıcı tanımlayıcısı iletilmez.</li>
+          <li><strong>Çevrimdışı Mod:</strong> İnternet bağlantısı olmadığında dahili yerel arşivden çalışır.</li>
+        </ul>
+      </div>
+
+      <!-- Bölüm 5 -->
+      <div class="content-section">
+        <div class="section-num">05 // İZİNLER</div>
+        <h2>Cihaz İzinleri ve Doğal Özellikler</h2>
+        <ul>
+          <li><strong>BİLDİRİM İZNİ (POST_NOTIFICATIONS):</strong> Yalnızca kullanıcının seçtiği saatte cihazın yerel alarm motoru üzerinden "Günün Dersi" hatırlatması göndermek için kullanılır. Uzak sunucuya bağlanmaz.</li>
+          <li><strong>ANA EKRAN WİDGETI:</strong> Android telefonunuzun ana ekranında günün dersini ve serinizi canlı göstermek için cihaz içi bellekten beslenir.</li>
+          <li><strong>TİTREŞİM (HAPTICS):</strong> Buton dokunuşlarında ve test değerlendirmelerinde dokunsal geri bildirim sağlar.</li>
+        </ul>
+      </div>
+
+      <!-- Bölüm 6 -->
+      <div class="content-section">
+        <div class="section-num">06 // MEVZUAT UYUMLULUĞU</div>
+        <h2>KVKK ve GDPR Uyumluluğu</h2>
+        <p>
+          5D KLİK herhangi bir kişisel veri toplamaması sebebiyle Türkiye Cumhuriyeti <strong>6698 sayılı KVKK</strong> ve Avrupa Birliği <strong>GDPR</strong> mevzuatının tüm gizlilik gerekliliklerine doğası gereği tam uyumludur.
+        </p>
+      </div>
+
+      <!-- İletişim -->
+      <div class="contact-card">
+        <div class="section-num" style="color: var(--accent-emerald);">07 // GELİŞTİRİCİ İLETİŞİM</div>
+        <h2 style="margin-bottom: 8px;">Sorularınız veya Geri Bildirimleriniz İçin</h2>
+        <p style="max-width: 540px; margin: 0 auto; color: var(--text-secondary);">
+          Bu Gizlilik Politikası veya Virelonsoft yazılım prensipleri ile ilgili her türlü soru ve talebiniz için doğrudan baş geliştiricimize ulaşabilirsiniz:
+        </p>
+        <a href="mailto:muhammetatmaca79@gmail.com" class="contact-email">
+          ✉️ muhammetatmaca79@gmail.com
+        </a>
+        <p style="margin-top: 14px; font-size: 12px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+          Virelonsoft Yazılım Geliştirme Stüdyosu &nbsp;|&nbsp; İstanbul, Türkiye
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Virelonsoft. All rights reserved. 5D KLIK - Editorial Micro-Learning Engine.</p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      const enSection = document.getElementById('content-en');
+      const trSection = document.getElementById('content-tr');
+      const btns = document.querySelectorAll('.lang-btn');
+
+      if (lang === 'tr') {
+        enSection.classList.add('hidden');
+        trSection.classList.remove('hidden');
+        btns[0].classList.remove('active');
+        btns[1].classList.add('active');
+      } else {
+        trSection.classList.add('hidden');
+        enSection.classList.remove('hidden');
+        btns[1].classList.remove('active');
+        btns[0].classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
