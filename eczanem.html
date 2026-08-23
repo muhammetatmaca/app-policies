@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası — Nöbetçi Eczanem: İlaç & Doz | VirelonSoft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #E11D48;
+      --primary-glow: rgba(225, 29, 72, 0.12);
+      --bg-dark: #0F172A;
+      --surface-dark: #1E293B;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+      --bg-light: #F8FAFC;
+      --accent-green: #10B981;
+      --accent-blue: #0284C7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+      color: #FFFFFF;
+      padding: 60px 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid var(--primary);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(225, 29, 72, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #FDA4AF;
+      margin-bottom: 20px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .header-sub {
+      font-size: 15px;
+      color: #94A3B8;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: -30px auto 60px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .policy-card {
+      background: #FFFFFF;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    /* SUMMARY META GRID */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 36px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .meta-item {
+      background: var(--bg-light);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .meta-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .meta-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* SECTION STYLES */
+    section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--bg-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2 .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #FFFFFF;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    p {
+      color: #475569;
+      font-size: 14.5px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 14px;
+      gap: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      position: relative;
+      padding-left: 24px;
+      color: #475569;
+      font-size: 14px;
+    }
+
+    li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--accent-green);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    /* CALLOUT BOXES */
+    .callout {
+      background: #FFF1F2;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 16px 0;
+    }
+
+    .callout-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .callout p {
+      color: #881337;
+      font-size: 13.5px;
+      margin-bottom: 0;
+    }
+
+    .callout-success {
+      background: #ECFDF5;
+      border-left-color: var(--accent-green);
+    }
+
+    .callout-success .callout-title {
+      color: #065F46;
+    }
+
+    .callout-success p {
+      color: #047857;
+    }
+
+    /* PERMISSION TABLE */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 16px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+
+    th {
+      background: #F1F5F9;
+      padding: 12px 16px;
+      font-weight: 800;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      color: #475569;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .badge-perm {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #E0F2FE;
+      color: #0369A1;
+      font-size: 11px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 28px;
+      border-radius: 16px;
+      margin-top: 30px;
+    }
+
+    .contact-box h3 {
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .contact-box p {
+      color: #94A3B8;
+      font-size: 13.5px;
+      margin-bottom: 16px;
+    }
+
+    .email-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px 18px;
+      border-radius: 10px;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .email-badge:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 640px) {
+      .policy-card {
+        padding: 24px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand-badge">
+      <div class="live-dot"></div>
+      VIRELONSOFT • RESMİ GİZLİLİK POLİTİKASI
+    </div>
+    <h1>Nöbetçi Eczanem: İlaç & Doz Gizlilik Politikası</h1>
+    <p class="header-sub">
+      Sağlığınız, ilaç güvenliğiniz ve kişisel verilerinizin korunması bizim için en temel önceliktir.
+    </p>
+  </header>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="policy-card">
+      
+      <!-- META GRID -->
+      <div class="meta-grid">
+        <div class="meta-item">
+          <div class="meta-label">Geliştirici Şirket</div>
+          <div class="meta-val">VirelonSoft</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Uygulama Adı</div>
+          <div class="meta-val">Nöbetçi Eczanem: İlaç & Doz</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Paket Adı</div>
+          <div class="meta-val">com.virelon.ecza</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Son Güncelleme</div>
+          <div class="meta-val">23 Ağustos 2026</div>
+        </div>
+      </div>
+
+      <!-- 1. GİRİŞ -->
+      <section>
+        <h2><span class="sec-num">01</span> Giriş ve Kapsam</h2>
+        <p>
+          İşbu Gizlilik Politikası, <strong>VirelonSoft</strong> ("Şirket", "Biz" veya "Geliştirici") tarafından geliştirilen <strong>Nöbetçi Eczanem: İlaç & Doz</strong> ("Uygulama") mobil uygulaması aracılığıyla işlenen ve korunan kullanıcı verilerine ilişkin kuralları açıklamaktadır.
+        </p>
+        <p>
+          Uygulamamızı indirerek, kurarak veya kullanarak işbu Gizlilik Politikası’nda belirtilen veri işleme esaslarını kabul etmiş sayılırsınız. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) ve Google Play Geliştirici Politikaları ile tam uyumlu olarak faaliyet göstermekteyiz.
+        </p>
+      </section>
+
+      <!-- 2. VERİ TOPLAMA VE SAKLAMA PRENSİBİ -->
+      <section>
+        <h2><span class="sec-num">02</span> Sıfır Sunucu Veri İlkesi & Yerel Depolama</h2>
+        <div class="callout callout-success">
+          <div class="callout-title">🔒 Verileriniz Yalnızca Sizin Telefonunuzda Kalır</div>
+          <p>
+            Uygulamamız, kişisel sağlık verilerinizi (ilaç adları, dozaj saatleri, kutu kalan tablet miktarları, uyum skorları) hiçbir harici bulut sunucusuna aktarmaz. Tüm veriler telefonunuzun kendi güvenli yerel hafızasında (AsyncStorage / Encrypted Storage) saklanır.
+          </p>
+        </div>
+        <p>
+          Uygulamayı sildiğinizde veya verilerini temizlediğinizde, takip ettiğiniz tüm ilaç kayıtları telefonunuzdan kalıcı olarak silinir.
+        </p>
+      </section>
+
+      <!-- 3. İSTENEN CİHAZ İZİNLERİ -->
+      <section>
+        <h2><span class="sec-num">03</span> Kullanılan Cihaz İzinleri ve Amaçları</h2>
+        <p>
+          Uygulamamız yalnızca temel özelliklerin çalışması için zorunlu olan minimum cihaz izinlerini talep eder:
+        </p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>İzin Türü</th>
+                <th>Teknik Adı</th>
+                <th>Kullanım Amacı</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Konum (GPS)</strong></td>
+                <td><span class="badge-perm">ACCESS_FINE_LOCATION</span></td>
+                <td>Size en yakın nöbetçi eczaneleri harita üzerinde metre cinsinden mesafe ile sıralamak ve yol tarifi sunmak için kullanılır. Arka planda konum takip edilmez.</td>
+              </tr>
+              <tr>
+                <td><strong>Kamera</strong></td>
+                <td><span class="badge-perm">CAMERA</span></td>
+                <td>İlaç kutusunun arkasındaki barkod veya karekodu tarayarak ilacın etken maddesi, prospektüs özeti ve fiyat bilgilerini ekrana getirmek için anlık kullanılır. Fotoğraf kaydedilmez.</td>
+              </tr>
+              <tr>
+                <td><strong>Bildirimler</strong></td>
+                <td><span class="badge-perm">POST_NOTIFICATIONS</span></td>
+                <td>Belirlediğiniz saatlerde (Örn: 08:30, 20:30) ilaç içme vaktinizi ve kutunuzda son 5 hap kaldığında kritik stok uyarısını iletmek için kullanılır.</td>
+              </tr>
+              <tr>
+                <td><strong>Titreşim</strong></td>
+                <td><span class="badge-perm">VIBRATE</span></td>
+                <td>Doz alımı onaylandığında ve buton dokunuşlarında dokunsal geri bildirim (Haptics) vermek için kullanılır.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 4. ÜÇÜNCÜ TARAF SERVİSLER -->
+      <section>
+        <h2><span class="sec-num">04</span> Üçüncü Taraf Servisler ve Veri Paylaşımı</h2>
+        <p>
+          Uygulamamız aşağıdaki güvenilir ve açık kaynaklı altyapıları kullanmaktadır:
+        </p>
+        <ul>
+          <li><strong>OpenStreetMap & Leaflet:</strong> Harita katmanlarını ve coğrafi sınırları görüntülemek amacıyla kullanılır. Kişisel kimlik verisi gönderilmez.</li>
+          <li><strong>Google Maps & Apple Maps:</strong> Kullanıcı "Yol Tarifi Al" butonuna bastığında rotayı çizmek üzere cihazın varsayılan harita uygulaması harici olarak başlatılır.</li>
+          <li><strong>TİTCK & Eczacı Odaları Açık Verileri:</strong> Resmi nöbetçi eczane listeleri ve resmi perakende fiyat verilerini doğrulamak için genel API kaynakları kullanılır.</li>
+        </ul>
+      </section>
+
+      <!-- 5. ÇOCUKLARIN GİZLİLİĞİ -->
+      <section>
+        <h2><span class="sec-num">05</span> Çocukların Gizliliği (COPPA / GDPR)</h2>
+        <p>
+          Uygulamamız 13 yaşın (veya yürürlükteki yasalara göre 16 yaşın) altındaki çocuklardan bilerek doğrudan kişisel kimlik bilgisi toplamaz. Çocukların ilaç kullanımı ebeveyn veya yasal vasi gözetiminde yönetilmelidir.
+        </p>
+      </section>
+
+      <!-- 6. YASAL TIBBİ SORUMLULUK REDDİ -->
+      <section>
+        <h2><span class="sec-num">06</span> Yasal Tıbbi Sorumluluk Reddi (Medical Disclaimer)</h2>
+        <div class="callout">
+          <div class="callout-title">⚠️ ÖNEMLİ TIBBİ BİLGİLENDİRME</div>
+          <p>
+            <strong>Nöbetçi & Eczane</strong> uygulaması bir hekim, eczacı veya sağlık kuruluşu değildir. Uygulamada yer alan ilaç etkileşim analizleri, prospektüs özetleri ve 150 günlük klinik eczacılık rehberi yalnızca genel bilgilendirme ve farkındalık amaçlıdır.
+          </p>
+          <p style="margin-top: 8px;">
+            Teşhis, tedavi, dozaj değişikliği ve reçeteli ilaç kararlarınız için daima doktorunuza veya yetkili eczacınıza danışınız. Acil durumlarda derhal <strong>112 Acil Çağrı Merkezi</strong>'ni arayınız.
+          </p>
+        </div>
+      </section>
+
+      <!-- 7. KULLANICI HAKLARI -->
+      <section>
+        <h2><span class="sec-num">07</span> Kullanıcı Hakları ve Veri Silme</h2>
+        <p>
+          KVKK ve GDPR kapsamında kullanıcılar verilerini kontrol etme hakkına sahiptir:
+        </p>
+        <ul>
+          <li>Uygulama ayarlarından istediğiniz zaman ilaç takip listenizi sıfırlayabilirsiniz.</li>
+          <li>Telefon ayarlarınızdan Konum, Kamera veya Bildirim izinlerini dilediğiniz an iptal edebilirsiniz.</li>
+          <li>Uygulamayı cihazınızdan kaldırarak yerel olarak tutulan tüm verilerin kalıcı olarak silinmesini sağlayabilirsiniz.</li>
+        </ul>
+      </section>
+
+      <!-- 8. İLETİŞİM -->
+      <section>
+        <h2><span class="sec-num">08</span> İletişim & Geliştirici Bilgileri</h2>
+        <p>
+          Gizlilik Politikamız veya kişisel verilerinizin korunması hakkında her türlü soru, öneri ve talepleriniz için geliştirici ekibimizle doğrudan iletişime geçebilirsiniz:
+        </p>
+
+        <div class="contact-box">
+          <h3>VirelonSoft Geliştirici Destek Ekibi</h3>
+          <p>Tüm gizlilik ve teknik sorularınız en geç 48 saat içerisinde yanıtlanacaktır.</p>
+          <a href="mailto:muhammetatmaca79@gmail.com" class="email-badge">
+            ✉️ muhammetatmaca79@gmail.com
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <strong>VirelonSoft</strong>. Tüm hakları saklıdır.</p>
+    <p style="margin-top: 4px; color: #94A3B8;">Nöbetçi & Eczane Mobil Uygulaması</p>
+  </footer>
+
+</body>
+</html>
