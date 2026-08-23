@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası | TopluAlarm - VirelonSoft</title>
+  <meta name="description" content="TopluAlarm mobil uygulaması Gizlilik Politikası ve Kişisel Verilerin Korunması (KVKK & GDPR) Aydınlatma Metni.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1A237E;
+      --primary-dark: #0D134A;
+      --primary-light: #EEF2FF;
+      --primary-border: #C7D2FE;
+      --accent: #F59E0B;
+      --accent-light: #FEF3C7;
+      --success: #10B981;
+      --success-light: #D1FAE5;
+      --bg: #F8F9FA;
+      --surface: #FFFFFF;
+      --text-primary: #1E293B;
+      --text-secondary: #64748B;
+      --text-muted: #94A3B8;
+      --border: #E2E8F0;
+      --divider: #F1F5F9;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 3px rgba(10, 16, 69, 0.05);
+      --shadow-md: 0 4px 12px rgba(10, 16, 69, 0.06);
+      --shadow-lg: 0 10px 25px rgba(10, 16, 69, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 80px;
+    }
+
+    /* HEADER & HERO */
+    header {
+      background: var(--surface);
+      border-bottom: 1.5px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .header-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-md);
+      background: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 10px rgba(26, 35, 126, 0.25);
+    }
+
+    .brand-text h1 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .badge-live {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--success-light);
+      color: #065F46;
+      border: 1px solid #A7F3D0;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .badge-live::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: var(--success);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 36px 24px 0;
+    }
+
+    /* HERO CARD */
+    .hero-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid var(--primary-border);
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      margin-bottom: 14px;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 760px;
+      line-height: 1.6;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--divider);
+    }
+
+    .meta-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .meta-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-top: 2px;
+    }
+
+    /* QUICK NAVIGATION PILLS */
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .nav-pill {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      color: var(--text-secondary);
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-pill:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    /* SECTIONS & CARDS */
+    .section-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid var(--divider);
+    }
+
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--primary-border);
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -0.4px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+      line-height: 1.65;
+    }
+
+    ul {
+      margin: 12px 0 18px 24px;
+    }
+
+    li {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+      line-height: 1.55;
+    }
+
+    li strong {
+      color: var(--text-primary);
+    }
+
+    /* CALLOUT BOXES */
+    .callout {
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin: 18px 0;
+      border: 1.5px solid;
+    }
+
+    .callout-info {
+      background: var(--primary-light);
+      border-color: var(--primary-border);
+      color: var(--primary-dark);
+    }
+
+    .callout-success {
+      background: var(--success-light);
+      border-color: #A7F3D0;
+      color: #065F46;
+    }
+
+    .callout-warning {
+      background: var(--accent-light);
+      border-color: #FDE68A;
+      color: #92400E;
+    }
+
+    .callout-title {
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .callout-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* PERMISSION TABLE */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 16px 0;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: var(--bg);
+      color: var(--primary-dark);
+      font-weight: 700;
+      padding: 12px 16px;
+      border-bottom: 1.5px solid var(--border);
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--divider);
+      color: var(--text-secondary);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td strong {
+      color: var(--text-primary);
+    }
+
+    /* CONTACT BOX */
+    .contact-card {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      margin-top: 36px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .contact-card p {
+      color: #C7D2FE;
+      font-size: 15px;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .btn-mail {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 15px;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .btn-mail:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: 1000px;
+      margin: 40px auto 0;
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .hero-card, .section-card {
+        padding: 24px 20px;
+      }
+      .hero-title {
+        font-size: 26px;
+      }
+      .contact-card {
+        padding: 28px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="#" class="brand">
+        <div class="brand-icon">⏰</div>
+        <div class="brand-text">
+          <h1>TopluAlarm</h1>
+          <p>by VirelonSoft</p>
+        </div>
+      </a>
+      <div class="badge-live">KVKK & GDPR Uyumlu</div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- HERO SECTION -->
+    <div class="hero-card">
+      <span class="hero-tag">YASAL BİLGİLENDİRME & AYDINLATMA METNİ</span>
+      <h2 class="hero-title">Gizlilik Politikası</h2>
+      <p class="hero-desc">
+        Bu Gizlilik Politikası, <strong>VirelonSoft</strong> ("Şirket", "biz", "bize") tarafından geliştirilen <strong>TopluAlarm</strong> mobil uygulamasını ("Uygulama") kullanan tüm kullanıcılarımızın ("Kullanıcı", "siz") kişisel verilerinin gizliliğini korumak amacıyla 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR), Apple App Store ve Google Play Geliştirici Politikaları standartlarına uygun olarak hazırlanmıştır.
+      </p>
+
+      <div class="meta-grid">
+        <div class="meta-item">
+          <span class="meta-label">Geliştirici & Şirket</span>
+          <span class="meta-value">VirelonSoft</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Uygulama Adı</span>
+          <span class="meta-value">TopluAlarm</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">İletişim E-Posta</span>
+          <span class="meta-value">muhammetatmaca79@gmail.com</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Son Güncelleme</span>
+          <span class="meta-value">24 Ağustos 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK NAV PILLS -->
+    <div class="nav-pills">
+      <a href="#veri-toplama" class="nav-pill">1. Toplanan Veriler</a>
+      <a href="#izinler" class="nav-pill">2. Cihaz İzinleri & Takvim</a>
+      <a href="#verilerin-kullanimi" class="nav-pill">3. Verilerin Kullanımı</a>
+      <a href="#ucuncu-taraf" class="nav-pill">4. Üçüncü Taraf Servisler</a>
+      <a href="#veri-guvenligi" class="nav-pill">5. Güvenlik & Saklama</a>
+      <a href="#kullanici-haklari" class="nav-pill">6. Haklarınız (KVKK)</a>
+      <a href="#iletisim" class="nav-pill">7. İletişim</a>
+    </div>
+
+    <!-- SECTION 1 -->
+    <section id="veri-toplama" class="section-card">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <h3 class="section-title">Hangi Verileri Topluyoruz ve Nasıl Saklıyoruz?</h3>
+      </div>
+      <p>
+        TopluAlarm, kullanıcı gizliliğini en yüksek standartta tutacak şekilde <strong>"Privacy by Design" (Tasarımda Gizlilik)</strong> ilkesiyle tasarlanmıştır. Uygulamayı kullanmak için herhangi bir hesap oluşturmanız, ad-soyad, kimlik numarası, telefon numarası veya parola paylaşmanız gerekmez.
+      </p>
+
+      <div class="callout callout-success">
+        <div class="callout-title">🔒 %100 Cihaz İçi Yerel Depolama (Local Storage)</div>
+        <p class="callout-text">
+          Seçtiğiniz favori takımlar, takip ettiğiniz spor dalları ve dil tercihleriniz hiçbir uzak sunucumuza gönderilmez; yalnızca kendi cihazınızın yerel hafızasında (AsyncStorage / MMKV) şifrelenmiş olarak saklanır.
+        </p>
+      </div>
+
+      <ul>
+        <li><strong>Kullanıcı Tercihleri (Yerel):</strong> Favori spor kulüpleri (örn: Galatasaray, Fenerbahçe), etkinleştirilmiş ligler ve dil seçimi (TR/EN).</li>
+        <li><strong>Takvim ve Alarm Durumları (Yerel):</strong> Alarma eklediğiniz maçlar ve oluşturulan yerel bildirim kimlikleri.</li>
+        <li><strong>Önbellek Verileri (Yerel):</strong> İnternetsiz ortamda maçları görüntüleyebilmeniz için cihazda tutulan kamuya açık fikstür, film vizyonu ve oyun çıkış listesi.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section id="izinler" class="section-card">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <h3 class="section-title">İstenen Cihaz İzinleri ve Kullanım Amaçları</h3>
+      </div>
+      <p>
+        Uygulamanın düzgün çalışabilmesi için cihazınızdan yalnızca aşağıdaki sınırlı izinler talep edilir. Bu izinler hiçbir suretle kişisel verilerinizi izlemek veya toplamak amacıyla kullanılmaz:
+      </p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>İzin Türü</th>
+              <th>Teknik İsim</th>
+              <th>Kullanım Amacı</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Cihaz Takvimine Erişim</strong></td>
+              <td><code>READ_CALENDAR</code><br><code>WRITE_CALENDAR</code></td>
+              <td>
+                Sadece kullanıcının <strong>kendi onayıyla</strong> seçtiği maçları telefonun yerel Google / Apple Takvimine eklemek için kullanılır. Mevcut kişisel takvim kayıtlarınız <strong>kesinlikle okunmaz veya sunuculara aktarılmaz.</strong>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>Bildirim İzni</strong></td>
+              <td><code>POST_NOTIFICATIONS</code></td>
+              <td>
+                Maç başlama saatinden 1 saat ve 15 dakika önce cihazınızda yerel hatırlatıcı alarm oluşturmak için kullanılır.
+              </td>
+            </tr>
+            <tr>
+              <td><strong>İnternet Erişimi</strong></td>
+              <td><code>INTERNET</code></td>
+              <td>
+                Güncel kamuya açık lig fikstürlerini, Box Office sinema takvimini ve IGDB oyun tarihlerini indirmek için kullanılır.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-warning">
+        <div class="callout-title">⚠️ Kişisel Takvim Verileriniz Güvende</div>
+        <p class="callout-text">
+          TopluAlarm, telefonunuzun takvimindeki kişisel randevularınızı, özel notlarınızı veya toplantılarınızı <strong>asla taramaz, kaydetmez veya üçüncü taraflarla paylaşmaz.</strong> Takvim izni yalnızca yeni bir "TopluAlarm Maç Takvimi" oluşturup maç saatini oraya kaydetmekle sınırlıdır.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3 -->
+    <section id="verilerin-kullanimi" class="section-card">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <h3 class="section-title">Verilerin Kullanım Amaçları</h3>
+      </div>
+      <p>Toplanan sınırlı yerel veriler yalnızca aşağıdaki amaçlar doğrultusunda işlenir:</p>
+      <ul>
+        <li>Kullanıcının belirlediği takımların maçlarını ana sayfada öncelikli olarak derbi sayacıyla sunmak,</li>
+        <li>Kullanıcının talep ettiği müsabakalar için zamanında maç başlama alarmları üretmek,</li>
+        <li>Kullanıcının isteğiyle maçları telefonun sistem takvimine (.ics veya doğrudan takvim API'si) işlemek,</li>
+        <li>Sosyal medyada paylaşılmak üzere kullanıcının seçtiği takıma özel maç posteri (PNG infografik) oluşturmak.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 4 -->
+    <section id="ucuncu-taraf" class="section-card">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <h3 class="section-title">Üçüncü Taraf Servisler ve Kamuya Açık Veri Kaynakları</h3>
+      </div>
+      <p>
+        TopluAlarm, sizlere en doğru ve güncel maç ve etkinlik tarihlerini sunabilmek için kamuya açık veri akışlarından ve resmi geliştirici API'lerinden yararlanır:
+      </p>
+      <ul>
+        <li><strong>Twitch / IGDB API (Video Oyunları):</strong> Canlı oyun çıkış tarihleri doğrudan IGDB Apicalypse API'si üzerinden şifrelenmiş OAuth2 bağlantısıyla çekilir.</li>
+        <li><strong>Box Office Türkiye (Sinema Vizyonu):</strong> Türkiye sinema vizyon takvimi kamuya açık kaynaklardan dinamik olarak listelenir.</li>
+        <li><strong>ESPN & beIN Sports Kamuya Açık Fikstürler:</strong> Süper Lig, Premier Lig, La Liga ve UEFA turnuva takvimleri.</li>
+      </ul>
+      <div class="callout callout-info">
+        <div class="callout-title">ℹ️ Sıfır Üçüncü Taraf Takipçisi (No Analytics / No Trackers)</div>
+        <p class="callout-text">
+          Uygulamamız içerisinde Facebook SDK, Google AdMob, Adjust veya benzeri davranışsal reklam ve kullanıcı profilleme takipçileri <strong>bulunmamaktadır.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 5 -->
+    <section id="veri-guvenligi" class="section-card">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <h3 class="section-title">Veri Güvenliği ve Saklama Süresi</h3>
+      </div>
+      <p>
+        Verileriniz yalnızca uygulamanın kurulu olduğu cihazınızın korumalı sandbox depolama alanında tutulur. 
+      </p>
+      <ul>
+        <li>Uygulamayı sildiğinizde cihazınızdaki tüm yerel tercihler, geçmiş ve önbellek <strong>anında ve kalıcı olarak silinir.</strong></li>
+        <li>Ayrıca dilediğiniz an <strong>Ayarlar &gt; Önbelleği Temizle</strong> butonuna basarak tüm yerel etkinlik verilerini ve önbelleği sıfırlayabilirsiniz.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 6 -->
+    <section id="kullanici-haklari" class="section-card">
+      <div class="section-header">
+        <div class="section-num">6</div>
+        <h3 class="section-title">Kullanıcı Hakları (KVKK Madde 11 & GDPR)</h3>
+      </div>
+      <p>
+        6698 sayılı KVKK ve GDPR kapsamında tüm kullanıcılarımız aşağıdaki yasal haklara sahiptir:
+      </p>
+      <ul>
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme,</li>
+        <li>İşlenen verilerin kapsamı hakkında bilgi talep etme,</li>
+        <li>Cihaz izinlerini (Takvim, Bildirim) telefonunuzun Ayarlar menüsünden dilediğiniz an geri alma veya kısıtlama,</li>
+        <li>Uygulama içerisinden tek tıkla tüm önbelleği ve tercihleri silme hakkı.</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7: CONTACT -->
+    <div id="iletisim" class="contact-card">
+      <span class="hero-tag" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.3);">BİZE ULAŞIN</span>
+      <h3>Sorularınız veya Geri Bildiriminiz mi Var?</h3>
+      <p>
+        Gizlilik Politikamız, veri güvenliği veya uygulama içi izinlerle ilgili her türlü soru, görüş ve yasal talepleriniz için veri sorumlusu ile doğrudan iletişime geçebilirsiniz.
+      </p>
+      <a href="mailto:muhammetatmaca79@gmail.com?subject=TopluAlarm%20Gizlilik%20Politikasi%20Hakkinda" class="btn-mail">
+        ✉️ muhammetatmaca79@gmail.com
+      </a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <strong>VirelonSoft</strong>. Tüm Hakları Saklıdır.</p>
+    <p style="margin-top: 4px; font-size: 12px;">TopluAlarm - Canlı Spor, Fikstür, Sinema ve Oyun Takvimi</p>
+  </footer>
+
+</body>
+</html>
