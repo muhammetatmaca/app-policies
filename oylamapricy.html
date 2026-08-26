@@ -1,35 +1,58 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gizlilik Politikası — oylama. | VirelonSoft</title>
-  <meta name="description" content="oylama. (VirelonSoft) Sıfır-Bilgi Gizliliği (Zero-Knowledge Privacy), Salted SHA-256 Anonim Karar Protokolü ve KVKK/GDPR Uyumlu Gizlilik Politikası." />
+  <title>Gizlilik Politikası & Sıfır-Bilgi Güvenlik Şartı — oylama. | VirelonSoft</title>
+  <meta name="description" content="oylama. (VirelonSoft) Sıfır-Bilgi Gizliliği (Zero-Knowledge Privacy), Salted SHA-256 Anonim Karar Protokolü ve KVKK/GDPR Uyumlu Kapsamlı Gizlilik Politikası." />
   
-  <!-- Fonts -->
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Premium Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-base: #090A0F;
-      --bg-surface: #11141D;
-      --bg-surface-elevated: #181C28;
-      --bg-card: rgba(24, 28, 40, 0.75);
-      --border: rgba(255, 255, 255, 0.08);
-      --border-strong: rgba(255, 255, 255, 0.16);
-      --text-main: #F4F6FB;
-      --text-muted: #8E9BAE;
+      --bg-base: #06070B;
+      --bg-surface: #0E1118;
+      --bg-surface-elevated: #151A26;
+      --bg-surface-glass: rgba(18, 22, 33, 0.75);
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(255, 255, 255, 0.18);
+      
+      --text-main: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --text-muted: #64748B;
+      
       --accent: #E0564C;
-      --accent-glow: rgba(224, 86, 76, 0.25);
+      --accent-glow: rgba(224, 86, 76, 0.35);
       --accent-light: #FF7B72;
       --accent-bg: rgba(224, 86, 76, 0.12);
-      --success: #10B981;
-      --success-bg: rgba(16, 185, 129, 0.12);
-      --code-bg: #0D1017;
+      
+      --brand-cream: #EFE7DA;
+      --brand-slate: #5B6A79;
+      
+      --cyan: #0EA5E9;
+      --cyan-bg: rgba(14, 165, 233, 0.12);
+      --emerald: #10B981;
+      --emerald-bg: rgba(16, 185, 129, 0.12);
+      --purple: #8B5CF6;
+      --purple-bg: rgba(139, 92, 246, 0.12);
+      --amber: #F59E0B;
+      --amber-bg: rgba(245, 158, 11, 0.12);
+
       --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-display: 'Syne', var(--font-main);
       --font-mono: 'JetBrains Mono', monospace;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
     }
 
     * {
@@ -47,382 +70,729 @@
       font-family: var(--font-main);
       color: var(--text-main);
       background-color: var(--bg-base);
-      line-height: 1.7;
+      line-height: 1.75;
       font-size: 16px;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Ambient Background Glows */
-    .ambient-glow-top {
+    /* Ambient Background Effects */
+    .mesh-gradient {
       position: fixed;
-      top: -200px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(224, 86, 76, 0.15) 0%, rgba(91, 106, 121, 0.08) 50%, transparent 80%);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
       z-index: 0;
+      background:
+        radial-gradient(at 10% 10%, rgba(224, 86, 76, 0.12) 0px, transparent 50%),
+        radial-gradient(at 90% 20%, rgba(14, 165, 233, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 80%, rgba(16, 185, 129, 0.06) 0px, transparent 50%),
+        radial-gradient(at 80% 90%, rgba(139, 92, 246, 0.08) 0px, transparent 50%);
       filter: blur(80px);
     }
 
-    .ambient-glow-bottom {
+    .grid-overlay {
       position: fixed;
-      bottom: -300px;
-      right: 10%;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
       pointer-events: none;
       z-index: 0;
-      filter: blur(100px);
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at 50% 30%, black 40%, transparent 80%);
     }
 
     /* Layout */
-    .container {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 24px;
+    .wrapper {
       position: relative;
       z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
-    /* Header & Navigation */
+    /* Header */
     header {
-      border-bottom: 1px solid var(--border);
-      background: rgba(9, 10, 15, 0.85);
-      backdrop-filter: blur(16px);
       position: sticky;
       top: 0;
       z-index: 100;
+      background: rgba(6, 7, 11, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .header-inner {
+    .header-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 76px;
+      height: 80px;
     }
 
-    .brand-logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      color: var(--text-main);
-    }
-
-    .brand-cube-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: #EFE7DA;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    .brand-cube-inner {
-      width: 22px;
-      height: 22px;
-      background: var(--accent);
-      border-radius: 5px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-weight: 900;
-      font-size: 13px;
-    }
-
-    .brand-title {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-    }
-
-    .brand-title span {
-      color: var(--accent);
-    }
-
-    .brand-badge {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--accent-light);
-      background: var(--accent-bg);
-      border: 1px solid var(--accent-glow);
-      padding: 3px 8px;
-      border-radius: 6px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .nav-actions {
+    .brand {
       display: flex;
       align-items: center;
       gap: 14px;
+      text-decoration: none;
+      color: var(--text-main);
     }
 
-    .btn-contact {
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--brand-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-icon::after {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      background: linear-gradient(135deg, #FF7B72, #E0564C);
+      border-radius: 6px;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+
+    .brand-name span {
+      color: var(--accent);
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lang-pill {
+      display: flex;
+      align-items: center;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 4px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      color: #FFF;
+      box-shadow: 0 2px 8px var(--accent-glow);
+    }
+
+    .action-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 8px 16px;
-      border-radius: 10px;
+      padding: 10px 18px;
+      border-radius: 12px;
       background: var(--bg-surface-elevated);
-      border: 1px solid var(--border-strong);
+      border: 1px solid var(--border);
       color: var(--text-main);
-      text-decoration: none;
       font-size: 13px;
-      font-weight: 600;
-      transition: all 0.2s ease;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .btn-contact:hover {
+    .action-btn:hover {
       border-color: var(--accent);
       color: var(--accent-light);
-      transform: translateY(-1px);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    .action-btn.primary {
+      background: linear-gradient(135deg, #FF7B72, #E0564C);
+      color: white;
+      border-color: transparent;
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+
+    .action-btn.primary:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
     }
 
     /* Hero Section */
     .hero {
-      padding: 64px 0 40px;
+      padding: 72px 0 48px;
       text-align: center;
+      position: relative;
     }
 
-    .hero-pill {
+    .badge-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 14px;
+      padding: 6px 16px;
       border-radius: 100px;
-      background: var(--success-bg);
+      background: var(--emerald-bg);
       border: 1px solid rgba(16, 185, 129, 0.3);
-      color: var(--success);
+      color: var(--emerald);
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
-    .hero-pulse-dot {
+    .pulse-indicator {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--success);
-      box-shadow: 0 0 10px var(--success);
+      background: var(--emerald);
+      box-shadow: 0 0 12px var(--emerald);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.2); opacity: 1; filter: drop-shadow(0 0 6px var(--emerald)); }
+      100% { transform: scale(0.95); opacity: 0.8; }
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-family: var(--font-display);
+      font-size: 48px;
       font-weight: 900;
-      letter-spacing: -1.5px;
-      line-height: 1.2;
-      margin-bottom: 16px;
+      letter-spacing: -1.8px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 920px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    .hero h1 span {
-      background: linear-gradient(135deg, #FF9E98 0%, #E0564C 100%);
+    .hero h1 .gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 20%, #FF9E98 60%, #E0564C 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .hero p {
-      font-size: 18px;
-      color: var(--text-muted);
-      max-width: 680px;
+      font-size: 19px;
+      color: var(--text-secondary);
+      max-width: 760px;
       margin: 0 auto;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
-    .meta-box-row {
-      display: flex;
-      justify-content: center;
+    /* Quick Specs Ribbon */
+    .specs-ribbon {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 28px;
-      flex-wrap: wrap;
+      margin-top: 48px;
     }
 
-    .meta-tag {
+    .spec-card {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: left;
+      transition: all 0.2s;
+    }
+
+    .spec-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+    }
+
+    .spec-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       gap: 6px;
-      font-size: 13px;
-      color: var(--text-muted);
-      background: var(--bg-surface);
-      border: 1px solid var(--border);
-      padding: 6px 14px;
-      border-radius: 8px;
     }
 
-    .meta-tag strong {
+    .spec-val {
+      font-size: 15px;
+      font-weight: 800;
       color: var(--text-main);
+      font-family: var(--font-mono);
     }
 
-    /* Main Grid */
-    .main-grid {
+    .spec-val.accent {
+      color: var(--accent-light);
+    }
+
+    .spec-val.emerald {
+      color: var(--emerald);
+    }
+
+    /* Live Cryptographic Interactive Visualizer */
+    .crypto-visualizer {
+      background: linear-gradient(180deg, var(--bg-surface-elevated) 0%, var(--bg-surface) 100%);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-xl);
+      padding: 36px;
+      margin: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .visualizer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .visualizer-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .visualizer-pill {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      color: var(--cyan);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .nodes-flow {
       display: grid;
-      grid-template-columns: 280px 1fr;
+      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .node-box {
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      text-align: center;
+      transition: all 0.2s;
+      position: relative;
+    }
+
+    .node-box:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(224, 86, 76, 0.15);
+    }
+
+    .node-step {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .node-title {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .node-code {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-light);
+      word-break: break-all;
+    }
+
+    .flow-arrow {
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flow-arrow svg {
+      animation: bounceRight 2s infinite ease-in-out;
+    }
+
+    @keyframes bounceRight {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(4px); color: var(--accent-light); }
+    }
+
+    /* Main Grid Layout */
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 300px 1fr;
       gap: 40px;
-      padding: 40px 0 80px;
+      padding-bottom: 100px;
       align-items: start;
     }
 
-    /* Sidebar Navigation */
+    /* Sticky Sidebar */
     .sidebar {
       position: sticky;
       top: 100px;
-      background: var(--bg-surface);
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(20px);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 20px;
+      border-radius: var(--radius-lg);
+      padding: 24px;
     }
 
-    .sidebar h3 {
-      font-size: 12px;
+    .search-box {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 12px 10px 36px;
+      color: var(--text-main);
+      font-size: 13px;
+      font-family: var(--font-main);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .nav-header {
+      font-size: 11px;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
-    .nav-list {
+    .nav-menu {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
 
-    .nav-list a {
+    .nav-link {
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 9px 12px;
-      border-radius: 8px;
-      font-size: 14px;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
       font-weight: 600;
-      color: var(--text-muted);
+      color: var(--text-secondary);
       text-decoration: none;
-      transition: all 0.2s;
+      transition: all 0.15s;
     }
 
-    .nav-list a:hover, .nav-list a.active {
+    .nav-link:hover {
       color: var(--text-main);
       background: var(--bg-surface-elevated);
     }
 
-    .nav-list a.active {
+    .nav-link.active {
+      color: #FFF;
+      background: var(--accent-bg);
       border-left: 3px solid var(--accent);
-      color: var(--accent-light);
+      font-weight: 700;
     }
 
-    .sidebar-footer {
-      margin-top: 24px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
+    .nav-badge {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.05);
       color: var(--text-muted);
     }
 
-    /* Content Area */
-    .content-area {
+    .sidebar-company {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .company-card {
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      font-size: 12px;
+    }
+
+    .company-name {
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .company-email {
+      color: var(--accent-light);
+      text-decoration: none;
+      display: block;
+      margin-top: 4px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    /* Content Cards */
+    .content-flow {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      gap: 36px;
     }
 
-    .policy-card {
-      background: var(--bg-surface);
+    .policy-section {
+      background: var(--bg-surface-glass);
+      backdrop-filter: blur(16px);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px;
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      transition: all 0.25s;
       position: relative;
-      overflow: hidden;
-      transition: border-color 0.2s;
     }
 
-    .policy-card:hover {
+    .policy-section:hover {
       border-color: var(--border-strong);
     }
 
-    .card-header {
+    .section-header {
       display: flex;
       align-items: center;
-      gap: 14px;
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid var(--border);
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-subtle);
     }
 
-    .card-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: var(--accent-bg);
-      border: 1px solid var(--accent-glow);
-      color: var(--accent-light);
+    .section-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-md);
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-strong);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 15px;
-      font-weight: 800;
-      font-family: var(--font-mono);
+      color: var(--accent-light);
+      flex-shrink: 0;
     }
 
-    .card-title {
-      font-size: 20px;
+    .section-title-wrap {
+      flex: 1;
+    }
+
+    .section-num {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent-light);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 24px;
       font-weight: 800;
       letter-spacing: -0.5px;
     }
 
-    .policy-card p {
-      color: #CAD2DE;
-      margin-bottom: 16px;
+    .policy-section p {
+      color: #CBD5E1;
+      margin-bottom: 18px;
       line-height: 1.8;
-      font-size: 15px;
+      font-size: 15.5px;
     }
 
-    .policy-card p:last-child {
+    .policy-section p:last-child {
       margin-bottom: 0;
     }
 
-    .policy-card ul {
-      margin: 16px 0;
-      padding-left: 24px;
-      color: #CAD2DE;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .feature-item {
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    .feature-item-title {
       font-size: 15px;
-    }
-
-    .policy-card li strong {
+      font-weight: 800;
       color: var(--text-main);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    /* Feature Badges & Callouts */
+    .feature-item-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0 !important;
+    }
+
+    /* Comparison Table */
+    .matrix-table-wrap {
+      overflow-x: auto;
+      margin: 24px 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--bg-base);
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+      text-align: left;
+    }
+
+    .matrix-table th {
+      background: var(--bg-surface-elevated);
+      color: var(--text-main);
+      padding: 14px 18px;
+      font-weight: 800;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .matrix-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+
+    .matrix-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tag-no {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #F87171;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    .tag-yes {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--emerald-bg);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--emerald);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    /* Callout Boxes */
     .callout {
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-strong);
       border-left: 4px solid var(--accent);
-      border-radius: 12px;
-      padding: 16px 20px;
-      margin: 20px 0;
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin: 24px 0;
     }
 
-    .callout-success {
-      border-left-color: var(--success);
-      background: rgba(16, 185, 129, 0.06);
+    .callout.emerald {
+      border-left-color: var(--emerald);
+      background: rgba(16, 185, 129, 0.05);
     }
 
-    .callout-title {
-      font-weight: 700;
-      font-size: 14px;
+    .callout.cyan {
+      border-left-color: var(--cyan);
+      background: rgba(14, 165, 233, 0.05);
+    }
+
+    .callout-head {
+      font-size: 14.5px;
+      font-weight: 800;
       color: var(--text-main);
       margin-bottom: 6px;
       display: flex;
@@ -431,414 +801,714 @@
     }
 
     .callout p {
-      margin: 0 !important;
       font-size: 14px !important;
-      color: var(--text-muted) !important;
+      color: var(--text-secondary) !important;
+      margin: 0 !important;
     }
 
-    /* Code Snippet Box */
-    .code-block {
-      background: var(--code-bg);
+    /* Interactive Accordion */
+    .accordion-item {
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 14px 18px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: #38BDF8;
-      margin: 16px 0;
+      border-radius: var(--radius-md);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: var(--bg-surface-elevated);
+    }
+
+    .accordion-trigger {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      overflow-x: auto;
-    }
-
-    .code-badge {
-      background: rgba(56, 189, 248, 0.15);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      color: #38BDF8;
-      font-size: 10px;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-weight: 700;
-    }
-
-    /* Data Table */
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 14px;
-    }
-
-    .data-table th, .data-table td {
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .data-table th {
-      background: var(--bg-surface-elevated);
+      padding: 16px 20px;
+      background: transparent;
+      border: none;
       color: var(--text-main);
+      font-size: 15px;
       font-weight: 700;
-      border-radius: 8px 8px 0 0;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.2s;
     }
 
-    .data-table td {
-      color: #CAD2DE;
+    .accordion-trigger:hover {
+      background: rgba(255, 255, 255, 0.03);
     }
 
-    .badge-no {
-      background: rgba(224, 86, 76, 0.15);
-      color: #FF8E85;
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
-      display: inline-block;
+    .accordion-content {
+      padding: 0 20px 18px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
     }
 
-    .badge-yes {
-      background: var(--success-bg);
-      color: var(--success);
-      padding: 3px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      font-weight: 700;
-      display: inline-block;
-    }
-
-    /* Contact Box */
-    .contact-box {
-      background: linear-gradient(135deg, rgba(224, 86, 76, 0.12) 0%, rgba(24, 28, 40, 0.9) 100%);
+    /* DPO & Company Contact Box */
+    .contact-card-premium {
+      background: radial-gradient(circle at top right, rgba(224, 86, 76, 0.15) 0%, var(--bg-surface-elevated) 70%);
       border: 1px solid var(--accent-glow);
-      border-radius: 20px;
-      padding: 32px;
+      border-radius: var(--radius-xl);
+      padding: 44px;
       text-align: center;
-      margin-top: 40px;
+      position: relative;
     }
 
-    .contact-box h3 {
-      font-size: 24px;
+    .contact-badge-verified {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: var(--emerald-bg);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--emerald);
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .contact-card-premium h3 {
+      font-family: var(--font-display);
+      font-size: 32px;
       font-weight: 900;
       margin-bottom: 8px;
     }
 
-    .contact-box p {
-      color: var(--text-muted);
-      margin-bottom: 20px;
+    .contact-card-premium p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto 28px;
       font-size: 15px;
     }
 
-    .email-chip {
+    .email-container {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       background: var(--bg-base);
-      border: 1px solid var(--accent);
-      padding: 12px 24px;
+      border: 1px solid var(--border-strong);
+      padding: 10px 12px 10px 24px;
       border-radius: 100px;
-      color: var(--text-main);
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 700;
-      font-family: var(--font-mono);
-      transition: transform 0.2s;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
     }
 
-    .email-chip:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 20px var(--accent-glow);
+    .email-link {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+    }
+
+    .copy-btn {
+      background: var(--accent);
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: var(--accent-light);
+      transform: scale(1.05);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: var(--emerald);
+      color: #000;
+      font-weight: 800;
+      font-size: 13px;
+      padding: 10px 20px;
+      border-radius: 100px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.show {
+      transform: translateX(-50%) translateY(0);
     }
 
     /* Footer */
     footer {
-      border-top: 1px solid var(--border);
-      padding: 40px 0;
+      border-top: 1px solid var(--border-subtle);
       background: var(--bg-base);
+      padding: 60px 0 40px;
       font-size: 13px;
       color: var(--text-muted);
     }
 
-    .footer-inner {
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .footer-brand p {
+      max-width: 360px;
+      line-height: 1.6;
+    }
+
+    .footer-col h5 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-main);
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-col a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent-light);
+    }
+
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
       flex-wrap: wrap;
       gap: 16px;
     }
 
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        color: black;
+        font-size: 12pt;
+      }
+      .mesh-gradient, .grid-overlay, header, .sidebar, .hero-pill, .header-controls, .action-btn, .search-box, .contact-badge-verified, .copy-btn {
+        display: none !important;
+      }
+      .layout-grid {
+        grid-template-columns: 1fr;
+      }
+      .policy-section, .spec-card, .crypto-visualizer {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        color: black !important;
+        page-break-inside: avoid;
+      }
+      .policy-section p, .policy-section li {
+        color: #333 !important;
+      }
+      .hero h1 .gradient-text {
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+      }
+    }
+
     /* Responsive */
-    @media (max-width: 900px) {
-      .main-grid {
+    @media (max-width: 1024px) {
+      .specs-ribbon {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .nodes-flow {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .flow-arrow {
+        transform: rotate(90deg);
+      }
+      .layout-grid {
         grid-template-columns: 1fr;
       }
       .sidebar {
         display: none;
       }
       .hero h1 {
-        font-size: 32px;
+        font-size: 36px;
       }
-      .policy-card {
-        padding: 24px;
+      .footer-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="ambient-glow-top"></div>
-  <div class="ambient-glow-bottom"></div>
+  <!-- Ambient Light Layers -->
+  <div class="mesh-gradient"></div>
+  <div class="grid-overlay"></div>
 
-  <!-- Header -->
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">E-posta adresi panoya kopyalandı!</div>
+
+  <!-- Top Navigation Header -->
   <header>
-    <div class="container">
-      <div class="header-inner">
-        <a href="#" class="brand-logo">
-          <div class="brand-cube-icon">
-            <div class="brand-cube-inner">oy</div>
+    <div class="wrapper">
+      <div class="header-content">
+        <a href="#" class="brand">
+          <div class="brand-icon"></div>
+          <div class="brand-text">
+            <div class="brand-name">oylama<span>.</span></div>
+            <div class="brand-subtitle">VirelonSoft Güvenlik Protokolü</div>
           </div>
-          <div class="brand-title">oylama<span>.</span></div>
-          <span class="brand-badge">Sıfır-Bilgi Gizliliği</span>
         </a>
 
-        <div class="nav-actions">
-          <a href="mailto:muhammetatmaca79@gmail.com" class="btn-contact">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            VirelonSoft İletişim
+        <div class="header-controls">
+          <button onclick="window.print()" class="action-btn" title="PDF olarak yazdır veya kaydet">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+            Yazdır / PDF
+          </button>
+          <a href="mailto:muhammetatmaca79@gmail.com" class="action-btn primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Geliştirici İletişim
           </a>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-pill">
-        <div class="hero-pulse-dot"></div>
-        Zero-Knowledge Privacy Charter
+  <div class="wrapper">
+
+    <!-- Hero Header -->
+    <section class="hero">
+      <div class="badge-pill">
+        <div class="pulse-indicator"></div>
+        Zero-Knowledge Cryptographic Privacy Charter
       </div>
-      <h1>Gizlilik ve Veri Güvenliği <span>Politikası</span></h1>
+      <h1>
+        Sıfır-Bilgi Gizliliği ve <br />
+        <span class="gradient-text">Kriptografik Veri Güvenliği</span> Politikası
+      </h1>
       <p>
-        <strong>VirelonSoft</strong> tarafından geliştirilen <strong>oylama.</strong>, kullanıcıların kimliğini hiçbir koşulda kaydetmeyen ve oyları kriptografik olarak cihazdan koparan sıfır-bilgi mimarisiyle inşa edilmiştir.
+        <strong>VirelonSoft</strong> tarafından geliştirilen <strong>oylama.</strong> platformu; kullanıcıların kişisel kimliklerini hiçbir koşulda kaydetmeyen, oyları cihazdan fiziksel olarak koparan ve sosyal baskıyı sıfırlayan bağımsız bir konsensüs protokolüdür.
       </p>
 
-      <div class="meta-box-row">
-        <div class="meta-tag">Geliştirici: <strong>VirelonSoft</strong></div>
-        <div class="meta-tag">Paket Kimliği: <strong>com.virelon.consensus</strong></div>
-        <div class="meta-tag">Son Güncelleme: <strong>27 Ağustos 2026</strong></div>
-        <div class="meta-tag">Yasal Standart: <strong>KVKK & GDPR Uyumlu</strong></div>
+      <!-- Quick Specs Ribbon -->
+      <div class="specs-ribbon">
+        <div class="spec-card">
+          <div class="spec-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 12h6"/></svg>
+            Kayıt Şartı
+          </div>
+          <div class="spec-val emerald">SIFIR HESAP (%100 ANONİM)</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            İmza Algoritması
+          </div>
+          <div class="spec-val accent">SALTED SHA-256</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Yasal Uyumluluk
+          </div>
+          <div class="spec-val">KVKK &bull; GDPR &bull; CCPA</div>
+        </div>
+        <div class="spec-card">
+          <div class="spec-label">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+            Geliştirici
+          </div>
+          <div class="spec-val">VIRELONSOFT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Cryptographic Architecture Visualizer -->
+    <div class="crypto-visualizer">
+      <div class="visualizer-header">
+        <div class="visualizer-title">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Sıfır-Bilgi Kriptografik Veri Ayrıştırma Mimarisi
+        </div>
+        <span class="visualizer-pill">Geri Döndürülemez Tek Yönlü Fonksiyon</span>
+      </div>
+
+      <div class="nodes-flow">
+        <!-- Node 1 -->
+        <div class="node-box">
+          <div class="node-step">01. Kaynak</div>
+          <div class="node-title">Cihaz Donanım Kimliği</div>
+          <div class="node-code">SecureStore::UUID</div>
+        </div>
+
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+
+        <!-- Node 2 -->
+        <div class="node-box">
+          <div class="node-step">02. Entropi</div>
+          <div class="node-title">Oturum Tuzu (Salt)</div>
+          <div class="node-code">CSPRNG::256-Bit</div>
+        </div>
+
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+
+        <!-- Node 3 -->
+        <div class="node-box">
+          <div class="node-step">03. Kripto</div>
+          <div class="node-title">Tek Yönlü Hash</div>
+          <div class="node-code">SHA256(ID + Salt)</div>
+        </div>
+
+        <div class="flow-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </div>
+
+        <!-- Node 4 -->
+        <div class="node-box">
+          <div class="node-step">04. Konsensüs</div>
+          <div class="node-title">Anonim Oy Kaydı</div>
+          <div class="node-code">%100 İZ BIRAKMAZ</div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Main Content Grid -->
-  <div class="container">
-    <div class="main-grid">
+    <!-- Main Content Layout -->
+    <div class="layout-grid">
 
-      <!-- Navigation Sidebar -->
+      <!-- Sticky Table of Contents -->
       <aside class="sidebar">
-        <h3>İçindekiler</h3>
-        <ul class="nav-list">
-          <li><a href="#section-1" class="active">1. Temel Felsefemiz</a></li>
-          <li><a href="#section-2">2. Toplanmayan Veriler</a></li>
-          <li><a href="#section-3">3. Kriptografik İmzalama</a></li>
-          <li><a href="#section-4">4. Kör Kabin & AI Denetimi</a></li>
-          <li><a href="#section-5">5. Cihaz İzinleri & Kamera</a></li>
-          <li><a href="#section-6">6. Veri Saklama & Otomatik Kilit</a></li>
-          <li><a href="#section-7">7. Dışa Aktarma (PDF/CSV)</a></li>
-          <li><a href="#section-8">8. KVKK & GDPR Hakları</a></li>
-          <li><a href="#section-9">9. Geliştirici & İletişim</a></li>
+        <div class="search-box">
+          <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="policySearch" class="search-input" placeholder="Politikada ara..." onkeyup="filterSections()" />
+        </div>
+
+        <div class="nav-header">Maddeler & Başlıklar</div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#sec-1" class="nav-link active">1. Veri Sorumlusu Kimliği <span class="nav-badge">01</span></a></li>
+          <li><a href="#sec-2" class="nav-link">2. Toplanmayan Kişisel Veriler <span class="nav-badge">02</span></a></li>
+          <li><a href="#sec-3" class="nav-link">3. Kriptografik İmzalama & Hash <span class="nav-badge">03</span></a></li>
+          <li><a href="#sec-4" class="nav-link">4. Kör Kabin & Zero-Bias <span class="nav-badge">04</span></a></li>
+          <li><a href="#sec-5" class="nav-link">5. Yapay Zeka (AI) Denetimi <span class="nav-badge">05</span></a></li>
+          <li><a href="#sec-6" class="nav-link">6. Cihaz İzinleri (Kamera/QR) <span class="nav-badge">06</span></a></li>
+          <li><a href="#sec-7" class="nav-link">7. Veri Saklama & İmha <span class="nav-badge">07</span></a></li>
+          <li><a href="#sec-8" class="nav-link">8. Dışa Aktarma & Raporlama <span class="nav-badge">08</span></a></li>
+          <li><a href="#sec-9" class="nav-link">9. KVKK & GDPR Haklarınız <span class="nav-badge">09</span></a></li>
+          <li><a href="#sec-10" class="nav-link">10. İletişim & DPO Bilgileri <span class="nav-badge">10</span></a></li>
         </ul>
 
-        <div class="sidebar-footer">
-          &copy; 2026 VirelonSoft.<br />Tüm hakları saklıdır.
+        <div class="sidebar-company">
+          <div class="company-card">
+            <div class="company-name">VirelonSoft Technologies</div>
+            <div style="color: var(--text-muted); font-size: 11px; margin-top: 2px;">oylama. Official Publisher</div>
+            <a href="mailto:muhammetatmaca79@gmail.com" class="company-email">muhammetatmaca79@gmail.com</a>
+          </div>
         </div>
       </aside>
 
-      <!-- Content Area -->
-      <main class="content-area">
+      <!-- Content Sections Flow -->
+      <main class="content-flow">
 
-        <!-- 1. Temel Felsefemiz -->
-        <article id="section-1" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">01</div>
-            <h2 class="card-title">Temel Felsefemiz ve Sıfır-Bilgi Mimarisi</h2>
+        <!-- 1. Veri Sorumlusu Kimliği -->
+        <article id="sec-1" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 01</div>
+              <h2 class="section-title">Veri Sorumlusu ve Hizmet Tanımı</h2>
+            </div>
           </div>
           <p>
-            Geleneksel anket ve oylama platformları kullanıcıların e-posta adreslerini, telefon numaralarını, IP adreslerini ve sosyal profil kimliklerini toplar. Bu durum oylama esnasında çoğunluğun veya yöneticilerin sosyal baskısına yol açar.
+            Bu Gizlilik Politikası, <strong>VirelonSoft</strong> (“Şirket”, “Geliştirici”, “Biz”) tarafından geliştirilen ve işletilen <strong>oylama.</strong> (Paket Kimliği: <code>com.virelon.consensus</code>) mobil uygulaması ve ilgili protokol hizmetleri için geçerlidir.
           </p>
           <p>
-            <strong>VirelonSoft</strong> olarak geliştirdiğimiz <strong>oylama.</strong> protokolünde hedefimiz; katılımcıların hiçbir çekince duymadan, %100 özgür ve dürüst iradelerini yansıtabilecekleri güvenli bir konsensüs zemini oluşturmaktır.
+            VirelonSoft olarak amacımız; sınıflarda, şirket yönetim kurullarında, topluluk buluşmalarında ve arkadaş gruplarında sosyal baskı, grup etkisi ve hiyerarşik yönlendirmelerden arındırılmış, <strong>%100 tarafsız ve dürüst karar alma süreçleri</strong> sağlamaktır.
           </p>
-          <div class="callout callout-success">
-            <div class="callout-title">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Sıfır-Bilgi Prensibi (Zero-Knowledge Privacy)
+          <div class="callout emerald">
+            <div class="callout-head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Privacy by Design (Tasarım Yoluyla Gizlilik)
             </div>
             <p>
-              Sunucularımız kimin hangi seçeneğe oy verdiğini matematiksel olarak bilemez. Oy verisi cihaz kimliğinden tek yönlü kriptografik hash ile fiziksel olarak ayrıştırılır.
+              Uygulama mimarimiz "veriyi toplayıp saklamak ve sonra korumak" yerine "kişisel veriyi en baştan hiç toplamamak" felsefesi üzerine inşa edilmiştir.
             </p>
           </div>
         </article>
 
-        <!-- 2. Toplanmayan Veriler -->
-        <article id="section-2" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">02</div>
-            <h2 class="card-title">Toplanan ve Kesinlikle Toplanmayan Veriler</h2>
+        <!-- 2. Toplanmayan Kişisel Veriler -->
+        <article id="sec-2" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" x2="23" y1="1" y2="23"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 02</div>
+              <h2 class="section-title">Toplanan ve Kesinlikle Toplanmayan Veriler</h2>
+            </div>
           </div>
           <p>
-            Uygulamamızda <strong>Hesap Açma (Sign-Up / Sign-In) mekanizması bulunmamaktadır</strong>. Kullanıcılar uygulamayı indirdikleri anda hiçbir kişisel veri vermeden oturum oluşturabilir veya mevcut bir odaya katılabilirler.
+            <strong>oylama.</strong> uygulamasında kullanıcı hesabı, üyelik sistemi veya oturum açma (sign-up/login) bulunmaz. Uygulamayı başlattığınız anda hiçbir kişisel veri sağlamaksızın doğrudan tüm özellikleri kullanabilirsiniz.
           </p>
 
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Veri Türü</th>
-                <th>Durum</th>
-                <th>Açıklama</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>İsim / Soyisim / TC Kimlik</td>
-                <td><span class="badge-no">TOPLANMAZ</span></td>
-                <td>Kullanıcıdan hiçbir kimlik bilgisi talep edilmez.</td>
-              </tr>
-              <tr>
-                <td>E-posta & Telefon Numarası</td>
-                <td><span class="badge-no">TOPLANMAZ</span></td>
-                <td>Kayıt zorunluluğu yoktur; e-posta/SMS doğrulaması yapılmaz.</td>
-              </tr>
-              <tr>
-                <td>Konum & GPS Verileri</td>
-                <td><span class="badge-no">TOPLANMAZ</span></td>
-                <td>Konum erişimi istenmez ve takip edilmez.</td>
-              </tr>
-              <tr>
-                <td>Reklam Kimliği (IDFA / GAID)</td>
-                <td><span class="badge-no">TOPLANMAZ</span></td>
-                <td>Uygulamada 3. taraf reklam izleyicisi bulunmaz.</td>
-              </tr>
-              <tr>
-                <td>Anonim Oy Sayacı</td>
-                <td><span class="badge-yes">İŞLENİR</span></td>
-                <td>Yalnızca odadaki toplam seçenek yüzdeleri anlık toplanır.</td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="matrix-table-wrap">
+            <table class="matrix-table">
+              <thead>
+                <tr>
+                  <th>Veri Kategorisi</th>
+                  <th>Toplanma Durumu</th>
+                  <th>İşleme Amacı & Güvenlik Standardı</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Ad, Soyad, TC Kimlik</strong></td>
+                  <td><span class="tag-no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ASLA TOPLANMAZ</span></td>
+                  <td>Kullanıcıdan herhangi bir ad/soyad talep edilmez.</td>
+                </tr>
+                <tr>
+                  <td><strong>E-Posta & Telefon Numarası</strong></td>
+                  <td><span class="tag-no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ASLA TOPLANMAZ</span></td>
+                  <td>Hesap kaydı ve SMS/E-posta doğrulaması yoktur.</td>
+                </tr>
+                <tr>
+                  <td><strong>Konum (GPS & Ağ Konumu)</strong></td>
+                  <td><span class="tag-no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ASLA TOPLANMAZ</span></td>
+                  <td>Cihazın coğrafi konumu asla sorgulanmaz.</td>
+                </tr>
+                <tr>
+                  <td><strong>Reklam Kimliği (IDFA / GAID)</strong></td>
+                  <td><span class="tag-no"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> ASLA TOPLANMAZ</span></td>
+                  <td>Uygulama içinde reklam ağı veya kullanıcı izleyici bulunmaz.</td>
+                </tr>
+                <tr>
+                  <td><strong>Kriptografik Oy Sayacı</strong></td>
+                  <td><span class="tag-yes"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> ANONİM İŞLENİR</span></td>
+                  <td>Yalnızca odadaki toplam seçenek yüzdeleri anlık olarak toplanır.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </article>
 
-        <!-- 3. Kriptografik İmzalama -->
-        <article id="section-3" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">03</div>
-            <h2 class="card-title">Kriptografik İmzalama & Salted SHA-256</h2>
+        <!-- 3. Kriptografik İmzalama & Hash -->
+        <article id="sec-3" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 03</div>
+              <h2 class="section-title">Kriptografik İmzalama & Salted SHA-256 Protokolü</h2>
+            </div>
           </div>
           <p>
-            Oylamalarda mükerrer oy kullanımını (aynı kişinin birden fazla oy vermesini) engellemek amacıyla cihazınızda rastgele bir oturum tuzu (Salt) üretilir. Bu tuz cihaz kimliğiyle birleştirilerek tek yönlü <strong>SHA-256</strong> hash algoritmasından geçirilir.
+            Oylamaların adil ve hilesiz olması için aynı kişinin mükerrer oy kullanması engellenmelidir. Ancak bunu yaparken kullanıcının kimliğini açığa çıkarmamak adına <strong>Salted SHA-256</strong> imzalama tekniği kullanılır:
           </p>
-          <div class="code-block">
-            <span>SHA256( Device_UUID + Poll_Salt_Key ) &rarr; 8f4c9a...d31a</span>
-            <span class="code-badge">TEK YÖNLÜ ŞİFRELEME</span>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <div class="feature-item-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                Oturum Tuzu (Poll Salt)
+              </div>
+              <p class="feature-item-desc">Her oylama odası oluşturulduğunda kriptografik olarak rastgele 256-bit bir oturum anahtarı üretilir.</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                Geri Döndürülemezlik
+              </div>
+              <p class="feature-item-desc">Üretilen hash verisinden asla cihazın gerçek kimliğine veya şahsına geri dönülemez (One-Way Hash).</p>
+            </div>
           </div>
-          <p>
-            Bu hash verisi tek yönlüdür; sunucuya iletilen bu imzadan asla cihazın gerçek kimliğine veya oy veren kişinin şahsına geri dönülemez (Geri Döndürülemez Matematiksel Fonksiyon).
-          </p>
         </article>
 
-        <!-- 4. Kör Kabin & AI Denetimi -->
-        <article id="section-4" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">04</div>
-            <h2 class="card-title">Zero-Bias Kör Kabin & Yapay Zeka Denetimi</h2>
+        <!-- 4. Kör Kabin & Zero-Bias -->
+        <article id="sec-4" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 04</div>
+              <h2 class="section-title">Zero-Bias Kör Kabin (Bilişsel Tarafsızlık)</h2>
+            </div>
           </div>
           <p>
-            <strong>Kör Kabin (Blind Booth):</strong> Yönlendirici veya sübjektif soru başlıklarının katılımcı psikolojisini etkilemesini engellemek için başlığı gizleyerek doğrudan seçenek odaklı karar vermeyi sağlar.
-          </p>
-          <p>
-            <strong>Akıllı AI Nötrlük Kontrolü:</strong> Oylama oluşturulurken sorunun yönlendirici, nefret söylemi veya manipülasyon içerip içermediği yerel yapay zeka veya kullanıcı tarafından girilen özel API anahtarlarıyla (Google Gemini / OpenAI) taranır. Bu işlem esnasında hiçbir kişisel veri 3. taraf yapay zeka sağlayıcılarına aktarılmaz.
-          </p>
-        </article>
-
-        <!-- 5. Cihaz İzinleri -->
-        <article id="section-5" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">05</div>
-            <h2 class="card-title">Cihaz İzinleri ve Kamera Erişimi</h2>
-          </div>
-          <p>
-            <strong>oylama.</strong> uygulaması minimum düzeyde izin talep eder:
+            İnsan psikolojisi, soruların yönlendirici başlıklarından veya popüler seçeneklerin mevcut oy dağılımından güçlü şekilde etkilenir. <strong>Kör Kabin (Blind Booth)</strong> modu bu bilişsel önyargıyı ortadan kaldırır:
           </p>
           <ul>
-            <li>
-              <strong>Kamera İzni (android.permission.CAMERA):</strong> Yalnızca oylama odalarına hızlıca katılmak için sunulan QR kodunu okutmak amacıyla kullanılır. Kamera görüntüsü kaydedilmez, fotoğraflar depolanmaz veya harici sunuculara iletilmez. QR kod çözüldüğü anda kamera akışı anında sonlandırılır.
-            </li>
-            <li>
-              <strong>Depolama / Dosya Paylaşımı:</strong> Kullanıcı oylama tutanağını (PDF veya CSV) dışa aktarmak ve cihazına indirmek istediğinde geçici dosya yazma izni kullanılır.
-            </li>
+            <li><strong>Başlık Gizleme:</strong> Katılımcı, sorunun yönlendirici tonuna takılmadan seçeneklerin salt değerini bağımsızca tartar.</li>
+            <li><strong>Sıfır Sosyal Baskı:</strong> Diğer kişilerin ne yönde oy kullandığı oylama bitene kadar gizlenir.</li>
           </ul>
         </article>
 
-        <!-- 6. Veri Saklama & Otomatik Kilit -->
-        <article id="section-6" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">06</div>
-            <h2 class="card-title">Veri Saklama Süreleri ve Otomatik İmha</h2>
+        <!-- 5. Yapay Zeka (AI) Denetimi -->
+        <article id="sec-5" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 05</div>
+              <h2 class="section-title">Yapay Zeka (AI) Tarafsızlık ve Güvenlik Denetimi</h2>
+            </div>
           </div>
           <p>
-            Oylama odaları oluşturucunun belirlediği süre boyunca (örneğin 5 dakika, 1 saat veya 24 saat) aktif kalır. Süre dolduğunda:
+            Oylama oluşturulurken girilen soru metni ve şıklar, yapay zeka denetim katmanından geçirilir. Bu denetim:
           </p>
           <ul>
-            <li>Oda otomatik olarak kilitlenir ve yeni oy girişi kalıcı olarak kapatılır.</li>
-            <li>Sonuçlar şifreli olarak konsensüs raporuna dönüştürülür.</li>
-            <li>Kullanıcı dilediği an Ayarlar menüsünden <strong>"Tüm Yerel Verileri Temizle"</strong> butonuna dokunarak cihazındaki tüm oturum geçmişini ve şifreli anahtarları geri döndürülemez biçimde silebilir.</li>
+            <li>Soruların hileli, yönlendirici veya manipülatif bir dille kurgulanmasını engeller.</li>
+            <li>Nefret söylemi, hakaret veya kırıcı ifadelerin yer almasını otomatik olarak önler.</li>
+            <li><strong>BYOK (Bring Your Own Key) Desteği:</strong> Kullanıcı dilerse kendi Google Gemini veya OpenAI API anahtarını girebilir; bu anahtarlar yalnızca cihazın yerel güvenli hafızasında (SecureStore / Keystore) saklanır, asla sunucularımıza aktarılmaz.</li>
           </ul>
         </article>
 
-        <!-- 7. Dışa Aktarma -->
-        <article id="section-7" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">07</div>
-            <h2 class="card-title">Dışa Aktarma (PDF / CSV) ve Fikri Mülkiyet</h2>
+        <!-- 6. Cihaz İzinleri (Kamera/QR) -->
+        <article id="sec-6" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 06</div>
+              <h2 class="section-title">Cihaz İzinleri ve Kamera Güvenliği</h2>
+            </div>
           </div>
           <p>
-            Uygulama üzerinden üretilen A4 Sergi Posteri, resmi PDF Karar Tutanağı ve Excel/CSV veri tabloları tamamen oylamayı oluşturan topluluğun / yöneticinin mülkiyetindedir. VirelonSoft bu raporlar üzerinde hiçbir hak iddia etmez ve içeriklerini ticari amaçla kullanamaz.
+            Uygulamamız yalnızca temel işlevler için gereken asgari izinleri talep eder:
+          </p>
+          <div class="feature-grid">
+            <div class="feature-item">
+              <div class="feature-item-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+                Kamera İzni (CAMERA)
+              </div>
+              <p class="feature-item-desc">Sadece oylama odasına katılmak amacıyla QR kod okuma anında kullanılır. Hiçbir fotoğraf çekilmez, saklanmaz veya harici ağlara gönderilmez.</p>
+            </div>
+            <div class="feature-item">
+              <div class="feature-item-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
+                Dosya Paylaşımı (STORAGE)
+              </div>
+              <p class="feature-item-desc">Oylama bittiğinde A4 Sergi Posteri, PDF tutanağı veya CSV tablosunu telefonunuza indirmek istediğinizde geçici dosya yazımı için kullanılır.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Veri Saklama & İmha -->
+        <article id="sec-7" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 07</div>
+              <h2 class="section-title">Oturum Süreleri, Otomatik Kilitlenme ve Sıfır-İz İmhası</h2>
+            </div>
+          </div>
+          <p>
+            Oylamalar süresiz olarak açık kalmaz. Oda kurucusunun belirlediği süre (örneğin 5 dakika veya 24 saat) sona erdiğinde:
+          </p>
+          <ul>
+            <li>Oda kriptografik olarak kilitlenir; yeni oy girişi kalıcı olarak engellenir.</li>
+            <li>Sonuçlar özet rapor formatına dönüştürülür.</li>
+            <li>Kullanıcılar istedikleri an Ayarlar sayfasındaki <strong>"Tüm Yerel Verileri Temizle"</strong> butonuyla cihazlarındaki tüm oturum ve anahtar kayıtlarını tek dokunuşla kalıcı olarak silebilirler.</li>
+          </ul>
+        </article>
+
+        <!-- 8. Dışa Aktarma & Raporlama -->
+        <article id="sec-8" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 08</div>
+              <h2 class="section-title">Raporlama, Fikri Mülkiyet ve Ticari Bağımsızlık</h2>
+            </div>
+          </div>
+          <p>
+            Uygulama tarafından üretilen vektörel PDF Karar Tutanakları, A4 Sergi Posterleri ve Excel/CSV tabloları tamamen oylamayı gerçekleştiren grup veya topluluğun mülkiyetindedir. VirelonSoft bu veriler üzerinde hak iddia etmez, ticari amaçla kullanamaz ve üçüncü taraflara satamaz.
           </p>
         </article>
 
-        <!-- 8. Yasal Haklar -->
-        <article id="section-8" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">08</div>
-            <h2 class="card-title">KVKK, GDPR ve Uluslararası Yasal Uyum</h2>
+        <!-- 9. KVKK & GDPR Haklarınız -->
+        <article id="sec-9" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 09</div>
+              <h2 class="section-title">KVKK, GDPR ve Uluslararası Yasal Haklar</h2>
+            </div>
           </div>
           <p>
-            Uygulamamız 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu (KVKK)</strong>, Avrupa Birliği <strong>Genel Veri Koruma Tüzüğü (GDPR)</strong> ve <strong>California Consumer Privacy Act (CCPA/CPRA)</strong> prensiplerine tam uyumlu olarak <em>"Privacy by Design" (Tasarım Yoluyla Gizlilik)</em> yaklaşımıyla kodlanmıştır.
+            Uygulamamız 6698 sayılı <strong>Kişisel Verilerin Korunması Kanunu (KVKK)</strong>, Avrupa Birliği <strong>Genel Veri Koruma Tüzüğü (GDPR)</strong> ve <strong>California Consumer Privacy Act (CCPA/CPRA)</strong> çerçevesinde en yüksek güvenlik standartlarına tabidir.
           </p>
-          <p>
-            Kişisel veriniz işlenmediği için veri sızıntısı veya profil oluşturma riski matematiksel olarak sıfıra indirilmiştir.
-          </p>
+          <div class="callout cyan">
+            <div class="callout-head">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              Veri İşlenmeme Garantisi
+            </div>
+            <p>
+              Kişisel kimlik veriniz hiçbir aşamada toplanmadığı ve işlenmediği için, geleneksel veritabanı sızıntıları veya yetkisiz profil oluşturma riskleri teknik olarak imkansız kılınmıştır.
+            </p>
+          </div>
         </article>
 
-        <!-- 9. İletişim -->
-        <article id="section-9" class="policy-card">
-          <div class="card-header">
-            <div class="card-num">09</div>
-            <h2 class="card-title">Geliştirici & Yasal İletişim</h2>
+        <!-- 10. İletişim & DPO Bilgileri -->
+        <article id="sec-10" class="policy-section">
+          <div class="section-header">
+            <div class="section-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="section-title-wrap">
+              <div class="section-num">Madde 10</div>
+              <h2 class="section-title">Veri Sorumlusu İletişim ve Yasal Başvuru</h2>
+            </div>
           </div>
           <p>
-            Gizlilik Politikamız veya veri güvenliği protokolümüz hakkında her türlü soru, geri bildirim veya yasal talepleriniz için veri sorumlusu şirketimizle doğrudan iletişime geçebilirsiniz:
+            Gizlilik Şartımız, şifreleme protokolümüz veya güvenlik denetimlerimiz hakkında her türlü soru, öneri ve yasal başvurularınız için geliştirici şirketimizle 7/24 doğrudan iletişime geçebilirsiniz:
           </p>
 
-          <div class="contact-box">
-            <h3>VirelonSoft</h3>
-            <p>oylama. Geliştirici & Dağıtıcı Ekibi</p>
-            <a href="mailto:muhammetatmaca79@gmail.com" class="email-chip">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              muhammetatmaca79@gmail.com
-            </a>
+          <div class="contact-card-premium">
+            <div class="contact-badge-verified">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              Doğrulanmış Resmi Geliştirici
+            </div>
+            <h3>VirelonSoft Technologies</h3>
+            <p>oylama. Geliştirici & Protokol Güvenlik Ekibi</p>
+
+            <div class="email-container">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2.5"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:muhammetatmaca79@gmail.com" class="email-link" id="emailText">muhammetatmaca79@gmail.com</a>
+              <button onclick="copyEmail()" class="copy-btn" id="copyBtn">Kopyala</button>
+            </div>
           </div>
         </article>
 
@@ -848,17 +1518,97 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-inner">
+    <div class="wrapper">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>oylama.</h4>
+          <p>
+            VirelonSoft tarafından geliştirilen Sıfır-Bilgi Gizliliği tabanlı, sosyal baskıyı sıfırlayan bağımsız karar ve konsensüs protokolü.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h5>Yasal & Güvenlik</h5>
+          <ul>
+            <li><a href="#sec-1">Gizlilik Politikası</a></li>
+            <li><a href="#sec-3">Salted SHA-256 Mimarisi</a></li>
+            <li><a href="#sec-9">KVKK & GDPR Uyumu</a></li>
+            <li><a href="#sec-7">Sıfır-İz Veri İmhası</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>İletişim & Şirket</h5>
+          <ul>
+            <li><strong style="color: var(--text-main);">VirelonSoft</strong></li>
+            <li><a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a></li>
+            <li>Paket: <code>com.virelon.consensus</code></li>
+            <li>Sürüm: 1.0.0 (Android 36)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
         <div>
-          <strong>oylama.</strong> &mdash; Anonymous Consensus Protocol &bull; Geliştirici: <strong>VirelonSoft</strong>
+          &copy; 2026 <strong>VirelonSoft</strong>. Tüm hakları saklıdır.
         </div>
         <div>
-          İletişim: <a href="mailto:muhammetatmaca79@gmail.com" style="color: var(--accent-light); text-decoration: none;">muhammetatmaca79@gmail.com</a>
+          Son Güncelleme: <strong>27 Ağustos 2026</strong> &bull; Yasal Standart: <strong>Google Play & App Store Uyumlu</strong>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Copy Email to Clipboard with Toast Notification
+    function copyEmail() {
+      const email = document.getElementById('emailText').innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        const toast = document.getElementById('toast');
+        const copyBtn = document.getElementById('copyBtn');
+        copyBtn.innerText = 'Kopyalandı!';
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+          copyBtn.innerText = 'Kopyala';
+        }, 2500);
+      });
+    }
+
+    // Live Section Search Filter
+    function filterSections() {
+      const input = document.getElementById('policySearch').value.toLowerCase();
+      const sections = document.querySelectorAll('.policy-section');
+      sections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        if (text.includes(input)) {
+          section.style.display = 'block';
+        } else {
+          section.style.display = 'none';
+        }
+      });
+    }
+
+    // Sticky Scrollspy Navigation
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.policy-section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      let currentSectionId = '';
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 140;
+        if (window.pageYOffset >= sectionTop) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
