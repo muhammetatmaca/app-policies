@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası | AR Precision Ruler - Virelon Soft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at 50% 0%, #0d1527 0%, #030712 100%);
+      --surface-card: rgba(15, 23, 42, 0.7);
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --surface-border-hover: rgba(59, 130, 246, 0.4);
+      --primary: #2563eb;
+      --primary-glow: rgba(37, 99, 235, 0.25);
+      --accent-cyan: #38bdf8;
+      --accent-emerald: #10b981;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Ambient Background Light Orbs */
+    .ambient-glow {
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.18) 0%, rgba(56, 189, 248, 0.05) 50%, transparent 70%);
+      filter: blur(80px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header & Hero Branding */
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--surface-border);
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(37, 99, 235, 0.12);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 20px;
+      backdrop-filter: blur(12px);
+    }
+
+    .brand-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 10px var(--accent-emerald);
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #60a5fa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto 24px;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      font-size: 13px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .meta-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--surface-border);
+      padding: 6px 14px;
+      border-radius: 8px;
+      color: #94a3b8;
+    }
+
+    .meta-pill strong {
+      color: #f1f5f9;
+    }
+
+    /* Trust Pillars Grid */
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+      margin-bottom: 48px;
+    }
+
+    .trust-card {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      padding: 24px;
+      backdrop-filter: blur(16px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .trust-card:hover {
+      border-color: var(--surface-border-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .trust-card-glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+
+    .trust-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(37, 99, 235, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--accent-cyan);
+    }
+
+    .trust-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .trust-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Main Policy Sections */
+    .policy-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .section-card {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 24px;
+      padding: 36px;
+      backdrop-filter: blur(16px);
+    }
+
+    .section-card:hover {
+      border-color: rgba(255, 255, 255, 0.14);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .section-number {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: var(--primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    .section-body {
+      font-size: 14.5px;
+      color: #cbd5e1;
+      line-height: 1.75;
+    }
+
+    .section-body p {
+      margin-bottom: 14px;
+    }
+
+    .section-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-body ul {
+      list-style: none;
+      margin: 16px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section-body li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .section-body li::before {
+      content: "✦";
+      color: var(--accent-cyan);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .highlight-box {
+      background: rgba(37, 99, 235, 0.08);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      border-radius: 14px;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .highlight-box p {
+      font-size: 13.5px;
+      color: #93c5fd;
+      margin-bottom: 0;
+    }
+
+    /* Contact Footer Card */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      border-radius: 24px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .contact-desc {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin: 0 auto 24px;
+    }
+
+    .contact-email-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 14px;
+      font-size: 15px;
+      font-weight: 800;
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+      transition: all 0.2s ease;
+    }
+
+    .contact-email-btn:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.55);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--surface-border);
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 30px; }
+      .section-card { padding: 24px; }
+      .contact-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="brand-badge">
+        <span class="brand-badge-dot"></span>
+        VIRELON SOFT • RESMİ GİZLİLİK POLİTİKASI
+      </div>
+      <h1>Gizlilik ve Güvenlik Politikası</h1>
+      <p class="subtitle">
+        AR Precision Ruler uygulamamızda kullanıcı gizliliği, şeffaflık ve veri egemenliği temel ilkemizdir.
+      </p>
+
+      <div class="meta-pills">
+        <div class="meta-pill">Şirket: <strong>Virelon Soft</strong></div>
+        <div class="meta-pill">Paket: <strong>com.virelon.ruler</strong></div>
+        <div class="meta-pill">Uygulama: <strong>AR Camera Ruler</strong></div>
+        <div class="meta-pill">Son Güncelleme: <strong>30 Ağustos 2026</strong></div>
+      </div>
+    </header>
+
+    <!-- Trust Pillars Cards -->
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="trust-card-glow"></div>
+        <div class="trust-icon">📷</div>
+        <div class="trust-title">Kamera Yerel İşleme</div>
+        <div class="trust-desc">
+          Kamera akışı yalnızca ekranınızda canlı ölçüm yapmak için kullanılır. Hiçbir görüntü sunuculara yüklenmez veya kaydedilmez.
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-card-glow"></div>
+        <div class="trust-icon">🔒</div>
+        <div class="trust-title">%100 Cihaz İçi Veri</div>
+        <div class="trust-desc">
+          Kaydettiğiniz tüm ölçümler, PDF raporları ve geçmiş verileri sadece kendi cihazınızın yerel hafızasında (AsyncStorage) saklanır.
+        </div>
+      </div>
+
+      <div class="trust-card">
+        <div class="trust-card-glow"></div>
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-title">Sıfır Profilleme & Reklam</div>
+        <div class="trust-desc">
+          Uygulamamız kullanıcıları izlemez, üçüncü taraf reklam ağlarıyla kişisel kimlik veya konum verisi paylaşmaz.
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Sections -->
+    <div class="policy-sections">
+      <!-- Section 1 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">01</div>
+          <div class="section-title">Giriş ve Genel Bakış</div>
+        </div>
+        <div class="section-body">
+          <p>
+            Bu Gizlilik Politikası, <strong>Virelon Soft</strong> (“Şirket”, “biz”) tarafından geliştirilen <strong>AR Precision Ruler</strong> (Paket Kimliği: <code>com.virelon.ruler</code>) mobil uygulamasının gizlilik uygulamalarını, toplanan verilerin niteliğini ve kullanıcı haklarını açıklamaktadır.
+          </p>
+          <p>
+            Uygulamamızı yükleyerek veya kullanarak, bu politikada belirtilen veri işleme esaslarını kabul etmiş olursunuz. Politikamız; <strong>KVKK (6698 Sayılı Kişisel Verilerin Korunması Kanunu)</strong>, <strong>GDPR (Genel Veri Koruma Tüzüğü)</strong> ve <strong>Google Play Geliştirici Politikaları</strong> ile tam uyumlu olarak hazırlanmıştır.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">02</div>
+          <div class="section-title">İstenen Cihaz İzinleri ve Kullanım Amaçları</div>
+        </div>
+        <div class="section-body">
+          <p>Uygulamanın temel ölçüm fonksiyonlarını yerine getirebilmesi için aşağıdaki donanımsal izinler talep edilir:</p>
+          <ul>
+            <li><strong>Kamera İzni (android.permission.CAMERA):</strong> Artırılmış gerçeklik (AR) ve optik mesafe tespiti için canlı kamera önizlemesini ekranda göstermek amacıyla kullanılır. Kamera görüntüsü anlık olarak sadece cihazınızın RAM belleğinde işlenir, harici hiçbir sunucuya iletilmez.</li>
+            <li><strong>Sensör İzinleri (Jiroskop & İvmeölçer):</strong> Telefonun eğim açısını (Pitch/Roll) ve 2D su terazisi paralelliğini hesaplayarak optik perspektif sapmalarını gidermek için kullanılır. Biyometrik veya sağlık verisi toplanmaz.</li>
+            <li><strong>Depolama / Dosya Paylaşım İzni:</strong> Oluşturduğunuz ölçüm raporlarını (PDF, CSV veya Alıntı Kartı) cihazınıza kaydetmeniz ve WhatsApp/E-posta ile paylaşabilmeniz için kullanılır.</li>
+          </ul>
+
+          <div class="highlight-box">
+            <p><strong>Önemli Güvence:</strong> Kamera ve sensör izinleri hiçbir koşulda arka planda veya kullanıcı uygulamanın dışındayken çalışmaz.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">03</div>
+          <div class="section-title">Veri Toplama, Saklama ve Güvenlik</div>
+        </div>
+        <div class="section-body">
+          <p>
+            <strong>AR Precision Ruler</strong> mimarisi "Privacy by Design" (Tasarım Gereği Gizlilik) prensibiyle inşa edilmiştir:
+          </p>
+          <ul>
+            <li><strong>Kişisel Kimlik Bilgileri:</strong> İsim, soyisim, telefon numarası, T.C. kimlik no veya e-posta gibi kişisel veriler uygulama tarafından talep edilmez veya toplanmaz.</li>
+            <li><strong>Ölçüm Geçmişi ve Kayıtlar:</strong> Yaptığınız ölçümler, notlar ve ekran fotoğrafları yalnızca cihazınızdaki şifreli yerel depolama alanında tutulur. Uygulamayı sildiğinizde bu veriler cihazınızdan tamamen silinir.</li>
+            <li><strong>Üçüncü Taraf Paylaşımı:</strong> Ölçüm verileriniz hiçbir reklam veren, analitik şirketi veya üçüncü taraf kurum ile satılmaz veya paylaşılmaz.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Section 4 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">04</div>
+          <div class="section-title">Çocukların Gizliliği (COPPA Uyumluluğu)</div>
+        </div>
+        <div class="section-body">
+          <p>
+            Uygulamamız 13 yaşın (veya geçerli yargı alanındaki asgari yaşın) altındaki çocukları hedeflememektedir ve çocuklardan bilerek herhangi bir kişisel veri toplamamaktadır. Tüm ölçüm özellikleri her yaştan kullanıcı için güvenli ve reklamsız bir çevrimdışı çalışma prensibine sahiptir.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section 5 -->
+      <div class="section-card">
+        <div class="section-header">
+          <div class="section-number">05</div>
+          <div class="section-title">Kullanıcı Hakları ve Politika Değişiklikleri</div>
+        </div>
+        <div class="section-body">
+          <p>
+            Kullanıcılar diledikleri zaman cihaz ayarlarından kamera ve sensör izinlerini iptal edebilir veya uygulama içindeki <em>Geçmişi Temizle</em> fonksiyonuyla tüm kayıtlı ölçüm verilerini anında silebilirler.
+          </p>
+          <p>
+            Gizlilik politikamız yasal düzenlemeler veya yeni özellikler doğrultusunda güncellenebilir. Güncellemeler bu sayfa üzerinden kamuoyuna duyurulacaktır.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Card -->
+    <div class="contact-card">
+      <div class="contact-title">Sorularınız veya Geri Bildiriminiz mi Var?</div>
+      <div class="contact-desc">
+        Gizlilik politikamız veya veri güvenliği süreçlerimiz hakkında her türlü soru, öneri ve talepleriniz için resmi iletişim adresimiz üzerinden bize doğrudan ulaşabilirsiniz.
+      </div>
+      <a href="mailto:muhammetatmaca79@gmail.com?subject=AR%20Precision%20Ruler%20Gizlilik%20Hakk%C4%B1nda" class="contact-email-btn">
+        ✉️ muhammetatmaca79@gmail.com
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Virelon Soft. Tüm hakları saklıdır. • Paket: com.virelon.ruler</p>
+    </footer>
+  </div>
+</body>
+</html>
