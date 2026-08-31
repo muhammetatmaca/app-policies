@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy & Security Standards — PairPlay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #070913;
+      --bg-card: rgba(18, 24, 38, 0.75);
+      --bg-card-hover: rgba(28, 36, 56, 0.85);
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(99, 102, 241, 0.3);
+      --primary: #6366F1;
+      --primary-glow: rgba(99, 102, 241, 0.4);
+      --secondary: #EC4899;
+      --accent: #38BDF8;
+      --success: #10B981;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-sub: #64748B;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.7;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 85% 60%, rgba(236, 72, 153, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 50% 90%, rgba(56, 189, 248, 0.1) 0%, transparent 50%);
+      background-attachment: fixed;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(7, 9, 19, 0.8);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      color: #FFF;
+      box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, #FFFFFF, #E2E8F0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lang-toggle-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .lang-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--primary);
+    }
+
+    /* Main Container & Grid */
+    .layout-wrapper {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 900px) {
+      .layout-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        display: none;
+      }
+    }
+
+    /* Sticky Sidebar Navigation */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+    }
+
+    .sidebar-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateX(4px);
+    }
+
+    /* Content Area */
+    .content-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-badge-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(16, 185, 129, 0.15);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .hero-badge.blue {
+      background: rgba(56, 189, 248, 0.15);
+      color: #38BDF8;
+      border-color: rgba(56, 189, 248, 0.3);
+    }
+
+    .doc-title {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .doc-subtitle {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .h2-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(99, 102, 241, 0.15);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    /* Permission Grid & Feature Cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .feature-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .feature-box:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+
+    .feature-box h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-box p {
+      font-size: 13px;
+      color: var(--text-sub);
+      margin-bottom: 0;
+    }
+
+    /* Highlight Alert Box */
+    .callout {
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.05));
+      border: 1px solid var(--border-accent);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      position: relative;
+    }
+
+    .callout h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #A5B4FC;
+      margin-bottom: 8px;
+    }
+
+    .callout p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #CBD5E1;
+    }
+
+    /* Architecture Monospace Pills */
+    .mono-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2px 8px;
+      border-radius: 6px;
+      color: #38BDF8;
+    }
+
+    /* Contact & Form Section */
+    .contact-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .contact-row a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-row a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      color: var(--text-sub);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header>
+    <a href="#" class="brand-group">
+      <div class="brand-logo">▶</div>
+      <div class="brand-title">PairPlay</div>
+    </a>
+    <div class="header-actions">
+      <button class="lang-toggle-btn" onclick="toggleLanguage()">
+        <span id="lang-flag">🇹🇷</span>
+        <span id="lang-label">Türkçe'ye Geç</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <div class="layout-wrapper">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-title" id="nav-title">İçindekiler / Navigation</div>
+      <ul class="nav-list">
+        <li><a href="#overview" class="nav-link">1. Genel Bakış & Felsefe</a></li>
+        <li><a href="#data-collected" class="nav-link">2. Toplanan & İşlenen Veriler</a></li>
+        <li><a href="#realtime-telemetry" class="nav-link">3. Canlı Eşzamanlama (Telemetry)</a></li>
+        <li><a href="#permissions" class="nav-link">4. Uygulama İzinleri</a></li>
+        <li><a href="#third-parties" class="nav-link">5. Altyapı & Sunucular</a></li>
+        <li><a href="#children" class="nav-link">6. Çocukların Gizliliği</a></li>
+        <li><a href="#data-deletion" class="nav-link">7. Veri Silme & Haklar</a></li>
+        <li><a href="#contact" class="nav-link">8. İletişim & Geliştirici</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="content-card">
+      
+      <div class="hero-badge-wrap">
+        <div class="hero-badge">
+          <span>●</span> Google Play 2026 Uyumlu
+        </div>
+        <div class="hero-badge blue">
+          <span>🛡️</span> GDPR & CCPA Standardı
+        </div>
+        <div class="hero-badge">
+          <span>🔒</span> Sıfır Veri Depolama (Zero-Storage)
+        </div>
+      </div>
+
+      <h1 class="doc-title" id="doc-main-title">Gizlilik Politikası & Güvenlik Standartları</h1>
+      <div class="doc-subtitle" id="doc-sub-title">
+        Son Güncelleme: 31 Ağustos 2026 • Versiyon 1.0.0 • Geliştirici: Virelon Soft
+      </div>
+
+      <!-- Section 1: Overview -->
+      <section id="overview">
+        <h2><span class="h2-icon">📖</span> <span id="s1-title">1. Genel Bakış ve Gizlilik Felsefemiz</span></h2>
+        <p id="s1-p1">
+          <strong>PairPlay</strong> ("biz", "uygulamamız"), <strong>Virelon Soft</strong> tarafından geliştirilmiş, iki kullanıcının dünyanın neresinde olurlarsa olsunlar aynı video veya filmi <strong>0 milisaniye gecikme ile eşzamanlı</strong> izlemelerini sağlayan yeni nesil bir medya senkronizasyon platformudur.
+        </p>
+        <div class="callout">
+          <h4 id="s1-callout-h">Temel İlkemiz: "En Güvenli Veri, Hiç Toplanmayan Veridir"</h4>
+          <p id="s1-callout-p">PairPlay'i kullanırken hesap oluşturmanız, e-posta vermeniz, telefon numarası kaydetmeniz veya profil fotoğrafı yüklemeniz istenmez. Tüm odalar geçicidir ve oturum kapandığı an yok edilir.</p>
+        </div>
+      </section>
+
+      <!-- Section 2: Data Collected -->
+      <section id="data-collected">
+        <h2><span class="h2-icon">📊</span> <span id="s2-title">2. Toplanan ve İşlenen Veriler</span></h2>
+        <p id="s2-p1">PairPlay, kullanıcılarının kişisel kimliğini ortaya çıkaracak hiçbir hassas veri toplamamaktadır:</p>
+        
+        <div class="card-grid">
+          <div class="feature-box">
+            <h3 id="card1-h">❌ Kimlik & Hesap Bilgileri</h3>
+            <p id="card1-p">Ad, soyad, e-posta, şifre, telefon ve profil bilgileri asla istenmez ve toplanmaz.</p>
+          </div>
+          <div class="feature-box">
+            <h3 id="card2-h">❌ Konum & GPS Verisi</h3>
+            <p id="card2-p">Cihazınızın coğrafi GPS konumu veya hareket verileri asla okunmaz.</p>
+          </div>
+          <div class="feature-box">
+            <h3 id="card3-h">❌ Finansal & Ödeme Verisi</h3>
+            <p id="card3-p">Kredi kartı veya banka bilgisi talep edilmez, ödeme verileri cihazda saklanmaz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Realtime Telemetry -->
+      <section id="realtime-telemetry">
+        <h2><span class="h2-icon">⚡</span> <span id="s3-title">3. Canlı Eşzamanlama (Playback Telemetry)</span></h2>
+        <p id="s3-p1">
+          PairPlay'in çalışabilmesi için iki cihaz arasında yalnızca saf oynatma kontrol sinyalleri iletilir:
+        </p>
+        <ul style="padding-left: 20px; color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
+          <li id="li-t1"><strong>Oynatma Durumu:</strong> <span class="mono-pill">PLAY</span>, <span class="mono-pill">PAUSE</span>, <span class="mono-pill">SEEK</span> durum sinyalleri.</li>
+          <li id="li-t2"><strong>Milisaniye Zaman Damgası:</strong> Videonun hangi saniyede olduğunu gösteren sayısal değer (Örn: <span class="mono-pill">124.52s</span>).</li>
+          <li id="li-t3"><strong>Oda Kodu:</strong> 6 haneli rastgele üretilen geçici oda oturum anahtarı (Örn: <span class="mono-pill">K94X2M</span>).</li>
+        </ul>
+        <p id="s3-p2">
+          Bu telemetri paketleri bellekten anında iletilir ve sunucularda hiçbir zaman kalıcı olarak <strong>kaydedilmez veya diskte saklanmaz</strong>.
+        </p>
+      </section>
+
+      <!-- Section 4: Permissions -->
+      <section id="permissions">
+        <h2><span class="h2-icon">🔐</span> <span id="s4-title">4. Uygulama İzinleri & Kullanım Amacı</span></h2>
+        <p id="s4-p1">PairPlay yalnızca temel özelliklerinin çalışması için gereken minimum izinleri talep eder:</p>
+
+        <div class="card-grid">
+          <div class="feature-box">
+            <h3 id="perm1-h">📁 Galeri & Medya Erişimi</h3>
+            <p id="perm1-p">Yalnızca siz kendi galerinizden partnerinizle izlemek için bir video seçtiğinizde devreye girer. Cihazınızdaki diğer dosyalara asla erişilmez.</p>
+          </div>
+          <div class="feature-box">
+            <h3 id="perm2-h">🌐 İnternet & Ağ Erişimi</h3>
+            <p id="perm2-p">Eşzamanlı oynatma sinyallerini (WebSocket / Supabase) iletmek ve web videolarını yüklemek için gereklidir.</p>
+          </div>
+          <div class="feature-box">
+            <h3 id="perm3-h">📳 Titreşim (Haptics)</h3>
+            <p id="perm3-p">Video bağlandığında veya oda kurulduğunda kullanıcıya dokunsal geri bildirim sağlamak için kullanılır.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Third Parties -->
+      <section id="third-parties">
+        <h2><span class="h2-icon">☁️</span> <span id="s5-title">5. Altyapı Sağlayıcıları & Sunucu Standartları</span></h2>
+        <p id="s5-p1">Hızlı ve güvenli küresel bağlantı için endüstri standardı altyapı sağlayıcıları kullanılır:</p>
+        <ul style="padding-left: 20px; color: var(--text-muted); font-size: 14px; margin-bottom: 16px;">
+          <li><strong>Supabase Realtime Broadcast:</strong> TLS 1.3 şifrelemeli geçici soket veri iletimi.</li>
+          <li><strong>Render Cloud Infrastructure:</strong> Canlı WSS WebSocket relay kümesi.</li>
+          <li><strong>Google Play Services:</strong> SDK 36 güvenlik ve hata raporlama bileşenleri.</li>
+        </ul>
+      </section>
+
+      <!-- Section 6: Children's Privacy -->
+      <section id="children">
+        <h2><span class="h2-icon">👶</span> <span id="s6-title">6. Çocukların Gizliliği (COPPA)</span></h2>
+        <p id="s6-p1">
+          Uygulamamız 13 yaşın altındaki çocuklardan bilerek ve isteyerek hiçbir veri toplamamaktadır. Hesap oluşturma zorunluluğu bulunmadığından yaş ayrımı yapılmaksızın tüm kullanıcıların gizliliği en üst düzeyde korunur.
+        </p>
+      </section>
+
+      <!-- Section 7: Data Deletion -->
+      <section id="data-deletion">
+        <h2><span class="h2-icon">🗑️</span> <span id="s7-title">7. Veri Saklama Süresi ve Veri Silme Hakları</span></h2>
+        <p id="s7-p1">
+          PairPlay kalıcı bir veritabanı veya kullanıcı tablosu tutmadığından, oturum sonlandığında telemetri verileri anında silinir. Galeriden geçici yüklenen videolar oturum bittiğinde sunuculardan otomatik olarak imha edilir.
+        </p>
+      </section>
+
+      <!-- Section 8: Contact -->
+      <section id="contact">
+        <h2><span class="h2-icon">📬</span> <span id="s8-title">8. İletişim & Yasal Başvuru</span></h2>
+        <p id="s8-p1">Gizlilik politikamız veya veri güvenliği ile ilgili her türlü soru, öneri ve talepleriniz için:</p>
+        
+        <div class="contact-card">
+          <div class="contact-row">
+            <strong>🏢 Geliştirici & Yayıncı:</strong> <span>Virelon Soft</span>
+          </div>
+          <div class="contact-row">
+            <strong>📧 Destek E-Postası:</strong> <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a>
+          </div>
+          <div class="contact-row">
+            <strong>🌐 Canlı Politika Bağlantısı:</strong> <a href="https://muhammetatmaca.github.io/app-policies/pairplaypolicies.html" target="_blank">https://muhammetatmaca.github.io/app-policies/pairplaypolicies.html</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 PairPlay by Virelon Soft. All rights reserved. • Built with Privacy-by-Design Standards.
+  </footer>
+
+  <script>
+    let currentLang = 'tr';
+
+    const translations = {
+      en: {
+        flag: '🇹🇷',
+        btnText: "Türkçe'ye Geç",
+        navTitle: 'Table of Contents',
+        n1: '1. Overview & Philosophy',
+        n2: '2. Data Processed',
+        n3: '3. Realtime Telemetry',
+        n4: '4. App Permissions',
+        n5: '5. Infrastructure & Cloud',
+        n6: "6. Children's Privacy",
+        n7: '7. Data Deletion Rights',
+        n8: '8. Contact & Developer',
+        mainTitle: 'Privacy Policy & Security Standards',
+        subTitle: 'Last Updated: August 31, 2026 • Version 1.0.0 • Developer: Virelon Soft',
+        s1Title: '1. Overview & Privacy Philosophy',
+        s1P1: '<strong>PairPlay</strong> ("we", "our app"), developed by <strong>Virelon Soft</strong>, is a next-generation media synchronization platform enabling two users anywhere in the world to watch videos and movies with <strong>0ms latency</strong> simultaneously.',
+        calloutH: 'Core Philosophy: "The Most Secure Data Is The Data Never Collected"',
+        calloutP: 'PairPlay requires no account creation, email address, phone number, or profile photo. All watch rooms are ephemeral and automatically destroyed when the session ends.',
+        s2Title: '2. Collected and Processed Data',
+        s2P1: 'PairPlay does not collect any sensitive personal identifiable information (PII):',
+        c1H: '❌ Identity & Accounts',
+        c1P: 'No name, surname, email, password, phone, or profile data is ever requested or collected.',
+        c2H: '❌ Location & GPS',
+        c2P: 'Your geographic GPS location or movement data is never accessed or monitored.',
+        c3H: '❌ Financial Data',
+        c3P: 'No credit card or banking details are requested, stored, or processed.',
+        s3Title: '3. Real-Time Playback Telemetry',
+        s3P1: 'To keep video playback perfectly synchronized between 2 participants, only numerical state packets are transmitted:',
+        t1: '<strong>Playback State:</strong> <span class="mono-pill">PLAY</span>, <span class="mono-pill">PAUSE</span>, <span class="mono-pill">SEEK</span> commands.',
+        t2: '<strong>Millisecond Timestamps:</strong> Numerical progress indicator (e.g. <span class="mono-pill">124.52s</span>).',
+        t3: '<strong>Room Key:</strong> 6-character random ephemeral session code (e.g. <span class="mono-pill">K94X2M</span>).',
+        s3P2: 'These packets are relayed in-memory and <strong>never written to permanent disk storage or retained</strong>.',
+        s4Title: '4. Application Permissions & Purpose',
+        s4P1: 'PairPlay only requests essential Android permissions necessary for core operation:',
+        p1H: '📁 Gallery & Media',
+        p1P: 'Only activated when you explicitly choose a video file from your gallery to stream to your partner. No other files are accessed.',
+        p2H: '🌐 Internet & Network',
+        p2P: 'Required to transmit synchronization packets (WebSocket / Supabase) and stream web videos.',
+        p3H: '📳 Haptics & Vibration',
+        p3P: 'Provides tactile feedback during playback interactions and room connections.',
+        s5Title: '5. Infrastructure Providers',
+        s5P1: 'We use industry-standard global relay infrastructure:',
+        s6Title: "6. Children's Privacy (COPPA)",
+        s6P1: 'Our service does not knowingly collect or solicit personal data from children under 13 years of age. With no user accounts required, all users receive maximum privacy protection.',
+        s7Title: '7. Data Retention & Deletion Rights',
+        s7P1: 'Because PairPlay operates without persistent user accounts or logs, all telemetry is discarded immediately upon session closure.',
+        s8Title: '8. Contact & Legal Inquiry',
+        s8P1: 'For questions, suggestions, or data security requests, please reach us at:'
+      },
+      tr: {
+        flag: '🇬🇧',
+        btnText: 'Switch to English',
+        navTitle: 'İçindekiler / Navigation',
+        n1: '1. Genel Bakış & Felsefe',
+        n2: '2. Toplanan & İşlenen Veriler',
+        n3: '3. Canlı Eşzamanlama (Telemetry)',
+        n4: '4. Uygulama İzinleri',
+        n5: '5. Altyapı & Sunucular',
+        n6: '6. Çocukların Gizliliği',
+        n7: '7. Veri Silme & Haklar',
+        n8: '8. İletişim & Geliştirici',
+        mainTitle: 'Gizlilik Politikası & Güvenlik Standartları',
+        subTitle: 'Son Güncelleme: 31 Ağustos 2026 • Versiyon 1.0.0 • Geliştirici: Virelon Soft',
+        s1Title: '1. Genel Bakış ve Gizlilik Felsefemiz',
+        s1P1: '<strong>PairPlay</strong> ("biz", "uygulamamız"), <strong>Virelon Soft</strong> tarafından geliştirilmiş, iki kullanıcının dünyanın neresinde olurlarsa olsunlar aynı video veya filmi <strong>0 milisaniye gecikme ile eşzamanlı</strong> izlemelerini sağlayan yeni nesil bir medya senkronizasyon platformudur.',
+        calloutH: 'Temel İlkemiz: "En Güvenli Veri, Hiç Toplanmayan Veridir"',
+        calloutP: 'PairPlay\'i kullanırken hesap oluşturmanız, e-posta vermeniz, telefon numarası kaydetmeniz veya profil fotoğrafı yüklemeniz istenmez. Tüm odalar geçicidir ve oturum kapandığı an yok edilir.',
+        s2Title: '2. Toplanan ve İşlenen Veriler',
+        s2P1: 'PairPlay, kullanıcılarının kişisel kimliğini ortaya çıkaracak hiçbir hassas veri toplamamaktadır:',
+        c1H: '❌ Kimlik & Hesap Bilgileri',
+        c1P: 'Ad, soyad, e-posta, şifre, telefon ve profil bilgileri asla istenmez ve toplanmaz.',
+        c2H: '❌ Konum & GPS Verisi',
+        c2P: 'Cihazınızın coğrafi GPS konumu veya hareket verileri asla okunmaz.',
+        c3H: '❌ Finansal & Ödeme Verisi',
+        c3P: 'Kredi kartı veya banka bilgisi talep edilmez, ödeme verileri cihazda saklanmaz.',
+        s3Title: '3. Canlı Eşzamanlama (Playback Telemetry)',
+        s3P1: 'PairPlay\'in çalışabilmesi için iki cihaz arasında yalnızca saf oynatma kontrol sinyalleri iletilir:',
+        t1: '<strong>Oynatma Durumu:</strong> <span class="mono-pill">PLAY</span>, <span class="mono-pill">PAUSE</span>, <span class="mono-pill">SEEK</span> durum sinyalleri.',
+        t2: '<strong>Milisaniye Zaman Damgası:</strong> Videonun hangi saniyede olduğunu gösteren sayısal değer (Örn: <span class="mono-pill">124.52s</span>).',
+        t3: '<strong>Oda Kodu:</strong> 6 haneli rastgele üretilen geçici oda oturum anahtarı (Örn: <span class="mono-pill">K94X2M</span>).',
+        s3P2: 'Bu telemetri paketleri bellekten anında iletilir ve sunucularda hiçbir zaman kalıcı olarak <strong>kaydedilmez veya diskte saklanmaz</strong>.',
+        s4Title: '4. Uygulama İzinleri & Kullanım Amacı',
+        s4P1: 'PairPlay yalnızca temel özelliklerinin çalışması için gereken minimum izinleri talep eder:',
+        p1H: '📁 Galeri & Medya Erişimi',
+        p1P: 'Yalnızca siz kendi galerinizden partnerinizle izlemek için bir video seçtiğinizde devreye girer. Cihazınızdaki diğer dosyalara asla erişilmez.',
+        p2H: '🌐 İnternet & Ağ Erişimi',
+        p2P: 'Eşzamanlı oynatma sinyallerini (WebSocket / Supabase) iletmek ve web videolarını yüklemek için gereklidir.',
+        p3H: '📳 Titreşim (Haptics)',
+        p3P: 'Video bağlandığında veya oda kurulduğunda kullanıcıya dokunsal geri bildirim sağlamak için kullanılır.',
+        s5Title: '5. Altyapı Sağlayıcıları & Sunucu Standartları',
+        s5P1: 'Hızlı ve güvenli küresel bağlantı için endüstri standardı altyapı sağlayıcıları kullanılır:',
+        s6Title: '6. Çocukların Gizliliği (COPPA)',
+        s6P1: 'Uygulamamız 13 yaşın altındaki çocuklardan bilerek ve isteyerek hiçbir veri toplamamaktadır. Hesap oluşturma zorunluluğu bulunmadığından yaş ayrımı yapılmaksızın tüm kullanıcıların gizliliği en üst düzeyde korunur.',
+        s7Title: '7. Veri Saklama Süresi ve Veri Silme Hakları',
+        s7P1: 'PairPlay kalıcı bir veritabanı veya kullanıcı tablosu tutmadığından, oturum sonlandığında telemetri verileri anında silinir. Galeriden geçici yüklenen videolar oturum bittiğinde sunuculardan otomatik olarak imha edilir.',
+        s8Title: '8. İletişim & Yasal Başvuru',
+        s8P1: 'Gizlilik politikamız veya veri güvenliği ile ilgili her türlü soru, öneri ve talepleriniz için:'
+      }
+    };
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      const t = translations[currentLang];
+
+      document.getElementById('lang-flag').textContent = t.flag;
+      document.getElementById('lang-label').textContent = t.btnText;
+      document.getElementById('nav-title').textContent = t.navTitle;
+      document.getElementById('doc-main-title').textContent = t.mainTitle;
+      document.getElementById('doc-sub-title').textContent = t.subTitle;
+
+      document.getElementById('s1-title').textContent = t.s1Title;
+      document.getElementById('s1-p1').innerHTML = t.s1P1;
+      document.getElementById('s1-callout-h').textContent = t.calloutH;
+      document.getElementById('s1-callout-p').textContent = t.calloutP;
+
+      document.getElementById('s2-title').textContent = t.s2Title;
+      document.getElementById('s2-p1').textContent = t.s2P1;
+      document.getElementById('card1-h').textContent = t.c1H;
+      document.getElementById('card1-p').textContent = t.c1P;
+      document.getElementById('card2-h').textContent = t.c2H;
+      document.getElementById('card2-p').textContent = t.c2P;
+      document.getElementById('card3-h').textContent = t.c3H;
+      document.getElementById('card3-p').textContent = t.c3P;
+
+      document.getElementById('s3-title').textContent = t.s3Title;
+      document.getElementById('s3-p1').textContent = t.s3P1;
+      document.getElementById('li-t1').innerHTML = t.t1;
+      document.getElementById('li-t2').innerHTML = t.t2;
+      document.getElementById('li-t3').innerHTML = t.t3;
+      document.getElementById('s3-p2').innerHTML = t.s3P2;
+
+      document.getElementById('s4-title').textContent = t.s4Title;
+      document.getElementById('s4-p1').textContent = t.s4P1;
+      document.getElementById('perm1-h').textContent = t.p1H;
+      document.getElementById('perm1-p').textContent = t.p1P;
+      document.getElementById('perm2-h').textContent = t.p2H;
+      document.getElementById('perm2-p').textContent = t.p2P;
+      document.getElementById('perm3-h').textContent = t.p3H;
+      document.getElementById('perm3-p').textContent = t.p3P;
+
+      document.getElementById('s5-title').textContent = t.s5Title;
+      document.getElementById('s5-p1').textContent = t.s5P1;
+      document.getElementById('s6-title').textContent = t.s6Title;
+      document.getElementById('s6-p1').textContent = t.s6P1;
+      document.getElementById('s7-title').textContent = t.s7Title;
+      document.getElementById('s7-p1').textContent = t.s7P1;
+      document.getElementById('s8-title').textContent = t.s8Title;
+      document.getElementById('s8-p1').textContent = t.s8P1;
+    }
+  </script>
+</body>
+</html>
+
