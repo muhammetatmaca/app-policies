@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CalmTouch - Resmi Gizlilik Politikası (Official Privacy Policy)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #020617;
+      --card-bg: rgba(11, 19, 38, 0.72);
+      --card-border: rgba(255, 255, 255, 0.09);
+      --card-border-glow: rgba(0, 240, 216, 0.35);
+      --primary: #00F0D8;
+      --primary-rgb: 0, 240, 216;
+      --secondary: #10B981;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --accent-purple: #C084FC;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Fixed Animated Dot-Matrix Canvas Background */
+    #dot-matrix-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+
+    /* Radial Ambient Color Lights */
+    .ambient-light-cyan {
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(0, 240, 216, 0.09) 0%, transparent 70%);
+      filter: blur(100px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .ambient-light-emerald {
+      position: fixed;
+      bottom: -150px;
+      right: 5%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.07) 0%, transparent 70%);
+      filter: blur(100px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Sticky Top Header Bar */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background: rgba(2, 6, 23, 0.8);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .brand-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(0, 240, 216, 0.2) 0%, rgba(16, 185, 129, 0.1) 100%);
+      border: 1.5px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-weight: 900;
+      font-size: 20px;
+      box-shadow: 0 0 20px rgba(0, 240, 216, 0.3);
+    }
+
+    .brand-text-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 100px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--secondary);
+    }
+
+    .status-dot-pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--secondary);
+      box-shadow: 0 0 10px var(--secondary);
+      animation: pulse-dot 2s infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+    }
+
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+    }
+
+    .lang-btn {
+      padding: 6px 14px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .lang-btn.active {
+      background: #FFFFFF;
+      color: #000000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Main Page Container & Layout */
+    .page-layout {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 100px 24px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    @media (max-width: 960px) {
+      .page-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .sidebar-toc {
+        display: none;
+      }
+    }
+
+    /* Sticky Sidebar Table of Contents */
+    .sidebar-toc {
+      position: sticky;
+      top: 100px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 24px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .toc-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .toc-link {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 10px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      line-height: 1.4;
+    }
+
+    .toc-link:hover, .toc-link.active {
+      color: #FFFFFF;
+      background: rgba(0, 240, 216, 0.1);
+      border-left: 3px solid var(--primary);
+      padding-left: 14px;
+    }
+
+    /* Main Content Area */
+    .content-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    /* Hero Section */
+    .hero-header {
+      padding-bottom: 12px;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border-radius: 100px;
+      background: rgba(0, 240, 216, 0.1);
+      border: 1px solid rgba(0, 240, 216, 0.3);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero-h1 {
+      font-size: 44px;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 16px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 80%, #94A3B8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      font-size: 17px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Glass Cards */
+    .glass-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 28px;
+      padding: 36px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .glass-card:hover {
+      border-color: var(--card-border-glow);
+      box-shadow: 0 20px 50px rgba(0, 240, 216, 0.08);
+    }
+
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .card-icon-bubble {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: rgba(0, 240, 216, 0.12);
+      border: 1px solid rgba(0, 240, 216, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      color: var(--primary);
+    }
+
+    .card-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
+
+    p {
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, 0.82);
+      margin-bottom: 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* High-Tech Grid Matrix Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .feature-item-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 22px;
+      transition: all 0.25s ease;
+    }
+
+    .feature-item-box:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(0, 240, 216, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .feature-item-title {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .feature-item-desc {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* High-Tech Key-Value Specs Table */
+    .spec-table-box {
+      margin-top: 20px;
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .spec-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--card-border);
+      font-size: 14px;
+    }
+
+    .spec-row:last-child {
+      border-bottom: none;
+    }
+
+    .spec-key {
+      font-weight: 700;
+      color: var(--primary);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+    }
+
+    .spec-val {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    @media (max-width: 640px) {
+      .spec-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+
+    /* Custom Alert Note Box */
+    .note-box {
+      margin-top: 20px;
+      background: rgba(0, 240, 216, 0.06);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 16px 16px 0;
+      padding: 18px 24px;
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Bullet List Items with Neon Glows */
+    .custom-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 16px 0;
+    }
+
+    .custom-bullets li {
+      position: relative;
+      padding-left: 28px;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .custom-bullets li::before {
+      content: "✦";
+      position: absolute;
+      left: 6px;
+      color: var(--primary);
+      font-size: 14px;
+      top: 0;
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      z-index: 10;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-dim);
+      font-size: 13.5px;
+    }
+
+    @media (max-width: 640px) {
+      footer {
+        flex-direction: column;
+        gap: 14px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Fixed Interactive Dot-Matrix Canvas -->
+  <canvas id="dot-matrix-canvas"></canvas>
+  
+  <div class="ambient-light-cyan"></div>
+  <div class="ambient-light-emerald"></div>
+
+  <!-- Sticky Top Navigation -->
+  <nav class="top-nav">
+    <div class="nav-inner">
+      <a href="#" class="brand-group">
+        <div class="brand-icon-box">C</div>
+        <div class="brand-text-col">
+          <span class="brand-title">CALMTOUCH</span>
+          <span class="brand-tagline">VAGUS NERVE & BIOFEEDBACK</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <div class="status-badge">
+          <div class="status-dot-pulse"></div>
+          <span data-i18n="badgeCompliant">GOOGLE PLAY 2026 UYUMLU</span>
+        </div>
+
+        <div class="lang-switcher">
+          <button class="lang-btn active" onclick="setLanguage('tr')">TR 🇹🇷</button>
+          <button class="lang-btn" onclick="setLanguage('en')">EN 🇺🇸</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Main Layout -->
+  <main class="page-layout">
+    <!-- Sticky Table of Contents Sidebar -->
+    <aside class="sidebar-toc">
+      <div class="toc-title">
+        <span>📑</span> <span data-i18n="tocTitle">İçindekiler</span>
+      </div>
+      <ul class="toc-list">
+        <li><a href="#section-1" class="toc-link" data-i18n="toc1">1. Sıfır Veri Depolama</a></li>
+        <li><a href="#section-2" class="toc-link" data-i18n="toc2">2. İşlenen Biyometrik Veriler</a></li>
+        <li><a href="#section-3" class="toc-link" data-i18n="toc3">3. Donanım İzinleri Matrisi</a></li>
+        <li><a href="#section-4" class="toc-link" data-i18n="toc4">4. Üçüncü Taraf & Telemetri</a></li>
+        <li><a href="#section-5" class="toc-link" data-i18n="toc5">5. Çocukların Gizliliği (COPPA)</a></li>
+        <li><a href="#section-6" class="toc-link" data-i18n="toc6">6. Kullanıcı Hakları & Silme</a></li>
+        <li><a href="#section-7" class="toc-link" data-i18n="toc7">7. Güvenlik ve Şifreleme</a></li>
+        <li><a href="#section-8" class="toc-link" data-i18n="toc8">8. İletişim & Geliştirici</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Stream -->
+    <div class="content-stream">
+      <section class="hero-header">
+        <div class="hero-badge-pill">
+          <span>●</span> <span data-i18n="heroBadge">%100 Yerel Cihaz İçi Veri Güvenliği</span>
+        </div>
+        <h1 class="hero-h1" data-i18n="heroTitle">Gizlilik Politikası</h1>
+        <p class="hero-lead" data-i18n="heroLead">
+          CalmTouch olarak kişisel sağlığınızı ve zihinsel dinginliğinizi korurken, mahremiyetinizden ödün vermemeniz gerektiğine inanıyoruz. Bu belge, uygulamamızın sıfır veri toplama ilkelerini ve teknik şeffaflık standartlarını açıklamaktadır.
+        </p>
+      </section>
+
+      <!-- Section 1 -->
+      <article id="section-1" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">🛡️</div>
+          <h2 class="card-title" data-i18n="s1Title">1. Sıfır Veri Depolama & Yerel Mimari Garantisi</h2>
+        </div>
+        <p data-i18n="s1P1">
+          CalmTouch, <strong>"Zero-Knowledge" (Sıfır Bilgi)</strong> ve <strong>"Local-First" (Önce Yerel)</strong> mimari prensipleriyle geliştirilmiştir. Uygulamamızın çekirdek çalışma felsefesi şunları garanti eder:
+        </p>
+        <ul class="custom-bullets">
+          <li data-i18n="s1Li1"><strong>Hesap Kaydı İstenmez:</strong> E-posta, kullanıcı adı, telefon numarası veya şifre talep edilmez.</li>
+          <li data-i18n="s1Li2"><strong>Bulut Sunucusu Yoktur:</strong> Biyometrik verileriniz, seans geçmişiniz veya kişisel tercihleriniz hiçbir zaman harici bir sunucuya gönderilmez.</li>
+          <li data-i18n="s1Li3"><strong>Çevrimdışı Çalışma:</strong> Uygulamanın tüm nefes protokolleri, 25Hz haptik motoru ve 15 dilde sesli rehberlik özellikleri tamamen internet olmadan çalışır.</li>
+        </ul>
+        <div class="note-box" data-i18n="s1Note">
+          🔒 Verileriniz telefonunuzdan asla ayrılmaz. Uygulamayı sildiğinizde cihazınızdaki tüm kayıtlar kalıcı olarak silinir.
+        </div>
+      </article>
+
+      <!-- Section 2 -->
+      <article id="section-2" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">📊</div>
+          <h2 class="card-title" data-i18n="s2Title">2. İşlenen Biyometrik Veriler ve Saklama Yöntemi</h2>
+        </div>
+        <p data-i18n="s2P1">
+          Seanslarınız sırasında otonom sinir sistemi dengesini optimize etmek için geçici olarak işlenen metrikler:
+        </p>
+
+        <div class="spec-table-box">
+          <div class="spec-row">
+            <div class="spec-key" data-i18n="spec1Key">HRV (RMSSD)</div>
+            <div class="spec-val" data-i18n="spec1Val">Kalp atım değişkenliği analizi ile parasempatik vagus tonusunun ölçümü.</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key" data-i18n="spec2Key">Nabız (BPM)</div>
+            <div class="spec-val" data-i18n="spec2Val">Nefes ve dokunsal uyarım süresince dakikadaki nabız hızı değişimi.</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key" data-i18n="spec3Key">Stres İndeksi</div>
+            <div class="spec-val" data-i18n="spec3Val">Baevsky standartlarına göre hesaplanan seans öncesi/sonrası stres skoru.</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key" data-i18n="spec4Key">Depolama Konumu</div>
+            <div class="spec-val" data-i18n="spec4Val">Yalnızca telefonun şifreli yerel belleği (React Native AsyncStorage / Sandbox).</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 3 -->
+      <article id="section-3" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">⚙️</div>
+          <h2 class="card-title" data-i18n="s3Title">3. Cihaz Donanım İzinleri Matrisi</h2>
+        </div>
+        <p data-i18n="s3P1">
+          CalmTouch yalnızca temel biyometrik deneyimi sağlamak amacıyla asgari donanım izinlerini talep eder:
+        </p>
+
+        <div class="features-grid">
+          <div class="feature-item-box">
+            <div class="feature-item-title">
+              <span>🖐️</span> <span data-i18n="perm1Title">Titreşim Motoru (Haptics)</span>
+            </div>
+            <p class="feature-item-desc" data-i18n="perm1Desc">
+              25Hz somatik kedi mırıltısı frekansını ve Meissner/Pacinian reseptör ritimlerini iletmek için kullanılır.
+            </p>
+          </div>
+
+          <div class="feature-item-box">
+            <div class="feature-item-title">
+              <span>🎧</span> <span data-i18n="perm2Title">Ses Çalma (Audio Playback)</span>
+            </div>
+            <p class="feature-item-desc" data-i18n="perm2Desc">
+              Çift kulak (binaural) akustik ses manzaraları ve 15 dilde profesyonel sesli rehberlik için kullanılır.
+            </p>
+          </div>
+
+          <div class="feature-item-box">
+            <div class="feature-item-title">
+              <span>💾</span> <span data-i18n="perm3Title">Dahili Hafıza (AsyncStorage)</span>
+            </div>
+            <p class="feature-item-desc" data-i18n="perm3Desc">
+              Seçtiğiniz dil, OLED tema modu ve yerel seans geçmişinizi yalnızca kendi cihazınızda saklamak için kullanılır.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section 4 -->
+      <article id="section-4" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">🚫</div>
+          <h2 class="card-title" data-i18n="s4Title">4. Üçüncü Taraf Hizmetleri ve Telemetri</h2>
+        </div>
+        <p data-i18n="s4P1">
+          Uygulamamız içerisinde hiçbir üçüncü taraf reklam SDK'sı, kullanıcı takip pikselleri veya telemetri araçları bulunmaz:
+        </p>
+        <ul class="custom-bullets">
+          <li data-i18n="s4Li1"><strong>Reklam Ağı Yoktur:</strong> Google AdMob, Unity Ads, Meta Audience Network vb. kullanılmaz.</li>
+          <li data-i18n="s4Li2"><strong>İzleme Pikselleri Yoktur:</strong> Facebook SDK, AppsFlyer veya Adjust gibi pazarlama araçları barındırılmaz.</li>
+          <li data-i18n="s4Li3"><strong>Çerez veya Web Takibi Yoktur:</strong> Kullanıcı davranışı izlenmez veya profil oluşturulmaz.</li>
+        </ul>
+      </article>
+
+      <!-- Section 5 -->
+      <article id="section-5" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">👶</div>
+          <h2 class="card-title" data-i18n="s5Title">5. Çocukların Gizliliği (COPPA & Aile Güvenliği)</h2>
+        </div>
+        <p data-i18n="s5P1">
+          CalmTouch 13 yaşın altındaki çocuklardan bilerek hiçbir kişisel bilgi toplamaz. Uygulamamız çocukların ve tüm aile bireylerinin kullanımına uygun, güvenli, reklamsız ve kapalı devre bir sağlıklı yaşam aracıdır.
+        </p>
+      </article>
+
+      <!-- Section 6 -->
+      <article id="section-6" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">⚖️</div>
+          <h2 class="card-title" data-i18n="s6Title">6. GDPR, CCPA ve KVKK Kapsamında Kullanıcı Hakları</h2>
+        </div>
+        <p data-i18n="s6P1">
+          Uluslararası veri koruma yasaları (GDPR, CCPA, KVKK) uyarınca tüm kontrol sizdedir:
+        </p>
+        <ul class="custom-bullets">
+          <li data-i18n="s6Li1"><strong>Unutulma Hakkı:</strong> Ayarlar ekranındaki <em>"Geçmişi Temizle"</em> butonuna basarak tüm seans ve biyometrik kayıtlarınızı anında kalıcı olarak silebilirsiniz.</li>
+          <li data-i18n="s6Li2"><strong>Veri İhracı:</strong> Verileriniz yalnızca cihazınızda olduğundan harici hiçbir kuruma devredilemez.</li>
+        </ul>
+      </article>
+
+      <!-- Section 7 -->
+      <article id="section-7" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">🔐</div>
+          <h2 class="card-title" data-i18n="s7Title">7. Güvenlik Standartları ve Şifreleme</h2>
+        </div>
+        <p data-i18n="s7P1">
+          Cihazınızda depolanan seans verileri, işletim sisteminin (Android / iOS) sunduğu korumalı Sandbox alanında tutulur ve başka uygulamalar tarafından erişilemez.
+        </p>
+      </article>
+
+      <!-- Section 8 -->
+      <article id="section-8" class="glass-card">
+        <div class="card-header-row">
+          <div class="card-icon-bubble">📬</div>
+          <h2 class="card-title" data-i18n="s8Title">8. İletişim ve Geliştirici Bilgileri</h2>
+        </div>
+        <p data-i18n="s8P1">
+          Gizlilik politikamız veya uygulamamızla ilgili her türlü soru, geri bildirim veya öneriniz için bizimle doğrudan iletişime geçebilirsiniz:
+        </p>
+        <div class="spec-table-box">
+          <div class="spec-row">
+            <div class="spec-key">Geliştirici & Stüdyo</div>
+            <div class="spec-val">Virelon Mobile Studio</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key">E-Posta Desteği</div>
+            <div class="spec-val">muhammetatmaca.dev@gmail.com</div>
+          </div>
+          <div class="spec-row">
+            <div class="spec-key">Yayın Adresi</div>
+            <div class="spec-val">https://muhammetatmaca.github.io/app-policies/calmtouchpolicies.html</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div>© 2026 CalmTouch. Tüm hakları saklıdır. Virelon Mobile Ecosystem.</div>
+    <div>Google Play 2026 & GDPR Tam Uyumlu</div>
+  </footer>
+
+  <!-- Dot Matrix Canvas Shader & Interaction Script -->
+  <script>
+    (function() {
+      const canvas = document.getElementById('dot-matrix-canvas');
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let mouseX = -1000, mouseY = -1000;
+      let dots = [];
+      const DOT_SPACING = 36;
+      let time = 0;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        initDots();
+      }
+
+      function initDots() {
+        dots = [];
+        const cols = Math.ceil(width / DOT_SPACING) + 1;
+        const rows = Math.ceil(height / DOT_SPACING) + 1;
+        for (let x = 0; x < cols; x++) {
+          for (let y = 0; y < rows; y++) {
+            dots.push({
+              x: x * DOT_SPACING,
+              y: y * DOT_SPACING,
+              baseRadius: 1.5,
+              phase: (x * 0.15) + (y * 0.15)
+            });
+          }
+        }
+      }
+
+      window.addEventListener('resize', resize);
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+      window.addEventListener('mouseleave', () => {
+        mouseX = -1000;
+        mouseY = -1000;
+      });
+
+      resize();
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        time += 0.02;
+
+        for (let i = 0; i < dots.length; i++) {
+          const dot = dots[i];
+          
+          // Distance from mouse
+          const dx = mouseX - dot.x;
+          const dy = mouseY - dot.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          const maxDist = 180;
+          let hoverFactor = 0;
+          if (dist < maxDist) {
+            hoverFactor = 1 - (dist / maxDist);
+          }
+
+          // Gentle sine wave pulse
+          const pulse = Math.sin(time + dot.phase) * 0.5 + 0.5;
+          const alpha = 0.15 + (pulse * 0.18) + (hoverFactor * 0.6);
+          const radius = dot.baseRadius + (pulse * 0.8) + (hoverFactor * 2.2);
+
+          // Color interpolate between cyan and emerald
+          if (hoverFactor > 0.1) {
+            ctx.fillStyle = `rgba(0, 240, 216, ${alpha})`;
+            ctx.shadowColor = '#00F0D8';
+            ctx.shadowBlur = 10 * hoverFactor;
+          } else {
+            ctx.fillStyle = `rgba(16, 185, 129, ${alpha})`;
+            ctx.shadowBlur = 0;
+          }
+
+          ctx.beginPath();
+          ctx.arc(dot.x, dot.y, radius, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+
+      draw();
+    })();
+
+    // Interactive Bilingual Language Translation Dictionary
+    const translations = {
+      tr: {
+        badgeCompliant: "GOOGLE PLAY 2026 UYUMLU",
+        tocTitle: "İçindekiler",
+        toc1: "1. Sıfır Veri Depolama",
+        toc2: "2. İşlenen Biyometrik Veriler",
+        toc3: "3. Donanım İzinleri Matrisi",
+        toc4: "4. Üçüncü Taraf & Telemetri",
+        toc5: "5. Çocukların Gizliliği (COPPA)",
+        toc6: "6. Kullanıcı Hakları & Silme",
+        toc7: "7. Güvenlik ve Şifreleme",
+        toc8: "8. İletişim & Geliştirici",
+        heroBadge: "%100 Yerel Cihaz İçi Veri Güvenliği",
+        heroTitle: "Gizlilik Politikası",
+        heroLead: "CalmTouch olarak kişisel sağlığınızı ve zihinsel dinginliğinizi korurken, mahremiyetinizden ödün vermemeniz gerektiğine inanıyoruz. Bu belge, uygulamamızın sıfır veri toplama ilkelerini ve teknik şeffaflık standartlarını açıklamaktadır.",
+        s1Title: "1. Sıfır Veri Depolama & Yerel Mimari Garantisi",
+        s1P1: "CalmTouch, <strong>'Zero-Knowledge' (Sıfır Bilgi)</strong> ve <strong>'Local-First' (Önce Yerel)</strong> mimari prensipleriyle geliştirilmiştir. Uygulamamızın çekirdek çalışma felsefesi şunları garanti eder:",
+        s1Li1: "<strong>Hesap Kaydı İstenmez:</strong> E-posta, kullanıcı adı, telefon numarası veya şifre talep edilmez.",
+        s1Li2: "<strong>Bulut Sunucusu Yoktur:</strong> Biyometrik verileriniz, seans geçmişiniz veya kişisel tercihleriniz hiçbir zaman harici bir sunucuya gönderilmez.",
+        s1Li3: "<strong>Çevrimdışı Çalışma:</strong> Uygulamanın tüm nefes protokolleri, 25Hz haptik motoru ve 15 dilde sesli rehberlik özellikleri tamamen internet olmadan çalışır.",
+        s1Note: "🔒 Verileriniz telefonunuzdan asla ayrılmaz. Uygulamayı sildiğinizde cihazınızdaki tüm kayıtlar kalıcı olarak silinir.",
+        s2Title: "2. İşlenen Biyometrik Veriler ve Saklama Yöntemi",
+        s2P1: "Seanslarınız sırasında otonom sinir sistemi dengesini optimize etmek için geçici olarak işlenen metrikler:",
+        spec1Key: "HRV (RMSSD)",
+        spec1Val: "Kalp atım değişkenliği analizi ile parasempatik vagus tonusunun ölçümü.",
+        spec2Key: "Nabız (BPM)",
+        spec2Val: "Nefes ve dokunsal uyarım süresince dakikadaki nabız hızı değişimi.",
+        spec3Key: "Stres İndeksi",
+        spec3Val: "Baevsky standartlarına göre hesaplanan seans öncesi/sonrası stres skoru.",
+        spec4Key: "Depolama Konumu",
+        spec4Val: "Yalnızca telefonun şifreli yerel belleği (React Native AsyncStorage / Sandbox).",
+        s3Title: "3. Cihaz Donanım İzinleri Matrisi",
+        s3P1: "CalmTouch yalnızca temel biyometrik deneyimi sağlamak amacıyla asgari donanım izinlerini talep eder:",
+        perm1Title: "Titreşim Motoru (Haptics)",
+        perm1Desc: "25Hz somatik kedi mırıltısı frekansını ve Meissner/Pacinian reseptör ritimlerini iletmek için kullanılır.",
+        perm2Title: "Ses Çalma (Audio Playback)",
+        perm2Desc: "Çift kulak (binaural) akustik ses manzaraları ve 15 dilde profesyonel sesli rehberlik için kullanılır.",
+        perm3Title: "Dahili Hafıza (AsyncStorage)",
+        perm3Desc: "Seçtiğiniz dil, OLED tema modu ve yerel seans geçmişinizi yalnızca kendi cihazınızda saklamak için kullanılır.",
+        s4Title: "4. Üçüncü Taraf Hizmetleri ve Telemetri",
+        s4P1: "Uygulamamız içerisinde hiçbir üçüncü taraf reklam SDK'sı, kullanıcı takip pikselleri veya telemetri araçları bulunmaz:",
+        s4Li1: "<strong>Reklam Ağı Yoktur:</strong> Google AdMob, Unity Ads, Meta Audience Network vb. kullanılmaz.",
+        s4Li2: "<strong>İzleme Pikselleri Yoktur:</strong> Facebook SDK, AppsFlyer veya Adjust gibi pazarlama araçları barındırılmaz.",
+        s4Li3: "<strong>Çerez veya Web Takibi Yoktur:</strong> Kullanıcı davranışı izlenmez veya profil oluşturulmaz.",
+        s5Title: "5. Çocukların Gizliliği (COPPA & Aile Güvenliği)",
+        s5P1: "CalmTouch 13 yaşın altındaki çocuklardan bilerek hiçbir kişisel bilgi toplamaz. Uygulamamız çocukların ve tüm aile bireylerinin kullanımına uygun, güvenli, reklamsız ve kapalı devre bir sağlıklı yaşam aracıdır.",
+        s6Title: "6. GDPR, CCPA ve KVKK Kapsamında Kullanıcı Hakları",
+        s6P1: "Uluslararası veri koruma yasaları (GDPR, CCPA, KVKK) uyarınca tüm kontrol sizdedir:",
+        s6Li1: "<strong>Unutulma Hakkı:</strong> Ayarlar ekranındaki <em>'Geçmişi Temizle'</em> butonuna basarak tüm seans ve biyometrik kayıtlarınızı anında kalıcı olarak silebilirsiniz.",
+        s6Li2: "<strong>Veri İhracı:</strong> Verileriniz yalnızca cihazınızda olduğundan harici hiçbir kuruma devredilemez.",
+        s7Title: "7. Güvenlik Standartları ve Şifreleme",
+        s7P1: "Cihazınızda depolanan seans verileri, işletim sisteminin (Android / iOS) sunduğu korumalı Sandbox alanında tutulur ve başka uygulamalar tarafından erişilemez.",
+        s8Title: "8. İletişim ve Geliştirici Bilgileri",
+        s8P1: "Gizlilik politikamız veya uygulamamızla ilgili her türlü soru, geri bildirim veya öneriniz için bizimle doğrudan iletişime geçebilirsiniz:"
+      },
+      en: {
+        badgeCompliant: "GOOGLE PLAY 2026 COMPLIANT",
+        tocTitle: "Table of Contents",
+        toc1: "1. Zero-Knowledge Architecture",
+        toc2: "2. Biometric Data Processed",
+        toc3: "3. Hardware Permissions Matrix",
+        toc4: "4. Third Parties & Telemetry",
+        toc5: "5. Children's Privacy (COPPA)",
+        toc6: "6. User Rights & Instant Deletion",
+        toc7: "7. Security & Encryption",
+        toc8: "8. Contact & Legal Details",
+        heroBadge: "100% Local On-Device Privacy Guaranteed",
+        heroTitle: "Privacy Policy",
+        heroLead: "At CalmTouch, we believe that protecting your mental well-being must never compromise your personal privacy. This document outlines our zero-data collection guarantee and rigorous technical transparency standards.",
+        s1Title: "1. Zero-Knowledge & Local-First Architecture Guarantee",
+        s1P1: "CalmTouch is engineered upon <strong>'Zero-Knowledge'</strong> and <strong>'Local-First'</strong> principles. Our core system architecture guarantees that:",
+        s1Li1: "<strong>No Account Required:</strong> We never request email addresses, passwords, phone numbers, or usernames.",
+        s1Li2: "<strong>Zero Cloud Servers:</strong> Your biometric recordings, session history, and preferences are never transmitted to external servers.",
+        s1Li3: "<strong>100% Offline Capable:</strong> All scientific breathing protocols, 25Hz haptic engine loops, and 15-language audio guides operate completely offline.",
+        s1Note: "🔒 Your health data never leaves your device. Uninstalling the app permanently erases all on-device records.",
+        s2Title: "2. Processed Biometric Metrics & Storage Methods",
+        s2P1: "During your sessions, the following metrics are processed locally to optimize autonomic balance:",
+        spec1Key: "HRV (RMSSD)",
+        spec1Val: "Heart Rate Variability analysis to quantify parasympathetic vagal tone.",
+        spec2Key: "Pulse (BPM)",
+        spec2Val: "Beats-per-minute fluctuations tracked during breathing and somatic grounding.",
+        spec3Key: "Stress Index",
+        spec3Val: "Pre vs. post-session stress scores computed via Baevsky clinical standards.",
+        spec4Key: "Storage Location",
+        spec4Val: "Exclusively stored within your device's encrypted sandbox (AsyncStorage).",
+        s3Title: "3. Device Hardware Permissions Matrix",
+        s3P1: "CalmTouch strictly requires minimal hardware permissions necessary for sensory feedback:",
+        perm1Title: "Haptics & Vibration Engine",
+        perm1Desc: "Emits 25Hz somatic cat purr frequencies and Meissner/Pacinian tactile resonance patterns.",
+        perm2Title: "Audio Playback",
+        perm2Desc: "Streams spatial binaural acoustics and studio voice guidance in 15 global languages.",
+        perm3Title: "Local Storage (AsyncStorage)",
+        perm3Desc: "Stores your selected language, OLED dark theme preference, and local session analytics.",
+        s4Title: "4. Zero Third Parties & Telemetry Guarantee",
+        s4P1: "Our application is free of third-party advertising SDKs, tracking pixels, and behavioral telemetry:",
+        s4Li1: "<strong>No Ad Networks:</strong> We do not integrate Google AdMob, Unity Ads, Meta Audience Network, etc.",
+        s4Li2: "<strong>No Tracking SDKs:</strong> Free of Facebook SDK, AppsFlyer, Adjust, or analytics trackers.",
+        s4Li3: "<strong>No Web Cookies:</strong> We never build user profiles or track browsing habits.",
+        s5Title: "5. Children's Privacy (COPPA & Family Safety)",
+        s5P1: "CalmTouch does not knowingly collect personal data from children under 13. The application is a safe, ad-free, self-contained wellness tool designed for users of all ages.",
+        s6Title: "6. User Rights Under GDPR, CCPA & Global Laws",
+        s6P1: "Under international data privacy frameworks (GDPR, CCPA), you have absolute ownership:",
+        s6Li1: "<strong>Right to Erasure:</strong> Tap 'Clear History' in Settings to instantly and permanently wipe all biometric records from your device.",
+        s6Li2: "<strong>Data Portability:</strong> Because data lives solely on your hardware, no third parties ever hold your data.",
+        s7Title: "7. Security Standards & Local Encryption",
+        s7P1: "All local session metrics are isolated inside the operating system's protected Application Sandbox (Android / iOS), preventing unauthorized cross-app access.",
+        s8Title: "8. Developer Contact & Legal Details",
+        s8P1: "For questions, feedback, or legal inquiries regarding our privacy standards, feel free to contact us:"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.innerText.includes(lang.toUpperCase()));
+      });
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      document.documentElement.lang = lang;
+    }
+
+    // Scrollspy for Sidebar Table of Contents
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('article[id]');
+      const scrollPos = window.scrollY + 200;
+
+      sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+        const link = document.querySelector(`.sidebar-toc a[href="#${id}"]`);
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          document.querySelectorAll('.toc-link').forEach(l => l.classList.remove('active'));
+          if (link) link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
