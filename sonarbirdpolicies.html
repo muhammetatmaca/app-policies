@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SonorBird · Gizlilik Politikası & Kullanım Şartları | VirelonSoft</title>
+  <meta name="description" content="SonorBird biyoakustik kuş tanıma uygulamasının resmi gizlilik politikası. Mikrofon verisi, yapay zeka işleme ve kullanıcı hakları hakkında şeffaf bilgilendirme.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+/* ==========================================================================
+   SONORBIRD · OFFICIAL PRIVACY POLICY & TERMS OF SERVICE
+   Developed by VirelonSoft (muhammetatmaca79@gmail.com)
+   Package Identifier: com.virelon.sonorbird
+   Document Version: 2.1.0 · Last Updated: September 2026
+   Compliance: Google Play Developer Policies, GDPR, KVKK, CCPA, COPPA
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS RESET & BOX MODELING
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+img, svg, picture, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+a {
+  color: var(--primary-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   2. DESIGN TOKENS & SYSTEM VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+  /* Brand Palette */
+  --brand-primary: #17372D;
+  --brand-secondary: #2B5746;
+  --brand-accent: #34D399;
+  --brand-emerald: #059669;
+  --brand-mint: #A7F3D0;
+  --brand-gold: #F59E0B;
+  --brand-sky: #0284C7;
+  --brand-rose: #E11D48;
+
+  /* Light Canvas & Surfaces */
+  --bg-canvas: #F6F3EA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-frosted: rgba(255, 255, 255, 0.88);
+  --bg-surface-elevated: #F9F7F1;
+  --bg-surface-card: #FFFFFF;
+  --bg-badge: #EBF4EE;
+  --bg-badge-tint: rgba(43, 87, 70, 0.08);
+  --bg-header: rgba(246, 243, 234, 0.94);
+  --bg-footer: #0D231A;
+
+  /* Borders & Dividers */
+  --border-subtle: #E8E2D2;
+  --border-card: #E3DCCB;
+  --border-card-hover: #2B5746;
+  --border-focus: #34D399;
+  --border-divider: rgba(23, 55, 45, 0.08);
+
+  /* Typography */
+  --text-primary: #17372D;
+  --text-secondary: #4A5568;
+  --text-muted: #718096;
+  --text-inverse: #FFFFFF;
+  --text-accent: #2B5746;
+  --primary-accent: #2B5746;
+  --primary-hover: #059669;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 4px rgba(23, 55, 45, 0.04);
+  --shadow-md: 0 4px 12px rgba(23, 55, 45, 0.07);
+  --shadow-lg: 0 10px 24px -3px rgba(23, 55, 45, 0.09);
+  --shadow-xl: 0 20px 35px -5px rgba(23, 55, 45, 0.12);
+  --shadow-glow: 0 0 25px rgba(52, 211, 153, 0.35);
+  --shadow-card: 0 6px 20px rgba(23, 55, 45, 0.05);
+
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Sizing */
+  --container-max: 1240px;
+  --sidebar-width: 320px;
+  --header-height: 80px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+}
+
+/* Dark Theme Tokens */
+[data-theme='dark'] {
+  --bg-canvas: #0A1712;
+  --bg-surface: #12221B;
+  --bg-surface-frosted: rgba(18, 34, 27, 0.88);
+  --bg-surface-elevated: #182E25;
+  --bg-surface-card: #14271F;
+  --bg-badge: #1B382D;
+  --bg-badge-tint: rgba(52, 211, 153, 0.12);
+  --bg-header: rgba(10, 23, 18, 0.94);
+  --bg-footer: #07120E;
+
+  --border-subtle: #1E3B2F;
+  --border-card: #224335;
+  --border-card-hover: #34D399;
+  --border-divider: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #F3F4F6;
+  --text-secondary: #CBD5E1;
+  --text-muted: #94A3B8;
+  --text-inverse: #0A1712;
+  --text-accent: #6EE7B7;
+  --primary-accent: #34D399;
+  --primary-hover: #6EE7B7;
+
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.65);
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHY & TEXT UTILITIES
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+h1 { font-size: clamp(2.2rem, 4vw, 3.4rem); }
+h2 { font-size: clamp(1.6rem, 2.5vw, 2.2rem); margin-bottom: 1.25rem; }
+h3 { font-size: 1.35rem; margin-bottom: 0.85rem; }
+h4 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+
+p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.lead {
+  font-size: 1.22rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.text-muted { color: var(--text-muted); }
+.text-accent { color: var(--brand-accent); }
+.text-bold { font-weight: 700; }
+.text-mono { font-family: 'JetBrains Mono', monospace; font-size: 0.9em; }
+
+/* --------------------------------------------------------------------------
+   4. AMBIENT BACKGROUND GLOW & ANIMATED ORBS
+   -------------------------------------------------------------------------- */
+.ambient-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.35;
+  animation: floatOrb 18s ease-in-out infinite alternate;
+}
+
+.ambient-orb-1 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #34D399 0%, rgba(52, 211, 153, 0) 70%);
+  top: -120px;
+  left: -100px;
+}
+
+.ambient-orb-2 {
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, #2B5746 0%, rgba(43, 87, 70, 0) 70%);
+  top: 35%;
+  right: -150px;
+  animation-duration: 22s;
+  animation-delay: -5s;
+}
+
+.ambient-orb-3 {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, #F59E0B 0%, rgba(245, 158, 11, 0) 70%);
+  bottom: 5%;
+  left: 10%;
+  opacity: 0.15;
+  animation-duration: 26s;
+  animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(45px, 60px) scale(1.1); }
+  100% { transform: translate(-35px, 30px) scale(0.95); }
+}
+
+/* --------------------------------------------------------------------------
+   5. HEADER & TOP NAVIGATION
+   -------------------------------------------------------------------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: var(--bg-header);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-base), border-color var(--transition-base);
+}
+
+.header-container {
+  max-width: var(--container-max);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+
+.brand-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--brand-secondary) 0%, var(--brand-primary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.brand-lockup:hover .brand-icon-wrapper {
+  transform: scale(1.05) rotate(-3deg);
+  box-shadow: var(--shadow-glow);
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.brand-tagline {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  background: var(--bg-badge);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--brand-secondary);
+}
+
+.badge-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-accent);
+  box-shadow: 0 0 8px var(--brand-accent);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.theme-toggle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: transform var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  transform: rotate(20deg);
+  border-color: var(--border-card-hover);
+}
+
+.print-doc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  background: var(--brand-primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.print-doc-btn:hover {
+  background: var(--brand-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   6. HERO SECTION & META BAR
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  z-index: 1;
+  padding: 5rem 0 3.5rem 0;
+  background: linear-gradient(180deg, rgba(23, 55, 45, 0.03) 0%, transparent 100%);
+  border-bottom: 1px solid var(--border-divider);
+}
+
+.hero-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--bg-badge);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--brand-secondary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.hero-title-highlight {
+  background: linear-gradient(135deg, var(--brand-primary) 0%, var(--brand-emerald) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='dark'] .hero-title-highlight {
+  background: linear-gradient(135deg, #FFFFFF 0%, var(--brand-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  max-width: 850px;
+  margin-bottom: 2rem;
+}
+
+.meta-infobar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.25rem 1.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.meta-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   7. DUAL-COLUMN LAYOUT & SIDEBAR NAVIGATION
+   -------------------------------------------------------------------------- */
+.main-layout {
+  position: relative;
+  z-index: 1;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 6rem 2rem;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.sidebar-wrapper {
+  position: sticky;
+  top: calc(var(--header-height) + 2rem);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem 1.25rem;
+  box-shadow: var(--shadow-card);
+  max-height: calc(100vh - var(--header-height) - 4rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-card) transparent;
+}
+
+.sidebar-wrapper::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-wrapper::-webkit-scrollbar-thumb {
+  background-color: var(--border-card);
+  border-radius: var(--radius-full);
+}
+
+.toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--border-divider);
+  margin-bottom: 1rem;
+}
+
+.toc-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-primary);
+}
+
+.toc-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border-left: 3px solid transparent;
+}
+
+.toc-link:hover {
+  background: var(--bg-surface-elevated);
+  color: var(--brand-secondary);
+  transform: translateX(3px);
+}
+
+.toc-link.active {
+  background: var(--bg-badge);
+  color: var(--brand-secondary);
+  border-left-color: var(--brand-accent);
+  font-weight: 800;
+}
+
+.toc-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--bg-surface-elevated);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.toc-link.active .toc-num {
+  background: var(--brand-secondary);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   8. CONTENT CONTAINER & ARTICLE SECTIONS
+   -------------------------------------------------------------------------- */
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.policy-section {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 2.5rem;
+  box-shadow: var(--shadow-card);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.policy-section:hover {
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-divider);
+}
+
+.section-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-badge);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--brand-secondary);
+  flex-shrink: 0;
+}
+
+.section-title-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-number {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-accent);
+}
+
+.section-title {
+  font-size: 1.65rem;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. FEATURE BOXES & HIGHLIGHT CARDS
+   -------------------------------------------------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-card-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature-card-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   10. CALLOUTS & ALERT BADGES
+   -------------------------------------------------------------------------- */
+.callout-box {
+  position: relative;
+  display: flex;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: var(--radius-lg);
+  margin: 1.75rem 0;
+  border-left: 4px solid var(--brand-accent);
+  background: var(--bg-badge);
+}
+
+.callout-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.callout-content p:last-child {
+  margin-bottom: 0;
+}
+
+.callout-warning {
+  border-left-color: var(--brand-gold);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+.callout-danger {
+  border-left-color: var(--brand-rose);
+  background: rgba(225, 29, 72, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   11. DATA TABLES & PERMISSION MATRIX
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-sm);
+}
+
+.data-table {
+  background: var(--bg-surface);
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.data-table th {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  font-weight: 800;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.data-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border-divider);
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.data-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.data-table tr:hover td {
+  background: var(--bg-surface-elevated);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.status-pill-success {
+  background: rgba(52, 211, 153, 0.15);
+  color: var(--brand-emerald);
+}
+
+.status-pill-info {
+  background: rgba(2, 132, 199, 0.15);
+  color: var(--brand-sky);
+}
+
+/* --------------------------------------------------------------------------
+   12. ACCORDION & FAQ LIST
+   -------------------------------------------------------------------------- */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.accordion-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface-elevated);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.accordion-item:hover {
+  border-color: var(--border-card-hover);
+}
+
+.accordion-trigger {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.accordion-trigger:hover {
+  background: var(--bg-badge-tint);
+}
+
+.accordion-icon {
+  transition: transform var(--transition-base);
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow), padding var(--transition-slow);
+  padding: 0 1.5rem;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. CONTACT CARDS & ACTIONS
+   -------------------------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.contact-card {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.contact-card-meta {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+.email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--brand-primary);
+  color: #FFFFFF;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  align-self: flex-start;
+}
+
+.email-button:hover {
+  background: var(--brand-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   14. LEGAL FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  background: var(--bg-footer);
+  color: #CBD5E1;
+  padding: 5rem 0 3rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-brand-info h4 {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand-info p {
+  color: #94A3B8;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+.footer-nav-col h5 {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+}
+
+.footer-nav-col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-nav-col a {
+  color: #94A3B8;
+  font-size: 0.92rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-col a:hover {
+  color: var(--brand-accent);
+}
+
+.footer-bottom {
+  max-width: var(--container-max);
+  margin: 3rem auto 0 auto;
+  padding: 2rem 2rem 0 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #64748B;
+}
+
+/* --------------------------------------------------------------------------
+   15. BACK TO TOP BUTTON & SCROLLBAR
+   -------------------------------------------------------------------------- */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--brand-primary);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: all var(--transition-base);
+  z-index: 99;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--brand-secondary);
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   16. RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .sidebar-wrapper {
+    display: none;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+  .hero-section {
+    padding: 3rem 0 2rem 0;
+  }
+  .policy-section {
+    padding: 1.75rem 1.25rem;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .header-controls .badge-verified {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   17. PRINT STYLESHEET
+   -------------------------------------------------------------------------- */
+@media print {
+  .site-header, .sidebar-wrapper, .ambient-canvas, .theme-toggle-btn, .print-doc-btn, .back-to-top, .site-footer {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  .main-layout {
+    display: block !important;
+    padding: 0 !important;
+  }
+  .policy-section {
+    box-shadow: none !important;
+    border: 1px solid #CCCCCC !important;
+    break-inside: avoid;
+    margin-bottom: 2rem !important;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-canvas">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+  </div>
+
+  <!-- Top Sticky Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="brand-lockup">
+        <div class="brand-icon-wrapper">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z" fill="#34D399"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-name">SonorBird <span style="font-size:0.85em;color:var(--brand-accent);">🕊️</span></span>
+          <span class="brand-tagline">VirelonSoft Biyoakustik</span>
+        </div>
+      </a>
+
+      <div class="header-controls">
+        <div class="badge-verified">
+          <span class="badge-pulse-dot"></span>
+          <span>Google Play & KVKK Onaylı</span>
+        </div>
+
+        <button class="theme-toggle-btn" id="themeToggle" title="Karanlık/Aydınlık Tema Değiştir" aria-label="Tema Değiştir">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="print-doc-btn" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Yazdır / PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-pill-badge">
+        <span>Resmi Yasal Bildirim</span>
+        <span>•</span>
+        <span>Sürüm 2.1</span>
+      </div>
+
+      <h1 class="hero-title">
+        SonorBird <span class="hero-title-highlight">Gizlilik Politikası</span> & Kullanım Koşulları
+      </h1>
+
+      <p class="hero-description">
+        SonorBird biyoakustik kuş tanıma uygulaması olarak, gizliliğinize ve veri egemenliğinize en üst düzeyde saygı duyuyoruz. Mikrofon kayıtlarınız cihazınızda güvenle işlenir ve asla ses dinleme veya izleme amacıyla sunuculara aktarılmaz.
+      </p>
+
+      <div class="meta-infobar">
+        <div class="meta-item">
+          <span class="meta-label">Geliştirici Şirket</span>
+          <span class="meta-value">VirelonSoft</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Uygulama Kimliği</span>
+          <span class="meta-value text-mono">com.virelon.sonorbird</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Resmi İletişim</span>
+          <span class="meta-value">muhammetatmaca79@gmail.com</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Son Güncelleme</span>
+          <span class="meta-value">3 Eylül 2026</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">Yasal Standartlar</span>
+          <span class="meta-value">Google Play Policy · KVKK · GDPR</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <div class="main-layout">
+    <!-- Sticky Sidebar Table of Contents -->
+    <aside class="sidebar-wrapper">
+      <div class="toc-header">
+        <span class="toc-title">İçindekiler</span>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">10 Bölüm</span>
+      </div>
+
+      <nav class="toc-nav" id="tocNav">
+        <a href="#sec-1" class="toc-link active">
+          <span class="toc-num">1</span>
+          <span>Giriş ve Kapsam</span>
+        </a>
+        <a href="#sec-2" class="toc-link">
+          <span class="toc-num">2</span>
+          <span>Mikrofon İzni & Ses İşleme</span>
+        </a>
+        <a href="#sec-3" class="toc-link">
+          <span class="toc-num">3</span>
+          <span>Cihaz İçi Biyoakustik Yapay Zeka</span>
+        </a>
+        <a href="#sec-4" class="toc-link">
+          <span class="toc-num">4</span>
+          <span>Veri Toplama & Saklama Matrisi</span>
+        </a>
+        <a href="#sec-5" class="toc-link">
+          <span class="toc-num">5</span>
+          <span>Üçüncü Taraf Entegrasyonlar</span>
+        </a>
+        <a href="#sec-6" class="toc-link">
+          <span class="toc-num">6</span>
+          <span>Çocukların Gizliliği (COPPA)</span>
+        </a>
+        <a href="#sec-7" class="toc-link">
+          <span class="toc-num">7</span>
+          <span>Veri Güvenliği ve Şifreleme</span>
+        </a>
+        <a href="#sec-8" class="toc-link">
+          <span class="toc-num">8</span>
+          <span>Kullanıcı Hakları & Veri Silme</span>
+        </a>
+        <a href="#sec-9" class="toc-link">
+          <span class="toc-num">9</span>
+          <span>Sıkça Sorulan Sorular (SSS)</span>
+        </a>
+        <a href="#sec-10" class="toc-link">
+          <span class="toc-num">10</span>
+          <span>İletişim & Yasal Temsil</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Content Sections -->
+    <main class="content-area">
+
+      <!-- Section 1 -->
+      <section id="sec-1" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📜</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 01</span>
+            <h2 class="section-title">Giriş ve Kapsam</h2>
+          </div>
+        </div>
+
+        <p class="lead">
+          Bu Gizlilik Politikası, <strong>VirelonSoft</strong> tarafından geliştirilen ve yönetilen <strong>SonorBird</strong> (paket kimliği: <code class="text-mono">com.virelon.sonorbird</code>) mobil uygulamasının tüm sürümleri için geçerlidir.
+        </p>
+
+        <p>
+          SonorBird, doğada ve çevrenizde duyduğunuz kuş seslerini canlı spektrogram (zaman-frekans sonogramı) şelalesi ve biyoakustik makine öğrenimi modelleriyle tanımlamanızı sağlayan profesyonel bir saha rehberidir. Uygulamamızı indirerek ve kullanarak, işbu Gizlilik Politikasında belirtilen ilke ve uygulamaları kabul etmiş sayılırsınız.
+        </p>
+
+        <div class="callout-box">
+          <div class="callout-icon">💡</div>
+          <div class="callout-content">
+            <p><strong>Temel Gizlilik Taahhüdümüz:</strong> SonorBird, kullanıcılardan ad, soyad, telefon numarası veya e-posta adresi gibi kişisel kimlik bilgilerini zorunlu kılmaksızın anonim ve bağımsız olarak çalışacak şekilde tasarlanmıştır.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="sec-2" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🎙️</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 02</span>
+            <h2 class="section-title">Mikrofon İzni ve Canlı Ses İşleme</h2>
+          </div>
+        </div>
+
+        <p>
+          SonorBird'in temel işlevi kuş ötüşlerini ses frekanslarından ayırt etmektir. Bu işlevin gerçekleşebilmesi için Android işletim sistemi düzeyinde <code class="text-mono">android.permission.RECORD_AUDIO</code> izni talep edilir.
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-card-icon">🔒</div>
+            <h3 class="feature-card-title">Yalnızca Canlı Kayıt Anında</h3>
+            <p class="feature-card-text">Mikrofon yalnızca siz "Dinlemeyi Başlat" butonuna dokunduğunuzda ve ekran açıkken etkinleşir. Arka planda gizli dinleme asla yapılmaz.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">⚡</div>
+            <h3 class="feature-card-title">Geçici Bellek (RAM) İşleme</h3>
+            <p class="feature-card-text">Kayıt alınan sesler doğrudan telefonunuzun geçici belleğinde (RAM) 48.000 Hz hızında spektrograma dönüştürülür ve analiz bitiminde otomatik silinir.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">🚫</div>
+            <h3 class="feature-card-title">İnsan Konuşmaları Filtrelenir</h3>
+            <p class="feature-card-text">Filtre algoritmamız 1.500 Hz altındaki insan konuşma frekanslarını bastırarak yalnızca kuş ötüş bandına (2.000 - 9.000 Hz) odaklanır.</p>
+          </div>
+        </div>
+
+        <div class="callout-box callout-warning">
+          <div class="callout-icon">⚠️</div>
+          <div class="callout-content">
+            <p><strong>Önemli Güvence:</strong> Ses kayıtlarınız hiçbir üçüncü taraf reklam şirketine, veri komisyoncusuna veya gözetim ajansına satılmaz, devredilmez veya aktarılmaz.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="sec-3" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🧠</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 03</span>
+            <h2 class="section-title">Cihaz İçi Biyoakustik Yapay Zeka</h2>
+          </div>
+        </div>
+
+        <p>
+          SonorBird, yapay zeka ve ses çözme işlemlerini doğrudan mobil cihazınızın donanım hızlandırmasından faydalanarak gerçekleştirir:
+        </p>
+
+        <ul style="margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.85rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--brand-accent); font-weight: 800;">✓</span>
+            <span><strong>FAAD2 WebAssembly Motoru:</strong> Ses sinyalleri harici sunuculara yüklenmeden doğrudan telefonunuzun yerel tarayıcı çekirdeğinde çözülür.</span>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--brand-accent); font-weight: 800;">✓</span>
+            <span><strong>8. Derece Butterworth Gürültü Filtresi:</strong> Şehir trafiği ve rüzgar uğultusu cihaz içinde -35 dB zayıflatılarak saf kuş sesi ayrıştırılır.</span>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--brand-accent); font-weight: 800;">✓</span>
+            <span><strong>Çevrimdışı Çalışma Kabiliyeti:</strong> Dağda, ormanda veya internet bağlantısının olmadığı hücresel kör noktalarda bile tanıma yapabilirsiniz.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="sec-4" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📊</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 04</span>
+            <h2 class="section-title">Veri Toplama ve İzin Matrisi</h2>
+          </div>
+        </div>
+
+        <p>
+          Google Play Geliştirici Politikaları doğrultusunda uygulamanın kullandığı izinler ve veri işleme durumları aşağıdaki tabloda açıkça belirtilmiştir:
+        </p>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>İzin / Veri Türü</th>
+                <th>Kullanım Amacı</th>
+                <th>İşleme Yeri</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>RECORD_AUDIO</strong> (Mikrofon)</td>
+                <td>Kuş sesini kaydetme ve canlı spektrogram çizme</td>
+                <td>Cihaz İçi (Bellekte)</td>
+                <td><span class="status-pill status-pill-success">Gizli / Paylaşılmaz</span></td>
+              </tr>
+              <tr>
+                <td><strong>INTERNET</strong> (Ağ Erişimi)</td>
+                <td>Xeno-Canto örnek sesleri ve Wikipedia kuş fotoğrafları indirme</td>
+                <td>HTTPS / SSL Şifreli</td>
+                <td><span class="status-pill status-pill-info">Yalnızca Gerekli Olduğunda</span></td>
+              </tr>
+              <tr>
+                <td><strong>ACCESS_NETWORK_STATE</strong></td>
+                <td>Çevrimdışı / Çevrimiçi mod algılama</td>
+                <td>Cihaz İçi</td>
+                <td><span class="status-pill status-pill-success">Kişisel Değil</span></td>
+              </tr>
+              <tr>
+                <td><strong>Gözlem Günlüğü</strong> (Notlar)</td>
+                <td>Kaydettiğiniz kuş gözlem tarihi ve saha notları</td>
+                <td>Cihaz İçi (SQLite/AsyncStorage)</td>
+                <td><span class="status-pill status-pill-success">%100 Yerel Depolama</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="sec-5" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🌐</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 05</span>
+            <h2 class="section-title">Üçüncü Taraf Entegrasyonlar ve API'ler</h2>
+          </div>
+        </div>
+
+        <p>
+          SonorBird, zengin bir saha rehberi deneyimi sunmak amacıyla yalnızca açık kaynaklı ve güvenilir bilimsel veri tabanlarıyla sınırlı düzeyde iletişim kurar:
+        </p>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-card-icon">🎵</div>
+            <h3 class="feature-card-title">Xeno-Canto Doğal Ses Arşivi</h3>
+            <p class="feature-card-text">Kuş rehberindeki örnek ötüşler, resmi Xeno-Canto açık lisanslı (Creative Commons) veri tabanından anlık akış olarak çekilir.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card-icon">📖</div>
+            <h3 class="feature-card-title">Wikimedia Commons & Wikipedia</h3>
+            <p class="feature-card-text">Kuşların yüksek çözünürlüklü fotoğrafları, taksonomi ve kanat açıklığı bilgileri kamusal eğitim amaçlı telifsiz kaynaklardan sağlanır.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="sec-6" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🛡️</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 06</span>
+            <h2 class="section-title">Çocukların Gizliliği (COPPA & Aile Politikası)</h2>
+          </div>
+        </div>
+
+        <p>
+          SonorBird, her yaştan doğasever, aileler, öğrenciler ve kuş gözlemcileri için güvenli bir ortam sunar. Uygulama, 13 yaşın altındaki çocuklardan bilerek herhangi bir kişisel veri toplamamaktadır.
+        </p>
+
+        <div class="callout-box">
+          <div class="callout-icon">👶</div>
+          <div class="callout-content">
+            <p><strong>Aile Dostu Tasarım:</strong> Uygulamamızda uygunsuz içerik, yetişkin temaları veya çocukların güvenliğini tehlikeye atacak üçüncü taraf izleme kodları yer almaz. Google Play Aileler Politikası ile tam uyumludur.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="sec-7" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">🔐</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 07</span>
+            <h2 class="section-title">Veri Güvenliği ve Saklama</h2>
+          </div>
+        </div>
+
+        <p>
+          Uygulama içinde kaydettiğiniz tüm gözlemler (günlük kayıtları, favori kuşlar, dinleme geçmişi) telefonunuzun korumalı yerel uygulama depolama alanında (<code class="text-mono">AsyncStorage</code>) saklanır.
+        </p>
+
+        <p>
+          Uygulamayı telefonunuzdan kaldırdığınızda veya Android Ayarlar &gt; Depolama &gt; "Verileri Temizle" seçeneğini kullandığınızda, cihazdaki tüm SonorBird verileri geri döndürülemez şekilde anında silinir.
+        </p>
+      </section>
+
+      <!-- Section 8 -->
+      <section id="sec-8" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">⚖️</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 08</span>
+            <h2 class="section-title">Kullanıcı Hakları (GDPR & KVKK)</h2>
+          </div>
+        </div>
+
+        <p>
+          Avrupa Genel Veri Koruma Yönetmeliği (GDPR) ve 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca aşağıdaki haklara sahipsiniz:
+        </p>
+
+        <ul style="margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.85rem;">
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--brand-accent); font-weight: 800;">✓</span>
+            <span><strong>İzinleri Geri Alma Hakkı:</strong> Android Ayarlar menüsünden dilediğiniz an mikrofon iznini kapatabilirsiniz.</span>
+          </li>
+          <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+            <span style="color: var(--brand-accent); font-weight: 800;">✓</span>
+            <span><strong>Veri Silme Talebi:</strong> Sunucularımızda hiçbir kişisel bilginiz tutulmadığından ek bir silme formu gerekmez; uygulamayı silmeniz tüm kayıtların yok olması için yeterlidir.</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Section 9 -->
+      <section id="sec-9" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">❓</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 09</span>
+            <h2 class="section-title">Sıkça Sorulan Sorular (SSS)</h2>
+          </div>
+        </div>
+
+        <div class="faq-accordion">
+          <div class="accordion-item active">
+            <button class="accordion-trigger">
+              <span>Ses kayıtlarım internete yükleniyor mu?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Hayır. Kaydettiğiniz sesler telefonunuzun kendi işlemcisinde WebAssembly motoru ile analiz edilir ve sunucularımıza yüklenmez.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>Uygulamayı kullanmak için üyelik veya hesap açmak zorunda mıyım?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Kesinlikle hayır. SonorBird'i yüklediğiniz anda hiçbir hesap veya şifre oluşturmadan doğrudan kullanmaya başlayabilirsiniz.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-trigger">
+              <span>SonorBird internet olmadan ormanda çalışır mı?</span>
+              <span class="accordion-icon">▼</span>
+            </button>
+            <div class="accordion-content">
+              <p>Evet. Biyoakustik tanı ve filtreleme motoru %100 çevrimdışı çalışabilmektedir.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10 -->
+      <section id="sec-10" class="policy-section">
+        <div class="section-header">
+          <div class="section-icon">📬</div>
+          <div class="section-title-wrap">
+            <span class="section-number">Bölüm 10</span>
+            <h2 class="section-title">İletişim ve Yasal Temsil</h2>
+          </div>
+        </div>
+
+        <p>
+          Gizlilik politikamız veya SonorBird uygulaması ile ilgili her türlü soru, öneri ve yasal talepleriniz için doğrudan geliştirici ekibimizle iletişime geçebilirsiniz:
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <span class="contact-card-title">🏢 Geliştirici Firma</span>
+            <span class="contact-card-meta">VirelonSoft Mobil Çözümleri</span>
+            <p style="margin-top:0.5rem; font-size:0.9rem;">Yazılım Geliştirme & Biyoakustik Araştırma Grubu</p>
+          </div>
+
+          <div class="contact-card">
+            <span class="contact-card-title">📧 Resmi Destek E-Postası</span>
+            <span class="contact-card-meta">muhammetatmaca79@gmail.com</span>
+            <a href="mailto:muhammetatmaca79@gmail.com?subject=SonorBird%20Gizlilik%20Politikasi%20Destek" class="email-button">
+              <span>E-Posta Gönder</span>
+              <span>➔</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand-info">
+        <h4>SonorBird · Biyoakustik Kuş Tanıma</h4>
+        <p>VirelonSoft tarafından geliştirilen profesyonel saha rehberi ve yapay zeka destekli tür sınıflandırma sistemi.</p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h5>Yasal & Güvenlik</h5>
+        <ul>
+          <li><a href="#sec-1">Gizlilik Politikası</a></li>
+          <li><a href="#sec-2">Mikrofon İzni Bildirimi</a></li>
+          <li><a href="#sec-8">KVKK & GDPR Hakları</a></li>
+          <li><a href="#sec-6">Çocuk Güvenliği (COPPA)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h5>Bağlantılar</h5>
+        <ul>
+          <li><a href="mailto:muhammetatmaca79@gmail.com">Geliştirici İletişim</a></li>
+          <li><a href="https://play.google.com/store/apps/details?id=com.virelon.sonorbird" target="_blank">Google Play Sayfası</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 VirelonSoft. Tüm Hakları Saklıdır.</div>
+      <div>Paket: <code class="text-mono">com.virelon.sonorbird</code></div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" title="Yukarı Çık" aria-label="Yukarı Çık">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('sonorbird_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('sonorbird_theme', theme);
+    });
+
+    // Back to top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Accordion Logic
+    document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+
+    // Scroll spy for TOC
+    const sections = document.querySelectorAll('.policy-section');
+    const navLinks = document.querySelectorAll('.toc-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        const secTop = sec.offsetTop - 150;
+        if (pageYOffset >= secTop) {
+          current = sec.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
