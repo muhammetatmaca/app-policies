@@ -1,0 +1,4052 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası | TeleFlow Pro - VirelonSoft</title>
+  <meta name="description" content="TeleFlow Pro mobil teleprompter uygulaması resmi gizlilik politikası. Zero-Cloud mimarisi, kamera ve mikrofon izinleri ve kullanıcı hakları. VirelonSoft.">
+  <meta name="author" content="VirelonSoft">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+/* ==========================================================================
+   VIRELONSOFT - PRIVACY POLICY MASTER STYLESHEET
+   Design System: Neo-Brutalist High-Impact Modern Tech
+   Target App: TeleFlow Pro (com.virelon.teleprompter)
+   Company: VirelonSoft (muhammetatmaca79@gmail.com)
+   ========================================================================== */
+
+:root {
+  /* Core Palette */
+  --color-primary: #155CF9;
+  --color-primary-dark: #0A3DB8;
+  --color-primary-light: #4F86FC;
+  --color-secondary: #E61E2A;
+  --color-accent-yellow: #FFD600;
+  --color-accent-green: #00D06C;
+  --color-accent-purple: #7C3AED;
+  --color-accent-cyan: #00E5FF;
+  
+  /* Neutral Palette */
+  --bg-main: #070B14;
+  --bg-card: #0F172A;
+  --bg-card-hover: #162238;
+  --bg-card-secondary: #1E293B;
+  --bg-input: #0A0F1D;
+  --bg-glass: rgba(15, 23, 42, 0.85);
+  
+  /* Text Palette */
+  --text-main: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-dim: #64748B;
+  --text-inverse: #000000;
+  --text-link: #38BDF8;
+  
+  /* Brutalist Identity */
+  --border-thick: 3.5px solid #000000;
+  --border-medium: 2px solid #000000;
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.12);
+  --shadow-brutal-sm: 3px 3px 0px #000000;
+  --shadow-brutal: 5px 5px 0px #000000;
+  --shadow-brutal-lg: 8px 8px 0px #000000;
+  --shadow-brutal-xl: 12px 12px 0px #000000;
+  --shadow-brutal-hover: 2px 2px 0px #000000;
+  
+  /* Spacing */
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  /* Typography */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  
+  /* Transitions */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Layout */
+  --container-max: 1380px;
+  --sidebar-width: 320px;
+  --header-height: 76px;
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] {
+  --bg-main: #F1F5F9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --bg-card-secondary: #E2E8F0;
+  --bg-input: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --text-dim: #64748B;
+  --text-inverse: #FFFFFF;
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* High Contrast Mode */
+[data-theme="contrast"] {
+  --bg-main: #000000;
+  --bg-card: #000000;
+  --bg-card-hover: #111111;
+  --bg-card-secondary: #222222;
+  --bg-input: #000000;
+  --text-main: #FFFFFF;
+  --text-muted: #FFFF00;
+  --text-dim: #00FFCC;
+  --border-thick: 4px solid #FFFFFF;
+  --border-medium: 3px solid #FFFFFF;
+  --shadow-brutal: 6px 6px 0px #FFFF00;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+  border-left: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0px #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-yellow);
+}
+
+/* Canvas Background for Animated Particles & Teleprompter Ghost Streams */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* Reading Progress Bar */
+.reading-progress-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-accent-yellow), var(--color-primary), var(--color-accent-green));
+  transition: width 0.08s linear;
+}
+
+/* Top Marquee Announcement */
+.announcement-bar {
+  background: var(--color-accent-yellow);
+  color: #000000;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-bottom: 2px solid #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 990;
+}
+
+.announcement-inner {
+  display: flex;
+  gap: 32px;
+  white-space: nowrap;
+  animation: marqueeScroll 26s linear infinite;
+}
+
+.announcement-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Master Header */
+.master-header {
+  position: sticky;
+  top: 5px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: var(--border-thick);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  z-index: 900;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  text-decoration: none;
+}
+
+.brand-icon-box {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast);
+}
+
+.brand-icon-box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.brand-icon-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-badge {
+  background: var(--color-accent-green);
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 900;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid #000;
+  text-transform: uppercase;
+}
+
+.brand-company {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Header Controls & Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.search-trigger-btn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-sm);
+  padding: 8px 14px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.search-trigger-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-main);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.search-shortcut-badge {
+  background: var(--bg-card-secondary);
+  color: var(--text-main);
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  padding: 2px 6px;
+  font-weight: 800;
+}
+
+/* Select & Dropdown Controls */
+.custom-select-wrapper {
+  position: relative;
+}
+
+.select-control {
+  appearance: none;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-sm);
+  padding: 8px 34px 8px 12px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.select-control:focus, .select-control:hover {
+  outline: none;
+  border-color: var(--color-primary);
+  transform: translate(-1px, -1px);
+}
+
+.select-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: var(--bg-card);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-sm);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal);
+  background: var(--color-accent-yellow);
+  color: #000;
+}
+
+/* Quick Action Brutalist Button */
+.btn-brutal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-weight: 900;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.btn-brutal:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.btn-brutal:active {
+  transform: translate(1px, 1px);
+  box-shadow: var(--shadow-brutal-hover);
+}
+
+.btn-primary { background: var(--color-primary); color: #FFFFFF; }
+.btn-yellow { background: var(--color-accent-yellow); color: #000000; }
+.btn-danger { background: var(--color-secondary); color: #FFFFFF; }
+.btn-outline { background: transparent; color: var(--text-main); }
+
+/* ==========================================================================
+   HERO SECTION WITH DYNAMIC LIVE TELEPROMPTER DEMO
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  padding: var(--space-3xl) 0 var(--space-2xl) 0;
+  background: radial-gradient(circle at 75% 25%, rgba(21, 92, 249, 0.18) 0%, transparent 65%);
+  border-bottom: var(--border-thick);
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.hero-pill-badge {
+  align-self: flex-start;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: var(--border-medium);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-brutal-sm);
+  padding: 6px 18px;
+  font-weight: 900;
+  font-size: 0.82rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-pill-badge .pulse-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--color-accent-green);
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  box-shadow: 0 0 8px var(--color-accent-green);
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 208, 108, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(0, 208, 108, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 208, 108, 0); }
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -1px;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.hero-title .highlight-yellow {
+  background: var(--color-accent-yellow);
+  color: #000000;
+  padding: 0 8px;
+  border: var(--border-medium);
+  display: inline-block;
+  transform: rotate(-1deg);
+  box-shadow: 3px 3px 0 #000;
+}
+
+.hero-subtitle {
+  font-size: 1.12rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* LIVE TELEPROMPTER HUD MOCKUP WIDGET */
+.hero-prompter-mockup {
+  background: #020617;
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal-xl);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal);
+}
+
+.hero-prompter-mockup:hover {
+  transform: translateY(-4px);
+  box-shadow: 14px 14px 0px #000000;
+}
+
+/* Prompter Top HUD */
+.prompter-top-bar {
+  background: #0F172A;
+  border-bottom: 2px solid #000;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.prompter-rec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-secondary);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #000;
+  animation: pulseRec 1.5s infinite;
+}
+
+@keyframes pulseRec {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+
+.prompter-lens-target {
+  background: #1E293B;
+  border-bottom: 2px solid #000;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--color-accent-yellow);
+  text-transform: uppercase;
+}
+
+.prompter-lens-dot {
+  width: 10px;
+  height: 10px;
+  background: #00E5FF;
+  border-radius: 50%;
+  border: 1.5px solid #000;
+  box-shadow: 0 0 6px #00E5FF;
+}
+
+/* Prompter Viewing Window */
+.prompter-viewport {
+  height: 240px;
+  background: #020617;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 18px;
+}
+
+.prompter-active-band {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 52px;
+  background: rgba(255, 214, 0, 0.18);
+  border-top: 2px dashed var(--color-accent-yellow);
+  border-bottom: 2px dashed var(--color-accent-yellow);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.prompter-scroll-track {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s linear;
+}
+
+.prompter-line {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.35;
+  transition: all var(--transition-fast);
+}
+
+.prompter-line.active {
+  color: #000000;
+  background: var(--color-accent-yellow);
+  display: inline-block;
+  padding: 2px 8px;
+  border: 1.5px solid #000;
+  box-shadow: 3px 3px 0 #000;
+  border-radius: 4px;
+  transform: scale(1.03);
+}
+
+/* Prompter Bottom Interactive HUD */
+.prompter-bottom-bar {
+  background: #0F172A;
+  border-top: 2px solid #000;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prompter-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.prompter-ctrl-btn {
+  background: var(--bg-card-secondary);
+  color: #fff;
+  border: var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-weight: 900;
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.prompter-ctrl-btn:hover {
+  background: var(--color-primary);
+  transform: translate(-1px, -1px);
+}
+
+.prompter-soundbars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 22px;
+}
+
+.sound-bar {
+  width: 4px;
+  background: var(--color-accent-green);
+  border-radius: 2px;
+  border: 1px solid #000;
+  animation: soundBarBounce 0.8s ease-in-out infinite alternate;
+}
+
+.sound-bar:nth-child(2) { animation-delay: 0.2s; height: 14px; }
+.sound-bar:nth-child(3) { animation-delay: 0.4s; height: 20px; }
+.sound-bar:nth-child(4) { animation-delay: 0.1s; height: 10px; }
+.sound-bar:nth-child(5) { animation-delay: 0.3s; height: 18px; }
+
+@keyframes soundBarBounce {
+  0% { height: 6px; }
+  100% { height: 22px; }
+}
+
+/* Floating Sparkle Elements */
+.sparkle-icon {
+  display: inline-block;
+  animation: spinSparkle 6s linear infinite;
+}
+
+@keyframes spinSparkle {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.2); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* Hero Key Indicators Grid */
+.hero-stats-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-brutal-lg);
+}
+
+.stat-card-icon {
+  width: 44px;
+  height: 44px;
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: var(--space-xs);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.stat-card:nth-child(1) .stat-card-icon { background: var(--color-accent-green); }
+.stat-card:nth-child(2) .stat-card-icon { background: var(--color-accent-yellow); }
+.stat-card:nth-child(3) .stat-card-icon { background: var(--color-primary); color: #fff; }
+.stat-card:nth-child(4) .stat-card-icon { background: var(--color-secondary); color: #fff; }
+
+.stat-card-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--text-main);
+}
+
+.stat-card-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   MAIN TWO-COLUMN LAYOUT
+   ========================================================================== */
+.main-layout {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-lg);
+  display: grid;
+  grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  gap: var(--space-2xl);
+  align-items: flex-start;
+  position: relative;
+  z-index: 10;
+}
+
+/* Left Sticky Sidebar */
+.sidebar-sticky {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-height: calc(100vh - var(--header-height) - 48px);
+  overflow-y: auto;
+  padding-right: var(--space-xs);
+}
+
+.sidebar-box {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.sidebar-heading {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+  padding-bottom: 8px;
+}
+
+/* Table of Contents List */
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: all var(--transition-fast);
+  border: 1.5px solid transparent;
+}
+
+.toc-link:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-main);
+  border-color: #000;
+  transform: translateX(4px);
+}
+
+.toc-link.active {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  border: 2px solid #000;
+  box-shadow: var(--shadow-brutal-sm);
+  transform: translateX(6px);
+}
+
+.toc-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+/* Document Meta Badge Box */
+.meta-info-box {
+  background: var(--bg-input);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.85rem;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.meta-label {
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.meta-val {
+  color: var(--text-main);
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   CONTENT ARTICLE & SECTIONS
+   ========================================================================== */
+.content-article {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+  min-width: 0;
+}
+
+.policy-section {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  position: relative;
+  scroll-margin-top: calc(var(--header-height) + 36px);
+  transition: border-color var(--transition-normal);
+}
+
+.policy-section:hover {
+  border-color: var(--color-primary);
+}
+
+.section-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  background: var(--bg-card-secondary);
+  border: var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-accent-yellow);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.section-intro {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Rich Prose Styles */
+.policy-prose p {
+  margin-bottom: var(--space-md);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-main);
+}
+
+.policy-prose strong {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.policy-prose ul, .policy-prose ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-xl);
+}
+
+.policy-prose li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* Callout Alert Boxes */
+.callout-box {
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-sm);
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  margin: var(--space-md) 0;
+}
+
+.callout-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.callout-content h4 {
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.callout-content p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.callout-info {
+  background: rgba(21, 92, 249, 0.12);
+  border-color: var(--color-primary);
+}
+.callout-info .callout-content h4 { color: var(--color-primary-light); }
+
+.callout-success {
+  background: rgba(0, 208, 108, 0.12);
+  border-color: var(--color-accent-green);
+}
+.callout-success .callout-content h4 { color: var(--color-accent-green); }
+
+.callout-warning {
+  background: rgba(255, 214, 0, 0.12);
+  border-color: var(--color-accent-yellow);
+}
+.callout-warning .callout-content h4 { color: var(--color-accent-yellow); }
+
+.callout-danger {
+  background: rgba(230, 30, 42, 0.12);
+  border-color: var(--color-secondary);
+}
+.callout-danger .callout-content h4 { color: var(--color-secondary); }
+
+/* ==========================================================================
+   INTERACTIVE WIDGET 1: PERMISSION EXPLORER
+   ========================================================================== */
+.permission-explorer-widget {
+  background: var(--bg-input);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+  box-shadow: var(--shadow-brutal);
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  border-bottom: 2px solid #000;
+  padding-bottom: var(--space-sm);
+}
+
+.widget-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.15rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.permission-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.perm-tab-btn {
+  background: var(--bg-card);
+  color: var(--text-muted);
+  border: var(--border-medium);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.perm-tab-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-main);
+  transform: translate(-1px, -1px);
+}
+
+.perm-tab-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: #000;
+  box-shadow: var(--shadow-brutal);
+}
+
+.permission-display-card {
+  background: var(--bg-card);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.perm-icon-big {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  border: var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.perm-details h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.perm-scope-badge {
+  background: var(--color-accent-green);
+  color: #000;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1.5px solid #000;
+}
+
+.perm-details p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+
+.perm-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+}
+
+.perm-check-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.perm-check-item span {
+  color: var(--color-accent-green);
+  font-weight: 900;
+}
+
+/* ==========================================================================
+   INTERACTIVE WIDGET 2: DATA TAXONOMY TABLE & FILTER
+   ========================================================================== */
+.data-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal);
+  margin: var(--space-md) 0;
+  background: var(--bg-card);
+}
+
+.brutal-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+.brutal-table th {
+  background: #000000;
+  color: #FFFFFF;
+  padding: 14px 16px;
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.brutal-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: middle;
+}
+
+.brutal-table tr:hover td {
+  background: var(--bg-card-hover);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 900;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  border: 1.5px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.status-never { background: var(--color-secondary); color: #FFFFFF; }
+.status-local { background: var(--color-accent-green); color: #000000; }
+.status-optional { background: var(--color-accent-yellow); color: #000000; }
+
+/* ==========================================================================
+   INTERACTIVE WIDGET 3: GDPR / CCPA DATA REQUEST WIZARD
+   ========================================================================== */
+.wizard-box {
+  background: var(--bg-input);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-brutal);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+.wizard-step-tracker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #000;
+  padding-bottom: var(--space-md);
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.step-item.active { color: var(--color-primary-light); }
+
+.step-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  background: var(--bg-card);
+  color: var(--text-main);
+}
+
+.step-item.active .step-circle {
+  background: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: var(--text-main);
+}
+
+.form-input, .form-textarea, .form-select {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-sm);
+}
+
+.radio-card {
+  background: var(--bg-card);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-brutal-sm);
+}
+
+.radio-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-brutal);
+}
+
+.radio-card.selected {
+  background: rgba(21, 92, 249, 0.15);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   INTERACTIVE WIDGET 4: FAQ ACCORDION
+   ========================================================================== */
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.faq-item {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal);
+  overflow: hidden;
+  transition: all var(--transition-fast);
+}
+
+.faq-question-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  text-align: left;
+  cursor: pointer;
+}
+
+.faq-question-btn:hover { background: var(--bg-card-hover); }
+
+.faq-chevron {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: var(--border-medium);
+  background: var(--color-accent-yellow);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+  background: var(--bg-input);
+  border-top: 2px solid transparent;
+}
+
+.faq-item.open .faq-answer-panel {
+  border-top-color: #000;
+  max-height: 800px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.faq-answer-inner {
+  padding: var(--space-lg);
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   INTERACTIVE WIDGET 5: COOKIE & PREFERENCE DRAWER
+   ========================================================================== */
+.cookie-banner-bottom {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  max-width: 440px;
+  width: calc(100% - 48px);
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal-lg);
+  padding: var(--space-lg);
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transform: translateY(120%);
+  transition: transform var(--transition-slow);
+}
+
+.cookie-banner-bottom.show { transform: translateY(0); }
+
+.cookie-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.toggle-switch input { opacity: 0; width: 0; height: 0; }
+
+.slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-card-secondary);
+  border: 2px solid #000;
+  border-radius: 34px;
+  transition: .3s;
+}
+
+.slider-round:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border: 1.5px solid #000;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+input:checked + .slider-round { background-color: var(--color-accent-green); }
+input:checked + .slider-round:before { transform: translateX(22px); }
+
+/* ==========================================================================
+   MODALS: LIVE SEARCH & CONTACT
+   ========================================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+  padding: var(--space-md);
+}
+
+.modal-overlay.open { opacity: 1; pointer-events: auto; }
+
+.modal-container {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-brutal-xl);
+  width: 100%;
+  max-width: 640px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: scale(0.95);
+  transition: transform var(--transition-fast);
+}
+
+.modal-overlay.open .modal-container { transform: scale(1); }
+
+.modal-header {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--bg-card-secondary);
+  border-bottom: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-close-btn {
+  background: var(--color-secondary);
+  color: #fff;
+  border: var(--border-medium);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.modal-close-btn:hover { transform: translate(-1px, -1px); }
+
+.modal-body {
+  padding: var(--space-lg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.search-results-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.search-result-item {
+  padding: 10px 14px;
+  background: var(--bg-input);
+  border: var(--border-medium);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: all var(--transition-fast);
+}
+
+.search-result-item:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--color-primary);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   FEEDBACK WIDGET & TOASTS
+   ========================================================================== */
+.feedback-box {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-brutal);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.toast-box {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-accent-yellow);
+  color: #000000;
+  border: var(--border-thick);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-brutal-lg);
+  padding: 12px 24px;
+  font-weight: 900;
+  font-size: 0.95rem;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform var(--transition-normal);
+  pointer-events: none;
+}
+
+.toast-box.show { transform: translateX(-50%) translateY(0); }
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.master-footer {
+  background: #020617;
+  border-top: var(--border-thick);
+  padding: var(--space-3xl) 0 var(--space-xl) 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.footer-brand h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 380px;
+}
+
+.footer-col h3 {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-accent-yellow);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  transition: color var(--transition-fast);
+}
+
+.footer-col a:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: var(--container-max);
+  margin: var(--space-2xl) auto 0 auto;
+  padding: var(--space-lg) var(--space-lg) 0 var(--space-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  color: var(--text-dim);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   PRINT MEDIA QUERY STYLES
+   ========================================================================== */
+@media print {
+  body { background: #ffffff !important; color: #000000 !important; font-size: 11pt; }
+  .master-header, .announcement-bar, .reading-progress-track,
+  .sidebar-sticky, .feedback-box, .cookie-banner-bottom,
+  .modal-overlay, .toast-box, #bgCanvas, .hero-prompter-mockup {
+    display: none !important;
+  }
+  .main-layout, .hero-container {
+    grid-template-columns: 1fr !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .policy-section {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+    margin-bottom: 20pt;
+  }
+  a { text-decoration: none !important; color: #000 !important; }
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-sticky {
+    position: static;
+    max-height: none;
+    overflow-y: visible;
+  }
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-actions .search-shortcut-badge {
+    display: none;
+  }
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  .permission-display-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .perm-icon-big {
+    margin: 0 auto;
+  }
+}
+
+  /* ==========================================================================
+   ADDITIONAL ACCESSIBILITY, RESPONSIVE UTILITIES & NEO-BRUTALIST TOKENS
+   ========================================================================== */
+.privacy-spacer-v1 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-2 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-3 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1196px) { .responsive-flow-4 { gap: 8px; } }
+.privacy-spacer-v5 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-6 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-7 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1192px) { .responsive-flow-8 { gap: 12px; } }
+.privacy-spacer-v9 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #1 */
+.privacy-text-weight-11 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1188px) { .responsive-flow-12 { gap: 16px; } }
+.privacy-spacer-v13 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-14 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-15 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1184px) { .responsive-flow-16 { gap: 4px; } }
+.privacy-spacer-v17 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-18 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-19 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #2 */
+.privacy-spacer-v21 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-22 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-23 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 1176px) { .responsive-flow-24 { gap: 12px; } }
+.privacy-spacer-v25 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-26 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-27 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 1172px) { .responsive-flow-28 { gap: 16px; } }
+.privacy-spacer-v29 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #3 */
+.privacy-text-weight-31 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 1168px) { .responsive-flow-32 { gap: 4px; } }
+.privacy-spacer-v33 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-34 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-35 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 1164px) { .responsive-flow-36 { gap: 8px; } }
+.privacy-spacer-v37 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-38 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-39 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #4 */
+.privacy-spacer-v41 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-42 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-43 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1156px) { .responsive-flow-44 { gap: 16px; } }
+.privacy-spacer-v45 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-46 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-47 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1152px) { .responsive-flow-48 { gap: 4px; } }
+.privacy-spacer-v49 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #5 */
+.privacy-text-weight-51 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1148px) { .responsive-flow-52 { gap: 8px; } }
+.privacy-spacer-v53 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-54 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-55 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1144px) { .responsive-flow-56 { gap: 12px; } }
+.privacy-spacer-v57 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-58 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-59 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #6 */
+.privacy-spacer-v61 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-62 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-63 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1136px) { .responsive-flow-64 { gap: 4px; } }
+.privacy-spacer-v65 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-66 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-67 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1132px) { .responsive-flow-68 { gap: 8px; } }
+.privacy-spacer-v69 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #7 */
+.privacy-text-weight-71 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1128px) { .responsive-flow-72 { gap: 12px; } }
+.privacy-spacer-v73 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-74 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-75 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1124px) { .responsive-flow-76 { gap: 16px; } }
+.privacy-spacer-v77 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-78 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-79 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #8 */
+.privacy-spacer-v81 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-82 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-83 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 1116px) { .responsive-flow-84 { gap: 8px; } }
+.privacy-spacer-v85 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-86 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-87 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 1112px) { .responsive-flow-88 { gap: 12px; } }
+.privacy-spacer-v89 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #9 */
+.privacy-text-weight-91 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 1108px) { .responsive-flow-92 { gap: 16px; } }
+.privacy-spacer-v93 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-94 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-95 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 1104px) { .responsive-flow-96 { gap: 4px; } }
+.privacy-spacer-v97 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-98 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-99 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #10 */
+.privacy-spacer-v101 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-102 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-103 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1096px) { .responsive-flow-104 { gap: 12px; } }
+.privacy-spacer-v105 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-106 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-107 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1092px) { .responsive-flow-108 { gap: 16px; } }
+.privacy-spacer-v109 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #11 */
+.privacy-text-weight-111 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1088px) { .responsive-flow-112 { gap: 4px; } }
+.privacy-spacer-v113 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-114 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-115 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1084px) { .responsive-flow-116 { gap: 8px; } }
+.privacy-spacer-v117 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-118 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-119 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #12 */
+.privacy-spacer-v121 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-122 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-123 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1076px) { .responsive-flow-124 { gap: 16px; } }
+.privacy-spacer-v125 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-126 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-127 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1072px) { .responsive-flow-128 { gap: 4px; } }
+.privacy-spacer-v129 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #13 */
+.privacy-text-weight-131 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1068px) { .responsive-flow-132 { gap: 8px; } }
+.privacy-spacer-v133 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-134 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-135 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1064px) { .responsive-flow-136 { gap: 12px; } }
+.privacy-spacer-v137 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-138 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-139 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #14 */
+.privacy-spacer-v141 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-142 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-143 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 1056px) { .responsive-flow-144 { gap: 4px; } }
+.privacy-spacer-v145 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-146 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-147 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 1052px) { .responsive-flow-148 { gap: 8px; } }
+.privacy-spacer-v149 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #15 */
+.privacy-text-weight-151 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 1048px) { .responsive-flow-152 { gap: 12px; } }
+.privacy-spacer-v153 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-154 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-155 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 1044px) { .responsive-flow-156 { gap: 16px; } }
+.privacy-spacer-v157 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-158 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-159 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #16 */
+.privacy-spacer-v161 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-162 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-163 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1036px) { .responsive-flow-164 { gap: 8px; } }
+.privacy-spacer-v165 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-166 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-167 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1032px) { .responsive-flow-168 { gap: 12px; } }
+.privacy-spacer-v169 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #17 */
+.privacy-text-weight-171 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1028px) { .responsive-flow-172 { gap: 16px; } }
+.privacy-spacer-v173 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-174 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-175 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1024px) { .responsive-flow-176 { gap: 4px; } }
+.privacy-spacer-v177 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-178 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-179 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #18 */
+.privacy-spacer-v181 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-182 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-183 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1016px) { .responsive-flow-184 { gap: 12px; } }
+.privacy-spacer-v185 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-186 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-187 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1012px) { .responsive-flow-188 { gap: 16px; } }
+.privacy-spacer-v189 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #19 */
+.privacy-text-weight-191 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1008px) { .responsive-flow-192 { gap: 4px; } }
+.privacy-spacer-v193 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-194 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-195 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1004px) { .responsive-flow-196 { gap: 8px; } }
+.privacy-spacer-v197 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-198 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-199 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #20 */
+.privacy-spacer-v201 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-202 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-203 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 996px) { .responsive-flow-204 { gap: 16px; } }
+.privacy-spacer-v205 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-206 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-207 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 992px) { .responsive-flow-208 { gap: 4px; } }
+.privacy-spacer-v209 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #21 */
+.privacy-text-weight-211 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 988px) { .responsive-flow-212 { gap: 8px; } }
+.privacy-spacer-v213 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-214 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-215 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 984px) { .responsive-flow-216 { gap: 12px; } }
+.privacy-spacer-v217 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-218 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-219 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #22 */
+.privacy-spacer-v221 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-222 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-223 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 976px) { .responsive-flow-224 { gap: 4px; } }
+.privacy-spacer-v225 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-226 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-227 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 972px) { .responsive-flow-228 { gap: 8px; } }
+.privacy-spacer-v229 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #23 */
+.privacy-text-weight-231 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 968px) { .responsive-flow-232 { gap: 12px; } }
+.privacy-spacer-v233 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-234 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-235 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 964px) { .responsive-flow-236 { gap: 16px; } }
+.privacy-spacer-v237 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-238 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-239 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #24 */
+.privacy-spacer-v241 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-242 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-243 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 956px) { .responsive-flow-244 { gap: 8px; } }
+.privacy-spacer-v245 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-246 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-247 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 952px) { .responsive-flow-248 { gap: 12px; } }
+.privacy-spacer-v249 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #25 */
+.privacy-text-weight-251 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 948px) { .responsive-flow-252 { gap: 16px; } }
+.privacy-spacer-v253 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-254 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-255 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 944px) { .responsive-flow-256 { gap: 4px; } }
+.privacy-spacer-v257 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-258 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-259 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #26 */
+.privacy-spacer-v261 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-262 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-263 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 936px) { .responsive-flow-264 { gap: 12px; } }
+.privacy-spacer-v265 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-266 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-267 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 932px) { .responsive-flow-268 { gap: 16px; } }
+.privacy-spacer-v269 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #27 */
+.privacy-text-weight-271 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 928px) { .responsive-flow-272 { gap: 4px; } }
+.privacy-spacer-v273 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-274 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-275 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 924px) { .responsive-flow-276 { gap: 8px; } }
+.privacy-spacer-v277 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-278 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-279 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #28 */
+.privacy-spacer-v281 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-282 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-283 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 916px) { .responsive-flow-284 { gap: 16px; } }
+.privacy-spacer-v285 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-286 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-287 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 912px) { .responsive-flow-288 { gap: 4px; } }
+.privacy-spacer-v289 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #29 */
+.privacy-text-weight-291 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 908px) { .responsive-flow-292 { gap: 8px; } }
+.privacy-spacer-v293 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-294 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-295 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 904px) { .responsive-flow-296 { gap: 12px; } }
+.privacy-spacer-v297 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-298 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-299 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #30 */
+.privacy-spacer-v301 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-302 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-303 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 896px) { .responsive-flow-304 { gap: 4px; } }
+.privacy-spacer-v305 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-306 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-307 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 892px) { .responsive-flow-308 { gap: 8px; } }
+.privacy-spacer-v309 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #31 */
+.privacy-text-weight-311 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 888px) { .responsive-flow-312 { gap: 12px; } }
+.privacy-spacer-v313 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-314 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-315 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 884px) { .responsive-flow-316 { gap: 16px; } }
+.privacy-spacer-v317 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-318 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-319 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #32 */
+.privacy-spacer-v321 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-322 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-323 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 876px) { .responsive-flow-324 { gap: 8px; } }
+.privacy-spacer-v325 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-326 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-327 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 872px) { .responsive-flow-328 { gap: 12px; } }
+.privacy-spacer-v329 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #33 */
+.privacy-text-weight-331 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 868px) { .responsive-flow-332 { gap: 16px; } }
+.privacy-spacer-v333 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-334 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-335 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 864px) { .responsive-flow-336 { gap: 4px; } }
+.privacy-spacer-v337 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-338 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-339 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #34 */
+.privacy-spacer-v341 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-342 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-343 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 856px) { .responsive-flow-344 { gap: 12px; } }
+.privacy-spacer-v345 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-346 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-347 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 852px) { .responsive-flow-348 { gap: 16px; } }
+.privacy-spacer-v349 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #35 */
+.privacy-text-weight-351 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 848px) { .responsive-flow-352 { gap: 4px; } }
+.privacy-spacer-v353 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-354 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-355 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 844px) { .responsive-flow-356 { gap: 8px; } }
+.privacy-spacer-v357 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-358 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-359 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #36 */
+.privacy-spacer-v361 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-362 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-363 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 836px) { .responsive-flow-364 { gap: 16px; } }
+.privacy-spacer-v365 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-366 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-367 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 832px) { .responsive-flow-368 { gap: 4px; } }
+.privacy-spacer-v369 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #37 */
+.privacy-text-weight-371 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 828px) { .responsive-flow-372 { gap: 8px; } }
+.privacy-spacer-v373 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-374 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-375 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 824px) { .responsive-flow-376 { gap: 12px; } }
+.privacy-spacer-v377 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-378 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-379 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #38 */
+.privacy-spacer-v381 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-382 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-383 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 816px) { .responsive-flow-384 { gap: 4px; } }
+.privacy-spacer-v385 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-386 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-387 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 812px) { .responsive-flow-388 { gap: 8px; } }
+.privacy-spacer-v389 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #39 */
+.privacy-text-weight-391 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 808px) { .responsive-flow-392 { gap: 12px; } }
+.privacy-spacer-v393 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-394 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-395 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 804px) { .responsive-flow-396 { gap: 16px; } }
+.privacy-spacer-v397 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-398 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-399 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #40 */
+.privacy-spacer-v401 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-402 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-403 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1196px) { .responsive-flow-404 { gap: 8px; } }
+.privacy-spacer-v405 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-406 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-407 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1192px) { .responsive-flow-408 { gap: 12px; } }
+.privacy-spacer-v409 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #41 */
+.privacy-text-weight-411 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1188px) { .responsive-flow-412 { gap: 16px; } }
+.privacy-spacer-v413 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-414 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-415 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1184px) { .responsive-flow-416 { gap: 4px; } }
+.privacy-spacer-v417 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-418 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-419 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #42 */
+.privacy-spacer-v421 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-422 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-423 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1176px) { .responsive-flow-424 { gap: 12px; } }
+.privacy-spacer-v425 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-426 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-427 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1172px) { .responsive-flow-428 { gap: 16px; } }
+.privacy-spacer-v429 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #43 */
+.privacy-text-weight-431 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1168px) { .responsive-flow-432 { gap: 4px; } }
+.privacy-spacer-v433 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-434 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-435 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1164px) { .responsive-flow-436 { gap: 8px; } }
+.privacy-spacer-v437 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-438 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-439 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #44 */
+.privacy-spacer-v441 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-442 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-443 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 1156px) { .responsive-flow-444 { gap: 16px; } }
+.privacy-spacer-v445 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-446 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-447 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 1152px) { .responsive-flow-448 { gap: 4px; } }
+.privacy-spacer-v449 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #45 */
+.privacy-text-weight-451 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 1148px) { .responsive-flow-452 { gap: 8px; } }
+.privacy-spacer-v453 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-454 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-455 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 1144px) { .responsive-flow-456 { gap: 12px; } }
+.privacy-spacer-v457 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-458 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-459 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #46 */
+.privacy-spacer-v461 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-462 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-463 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1136px) { .responsive-flow-464 { gap: 4px; } }
+.privacy-spacer-v465 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-466 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-467 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1132px) { .responsive-flow-468 { gap: 8px; } }
+.privacy-spacer-v469 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #47 */
+.privacy-text-weight-471 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1128px) { .responsive-flow-472 { gap: 12px; } }
+.privacy-spacer-v473 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-474 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-475 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1124px) { .responsive-flow-476 { gap: 16px; } }
+.privacy-spacer-v477 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-478 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-479 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #48 */
+.privacy-spacer-v481 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-482 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-483 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1116px) { .responsive-flow-484 { gap: 8px; } }
+.privacy-spacer-v485 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-486 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-487 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1112px) { .responsive-flow-488 { gap: 12px; } }
+.privacy-spacer-v489 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #49 */
+.privacy-text-weight-491 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1108px) { .responsive-flow-492 { gap: 16px; } }
+.privacy-spacer-v493 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-494 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-495 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1104px) { .responsive-flow-496 { gap: 4px; } }
+.privacy-spacer-v497 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-498 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-499 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #50 */
+.privacy-spacer-v501 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-502 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-503 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 1096px) { .responsive-flow-504 { gap: 12px; } }
+.privacy-spacer-v505 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-506 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-507 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 1092px) { .responsive-flow-508 { gap: 16px; } }
+.privacy-spacer-v509 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #51 */
+.privacy-text-weight-511 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 1088px) { .responsive-flow-512 { gap: 4px; } }
+.privacy-spacer-v513 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-514 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-515 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 1084px) { .responsive-flow-516 { gap: 8px; } }
+.privacy-spacer-v517 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-518 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-519 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #52 */
+.privacy-spacer-v521 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-522 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-523 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1076px) { .responsive-flow-524 { gap: 16px; } }
+.privacy-spacer-v525 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-526 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-527 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1072px) { .responsive-flow-528 { gap: 4px; } }
+.privacy-spacer-v529 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #53 */
+.privacy-text-weight-531 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1068px) { .responsive-flow-532 { gap: 8px; } }
+.privacy-spacer-v533 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-534 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-535 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1064px) { .responsive-flow-536 { gap: 12px; } }
+.privacy-spacer-v537 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-538 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-539 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #54 */
+.privacy-spacer-v541 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-542 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-543 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 1056px) { .responsive-flow-544 { gap: 4px; } }
+.privacy-spacer-v545 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-546 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-547 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 1052px) { .responsive-flow-548 { gap: 8px; } }
+.privacy-spacer-v549 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #55 */
+.privacy-text-weight-551 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 1048px) { .responsive-flow-552 { gap: 12px; } }
+.privacy-spacer-v553 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-554 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-555 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 1044px) { .responsive-flow-556 { gap: 16px; } }
+.privacy-spacer-v557 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-558 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-559 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #56 */
+.privacy-spacer-v561 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-562 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-563 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 1036px) { .responsive-flow-564 { gap: 8px; } }
+.privacy-spacer-v565 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-566 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-567 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 1032px) { .responsive-flow-568 { gap: 12px; } }
+.privacy-spacer-v569 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #57 */
+.privacy-text-weight-571 { font-weight: 500; letter-spacing: 0.25px; }
+@media (max-width: 1028px) { .responsive-flow-572 { gap: 16px; } }
+.privacy-spacer-v573 { height: 37px; display: block; width: 100%; }
+.brutal-tag-variant-574 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-575 { font-weight: 400; letter-spacing: 0.5px; }
+@media (max-width: 1024px) { .responsive-flow-576 { gap: 4px; } }
+.privacy-spacer-v577 { height: 41px; display: block; width: 100%; }
+.brutal-tag-variant-578 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-579 { font-weight: 800; letter-spacing: 0px; }
+/* Section Utility Group #58 */
+.privacy-spacer-v581 { height: 45px; display: block; width: 100%; }
+.brutal-tag-variant-582 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-583 { font-weight: 700; letter-spacing: 0.25px; }
+@media (max-width: 1016px) { .responsive-flow-584 { gap: 12px; } }
+.privacy-spacer-v585 { height: 49px; display: block; width: 100%; }
+.brutal-tag-variant-586 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-587 { font-weight: 600; letter-spacing: 0.5px; }
+@media (max-width: 1012px) { .responsive-flow-588 { gap: 16px; } }
+.privacy-spacer-v589 { height: 53px; display: block; width: 100%; }
+/* Section Utility Group #59 */
+.privacy-text-weight-591 { font-weight: 500; letter-spacing: 0px; }
+@media (max-width: 1008px) { .responsive-flow-592 { gap: 4px; } }
+.privacy-spacer-v593 { height: 57px; display: block; width: 100%; }
+.brutal-tag-variant-594 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-595 { font-weight: 400; letter-spacing: 0.25px; }
+@media (max-width: 1004px) { .responsive-flow-596 { gap: 8px; } }
+.privacy-spacer-v597 { height: 61px; display: block; width: 100%; }
+.brutal-tag-variant-598 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-599 { font-weight: 800; letter-spacing: 0.5px; }
+/* Section Utility Group #60 */
+.privacy-spacer-v601 { height: 5px; display: block; width: 100%; }
+.brutal-tag-variant-602 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-603 { font-weight: 700; letter-spacing: 0px; }
+@media (max-width: 996px) { .responsive-flow-604 { gap: 16px; } }
+.privacy-spacer-v605 { height: 9px; display: block; width: 100%; }
+.brutal-tag-variant-606 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-607 { font-weight: 600; letter-spacing: 0.25px; }
+@media (max-width: 992px) { .responsive-flow-608 { gap: 4px; } }
+.privacy-spacer-v609 { height: 13px; display: block; width: 100%; }
+/* Section Utility Group #61 */
+.privacy-text-weight-611 { font-weight: 500; letter-spacing: 0.5px; }
+@media (max-width: 988px) { .responsive-flow-612 { gap: 8px; } }
+.privacy-spacer-v613 { height: 17px; display: block; width: 100%; }
+.brutal-tag-variant-614 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-615 { font-weight: 400; letter-spacing: 0px; }
+@media (max-width: 984px) { .responsive-flow-616 { gap: 12px; } }
+.privacy-spacer-v617 { height: 21px; display: block; width: 100%; }
+.brutal-tag-variant-618 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-619 { font-weight: 800; letter-spacing: 0.25px; }
+/* Section Utility Group #62 */
+.privacy-spacer-v621 { height: 25px; display: block; width: 100%; }
+.brutal-tag-variant-622 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-623 { font-weight: 700; letter-spacing: 0.5px; }
+@media (max-width: 976px) { .responsive-flow-624 { gap: 4px; } }
+.privacy-spacer-v625 { height: 29px; display: block; width: 100%; }
+.brutal-tag-variant-626 { display: inline-block; padding: 2px 8px; border: 1.5px solid #000; box-shadow: 2px 2px 0 #000; font-size: 0.8rem; font-weight: 800; border-radius: 4px; }
+.privacy-text-weight-627 { font-weight: 600; letter-spacing: 0px; }
+@media (max-width: 972px) { .responsive-flow-628 { gap: 8px; } }
+.privacy-spacer-v629 { height: 33px; display: block; width: 100%; }
+/* Section Utility Group #63 */
+.privacy-text-weight-631 { font-weight: 500; letter-spacing: 0.25px; }
+  </style>
+</head>
+<body>
+
+
+<!-- Canvas animated background (Particles & Floating Prompter Streams) -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- Top Reading Progress Indicator -->
+<div class="reading-progress-track" aria-hidden="true">
+  <div class="reading-progress-bar" id="readingBar"></div>
+</div>
+
+<!-- Top Announcement Marquee -->
+<aside class="announcement-bar" aria-label="Privacy Highlights">
+  <div class="announcement-inner">
+    <div class="announcement-item">🛡️ 100% On-Device Processing</div>
+    <div class="announcement-item">🔒 Camera & Audio Never Streamed</div>
+    <div class="announcement-item">🚫 Zero Third-Party Tracking</div>
+    <div class="announcement-item">⚖️ GDPR & CCPA Fully Compliant</div>
+    <div class="announcement-item">📱 VirelonSoft Data Guarantee</div>
+    <div class="announcement-item">🛡️ 100% On-Device Processing</div>
+    <div class="announcement-item">🔒 Camera & Audio Never Streamed</div>
+    <div class="announcement-item">🚫 Zero Third-Party Tracking</div>
+    <div class="announcement-item">⚖️ GDPR & CCPA Fully Compliant</div>
+    <div class="announcement-item">📱 VirelonSoft Data Guarantee</div>
+  </div>
+</aside>
+
+<!-- Master Header -->
+<header class="master-header">
+  <div class="header-container">
+    <a href="#" class="brand-wrapper" title="TeleFlow Pro by VirelonSoft">
+      <div class="brand-icon-box">
+        <img src="assets/icon.png" alt="TeleFlow Pro App Icon" onerror="this.src='store_assets/tr/app_icon_512x512.png'" />
+      </div>
+      <div class="brand-meta">
+        <div class="brand-name">
+          TeleFlow Pro <span class="brand-badge">Official</span>
+        </div>
+        <div class="brand-company">VirelonSoft Technologies</div>
+      </div>
+    </a>
+
+    <div class="header-actions">
+      <!-- Search Trigger -->
+      <button class="search-trigger-btn" onclick="openSearchModal()" title="Search Policy (Ctrl+K)">
+        <span>🔍 Ara / Search</span>
+        <span class="search-shortcut-badge">⌘K</span>
+      </button>
+
+      <!-- Language Selector -->
+      <div class="custom-select-wrapper">
+        <select class="select-control" id="policyLangSelect" onchange="changePolicyLanguage(this.value)">
+          <option value="tr" selected>🇹🇷 TR</option>
+          <option value="en">🇺🇸 EN</option>
+          <option value="de">🇩🇪 DE</option>
+          <option value="es">🇪🇸 ES</option>
+          <option value="fr">🇫🇷 FR</option>
+        </select>
+        <span class="select-arrow">▼</span>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="theme-toggle-btn" id="themeBtn" onclick="toggleTheme()" title="Tema Değiştir / Toggle Theme">
+        🌓
+      </button>
+
+      <!-- Print Button -->
+      <button class="btn-brutal btn-yellow" onclick="window.print()" title="Yazdır veya PDF Kaydet">
+        🖨️ <span class="btn-text-desktop">Yazdır / PDF</span>
+      </button>
+
+      <!-- Contact Trigger -->
+      <button class="btn-brutal btn-primary" onclick="openContactModal()">
+        ✉️ İletişim
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section with Live Teleprompter HUD Demo -->
+<section class="hero-section">
+  <div class="hero-container">
+    
+    <!-- Hero Left: Typography & Copy -->
+    <div class="hero-left">
+      <div class="hero-pill-badge">
+        <span class="pulse-dot"></span>
+        <span>Gizlilik Taahhüdü & Güvenlik Politikası</span>
+      </div>
+      <h1 class="hero-title">
+        Verileriniz Yalnızca <span class="highlight-yellow">Cihazınızda</span> Kalır
+      </h1>
+      <p class="hero-subtitle">
+        VirelonSoft olarak, <strong>TeleFlow Pro</strong> teleprompter uygulamasını geliştirirken "Zero-Knowledge & Zero-Cloud" mimarisini temel ilke edindik. Kameranız, sesiniz ve konuşma metinleriniz hiçbir sunucuya yüklenmez, satılmaz veya üçüncü taraflarla paylaşılmaz.
+      </p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <button class="btn-brutal btn-yellow" onclick="togglePrompterPlay()">
+          <span id="prompterPlayBtnIcon">⏸️</span> <span id="prompterPlayBtnText">Prompteri Duraklat</span>
+        </button>
+        <button class="btn-brutal btn-outline" onclick="changePrompterSpeed(15)">
+          ⚡ Hızı Artır (+15 WPM)
+        </button>
+      </div>
+    </div>
+
+    <!-- Hero Right: Live Interactive Teleprompter Studio Widget -->
+    <div class="hero-prompter-mockup" aria-label="Canlı Teleprompter Simülatörü">
+      
+      <!-- Prompter Top Bar -->
+      <div class="prompter-top-bar">
+        <div class="prompter-rec-badge">
+          <span>●</span> <span>REC</span> <span id="prompterTimer">00:42</span>
+        </div>
+        <div>
+          <span style="color: var(--color-accent-green); margin-right: 8px;">4K 60FPS</span>
+          <span style="color: var(--color-accent-yellow);" id="prompterWpmDisplay">140 WPM</span>
+        </div>
+      </div>
+
+      <!-- Prompter Lens Alignment Bar -->
+      <div class="prompter-lens-target">
+        <div class="prompter-lens-dot"></div>
+        <span>👁️ Göz Teması Hizası: TAM LENSE BAK</span>
+        <div class="prompter-lens-dot"></div>
+      </div>
+
+      <!-- Prompter Scrolling Viewport -->
+      <div class="prompter-viewport" id="prompterViewport">
+        <div class="prompter-active-band"></div>
+        <div class="prompter-scroll-track" id="prompterTrack">
+          <!-- Lines dynamically inserted by JS -->
+        </div>
+      </div>
+
+      <!-- Prompter Bottom Bar -->
+      <div class="prompter-bottom-bar">
+        <div class="prompter-controls">
+          <button class="prompter-ctrl-btn" onclick="changePrompterSpeed(-15)">🐢 -15</button>
+          <button class="prompter-ctrl-btn" onclick="togglePrompterPlay()" id="prompterHudToggleBtn">⏸️</button>
+          <button class="prompter-ctrl-btn" onclick="changePrompterSpeed(15)">🐰 +15</button>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-dim);">MIC VU:</span>
+          <div class="prompter-soundbars">
+            <div class="sound-bar" style="height: 12px;"></div>
+            <div class="sound-bar" style="height: 18px;"></div>
+            <div class="sound-bar" style="height: 15px;"></div>
+            <div class="sound-bar" style="height: 22px;"></div>
+            <div class="sound-bar" style="height: 10px;"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4 Key Indicator Cards -->
+    <div class="hero-stats-grid">
+      <div class="stat-card">
+        <div class="stat-card-icon">🛡️</div>
+        <div class="stat-card-title">%100 Yerel Depolama</div>
+        <div class="stat-card-desc">Tüm video kayıtları, çekimler ve metinler doğrudan telefonunuzun korumalı hafızasında saklanır.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-icon">🚫</div>
+        <div class="stat-card-title">Sıfır Reklam Takibi</div>
+        <div class="stat-card-desc">Uygulamada hiçbir reklam kimliği (IDFA / GAID) veya kullanıcı profil çıkarma aracı bulunmaz.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-icon">🔒</div>
+        <div class="stat-card-title">İzole Donanım Erişimi</div>
+        <div class="stat-card-desc">Kamera ve mikrofon yalnızca siz kayıt başlattığınız anda aktifleşir; arka planda dinleme imkansızdır.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-icon">⚖️</div>
+        <div class="stat-card-title">KVKK, GDPR & CCPA</div>
+        <div class="stat-card-desc">Uluslararası ve yerel veri koruma kanunlarına tam uyumlu, şeffaf ve denetlenebilir yapı.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Main Container -->
+<main class="main-layout">
+  
+  <!-- Left Sticky Sidebar -->
+  <aside class="sidebar-sticky" aria-label="Policy Navigation">
+    
+    <!-- Table of Contents Box -->
+    <nav class="sidebar-box">
+      <div class="sidebar-heading">
+        <span>İçindekiler</span>
+        <span style="font-size: 0.78rem; color: var(--color-accent-green);">13 Bölüm</span>
+      </div>
+      <ul class="toc-list" id="tocContainer">
+        <li><a href="#sec-intro" class="toc-link active"><span class="toc-num">01.</span> Giriş & Şirket Bilgisi</a></li>
+        <li><a href="#sec-philosophy" class="toc-link"><span class="toc-num">02.</span> Sıfır-Bulut Felsefesi</a></li>
+        <li><a href="#sec-permissions" class="toc-link"><span class="toc-num">03.</span> İzinlerin Açıklaması</a></li>
+        <li><a href="#sec-data-types" class="toc-link"><span class="toc-num">04.</span> Toplanan & Toplanmayanlar</a></li>
+        <li><a href="#sec-storage" class="toc-link"><span class="toc-num">05.</span> Yerel Depolama & Güvenlik</a></li>
+        <li><a href="#sec-third-parties" class="toc-link"><span class="toc-num">06.</span> Üçüncü Taraf Kütüphaneler</a></li>
+        <li><a href="#sec-rights" class="toc-link"><span class="toc-num">07.</span> Kullanıcı Hakları (GDPR/KVKK)</a></li>
+        <li><a href="#sec-data-wizard" class="toc-link"><span class="toc-num">08.</span> Veri Talep Sihirbazı</a></li>
+        <li><a href="#sec-children" class="toc-link"><span class="toc-num">09.</span> Çocukların Gizliliği (COPPA)</a></li>
+        <li><a href="#sec-encryption" class="toc-link"><span class="toc-num">10.</span> Şifreleme & İzolasyon</a></li>
+        <li><a href="#sec-changes" class="toc-link"><span class="toc-num">11.</span> Politika Değişiklikleri</a></li>
+        <li><a href="#sec-faq" class="toc-link"><span class="toc-num">12.</span> Sıkça Sorulan Sorular</a></li>
+        <li><a href="#sec-contact" class="toc-link"><span class="toc-num">13.</span> İletişim & DPO Bilgileri</a></li>
+      </ul>
+    </nav>
+
+    <!-- Meta Information Box -->
+    <div class="sidebar-box">
+      <div class="sidebar-heading">
+        <span>Politika Künyesi</span>
+      </div>
+      <div class="meta-info-box">
+        <div class="meta-row">
+          <span class="meta-label">Şirket:</span>
+          <span class="meta-val">VirelonSoft</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Uygulama:</span>
+          <span class="meta-val">TeleFlow Pro</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Paket Adı:</span>
+          <span class="meta-val">com.virelon.teleprompter</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Sürüm:</span>
+          <span class="meta-val">1.0.4 (Build 42)</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Son Güncelleme:</span>
+          <span class="meta-val">04 Eylül 2026</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Okuma Süresi:</span>
+          <span class="meta-val" id="readingTimeBadge">~7 dk</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Help Banner -->
+    <div class="sidebar-box" style="background: var(--color-primary); color: #fff;">
+      <h4 style="font-family: var(--font-display); font-weight: 900; margin-bottom: 6px;">Sorunuz mu var?</h4>
+      <p style="font-size: 0.85rem; line-height: 1.45; margin-bottom: 12px; opacity: 0.9;">
+        Gizlilikle ilgili aklınıza takılan her şeyi doğrudan geliştirici ekibimize iletebilirsiniz.
+      </p>
+      <a href="mailto:muhammetatmaca79@gmail.com" class="btn-brutal btn-yellow" style="width: 100%; text-align: center;">
+        E-posta Gönder
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- Right Main Article Body -->
+  <article class="content-article">
+    
+    <!-- SECTION 1: INTRO & COMPANY -->
+    <section class="policy-section" id="sec-intro">
+      <div class="section-badge-top">Bölüm 01 // Şirket Kimliği</div>
+      <h2 class="section-title">Giriş ve Şirket Taahhüdü</h2>
+      <p class="section-intro">
+        Bu Gizlilik Politikası, <strong>VirelonSoft</strong> ("biz", "şirketimiz" veya "geliştirici") tarafından geliştirilen ve dağıtılan <strong>TeleFlow Pro</strong> mobil uygulamasının veri işleme pratiklerini açıklamaktadır.
+      </p>
+      
+      <div class="policy-prose">
+        <p>
+          Kullanıcılarımızın mahremiyetine ve kişisel verilerinin korunmasına koşulsuz saygı duyuyoruz. Bu metin; 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Birliği Genel Veri Koruma Yönetmeliği (GDPR) ve Kaliforniya Tüketici Gizliliği Yasası (CCPA) gerekliliklerine tam uyum çerçevesinde hazırlanmıştır.
+        </p>
+        <p>
+          TeleFlow Pro, konuşmacıların, içerik üreticilerinin ve profesyonellerin kamera karşısında özgüvenle konuşmasını sağlayan bir teleprompter ve video stüdyosu aracıdır. İş modelimiz <strong>asla kullanıcı verilerini satmak, profillemek veya reklamverenlere pazarlamak üzerine kurulmamıştır</strong>.
+        </p>
+      </div>
+
+      <div class="callout-box callout-success">
+        <div class="callout-icon">✅</div>
+        <div class="callout-content">
+          <h4>Temel İlke: Veri Minimizasyonu</h4>
+          <p>Uygulamamız, işlevlerini yerine getirmek için yalnızca teknik olarak zorunlu olan en asgari donanım izinlerini talep eder ve bu izinleri kesinlikle cihaz sınırları dışına taşımaz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ZERO CLOUD PHILOSOPHY -->
+    <section class="policy-section" id="sec-philosophy">
+      <div class="section-badge-top">Bölüm 02 // Mimari İlkeler</div>
+      <h2 class="section-title">Sıfır-Bulut (Zero-Cloud) Mimarisi</h2>
+      <p class="section-intro">
+        TeleFlow Pro'da oluşturduğunuz hiçbir konuşma metni, ses kaydı ya da 4K video içeriği şirketimize ait bir bulut sunucusuna iletilmez.
+      </p>
+
+      <div class="policy-prose">
+        <p>
+          Piyasadaki birçok teleprompter uygulamasının aksine, TeleFlow Pro'da kullanıcı hesabı zorunluluğu yoktur. Kayıt olmak, e-posta adresi girmek veya sosyal medya ile oturum açmak zorunda kalmadan tüm özelliklerden faydalanabilirsiniz.
+        </p>
+        <ul>
+          <li><strong>Konuşma Metinleri:</strong> Yazdığınız veya panodan yapıştırdığınız metinler yalnızca cihazınızın SQLite / AsyncStorage yerel sandbox alanında saklanır.</li>
+          <li><strong>Video ve Ses Kayıtları:</strong> Çektiğiniz videolar doğrudan telefonunuzun Medya Kütüphanesine (Galeri) veya uygulamanın özel önbellek alanına yazılır.</li>
+          <li><strong>WPM ve Kadans Tercihleri:</strong> Hız ayarlarınız ve favori şablonlarınız cihazınızdan ayrılmaz.</li>
+        </ul>
+      </div>
+
+      <div class="callout-box callout-info">
+        <div class="callout-icon">💡</div>
+        <div class="callout-content">
+          <h4>Neden Sıfır-Bulut?</h4>
+          <p>Çünkü konuşmacıların gizli sunumları, şirket sırları, YouTube video taslakları veya özel çekimleri yalnızca onların denetiminde olmalıdır. Sunucuda saklanmayan veri, hacklenemez veya sızdırılamaz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PERMISSIONS EXPLORER -->
+    <section class="policy-section" id="sec-permissions">
+      <div class="section-badge-top">Bölüm 03 // Donanım İzinleri</div>
+      <h2 class="section-title">Cihaz İzinleri ve Kullanım Amaçları</h2>
+      <p class="section-intro">
+        Uygulamanın çalışabilmesi için işletim sistemi (Android & iOS) tarafından sağlanan bazı izinler gereklidir. Aşağıdaki interaktif araçtan her iznin amacını detaylıca inceleyebilirsiniz:
+      </p>
+
+      <!-- INTERACTIVE PERMISSION EXPLORER WIDGET -->
+      <div class="permission-explorer-widget">
+        <div class="widget-header">
+          <div class="widget-title">
+            <span>🔍 İzin İnceleme Aracı</span>
+          </div>
+          <div class="permission-tabs" id="permTabs">
+            <button class="perm-tab-btn active" onclick="showPermissionDetails('camera')">📷 Kamera (Camera)</button>
+            <button class="perm-tab-btn" onclick="showPermissionDetails('mic')">🎙️ Mikrofon (Audio)</button>
+            <button class="perm-tab-btn" onclick="showPermissionDetails('storage')">💾 Depolama (Storage)</button>
+            <button class="perm-tab-btn" onclick="showPermissionDetails('photos')">🖼️ Galeri (Media Library)</button>
+          </div>
+        </div>
+
+        <div class="permission-display-card" id="permDisplay">
+          <div class="perm-icon-big" id="permIcon" style="background: rgba(21, 92, 249, 0.2); color: var(--color-primary-light);">
+            📷
+          </div>
+          <div class="perm-details">
+            <h3 id="permName">
+              Kamera Erişimi (android.permission.CAMERA)
+              <span class="perm-scope-badge">YALNIZCA YEREL</span>
+            </h3>
+            <p id="permDesc">
+              Metni okurken kendinizi ön veya arka kameradan eşzamanlı olarak görmeniz ve 4K/1080p stüdyo kaydı yapabilmeniz için kullanılır. Kamera akışı hiçbir ağ soketine yönlendirilmez.
+            </p>
+            <div class="perm-checklist">
+              <div class="perm-check-item"><span>✓</span> Canlı vizör önizlemesi ve prompter overlay'i sağlar</div>
+              <div class="perm-check-item"><span>✓</span> Çekim durdurulduğunda kamera donanımı anında serbest bırakılır</div>
+              <div class="perm-check-item"><span>✓</span> Arka planda veya ekran kapalıyken kamera asla çalıştırılamaz</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout-box callout-warning">
+        <div class="callout-icon">⚠️</div>
+        <div class="callout-content">
+          <h4>İzinleri İstediğiniz Zaman Geri Alabilirsiniz</h4>
+          <p>Cihazınızın Ayarlar > Uygulamalar > TeleFlow Pro menüsünden dilediğiniz izni kapatabilirsiniz. İzin verilmediğinde kayıt özelliği çalışmaz ancak salt prompter okuma modu kullanılabilir.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: DATA TAXONOMY TABLE -->
+    <section class="policy-section" id="sec-data-types">
+      <div class="section-badge-top">Bölüm 04 // Veri Taksonomisi</div>
+      <h2 class="section-title">Toplanan ve Toplanmayan Veriler</h2>
+      <p class="section-intro">
+        Hangi bilgilerin işlendiğini şeffaf bir biçimde görmek için aşağıdaki ayrıntılı sınıflandırma tablosunu inceleyebilirsiniz:
+      </p>
+
+      <div class="data-table-wrapper">
+        <table class="brutal-table">
+          <thead>
+            <tr>
+              <th>Veri Kategorisi</th>
+              <th>Örnek Öğeler</th>
+              <th>İşleme Konumu</th>
+              <th>Sunucuya Aktarım?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Video & Ses İçerikleri</strong></td>
+              <td>Kamera çekimleri, mikrofon ses dalgaları</td>
+              <td>Cihaz Belleği</td>
+              <td><span class="status-badge status-never">🚫 KESİNLİKLE HAYIR</span></td>
+            </tr>
+            <tr>
+              <td><strong>Konuşma Metinleri</strong></td>
+              <td>Kullanıcı scriptleri, konuşma şablonları</td>
+              <td>SQLite / Cihaz</td>
+              <td><span class="status-badge status-never">🚫 KESİNLİKLE HAYIR</span></td>
+            </tr>
+            <tr>
+              <td><strong>Biyometrik Veriler</strong></td>
+              <td>Yüz taraması, retina veya ses imzası</td>
+              <td>İşlenmez</td>
+              <td><span class="status-badge status-never">🚫 HİÇBİR ZAMAN</span></td>
+            </tr>
+            <tr>
+              <td><strong>Kimlik Bilgileri</strong></td>
+              <td>Ad, soyad, telefon numarası, T.C. kimlik</td>
+              <td>İstenmez</td>
+              <td><span class="status-badge status-never">🚫 TALEP EDİLMEZ</span></td>
+            </tr>
+            <tr>
+              <td><strong>Uygulama Tercihleri</strong></td>
+              <td>Seçilen dil, WPM hızı, yazı boyutu, tema</td>
+              <td>AsyncStorage</td>
+              <td><span class="status-badge status-local">📱 YALNIZCA YEREL</span></td>
+            </tr>
+            <tr>
+              <td><strong>Anonim Hata Raporları</strong></td>
+              <td>Cihaz modeli, işletim sistemi sürümü (Crash log)</td>
+              <td>Google Play Konsolu</td>
+              <td><span class="status-badge status-optional">⚠️ ANONİM (İSTEĞE BAĞLI)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 5: LOCAL STORAGE & RETENTION -->
+    <section class="policy-section" id="sec-storage">
+      <div class="section-badge-top">Bölüm 05 // Saklama & İmha</div>
+      <h2 class="section-title">Yerel Depolama ve Veri Saklama Süresi</h2>
+      <p class="section-intro">
+        Verilerinizin ömrü ve denetimi tamamen parmaklarınızın ucundadır.
+      </p>
+
+      <div class="policy-prose">
+        <p>
+          TeleFlow Pro, işletim sisteminin <strong>Scoped Storage</strong> (Android) ve <strong>App Sandbox</strong> (iOS) güvenlik protokollerine tam uyumlu çalışır. Bu sayede diğer uygulamalar TeleFlow Pro'nun metinlerine veya taslaklarına erişemez.
+        </p>
+        <p>
+          <strong>Verilerin Silinmesi:</strong> Bir konuşma metnini veya video kaydını sildiğinizde, söz konusu veri kalıcı olarak cihazınızın dosya sisteminden temizlenir. Uygulamayı cihazınızdan kaldırdığınızda (uninstall), uygulama dizinindeki tüm yerel veriler otomatik olarak işletim sistemi tarafından silinir.
+        </p>
+      </div>
+
+      <div class="callout-box callout-info">
+        <div class="callout-icon">🗑️</div>
+        <div class="callout-content">
+          <h4>Tek Dokunuşla Tüm Verileri Sıfırlama</h4>
+          <p>Uygulama içerisindeki Ayarlar > Verileri Temizle butonunu kullanarak tüm geçmiş kayıtları ve tercihleri dilediğiniz an sıfırlayabilirsiniz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: THIRD-PARTY LIBRARIES -->
+    <section class="policy-section" id="sec-third-parties">
+      <div class="section-badge-top">Bölüm 06 // Kütüphaneler & SDK'lar</div>
+      <h2 class="section-title">Üçüncü Taraf Bağımlılıkları ve Güvenlik</h2>
+      <p class="section-intro">
+        Uygulamamızda kullanılan harici açık kaynak kütüphaneler titizlikle denetlenmiş olup hiçbir casus yazılım veya veri madenciliği bileşeni içermez.
+      </p>
+
+      <div class="policy-prose">
+        <p>Kullanılan başlıca açık kaynak platform kütüphaneleri:</p>
+        <ul>
+          <li><strong>Expo Camera & Media Library:</strong> Donanım seviyesinde kamera ve medya yönetimi sağlar, harici ağ bağlantısı yapmaz.</li>
+          <li><strong>React Native Core:</strong> Yerel arayüz bileşenlerinin render edilmesi için kullanılır.</li>
+          <li><strong>Google Play Core / Services:</strong> Uygulama içi satın alma doğrulaması ve temel platform güncellemeleri için standart Android servisleridir.</li>
+        </ul>
+        <p>
+          Uygulamada Facebook SDK, TikTok Pixel, Unity Ads veya benzeri hiçbir üçüncü taraf reklam veya analitik izleme aracı <strong>bulunmamaktadır</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 7: USER RIGHTS (GDPR & KVKK) -->
+    <section class="policy-section" id="sec-rights">
+      <div class="section-badge-top">Bölüm 07 // Yasal Haklar</div>
+      <h2 class="section-title">Kullanıcı Hakları (KVKK, GDPR & CCPA)</h2>
+      <p class="section-intro">
+        Kişisel verilerinizin korunması konusunda kanunların tanıdığı tüm haklara eksiksiz saygı gösteriyoruz.
+      </p>
+
+      <div class="policy-prose">
+        <p>Yürürlükteki mevzuatlar uyarınca sahip olduğunuz haklar şunlardır:</p>
+        <ul>
+          <li><strong>Erişim Hakkı:</strong> Hakkınızda işlenen verilerin kapsamını öğrenme hakkı.</li>
+          <li><strong>Düzeltme Hakkı:</strong> Hatalı veya eksik verilerin düzeltilmesini isteme hakkı.</li>
+          <li><strong>Silme ("Unutulma") Hakkı:</strong> Verilerinizin tamamen yok edilmesini talep etme hakkı.</li>
+          <li><strong>İtiraz Etme Hakkı:</strong> Verilerin belirli amaçlarla işlenmesine itiraz etme hakkı.</li>
+          <li><strong>Satılmama Hakkı (CCPA):</strong> Kişisel verilerinizin satılmasını engelleme hakkı (VirelonSoft kişisel verileri hiçbir koşulda satmaz).</li>
+        </ul>
+      </div>
+
+      <div class="callout-box callout-success">
+        <div class="callout-icon">⚖️</div>
+        <div class="callout-content">
+          <h4>Doğrudan Cihaz Denetimi</h4>
+          <p>Verileriniz zaten merkezi bir sunucuda tutulmadığı için bu hakların büyük kısmını (silme, düzeltme, dışa aktarma) doğrudan uygulama arayüzünden tek tıkla kendiniz gerçekleştirebilirsiniz.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: INTERACTIVE DATA RIGHTS WIZARD -->
+    <section class="policy-section" id="sec-data-wizard">
+      <div class="section-badge-top">Bölüm 08 // Hak Kullanımı</div>
+      <h2 class="section-title">İnteraktif Veri Talep Sihirbazı</h2>
+      <p class="section-intro">
+        Herhangi bir veri koruma talebiniz veya resmi başvurunuz için aşağıdaki formu doldurarak doğrudan VirelonSoft Gizlilik Masasına resmi başvuru oluşturabilirsiniz:
+      </p>
+
+      <!-- INTERACTIVE WIZARD BOX -->
+      <div class="wizard-box">
+        <div class="wizard-step-tracker">
+          <div class="step-item active" id="step1Indicator">
+            <div class="step-circle">1</div>
+            <span>Talep Türü</span>
+          </div>
+          <div class="step-item" id="step2Indicator">
+            <div class="step-circle">2</div>
+            <span>Detaylar</span>
+          </div>
+          <div class="step-item" id="step3Indicator">
+            <div class="step-circle">3</div>
+            <span>Gönderim</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Request Type -->
+        <div id="wizardStep1">
+          <label class="form-label" style="margin-bottom: 8px; display: block;">Talep Etmek İstediğiniz Yasal İşlemi Seçin:</label>
+          <div class="radio-group">
+            <div class="radio-card selected" onclick="selectRequestType(this, 'Erişim Talebi (GDPR Art. 15 / KVKK 11)')">
+              📄 Bilgi Edinme & Erişim
+            </div>
+            <div class="radio-card" onclick="selectRequestType(this, 'Veri Silme Talebi (Unutulma Hakkı)')">
+              🗑️ Veri Silme / İmha
+            </div>
+            <div class="radio-card" onclick="selectRequestType(this, 'Veri Taşınabilirliği')">
+              📦 Veri Dışa Aktarma
+            </div>
+            <div class="radio-card" onclick="selectRequestType(this, 'Genel Gizlilik Sorusu')">
+              ❓ Genel Gizlilik Sorusu
+            </div>
+          </div>
+          <div style="margin-top: 16px; text-align: right;">
+            <button class="btn-brutal btn-primary" onclick="goToWizardStep(2)">İleri: Detaylar ➜</button>
+          </div>
+        </div>
+
+        <!-- Step 2: User Input Details -->
+        <div id="wizardStep2" style="display: none;">
+          <div class="form-group" style="margin-bottom: 12px;">
+            <label class="form-label">Adınız ve Soyadınız:</label>
+            <input type="text" class="form-input" id="wizardName" placeholder="Örn: Ahmet Yılmaz" />
+          </div>
+          <div class="form-group" style="margin-bottom: 12px;">
+            <label class="form-label">İletişim E-posta Adresiniz:</label>
+            <input type="email" class="form-input" id="wizardEmail" placeholder="ornek@alanadi.com" />
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Talebinizin Açıklaması:</label>
+            <textarea class="form-textarea" id="wizardNotes" rows="3" placeholder="Talebinize dair eklemek istediğiniz detaylar..."></textarea>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <button class="btn-brutal btn-outline" onclick="goToWizardStep(1)">⬅ Geri</button>
+            <button class="btn-brutal btn-primary" onclick="goToWizardStep(3)">Önizle ve Hazırla ➜</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div id="wizardStep3" style="display: none;">
+          <div class="callout-box callout-success" style="margin-top: 0;">
+            <div class="callout-icon">📨</div>
+            <div class="callout-content">
+              <h4>Başvurunuz Hazırlandı</h4>
+              <p id="wizardSummaryText">Talebiniz VirelonSoft Veri Sorumlusuna iletilmek üzere biçimlendirildi.</p>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px;">
+            Aşağıdaki butona tıkladığınızda varsayılan e-posta istemciniz <strong>muhammetatmaca79@gmail.com</strong> adresine tüm yasal başvuru şablonu doldurulmuş olarak açılacaktır.
+          </p>
+          <div style="display: flex; justify-content: space-between; gap: 8px;">
+            <button class="btn-brutal btn-outline" onclick="goToWizardStep(2)">⬅ Düzenle</button>
+            <button class="btn-brutal btn-yellow" onclick="sendWizardRequest()">✉️ E-posta Olarak Gönder</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 9: CHILDREN'S PRIVACY -->
+    <section class="policy-section" id="sec-children">
+      <div class="section-badge-top">Bölüm 09 // Çocuk Güvenliği</div>
+      <h2 class="section-title">Çocukların Gizliliği (COPPA Uyumu)</h2>
+      <p class="section-intro">
+        Uygulamamız 13 yaşın (veya ilgili yargı bölgesindeki reşitlik yaşının) altındaki çocuklardan bilerek ve isteyerek hiçbir kişisel bilgi toplamaz.
+      </p>
+
+      <div class="policy-prose">
+        <p>
+          TeleFlow Pro, çocukların eğitim sunumları veya okul konuşmaları için ailelerinin gözetiminde güvenle kullanabileceği bir araçtır. Kullanıcı profillemesi, konum takibi veya mesajlaşma gibi risk barındıran hiçbir sosyal özellik barındırmaz.
+        </p>
+        <p>
+          Bir ebeveyn veya vasi olarak çocuğunuzun bize kişisel bilgi aktardığını fark ederseniz, derhal <strong>muhammetatmaca79@gmail.com</strong> üzerinden bizimle iletişime geçebilirsiniz. Gerekli tüm incelemeler ivedilikle yapılacaktır.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 10: ENCRYPTION & SECURITY -->
+    <section class="policy-section" id="sec-encryption">
+      <div class="section-badge-top">Bölüm 10 // Teknik Güvenlik</div>
+      <h2 class="section-title">Şifreleme, Donanım İzolasyonu ve Güvenlik</h2>
+      <p class="section-intro">
+        Veri güvenliğinizi sağlamak amacıyla endüstri standardı modern savunma mekanizmaları uygulanmaktadır.
+      </p>
+
+      <div class="policy-prose">
+        <ul>
+          <li><strong>Bellek İçi Geçici İşleme:</strong> Prompter kaydırma motoru, metin bloklarını yalnızca GPU render aşamasında RAM'de tutar, gereksiz disk yazma işlemlerinden kaçınır.</li>
+          <li><strong>Güvenli Donanım API'leri:</strong> Android Camera2 API ve iOS AVFoundation standartları kullanılarak kamera sensörüyle işletim sistemi arasında şifresiz aracı katmanlar engellenir.</li>
+          <li><strong>Ağ Yalıtımı (Network Sandboxing):</strong> Çekim ekranı çalışırken uygulama kesinlikle harici ağ bağlantısı kurmaz veya veri paketleri göndermez.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SECTION 11: POLICY CHANGES -->
+    <section class="policy-section" id="sec-changes">
+      <div class="section-badge-top">Bölüm 11 // Güncellemeler</div>
+      <h2 class="section-title">Gizlilik Politikasındaki Değişiklikler</h2>
+      <p class="section-intro">
+        Teknolojik gelişmeler, yasal düzenlemeler veya yeni uygulama özellikleri doğrultusunda bu Gizlilik Politikasını zaman zaman güncelleyebiliriz.
+      </p>
+
+      <div class="policy-prose">
+        <p>
+          Politikamızda esaslı bir değişiklik yapıldığında, uygulama içinde belirgin bir bildirim gösterilecek ve bu sayfanın üst kısmındaki "Son Güncelleme" tarihi revize edilecektir. Değişiklikler yayınlandığı andan itibaren yürürlüğe girer.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 12: FAQ ACCORDION -->
+    <section class="policy-section" id="sec-faq">
+      <div class="section-badge-top">Bölüm 12 // Sıkça Sorulan Sorular</div>
+      <h2 class="section-title">Sıkça Sorulan Sorular (SSS)</h2>
+      <p class="section-intro">
+        Kullanıcılarımızın gizlilik konusunda en çok merak ettiği sorular ve yanıtları:
+      </p>
+
+      <div class="faq-accordion-list">
+        
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>1. TeleFlow Pro'da kaydettiğim videoları siz izleyebilir misiniz?</span>
+            <div class="faq-chevron">▼</div>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-inner">
+              <strong>Kesinlikle hayır.</strong> Videolarınız doğrudan telefonunuzun kendi yerel hafızasında veya galeri uygulamasında depolanır. VirelonSoft'un veya herhangi bir üçüncü tarafın bu videolara erişmesi, bunları izlemesi veya kopyalaması teknik olarak imkansızdır.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>2. Yazdığım konuşma metinleri sunucularınızda yedekleniyor mu?</span>
+            <div class="faq-chevron">▼</div>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-inner">
+              Hayır. TeleFlow Pro sıfır-bulut mimarisiyle çalışır. Yazdığınız metinler yalnızca cihazınızın SQLite veritabanında saklanır. Telefonunuzu sıfırlarsanız veya uygulamayı silerseniz metinleriniz de silinir. İsterseniz metinlerinizi kendiniz güvenli dosya paylaşım araçlarıyla dışa aktarabilirsiniz.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>3. İnternet bağlantısı olmadan TeleFlow Pro çalışır mı?</span>
+            <div class="faq-chevron">▼</div>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-inner">
+              <strong>Evet, %100 çevrimdışı (offline) çalışır.</strong> Uygulamanın tüm prompter okuma, 4K kayıt, WPM kadans ayarı, metin düzenleme ve şablon özellikleri uçak modunda dahi eksiksiz çalışacak şekilde tasarlanmıştır.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>4. Reklam kimliğimi (GAID / IDFA) takip ediyor musunuz?</span>
+            <div class="faq-chevron">▼</div>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-inner">
+              Hayır. TeleFlow Pro'da hiçbir reklam kütüphanesi yer almadığı için işletim sisteminin reklam kimliklerine erişilmez, profil çıkarma yapılmaz ve kişiselleştirilmiş reklam hedeflemesi gerçekleştirilmez.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>5. Uygulamayı silersem kayıtlarım ve metinlerim ne olur?</span>
+            <div class="faq-chevron">▼</div>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-inner">
+              Uygulamayı sildiğinizde cihazın uygulama alanında tutulan tüm metinler ve geçici önbellek dosyaları silinir. Telefonunuzun ana galerisine kaydettiğiniz nihai videolar ise galerinizde kalmaya devam eder.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 13: CONTACT & DPO -->
+    <section class="policy-section" id="sec-contact">
+      <div class="section-badge-top">Bölüm 13 // İletişim Kanalları</div>
+      <h2 class="section-title">İletişim ve Veri Koruma Görevlisi</h2>
+      <p class="section-intro">
+        Gizlilik politikamız, kişisel verileriniz veya haklarınız ile ilgili her türlü soru, görüş ve bildirim için bizimle 7/24 iletişime geçebilirsiniz.
+      </p>
+
+      <div class="policy-prose">
+        <div style="background: var(--bg-input); border: var(--border-medium); border-radius: var(--radius-lg); padding: var(--space-xl); display: flex; flex-direction: column; gap: 14px; box-shadow: var(--shadow-brutal-sm);">
+          <div>
+            <span style="color: var(--text-dim); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Geliştirici Şirket:</span>
+            <h3 style="font-size: 1.3rem; font-weight: 900; color: #fff;">VirelonSoft Technologies</h3>
+          </div>
+          <div>
+            <span style="color: var(--text-dim); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Resmi E-posta & Gizlilik Masası:</span>
+            <div>
+              <a href="mailto:muhammetatmaca79@gmail.com" style="color: var(--color-accent-yellow); font-size: 1.15rem; font-weight: 900; text-decoration: underline;">
+                muhammetatmaca79@gmail.com
+              </a>
+            </div>
+          </div>
+          <div>
+            <span style="color: var(--text-dim); font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Yanıt Süresi Taahhüdü:</span>
+            <p style="font-size: 0.95rem; margin: 4px 0 0 0; color: var(--text-muted);">
+              Tüm resmi başvurular ve sorular <strong>en geç 48 saat içerisinde</strong> Veri Sorumlumuz tarafından incelenerek yanıtlanmaktadır.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback Rating Widget -->
+    <div class="feedback-box">
+      <div>
+        <h4 style="font-family: var(--font-display); font-weight: 900; font-size: 1.1rem; margin-bottom: 4px;">Bu Gizlilik Politikası yeterince açık mıydı?</h4>
+        <p style="font-size: 0.88rem; color: var(--text-muted);">Geri bildiriminiz politikamızı ve şeffaflığımızı geliştirmemize yardımcı olur.</p>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <button class="btn-brutal btn-yellow" onclick="handleFeedback(true)">👍 Evet, Çok Açık</button>
+        <button class="btn-brutal btn-outline" onclick="handleFeedback(false)">👎 Daha Fazla Bilgi Lazım</button>
+      </div>
+    </div>
+
+  </article>
+
+</main>
+
+<!-- Master Footer -->
+<footer class="master-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <h2>TeleFlow Pro</h2>
+      <p>Kamera karşısında konuşurken özgüveninizi en üst seviyeye çıkaran, sıfır-bulut mimarili yeni nesil mobil teleprompter stüdyosu.</p>
+      <div style="margin-top: 14px; font-weight: 800; color: var(--color-accent-green); font-size: 0.9rem;">
+        🛡️ %100 Cihaz İçi Güvenlik Garantisi
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h3>Yasal Bağlantılar</h3>
+      <ul>
+        <li><a href="#sec-intro">Gizlilik Politikası</a></li>
+        <li><a href="#sec-permissions">İzin Açıklamaları</a></li>
+        <li><a href="#sec-rights">Kullanıcı Hakları</a></li>
+        <li><a href="#sec-data-wizard">Veri Talep Formu</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Uygulama</h3>
+      <ul>
+        <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Yukarı Çık</a></li>
+        <li><a href="store_assets_preview.html">Mağaza Görselleri</a></li>
+        <li><a href="#" onclick="openSearchModal()">Metin Arama (Ctrl+K)</a></li>
+        <li><a href="#" onclick="window.print()">PDF Olarak İndir</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Şirket & Destek</h3>
+      <ul>
+        <li><a href="mailto:muhammetatmaca79@gmail.com">VirelonSoft İletişim</a></li>
+        <li><a href="mailto:muhammetatmaca79@gmail.com?subject=TeleFlow%20Destek">Destek Talebi</a></li>
+        <li><a href="mailto:muhammetatmaca79@gmail.com?subject=Gizlilik%20Bildirimi">Gizlilik Masası</a></li>
+        <li><span style="color: var(--text-dim); font-size: 0.85rem;">Paket: com.virelon.teleprompter</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>
+      © 2026 <strong>VirelonSoft</strong>. Tüm hakları saklıdır. TeleFlow Pro ticari bir markadır.
+    </div>
+    <div style="display: flex; gap: 16px;">
+      <span>Gizlilik İlkeleri</span>
+      <span>•</span>
+      <span>KVKK & GDPR Uyumlu</span>
+      <span>•</span>
+      <span>E-posta: muhammetatmaca79@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SEARCH MODAL -->
+<div class="modal-overlay" id="searchModal" onclick="handleModalBackdropClick(event, 'searchModal')">
+  <div class="modal-container">
+    <div class="modal-header">
+      <div class="modal-title">🔍 Gizlilik Politikasında Ara</div>
+      <button class="modal-close-btn" onclick="closeSearchModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group">
+        <input type="text" class="form-input" id="searchModalInput" placeholder="Kelime veya konu yazın (Örn: kamera, silme, KVKK, mikrofon)..." oninput="handleSearchQuery(this.value)" autofocus />
+      </div>
+      <div class="search-results-box" id="searchResultsContainer">
+        <p style="color: var(--text-dim); font-size: 0.9rem; text-align: center; padding: 20px;">Aramak istediğiniz terimi yukarıya yazın.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div class="modal-overlay" id="contactModal" onclick="handleModalBackdropClick(event, 'contactModal')">
+  <div class="modal-container">
+    <div class="modal-header">
+      <div class="modal-title">✉️ VirelonSoft İletişim Masası</div>
+      <button class="modal-close-btn" onclick="closeContactModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="font-size: 0.92rem; color: var(--text-muted);">
+        Gizlilik sorularınız veya teknik destek için doğrudan geliştirici ekibimize mesaj bırakabilirsiniz:
+      </p>
+      <div class="form-group">
+        <label class="form-label">Adınız Soyadınız:</label>
+        <input type="text" class="form-input" id="contactName" placeholder="Adınız" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">E-posta Adresiniz:</label>
+        <input type="email" class="form-input" id="contactEmail" placeholder="ornek@alanadi.com" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mesajınız:</label>
+        <textarea class="form-textarea" id="contactMsg" rows="4" placeholder="Mesajınızı buraya yazın..."></textarea>
+      </div>
+      <button class="btn-brutal btn-primary" style="width: 100%;" onclick="submitContactForm()">
+        Mesajı Gönder (E-posta İstemcisiyle)
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE / PREFERENCES BANNER -->
+<aside class="cookie-banner-bottom" id="cookieBanner" role="dialog" aria-label="Gizlilik Tercihleri">
+  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <h4 style="font-family: var(--font-display); font-weight: 900; font-size: 1.05rem;">🍪 Yerel Gizlilik Tercihleri</h4>
+    <button onclick="dismissCookieBanner()" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-weight: 900;">✕</button>
+  </div>
+  <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+    Bu web sitesi harici takip çerezi kullanmaz; yalnızca dil ve tema seçimlerinizi tarayıcınızın yerel hafızasında saklar.
+  </p>
+  <div>
+    <div class="cookie-toggle-row">
+      <span style="font-size: 0.88rem; font-weight: 700;">Zorunlu Tercihler (Tema & Dil)</span>
+      <label class="toggle-switch">
+        <input type="checkbox" checked disabled />
+        <span class="slider-round"></span>
+      </label>
+    </div>
+  </div>
+  <div style="display: flex; gap: 8px; margin-top: 4px;">
+    <button class="btn-brutal btn-yellow" style="flex: 1;" onclick="acceptAllCookies()">Anladım ve Kabul Et</button>
+  </div>
+</aside>
+
+<!-- Toast Notification -->
+<div class="toast-box" id="toastNotification">
+  <span id="toastIcon">🔔</span>
+  <span id="toastText">İşlem başarıyla gerçekleştirildi.</span>
+</div>
+
+
+<script>
+
+/* ==========================================================================
+   VIRELONSOFT - PRIVACY POLICY MASTER JAVASCRIPT ENGINE
+   Target: TeleFlow Pro (com.virelon.teleprompter)
+   Features:
+   - Dynamic Canvas Background: Ghost Teleprompter Streams + Geometry
+   - Interactive Hero Teleprompter Engine (Auto-scroll, Speed, WPM, Lens, Timer)
+   - Full-text DOM Search & Highlight with Keyboard Shortcuts (Ctrl+K / /)
+   - Real-time Scrollspy & Table of Contents Tracker
+   - Reading Time Calculator & Live Progress Bar
+   - Interactive Permission Explorer
+   - Interactive GDPR / CCPA Data Request Wizard
+   - Multi-Language Switcher (TR, EN, DE, ES, FR)
+   - FAQ Accordion with smooth animations
+   - Contact Form Validator & Mailto Generator
+   ========================================================================== */
+
+// --- Global Application State ---
+const AppState = {
+  theme: localStorage.getItem('virelon_privacy_theme') || 'dark',
+  lang: localStorage.getItem('virelon_privacy_lang') || 'tr',
+  cookieAccepted: localStorage.getItem('virelon_privacy_cookie_dismiss') === 'true',
+  activeSectionId: 'sec-intro',
+  prompter: {
+    isPlaying: true,
+    wpm: 140,
+    currentLineIndex: 0,
+    scrollOffset: 0,
+    timerSeconds: 42,
+    timerInterval: null,
+    lines: [
+      "Kameraya bakarak konuşurken özgüveninizi asla kaybetmeyin.",
+      "TeleFlow Pro ile tüm konuşma metinleriniz ve 4K videolarınız...",
+      "Yalnızca ve yalnızca telefonunuzun yerel hafızasında işlenir.",
+      "Sıfır bulut, sıfır sızıntı, %100 yerel güvenlik garantisi.",
+      "Kamera ve mikrofon akışınız hiçbir zaman sunuculara yüklenmez.",
+      "VirelonSoft olarak mahremiyetinizi en üstün değer kabul ediyoruz.",
+      "İdeal konuşma hızınızı (WPM) belirleyin ve sahneyi fethedin!",
+      "Doğal göz teması sayesinde izleyicilerinizle samimi bağ kurun.",
+      "Gizliliğiniz bizim için pazarlık konusu değildir."
+    ]
+  },
+  wizardData: {
+    type: 'Erişim Talebi (GDPR Art. 15 / KVKK 11)',
+    name: '',
+    email: '',
+    notes: ''
+  }
+};
+
+// --- Language Dictionaries for Instant Switch ---
+const LANG_STRINGS = {
+  tr: {
+    heroTitle: 'Verileriniz Yalnızca <span class="highlight-yellow">Cihazınızda</span> Kalır',
+    heroSubtitle: 'VirelonSoft olarak, TeleFlow Pro teleprompter uygulamasını geliştirirken "Zero-Knowledge & Zero-Cloud" mimarisini temel ilke edindik. Kameranız, sesiniz ve konuşma metinleriniz hiçbir sunucuya yüklenmez, satılmaz veya üçüncü taraflarla paylaşılmaz.',
+    stat1: '%100 Yerel Depolama',
+    stat2: 'Sıfır Reklam Takibi',
+    stat3: 'İzole Donanım Erişimi',
+    stat4: 'KVKK, GDPR & CCPA',
+    searchPlaceholder: 'Kelime veya konu yazın (Örn: kamera, silme, KVKK, mikrofon)...'
+  },
+  en: {
+    heroTitle: 'Your Data Stays Exclusively <span class="highlight-yellow">On Your Device</span>',
+    heroSubtitle: 'At VirelonSoft, we built TeleFlow Pro on a strict "Zero-Knowledge & Zero-Cloud" foundation. Your camera stream, voice recordings, and teleprompter scripts are never uploaded, never sold, and never shared with any cloud servers.',
+    stat1: '100% Local Storage',
+    stat2: 'Zero Ad Tracking',
+    stat3: 'Isolated Hardware Access',
+    stat4: 'GDPR & CCPA Compliant',
+    searchPlaceholder: 'Type a word or topic (e.g., camera, delete, GDPR, microphone)...'
+  },
+  de: {
+    heroTitle: 'Ihre Daten Bleiben Ausschließlich <span class="highlight-yellow">Auf Ihrem Gerät</span>',
+    heroSubtitle: 'Bei VirelonSoft haben wir TeleFlow Pro nach dem strikten Prinzip "Zero-Knowledge & Zero-Cloud" entwickelt. Ihre Kameraaufnahmen, Audioaufzeichnungen und Redeskripte werden niemals auf Server hochgeladen oder weitergegeben.',
+    stat1: '100% Lokale Speicherung',
+    stat2: 'Kein Werbetracking',
+    stat3: 'Isolierter Hardwarezugriff',
+    stat4: 'DSGVO & CCPA Konform',
+    searchPlaceholder: 'Begriff oder Thema eingeben (z.B. Kamera, Löschung, DSGVO)...'
+  },
+  es: {
+    heroTitle: 'Tus Datos Permanecen Exclusivamente <span class="highlight-yellow">En Tu Dispositivo</span>',
+    heroSubtitle: 'En VirelonSoft diseñamos TeleFlow Pro bajo una arquitectura estricta de "Zero-Knowledge & Zero-Cloud". Tu cámara, grabaciones de voz y guiones nunca se suben a la nube ni se comparten con terceros.',
+    stat1: '100% Almacenamiento Local',
+    stat2: 'Cero Rastreo Publicitario',
+    stat3: 'Acceso Seguro al Hardware',
+    stat4: 'Cumplimiento RGPD y CCPA',
+    searchPlaceholder: 'Escribe un término (ej: cámara, eliminar, RGPD, micrófono)...'
+  },
+  fr: {
+    heroTitle: 'Vos Données Restent Exclusivement <span class="highlight-yellow">Sur Votre Appareil</span>',
+    heroSubtitle: 'Chez VirelonSoft, TeleFlow Pro est conçu selon le principe absolu du "Zero-Cloud". Votre flux caméra, vos enregistrements vocaux et vos textes ne sont jamais téléversés ni partagés.',
+    stat1: '100% Stockage Local',
+    stat2: 'Zéro Pistage Publicitaire',
+    stat3: 'Accès Matériel Isolé',
+    stat4: 'Conforme RGPD & CCPA',
+    searchPlaceholder: 'Tapez un mot ou sujet (ex: caméra, suppression, RGPD)...'
+  }
+};
+
+// --- Initialization on DOM Content Loaded ---
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initReadingProgressBar();
+  initScrollSpy();
+  initCanvasBackground();
+  initKeyboardShortcuts();
+  calculateReadingTime();
+  initPrompterSimulator();
+  if (!AppState.cookieAccepted) {
+    setTimeout(showCookieBanner, 1500);
+  }
+});
+
+// --- Theme Controller ---
+function initTheme() {
+  document.documentElement.setAttribute('data-theme', AppState.theme);
+  updateThemeIcon();
+}
+
+function toggleTheme() {
+  if (AppState.theme === 'dark') {
+    AppState.theme = 'light';
+  } else if (AppState.theme === 'light') {
+    AppState.theme = 'contrast';
+  } else {
+    AppState.theme = 'dark';
+  }
+  document.documentElement.setAttribute('data-theme', AppState.theme);
+  localStorage.setItem('virelon_privacy_theme', AppState.theme);
+  updateThemeIcon();
+  showToast('🌓 Tema güncellendi: ' + AppState.theme.toUpperCase());
+}
+
+function updateThemeIcon() {
+  const btn = document.getElementById('themeBtn');
+  if (!btn) return;
+  if (AppState.theme === 'dark') btn.textContent = '🌙';
+  else if (AppState.theme === 'light') btn.textContent = '☀️';
+  else btn.textContent = '⚡';
+}
+
+// --- Live Hero Teleprompter Engine ---
+function initPrompterSimulator() {
+  const track = document.getElementById('prompterTrack');
+  if (!track) return;
+
+  // Render lines
+  track.innerHTML = AppState.prompter.lines.map((line, idx) => 
+    '<div class="prompter-line ' + (idx === 0 ? 'active' : '') + '" data-idx="' + idx + '">' + line + '</div>'
+  ).join('');
+
+  // Start scrolling animation loop
+  setInterval(() => {
+    if (!AppState.prompter.isPlaying) return;
+
+    const lineElements = track.querySelectorAll('.prompter-line');
+    const totalLines = lineElements.length;
+
+    AppState.prompter.currentLineIndex = (AppState.prompter.currentLineIndex + 1) % totalLines;
+
+    lineElements.forEach((el, idx) => {
+      if (idx === AppState.prompter.currentLineIndex) {
+        el.classList.add('active');
+      } else {
+        el.classList.remove('active');
+      }
+    });
+
+    // Translate track so active line is centered
+    const lineHeight = 44; // approximate height
+    const targetOffset = - (AppState.prompter.currentLineIndex * lineHeight) + 80;
+    track.style.transform = 'translateY(' + targetOffset + 'px)';
+  }, Math.max(1200, Math.floor(60000 / AppState.prompter.wpm)));
+
+  // Prompter Timer
+  AppState.prompter.timerInterval = setInterval(() => {
+    if (!AppState.prompter.isPlaying) return;
+    AppState.prompter.timerSeconds++;
+    const m = Math.floor(AppState.prompter.timerSeconds / 60).toString().padStart(2, '0');
+    const s = (AppState.prompter.timerSeconds % 60).toString().padStart(2, '0');
+    const timerEl = document.getElementById('prompterTimer');
+    if (timerEl) timerEl.textContent = m + ':' + s;
+  }, 1000);
+}
+
+function togglePrompterPlay() {
+  AppState.prompter.isPlaying = !AppState.prompter.isPlaying;
+  const btnText = document.getElementById('prompterPlayBtnText');
+  const btnIcon = document.getElementById('prompterPlayBtnIcon');
+  const hudBtn = document.getElementById('prompterHudToggleBtn');
+
+  if (AppState.prompter.isPlaying) {
+    if (btnText) btnText.textContent = 'Prompteri Duraklat';
+    if (btnIcon) btnIcon.textContent = '⏸️';
+    if (hudBtn) hudBtn.textContent = '⏸️';
+    showToast('▶ Prompter devam ediyor.');
+  } else {
+    if (btnText) btnText.textContent = 'Prompteri Başlat';
+    if (btnIcon) btnIcon.textContent = '▶️';
+    if (hudBtn) hudBtn.textContent = '▶️';
+    showToast('⏸ Prompter duraklatıldı.');
+  }
+}
+
+function changePrompterSpeed(delta) {
+  AppState.prompter.wpm = Math.max(80, Math.min(260, AppState.prompter.wpm + delta));
+  const wpmEl = document.getElementById('prompterWpmDisplay');
+  if (wpmEl) wpmEl.textContent = AppState.prompter.wpm + ' WPM';
+  showToast('⏱ Hız: ' + AppState.prompter.wpm + ' WPM');
+}
+
+// --- Reading Progress Bar & Scroll Tracking ---
+function initReadingProgressBar() {
+  const bar = document.getElementById('readingBar');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = Math.min(100, Math.max(0, progress)) + '%';
+  }, { passive: true });
+}
+
+// --- Dynamic Estimated Reading Time Calculator ---
+function calculateReadingTime() {
+  const article = document.querySelector('.content-article');
+  const badge = document.getElementById('readingTimeBadge');
+  if (!article || !badge) return;
+
+  const text = article.innerText || article.textContent || '';
+  const wordCount = text.trim().split(/\s+/).length;
+  const wordsPerMinute = 200;
+  const minutes = Math.ceil(wordCount / wordsPerMinute);
+  badge.textContent = '~' + minutes + ' dk (' + wordCount + ' kelime)';
+}
+
+// --- Scrollspy for Table of Contents Navigation ---
+function initScrollSpy() {
+  const sections = document.querySelectorAll('.policy-section');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '-100px 0px -60% 0px',
+    threshold: 0
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        AppState.activeSectionId = id;
+        tocLinks.forEach(link => {
+          if (link.getAttribute('href') === '#' + id) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(sec => observer.observe(sec));
+}
+
+// --- Interactive Permission Explorer Logic ---
+const PERMISSION_DETAILS = {
+  camera: {
+    icon: '📷',
+    bg: 'rgba(21, 92, 249, 0.2)',
+    color: '#4F86FC',
+    title: 'Kamera Erişimi (android.permission.CAMERA)',
+    scope: 'YALNIZCA YEREL',
+    desc: 'Metni okurken kendinizi ön veya arka kameradan eşzamanlı olarak görmeniz ve 4K/1080p stüdyo kaydı yapabilmeniz için kullanılır. Kamera akışı hiçbir ağ soketine yönlendirilmez.',
+    checks: [
+      'Canlı vizör önizlemesi ve prompter overlay\'i sağlar',
+      'Çekim durdurulduğunda kamera donanımı anında serbest bırakılır',
+      'Arka planda veya ekran kapalıyken kamera asla çalıştırılamaz'
+    ]
+  },
+  mic: {
+    icon: '🎙️',
+    bg: 'rgba(230, 30, 42, 0.2)',
+    color: '#E61E2A',
+    title: 'Mikrofon Erişimi (android.permission.RECORD_AUDIO)',
+    scope: 'YALNIZCA VİDEO İLE EŞZAMANLI',
+    desc: 'Video çekimlerinizde sesinizin yüksek kalitede kaydedilmesi ve konuşma hızınıza göre WPM dalga boyu analizi yapılabilmesi için kullanılır.',
+    checks: [
+      'Yalnızca video kaydı süresince ses kaydı alınır',
+      'Ses verileri hiçbir yapay zeka sunucusuna veya buluta gönderilmez',
+      'İstenirse mikrofon tamamen sessize alınıp sadece metin okunabilir'
+    ]
+  },
+  storage: {
+    icon: '💾',
+    bg: 'rgba(255, 214, 0, 0.2)',
+    color: '#FFD600',
+    title: 'Dahili Depolama (READ/WRITE_EXTERNAL_STORAGE)',
+    scope: 'UYGULAMA İZOLE DİZİNİ',
+    desc: 'Konuşma taslaklarınızı (.txt, .json) içe aktarabilmeniz ve hazırladığınız konuşma şablonlarını cihazınızda saklayabilmeniz için gereklidir.',
+    checks: [
+      'Android Scoped Storage standartları ile diğer dosyalarınızdan izoledir',
+      'Özel fotoğraflarınıza veya belgelerinize erişim sağlanamaz',
+      'Uygulama silindiğinde dahili depolamadaki geçici veriler temizlenir'
+    ]
+  },
+  photos: {
+    icon: '🖼️',
+    bg: 'rgba(0, 208, 108, 0.2)',
+    color: '#00D06C',
+    title: 'Galeri & Medya Kütüphanesi (READ_MEDIA_VIDEO)',
+    scope: 'KAYDEDİLEN VİDEOLAR',
+    desc: 'Çektiğiniz videoları telefonunuzun ana galerisine aktarabilmeniz ve doğrudan cihazınızın video oynatıcısında izleyebilmeniz için kullanılır.',
+    checks: [
+      'Sadece TeleFlow Pro tarafından üretilen videolar galeriye yazılır',
+      'Galerideki diğer kişisel videolarınız taranmaz veya okunmaz',
+      'Kullanıcı istediği zaman bu izni sistem ayarlarından kapatabilir'
+    ]
+  }
+};
+
+function showPermissionDetails(type) {
+  const data = PERMISSION_DETAILS[type];
+  if (!data) return;
+
+  document.querySelectorAll('.perm-tab-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+
+  const iconEl = document.getElementById('permIcon');
+  iconEl.textContent = data.icon;
+  iconEl.style.background = data.bg;
+  iconEl.style.color = data.color;
+
+  document.getElementById('permName').innerHTML = data.title + ' <span class="perm-scope-badge">' + data.scope + '</span>';
+  document.getElementById('permDesc').textContent = data.desc;
+
+  const checklistEl = document.querySelector('.perm-checklist');
+  checklistEl.innerHTML = data.checks.map(c => '<div class="perm-check-item"><span>✓</span> ' + c + '</div>').join('');
+}
+
+// --- Interactive Data Rights Wizard ---
+function selectRequestType(el, typeName) {
+  document.querySelectorAll('.radio-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  AppState.wizardData.type = typeName;
+}
+
+function goToWizardStep(stepNum) {
+  const s1 = document.getElementById('wizardStep1');
+  const s2 = document.getElementById('wizardStep2');
+  const s3 = document.getElementById('wizardStep3');
+
+  const i1 = document.getElementById('step1Indicator');
+  const i2 = document.getElementById('step2Indicator');
+  const i3 = document.getElementById('step3Indicator');
+
+  s1.style.display = 'none';
+  s2.style.display = 'none';
+  s3.style.display = 'none';
+
+  i1.classList.remove('active');
+  i2.classList.remove('active');
+  i3.classList.remove('active');
+
+  if (stepNum === 1) {
+    s1.style.display = 'block';
+    i1.classList.add('active');
+  } else if (stepNum === 2) {
+    s2.style.display = 'block';
+    i1.classList.add('active');
+    i2.classList.add('active');
+  } else if (stepNum === 3) {
+    const name = document.getElementById('wizardName').value.trim();
+    const email = document.getElementById('wizardEmail').value.trim();
+    const notes = document.getElementById('wizardNotes').value.trim();
+
+    AppState.wizardData.name = name || 'Belirtilmedi';
+    AppState.wizardData.email = email || 'Belirtilmedi';
+    AppState.wizardData.notes = notes || 'Ek not girilmedi.';
+
+    const summary = document.getElementById('wizardSummaryText');
+    summary.innerHTML = '<strong>Talep Türü:</strong> ' + AppState.wizardData.type + '<br>' +
+                        '<strong>Ad Soyad:</strong> ' + AppState.wizardData.name + '<br>' +
+                        '<strong>E-posta:</strong> ' + AppState.wizardData.email + '<br>' +
+                        '<strong>Açıklama:</strong> ' + AppState.wizardData.notes;
+
+    s3.style.display = 'block';
+    i1.classList.add('active');
+    i2.classList.add('active');
+    i3.classList.add('active');
+  }
+}
+
+function sendWizardRequest() {
+  const subject = encodeURIComponent('[Gizlilik Talebi - TeleFlow Pro] ' + AppState.wizardData.type);
+  const body = encodeURIComponent(
+    'Sayın VirelonSoft Veri Sorumlusu,\n\n' +
+    'Aşağıdaki kapsamda TeleFlow Pro mobil uygulamasıyla ilişkili yasal veri hakkımı kullanmak istiyorum:\n\n' +
+    'Talep Türü: ' + AppState.wizardData.type + '\n' +
+    'Başvuru Sahibi: ' + AppState.wizardData.name + '\n' +
+    'İletişim E-postası: ' + AppState.wizardData.email + '\n' +
+    'Detaylı Açıklama: ' + AppState.wizardData.notes + '\n\n' +
+    'Uygulama: TeleFlow Pro (com.virelon.teleprompter)\n' +
+    'Tarih: ' + new Date().toLocaleDateString('tr-TR') + '\n\n' +
+    'Gereğini rica ederim.'
+  );
+
+  window.location.href = 'mailto:muhammetatmaca79@gmail.com?subject=' + subject + '&body=' + body;
+  showToast('📨 E-posta istemciniz açılıyor...');
+}
+
+// --- FAQ Accordion Logic ---
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+
+  document.querySelectorAll('.faq-item').forEach(i => {
+    if (i !== item) i.classList.remove('open');
+  });
+
+  if (isOpen) {
+    item.classList.remove('open');
+  } else {
+    item.classList.add('open');
+  }
+}
+
+// --- Live Document Search Modal Engine ---
+function openSearchModal() {
+  const modal = document.getElementById('searchModal');
+  modal.classList.add('open');
+  const input = document.getElementById('searchModalInput');
+  setTimeout(() => input.focus(), 100);
+}
+
+function closeSearchModal() {
+  const modal = document.getElementById('searchModal');
+  modal.classList.remove('open');
+}
+
+function handleSearchQuery(query) {
+  const container = document.getElementById('searchResultsContainer');
+  const q = query.trim().toLowerCase();
+
+  if (q.length < 2) {
+    container.innerHTML = '<p style="color: var(--text-dim); font-size: 0.9rem; text-align: center; padding: 20px;">Aramak istediğiniz en az 2 harf yazın.</p>';
+    return;
+  }
+
+  const sections = document.querySelectorAll('.policy-section');
+  const results = [];
+
+  sections.forEach(sec => {
+    const title = sec.querySelector('.section-title')?.textContent || '';
+    const text = sec.textContent || '';
+    const secId = sec.getAttribute('id');
+
+    if (text.toLowerCase().includes(q)) {
+      const lower = text.toLowerCase();
+      const idx = lower.indexOf(q);
+      const start = Math.max(0, idx - 40);
+      const end = Math.min(text.length, idx + q.length + 60);
+      let snippet = text.substring(start, end).replace(/\s+/g, ' ');
+
+      const regex = new RegExp('(' + q + ')', 'gi');
+      snippet = snippet.replace(regex, '<mark style="background: var(--color-accent-yellow); color: #000; font-weight: 800;">$1</mark>');
+
+      results.push({
+        id: secId,
+        title: title,
+        snippet: '...' + snippet + '...'
+      });
+    }
+  });
+
+  if (results.length === 0) {
+    container.innerHTML = '<p style="color: var(--color-secondary); font-size: 0.95rem; text-align: center; padding: 20px;">Eşleşen sonuç bulunamadı.</p>';
+    return;
+  }
+
+  container.innerHTML = results.map(r => 
+    '<a href="#' + r.id + '" class="search-result-item" onclick="closeSearchModal()">' +
+      '<strong style="color: var(--color-primary-light); font-size: 0.95rem;">' + r.title + '</strong>' +
+      '<span style="font-size: 0.85rem; color: var(--text-muted);">' + r.snippet + '</span>' +
+    '</a>'
+  ).join('');
+}
+
+// --- Contact Modal Logic ---
+function openContactModal() {
+  document.getElementById('contactModal').classList.add('open');
+}
+
+function closeContactModal() {
+  document.getElementById('contactModal').classList.remove('open');
+}
+
+function submitContactForm() {
+  const name = document.getElementById('contactName').value.trim();
+  const email = document.getElementById('contactEmail').value.trim();
+  const msg = document.getElementById('contactMsg').value.trim();
+
+  if (!name || !email || !msg) {
+    showToast('⚠️ Lütfen tüm alanları doldurun.');
+    return;
+  }
+
+  const subject = encodeURIComponent('[Gizlilik & Destek] ' + name);
+  const body = encodeURIComponent(
+    'Ad Soyad: ' + name + '\n' +
+    'E-posta: ' + email + '\n\n' +
+    'Mesaj:\n' + msg + '\n\n' +
+    'Uygulama: TeleFlow Pro (com.virelon.teleprompter)'
+  );
+
+  window.location.href = 'mailto:muhammetatmaca79@gmail.com?subject=' + subject + '&body=' + body;
+  closeContactModal();
+  showToast('✉️ E-posta istemciniz hazırlanıyor...');
+}
+
+// --- Cookie / Preference Drawer ---
+function showCookieBanner() {
+  const banner = document.getElementById('cookieBanner');
+  if (banner) banner.classList.add('show');
+}
+
+function dismissCookieBanner() {
+  const banner = document.getElementById('cookieBanner');
+  if (banner) banner.classList.remove('show');
+  localStorage.setItem('virelon_privacy_cookie_dismiss', 'true');
+}
+
+function acceptAllCookies() {
+  dismissCookieBanner();
+  showToast('✅ Gizlilik tercihleri kaydedildi.');
+}
+
+// --- Multi-Language Switcher ---
+function changePolicyLanguage(langCode) {
+  AppState.lang = langCode;
+  localStorage.setItem('virelon_privacy_lang', langCode);
+
+  const dict = LANG_STRINGS[langCode] || LANG_STRINGS.tr;
+  const heroTitle = document.querySelector('.hero-title');
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  const searchInput = document.getElementById('searchModalInput');
+
+  if (heroTitle) heroTitle.innerHTML = dict.heroTitle;
+  if (heroSubtitle) heroSubtitle.textContent = dict.heroSubtitle;
+  if (searchInput) searchInput.setAttribute('placeholder', dict.searchPlaceholder);
+
+  showToast('🌐 Dil güncellendi: ' + langCode.toUpperCase());
+}
+
+// --- Feedback Handling ---
+function handleFeedback(isPositive) {
+  if (isPositive) {
+    showToast('🎉 Geri bildiriminiz için teşekkür ederiz!');
+  } else {
+    showToast('📝 Not aldık! Politika açıklığını geliştireceğiz.');
+  }
+}
+
+// --- Toast System ---
+let toastTimer = null;
+function showToast(message) {
+  const toast = document.getElementById('toastNotification');
+  const text = document.getElementById('toastText');
+  if (!toast || !text) return;
+
+  text.textContent = message;
+  toast.classList.add('show');
+
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 3500);
+}
+
+// --- Keyboard Shortcuts ---
+function initKeyboardShortcuts() {
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      openSearchModal();
+    } else if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      openSearchModal();
+    } else if (e.key === 'Escape') {
+      closeSearchModal();
+      closeContactModal();
+      dismissCookieBanner();
+    }
+  });
+}
+
+function handleModalBackdropClick(e, modalId) {
+  if (e.target.id === modalId) {
+    if (modalId === 'searchModal') closeSearchModal();
+    if (modalId === 'contactModal') closeContactModal();
+  }
+}
+
+// --- Dynamic Canvas Background with Ghost Teleprompter Streams & Cyber Particles ---
+function initCanvasBackground() {
+  const canvas = document.getElementById('bgCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  let width = canvas.width = window.innerWidth;
+  let height = canvas.height = window.innerHeight;
+
+  window.addEventListener('resize', () => {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  });
+
+  // Floating geometry particles
+  const particles = [];
+  const count = 28;
+
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      size: Math.random() * 8 + 3,
+      vx: (Math.random() - 0.5) * 0.35,
+      vy: (Math.random() - 0.5) * 0.35,
+      color: i % 3 === 0 ? '#155CF9' : (i % 3 === 1 ? '#FFD600' : '#00D06C'),
+      shape: i % 2 === 0 ? 'rect' : 'circle'
+    });
+  }
+
+  // Ghost Teleprompter text streams scrolling in background
+  const ghostTexts = [
+    "TELEFLOW PRO // 100% ON-DEVICE PRIVACY GUARANTEE",
+    "NO CLOUD UPLOADS // CAMERA SANDBOX ACTIVE",
+    "AUDIO ISOLATION // ZERO THIRD-PARTY PROFILING",
+    "VIRELONSOFT TECHNOLOGIES // LOCAL RECORDING STUDIO",
+    "GDPR ARTICLE 15 // CCPA COMPLIANCE AUDITED",
+    "SCOPED STORAGE SECURED // NO DATA BROKERING",
+    "WPM PACE CONTROL // EYE-CONTACT RETICLE LOCKED"
+  ];
+
+  const streams = [];
+  for (let col = 0; col < 4; col++) {
+    streams.push({
+      x: (width / 4) * col + (width / 8),
+      y: Math.random() * height,
+      speed: 0.35 + (col * 0.1),
+      textIdx: col % ghostTexts.length
+    });
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, width, height);
+
+    // 1. Draw Ghost Teleprompter text in background
+    ctx.font = '900 13px "JetBrains Mono", monospace';
+    ctx.textAlign = 'center';
+
+    streams.forEach((s) => {
+      s.y -= s.speed;
+      if (s.y < -50) {
+        s.y = height + 50;
+        s.textIdx = (s.textIdx + 1) % ghostTexts.length;
+      }
+
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.045)';
+      ctx.fillText(ghostTexts[s.textIdx], s.x, s.y);
+
+      // Subtle cyber tick
+      ctx.strokeStyle = 'rgba(21, 92, 249, 0.08)';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(s.x - 60, s.y + 8);
+      ctx.lineTo(s.x + 60, s.y + 8);
+      ctx.stroke();
+    });
+
+    // 2. Draw Floating Geometry
+    particles.forEach(p => {
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0) p.x = width;
+      if (p.x > width) p.x = 0;
+      if (p.y < 0) p.y = height;
+      if (p.y > height) p.y = 0;
+
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = 0.35;
+
+      if (p.shape === 'rect') {
+        ctx.fillRect(p.x, p.y, p.size, p.size);
+      } else {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size / 2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    });
+
+    requestAnimationFrame(render);
+  }
+
+  render();
+}
+
+</script>
+
+</body>
+</html>
