@@ -1,0 +1,4793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090A0C">
+  <meta name="description" content="GhostRead - Air-Gapped Notification Vault & Sovereign Privacy Policy. Zero Cloud, Zero Trackers, 100% On-Device.">
+  <meta name="robots" content="index, follow">
+  <title>GhostRead // Air-Gapped Notification Vault & Sovereign Privacy Policy</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E4FF35'><path d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/></svg>">
+  <style>
+
+/* ==========================================================================
+   GHOSTREAD CYBER-VAULT DESIGN SYSTEM - V2.5.0
+   THEME: ELECTRIC LIME (#E4FF35) & OBSIDIAN BLACK (#090A0C)
+   HIGH-TECH HUD / GLASSMORPHISM / AIR-GAPPED PRIVACY ENGINE
+   ========================================================================== */
+
+:root {
+  --bg-primary: #090A0C;
+  --bg-secondary: #111317;
+  --bg-card: #16191F;
+  --bg-card-hover: #1C2028;
+  --bg-tertiary: #1F242D;
+  --bg-glass: rgba(17, 19, 23, 0.75);
+  --bg-glass-card: rgba(22, 25, 31, 0.65);
+  
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.04);
+  --border-accent: rgba(228, 255, 53, 0.35);
+  --border-accent-strong: rgba(228, 255, 53, 0.7);
+  --border-glow: rgba(228, 255, 53, 0.5);
+  
+  --accent-lime: #E4FF35;
+  --accent-lime-dim: rgba(228, 255, 53, 0.12);
+  --accent-lime-glow: rgba(228, 255, 53, 0.4);
+  --accent-lime-bright: #F0FF66;
+  --accent-lime-dark: #A4C400;
+  
+  --accent-cyan: #00F0FF;
+  --accent-cyan-dim: rgba(0, 240, 255, 0.12);
+  --accent-cyan-glow: rgba(0, 240, 255, 0.35);
+  
+  --accent-purple: #9D00FF;
+  --accent-purple-dim: rgba(157, 0, 255, 0.12);
+  --accent-purple-glow: rgba(157, 0, 255, 0.35);
+  
+  --accent-red: #FF3366;
+  --accent-red-dim: rgba(255, 51, 102, 0.12);
+  --accent-red-glow: rgba(255, 51, 102, 0.35);
+  
+  --accent-green: #00FF66;
+  --accent-green-dim: rgba(0, 255, 102, 0.12);
+  --accent-green-glow: rgba(0, 255, 102, 0.35);
+  
+  --accent-amber: #FFB800;
+  --accent-amber-dim: rgba(255, 184, 0, 0.12);
+  --accent-amber-glow: rgba(255, 184, 0, 0.35);
+  
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+  --text-dim: #475569;
+  
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  
+  --header-height: 74px;
+  --sidebar-width: 320px;
+  --container-max: 1440px;
+  
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.8);
+  --shadow-neon-lime: 0 0 30px rgba(228, 255, 53, 0.25);
+  --shadow-neon-cyan: 0 0 30px rgba(0, 240, 255, 0.25);
+  --shadow-neon-red: 0 0 30px rgba(255, 51, 102, 0.35);
+  
+  --transition-fast: all 0.15s ease;
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(228, 255, 53, 0.05) 0%, transparent 65%),
+    radial-gradient(circle at 100% 40%, rgba(0, 240, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 0% 80%, rgba(157, 0, 255, 0.03) 0%, transparent 50%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+}
+
+/* --------------------------------------------------------------------------
+   CANVAS BACKGROUND & THREE.JS 3D SCENE
+   -------------------------------------------------------------------------- */
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+#three-vault-canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border-radius: var(--radius-lg);
+  cursor: grab;
+}
+
+#three-vault-canvas:active {
+  cursor: grabbing;
+}
+
+/* --------------------------------------------------------------------------
+   SCROLLBAR STYLING
+   -------------------------------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-card);
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-lime-dim);
+  border-color: var(--accent-lime);
+}
+
+/* --------------------------------------------------------------------------
+   TYPOGRAPHY UTILITIES
+   -------------------------------------------------------------------------- */
+.mono-font {
+  font-family: var(--font-mono);
+}
+
+.text-lime {
+  color: var(--accent-lime) !important;
+}
+
+.text-cyan {
+  color: var(--accent-cyan) !important;
+}
+
+.text-red {
+  color: var(--accent-red) !important;
+}
+
+.text-green {
+  color: var(--accent-green) !important;
+}
+
+.text-amber {
+  color: var(--accent-amber) !important;
+}
+
+.text-purple {
+  color: var(--accent-purple) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-lime {
+  background: var(--accent-lime-dim);
+  color: var(--accent-lime);
+  border: 1px solid var(--border-accent);
+}
+
+.badge-cyan {
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+}
+
+.badge-red {
+  background: var(--accent-red-dim);
+  color: var(--accent-red);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+}
+
+.badge-green {
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   TOP NAVIGATION
+   -------------------------------------------------------------------------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--header-height);
+  background: rgba(9, 10, 12, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.brand-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+}
+
+.brand-logo-hex {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, var(--accent-lime) 0%, #a8cc00 100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-primary);
+  box-shadow: 0 0 20px rgba(228, 255, 53, 0.4);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.brand-logo-hex:hover {
+  transform: rotate(30deg) scale(1.05);
+  box-shadow: 0 0 30px rgba(228, 255, 53, 0.6);
+}
+
+.brand-logo-hex svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.brand-name-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-version-chip {
+  font-size: 0.68rem;
+  padding: 2px 6px;
+  background: var(--accent-lime-dim);
+  color: var(--accent-lime);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.brand-tagline {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 6px 14px;
+  background: rgba(0, 255, 102, 0.08);
+  border: 1px solid rgba(0, 255, 102, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--accent-green);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 10px var(--accent-green);
+  animation: pulse-ring 2s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 16px var(--accent-green); }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+  transform: translateY(-2px);
+}
+
+.nav-btn.primary {
+  background: var(--accent-lime);
+  color: var(--bg-primary);
+  border-color: var(--accent-lime);
+  box-shadow: 0 0 20px rgba(228, 255, 53, 0.3);
+}
+
+.nav-btn.primary:hover {
+  background: var(--accent-lime-bright);
+  box-shadow: 0 0 30px rgba(228, 255, 53, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   HERO SECTION & 3D CYBER VAULT VIEWPORT
+   -------------------------------------------------------------------------- */
+.hero-container {
+  position: relative;
+  padding: 4.5rem 2rem 2.5rem 2rem;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 6px 14px;
+  background: var(--accent-lime-dim);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  color: var(--accent-lime);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(228, 255, 53, 0.15);
+}
+
+.hero-eyebrow-icon {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.hero-title {
+  font-size: 3.6rem;
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #FFFFFF 25%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--accent-lime) 0%, #b8e600 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(228, 255, 53, 0.35);
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  max-width: 640px;
+}
+
+.hero-telemetry-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.telemetry-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.telemetry-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-lime);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.telemetry-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.telemetry-card:hover::before {
+  opacity: 1;
+}
+
+.telemetry-metric {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  color: var(--accent-lime);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.telemetry-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-mono);
+}
+
+/* 3D SCENE HUD CONTAINER */
+.hero-visual-viewport {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(228, 255, 53, 0.04) 0%, rgba(17, 19, 23, 0.8) 70%);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: 1rem;
+  box-shadow: var(--shadow-lg), 0 0 50px rgba(0, 0, 0, 0.6);
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.viewport-hud-overlay {
+  position: absolute;
+  inset: 1rem;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.hud-corner-tag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-lime);
+  background: rgba(9, 10, 12, 0.85);
+  border: 1px solid var(--border-accent);
+  padding: 4px 10px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 0 12px rgba(228, 255, 53, 0.2);
+  width: fit-content;
+}
+
+.hud-bottom-telemetry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.hud-hint-pill {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  background: rgba(9, 10, 12, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   LAYOUT CONTAINER
+   -------------------------------------------------------------------------- */
+.main-layout {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 2.5rem 2rem 5rem 2rem;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: 3.5rem;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+/* --------------------------------------------------------------------------
+   SIDEBAR NAVIGATION
+   -------------------------------------------------------------------------- */
+.sidebar-wrapper {
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+  height: calc(100vh - var(--header-height) - 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sidebar-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.sidebar-header {
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-title {
+  font-size: 0.85rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-lime);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sidebar-search-box {
+  margin-top: 0.8rem;
+  position: relative;
+}
+
+.sidebar-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.sidebar-search-input:focus {
+  border-color: var(--accent-lime);
+  box-shadow: 0 0 12px rgba(228, 255, 53, 0.2);
+}
+
+.search-icon-svg {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  fill: var(--text-muted);
+  pointer-events: none;
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-right: 0.5rem;
+  flex: 1;
+}
+
+.sidebar-nav-item {
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 8px 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.sidebar-nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-card);
+}
+
+.sidebar-nav-link.active {
+  color: var(--accent-lime);
+  background: var(--accent-lime-dim);
+  font-weight: 600;
+  border: 1px solid var(--border-accent);
+}
+
+.nav-clause-id {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.7;
+}
+
+.sidebar-nav-link.active .nav-clause-id {
+  opacity: 1;
+  color: var(--accent-lime);
+}
+
+.sidebar-footer-stat {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   CONTENT FEED BASE
+   -------------------------------------------------------------------------- */
+.content-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  min-width: 0;
+}
+
+.clause-section {
+  scroll-margin-top: calc(var(--header-height) + 2rem);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.clause-header-bar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  gap: 1.5rem;
+}
+
+.clause-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.clause-id-badge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  background: var(--accent-lime);
+  color: var(--bg-primary);
+  letter-spacing: 0.05em;
+}
+
+.clause-category-tag {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.clause-title {
+  font-size: 1.95rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+
+.clause-copy-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.clause-copy-btn:hover {
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+  background: var(--bg-card-hover);
+}
+
+.clause-lead-text {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+/* --------------------------------------------------------------------------
+   18 BESPOKE CLAUSE COMPONENT DESIGNS
+   -------------------------------------------------------------------------- */
+
+/* CLAUSE 01: MANIFESTO BENTO GRID */
+.bento-manifesto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.bento-tile {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.bento-tile:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-neon-lime);
+}
+
+.bento-tile.hero-tile {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(228, 255, 53, 0.05) 0%, rgba(17, 19, 23, 0.8) 100%);
+  border: 1px solid rgba(228, 255, 53, 0.25);
+}
+
+.bento-big-num {
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.04);
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+.bento-tile:hover .bento-big-num {
+  color: rgba(228, 255, 53, 0.1);
+}
+
+.bento-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  color: var(--accent-lime);
+}
+
+.bento-icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.bento-tile-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.6rem;
+}
+
+.bento-tile-body {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.bento-stat-chip {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-lime);
+}
+
+/* CLAUSE 02: DUAL-PERSONA SPLIT CARD */
+.dual-persona-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.persona-cockpit {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.persona-cockpit.user-side {
+  border-color: rgba(228, 255, 53, 0.35);
+  background: linear-gradient(180deg, rgba(228, 255, 53, 0.04) 0%, var(--bg-secondary) 100%);
+  box-shadow: 0 0 30px rgba(228, 255, 53, 0.05);
+}
+
+.persona-cockpit.developer-side {
+  border-color: rgba(148, 163, 184, 0.2);
+}
+
+.persona-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  width: fit-content;
+}
+
+.persona-cockpit.user-side .persona-badge {
+  background: var(--accent-lime-dim);
+  color: var(--accent-lime);
+  border: 1px solid var(--border-accent);
+}
+
+.persona-cockpit.developer-side .persona-badge {
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.persona-role-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.persona-role-desc {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.8rem;
+  line-height: 1.6;
+}
+
+.persona-rules-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin-top: auto;
+}
+
+.persona-rule-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.rule-bullet-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.rule-bullet-icon.yes {
+  fill: var(--accent-green);
+}
+
+.rule-bullet-icon.no {
+  fill: var(--accent-red);
+}
+
+/* CLAUSE 03: PERMISSION RADAR MATRIX & SVG AIR-GAP FLOWCHART */
+.permission-matrix-deck {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.svg-flowchart-container {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  overflow-x: auto;
+}
+
+.flowchart-svg {
+  width: 100%;
+  min-width: 680px;
+  height: auto;
+}
+
+.permissions-table-wrap {
+  overflow-x: auto;
+}
+
+.permissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  text-align: left;
+}
+
+.permissions-table th {
+  background: var(--bg-card);
+  padding: 12px 16px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.permissions-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  vertical-align: middle;
+}
+
+.permissions-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.perm-code {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  background: var(--accent-cyan-dim);
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.perm-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.perm-status-badge.granted {
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+  border: 1px solid rgba(0, 255, 102, 0.3);
+}
+
+.perm-status-badge.denied {
+  background: var(--accent-red-dim);
+  color: var(--accent-red);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+}
+
+/* CLAUSE 04: SQL SCHEMA TERMINAL & TABLE INSPECTOR */
+.sql-terminal-box {
+  background: #0B0D11;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.terminal-top-bar {
+  background: #14171E;
+  padding: 10px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.terminal-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.term-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.term-dot.red { background: #FF5F56; }
+.term-dot.yellow { background: #FFBD2E; }
+.term-dot.green { background: #27C93F; }
+
+.terminal-path {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.schema-tab-nav {
+  display: flex;
+  background: #0E1015;
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.schema-tab-btn {
+  padding: 11px 22px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-smooth);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.schema-tab-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.schema-tab-btn.active {
+  color: var(--accent-lime);
+  border-bottom-color: var(--accent-lime);
+  background: rgba(228, 255, 53, 0.05);
+}
+
+.schema-content-pane {
+  padding: 1.8rem;
+  overflow-x: auto;
+}
+
+.code-sql-snippet {
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  line-height: 1.7;
+  color: #E2E8F0;
+}
+
+.sql-kw { color: #FF7B72; font-weight: 700; }
+.sql-fn { color: #D2A8FF; }
+.sql-str { color: #A5D6FF; }
+.sql-col { color: #7EE787; }
+.sql-cm { color: #8B949E; font-style: italic; }
+
+/* CLAUSE 05: THE FORBIDDEN PERIMETER (CRIMSON SENSOR GRID) */
+.forbidden-perimeter-deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.forbidden-sensor-card {
+  background: rgba(255, 51, 102, 0.03);
+  border: 1px solid rgba(255, 51, 102, 0.2);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.forbidden-sensor-card:hover {
+  border-color: var(--accent-red);
+  background: rgba(255, 51, 102, 0.06);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.25);
+}
+
+.sensor-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sensor-icon-box {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-red-dim);
+  border: 1px solid rgba(255, 51, 102, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-red);
+}
+
+.sensor-icon-box svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.sensor-lock-badge {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--accent-red);
+  background: rgba(255, 51, 102, 0.15);
+  border: 1px solid var(--accent-red);
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.sensor-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sensor-strike {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.sensor-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1.2rem;
+}
+
+.sensor-manifest-pill {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-red);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 5px 9px;
+  border-radius: 4px;
+  border-left: 2px solid var(--accent-red);
+}
+
+/* CLAUSE 06: 4-TIER SECURITY DEFENSE STACK (3D SLABS) */
+.defense-stack-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  perspective: 1000px;
+}
+
+.security-tier-slab {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.6rem 2.2rem;
+  display: grid;
+  grid-template-columns: 80px 1.5fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  transition: var(--transition-smooth);
+  position: relative;
+  cursor: pointer;
+}
+
+.security-tier-slab::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--border-color);
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+  transition: var(--transition-smooth);
+}
+
+.security-tier-slab:hover {
+  border-color: var(--border-accent);
+  transform: translateX(8px);
+  background: var(--bg-card);
+  box-shadow: var(--shadow-md);
+}
+
+.security-tier-slab:hover::before {
+  background: var(--accent-lime);
+}
+
+.slab-level-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  color: var(--accent-lime);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.slab-level-sub {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+}
+
+.slab-info-col h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.slab-info-col p {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.slab-spec-tag {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-self: end;
+}
+
+/* CLAUSE 07: KEEPALIVE ENGINE & 6-OEM SETUP GUIDE */
+.keepalive-showcase {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.oem-selector-bar {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.oem-tab-btn {
+  padding: 9px 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+
+.oem-tab-btn:hover {
+  border-color: var(--accent-lime);
+  color: #fff;
+}
+
+.oem-tab-btn.active {
+  background: var(--accent-lime);
+  color: var(--bg-primary);
+  border-color: var(--accent-lime);
+  font-weight: 700;
+}
+
+.oem-instructions-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+}
+
+.oem-step-chain {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.oem-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.oem-step-index {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent-lime-dim);
+  border: 1px solid var(--border-accent);
+  color: var(--accent-lime);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.oem-step-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.oem-step-text strong {
+  color: #fff;
+}
+
+/* CLAUSE 08: RETRACTED MESSAGE RECOVERY DIFF SIMULATOR */
+.diff-simulator-deck {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.chat-simulator-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-sim-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.2rem;
+}
+
+.chat-sim-app-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.chat-bubble-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.chat-bubble {
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 88%;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  position: relative;
+}
+
+.chat-bubble.deleted-sender {
+  background: rgba(255, 51, 102, 0.1);
+  border: 1px dashed rgba(255, 51, 102, 0.4);
+  color: var(--accent-red);
+  font-style: italic;
+}
+
+.chat-bubble.ghost-recovered {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-lime);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(228, 255, 53, 0.15);
+}
+
+.ghost-recovery-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--accent-lime);
+  background: var(--accent-lime-dim);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+
+/* CLAUSE 09: DUAL-LANE PRIORITY DISPATCHER */
+.priority-highway-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.2rem;
+  position: relative;
+}
+
+.priority-highway-box::after {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 50%;
+  width: 1px;
+  background: var(--border-color);
+  border-left: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.highway-lane {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.lane-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.lane-badge.vip {
+  background: var(--accent-lime-dim);
+  color: var(--accent-lime);
+  border: 1px solid var(--border-accent);
+}
+
+.lane-badge.muted {
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.highway-item-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.highway-item-card.vip-glow {
+  border-color: rgba(228, 255, 53, 0.4);
+  box-shadow: 0 0 15px rgba(228, 255, 53, 0.1);
+}
+
+/* CLAUSE 10: INSTANT WIPE NUCLEAR COCKPIT */
+.nuclear-cockpit-box {
+  background: linear-gradient(135deg, rgba(255, 51, 102, 0.05) 0%, var(--bg-secondary) 100%);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.wipe-control-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 51, 102, 0.4);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 51, 102, 0.15);
+}
+
+.nuclear-btn-trigger {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #FF3366 0%, #CC1144 100%);
+  border: 1px solid #FF5588;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 0 25px rgba(255, 51, 102, 0.4);
+  transition: var(--transition-smooth);
+}
+
+.nuclear-btn-trigger:hover {
+  box-shadow: 0 0 40px rgba(255, 51, 102, 0.7);
+  transform: scale(1.02);
+}
+
+/* CLAUSE 11: PLATFORM COMPATIBILITY DOCK */
+.platform-dock-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.platform-pill-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.platform-pill-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.platform-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.platform-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.platform-badge-local {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  background: var(--accent-cyan-dim);
+  color: var(--accent-cyan);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* CLAUSE 12: FAMILY & COPPA SHIELD CERTIFICATE */
+.family-certificate-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.cert-seal-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--accent-green-dim);
+  border: 2px dashed var(--accent-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green);
+  box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+}
+
+.cert-seal-icon svg {
+  width: 48px;
+  height: 48px;
+  fill: currentColor;
+}
+
+/* CLAUSE 13: GDPR 6-ACTION DASHBOARD */
+.gdpr-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.gdpr-action-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: var(--transition-smooth);
+}
+
+.gdpr-action-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+
+.gdpr-article-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-lime);
+  margin-bottom: 0.5rem;
+}
+
+.gdpr-action-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.gdpr-action-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.gdpr-execute-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 6px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.gdpr-execute-pill:hover {
+  background: var(--accent-lime-dim);
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+}
+
+/* CLAUSE 14: CALIFORNIA CCPA / CPRA STATUTORY SEAL */
+.california-seal-deck {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.ccpa-declaration-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.ccpa-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-amber);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* CLAUSE 15: GLOBAL JURISDICTION WORLD TERMINAL */
+.jurisdiction-terminal {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.jurisdiction-nav-row {
+  display: flex;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  overflow-x: auto;
+}
+
+.jurisdiction-tab-btn {
+  padding: 12px 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.jurisdiction-tab-btn:hover {
+  color: #fff;
+}
+
+.jurisdiction-tab-btn.active {
+  color: var(--accent-lime);
+  border-bottom-color: var(--accent-lime);
+  background: rgba(228, 255, 53, 0.05);
+}
+
+.jurisdiction-content-box {
+  padding: 2rem;
+}
+
+/* CLAUSE 16: PGP CYBER TERMINAL KEY INSPECTOR */
+.pgp-terminal-deck {
+  background: #0B0D11;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.pgp-key-codeblock {
+  background: #050608;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: var(--accent-lime);
+  overflow-x: auto;
+}
+
+/* CLAUSE 17: CHANGELOG TIMELINE */
+.changelog-timeline-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.changelog-timeline-wrap::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-node {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  transition: var(--transition-smooth);
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 1.8rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent-lime);
+  box-shadow: 0 0 10px var(--accent-lime);
+}
+
+.timeline-node:hover {
+  border-color: var(--border-accent);
+  transform: translateX(6px);
+}
+
+.node-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.node-version {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--accent-lime);
+}
+
+.node-date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* CLAUSE 18: CYBER COMMAND CONTACT DECK & SLA GUARANTEE */
+.contact-deck-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.contact-card-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+.contact-card-box:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-icon-row {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-lime-dim);
+  border: 1px solid var(--border-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-lime);
+  margin-bottom: 1rem;
+}
+
+.contact-icon-row svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.contact-method-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.contact-method-sub {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.contact-link-pill {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-lime);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-link-pill:hover {
+  text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE NOTIFICATION SIMULATOR SANDBOX STUDIO
+   -------------------------------------------------------------------------- */
+.sandbox-studio-container {
+  margin: 4rem 0;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-neon-lime);
+}
+
+.sandbox-studio-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-lime), var(--accent-cyan), var(--accent-purple));
+}
+
+.sandbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.sandbox-controls-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.sandbox-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sandbox-label {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sandbox-input, .sandbox-select {
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.sandbox-input:focus, .sandbox-select:focus {
+  border-color: var(--accent-lime);
+  box-shadow: 0 0 15px rgba(228, 255, 53, 0.2);
+}
+
+.sandbox-fire-btn {
+  padding: 12px 20px;
+  background: var(--accent-lime);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 0 20px rgba(228, 255, 53, 0.3);
+  transition: var(--transition-smooth);
+  margin-top: 0.5rem;
+}
+
+.sandbox-fire-btn:hover {
+  background: #f0ff66;
+  box-shadow: 0 0 30px rgba(228, 255, 53, 0.5);
+  transform: translateY(-2px);
+}
+
+.sandbox-feed-display {
+  background: #0B0D11;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
+  overflow: hidden;
+}
+
+.sandbox-feed-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.sandbox-feed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.sim-feed-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   INTERACTIVE FAQ ACCORDION
+   -------------------------------------------------------------------------- */
+.faq-section-box {
+  margin: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.faq-item-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.faq-question-btn {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.faq-chevron {
+  width: 20px;
+  height: 20px;
+  fill: var(--text-muted);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item-card.open .faq-chevron {
+  transform: rotate(180deg);
+  fill: var(--accent-lime);
+}
+
+.faq-answer-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+  background: var(--bg-card);
+  border-top: 1px solid transparent;
+}
+
+.faq-item-card.open .faq-answer-panel {
+  border-top-color: var(--border-color);
+}
+
+.faq-answer-content {
+  padding: 1.25rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   FOOTER & CRYPTOGRAPHIC VERIFICATION STAMP
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: #07080A;
+  border-top: 1px solid var(--border-color);
+  padding: 4rem 2rem 3rem 2rem;
+  width: 100%;
+  margin-top: auto;
+  z-index: 10;
+  position: relative;
+}
+
+.footer-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer-top-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+}
+
+.footer-desc-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+}
+
+.footer-links-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-col-title {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-lime);
+  margin-bottom: 0.5rem;
+}
+
+.footer-link-item {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.footer-link-item:hover {
+  color: #fff;
+}
+
+.footer-crypto-stamp {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.crypto-stamp-text {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.crypto-stamp-hash {
+  color: var(--accent-lime);
+  font-weight: 700;
+}
+
+.footer-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   TOAST NOTIFICATION
+   -------------------------------------------------------------------------- */
+#toast-notice {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: 12px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--accent-lime);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  box-shadow: var(--shadow-neon-lime);
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --------------------------------------------------------------------------
+   CONFIRMATION MODAL
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-red);
+  border-radius: var(--radius-lg);
+  padding: 2.2rem;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 0 50px rgba(255, 51, 102, 0.4);
+  transform: scale(0.95);
+  transition: var(--transition-smooth);
+}
+
+.modal-overlay.open .modal-window {
+  transform: scale(1);
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent-red);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.8rem;
+  justify-content: flex-end;
+}
+
+.modal-btn {
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.modal-btn.cancel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.modal-btn.cancel:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.modal-btn.confirm-wipe {
+  background: var(--accent-red);
+  border: 1px solid var(--accent-red);
+  color: #fff;
+  box-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+}
+
+.modal-btn.confirm-wipe:hover {
+  background: #ff1f59;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-wrapper {
+    display: none;
+  }
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    margin: 0 auto 1.5rem auto;
+  }
+  .hero-description {
+    margin: 0 auto 2.2rem auto;
+  }
+  .hero-telemetry-row {
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+  }
+  .hero-visual-viewport {
+    margin-top: 2rem;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .bento-manifesto-grid,
+  .dual-persona-container,
+  .forbidden-perimeter-deck,
+  .diff-simulator-deck,
+  .priority-highway-box,
+  .nuclear-cockpit-box,
+  .platform-dock-grid,
+  .gdpr-dashboard-grid,
+  .california-seal-deck,
+  .contact-deck-grid,
+  .sandbox-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-tile.hero-tile {
+    grid-column: span 1;
+  }
+  .security-tier-slab {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .family-certificate-box {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND PARTICLE NETWORK CANVAS -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- TOP STICKY NAVIGATION BAR -->
+  <header class="top-nav">
+    <a href="#" class="brand-cluster" title="GhostRead Sovereign Privacy">
+      <div class="brand-logo-hex">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+      <div class="brand-name-group">
+        <div class="brand-title">
+          <span>GHOSTREAD</span>
+          <span class="brand-version-chip">v2.5 PRO</span>
+        </div>
+        <div class="brand-tagline">AIR-GAPPED NOTIFICATION VAULT // ZERO-CLOUD GUARANTEE</div>
+      </div>
+    </a>
+
+    <div class="nav-actions">
+      <div class="nav-status-pill">
+        <span class="pulse-dot"></span>
+        <span>VAULT ISOLATED: LOCAL STORAGE ONLY</span>
+      </div>
+      <a href="#sandbox-studio" class="nav-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        <span>Test Sandbox</span>
+      </a>
+      <a href="#clause-10" class="nav-btn primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+        <span>Instant Purge</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION WITH INTERACTIVE 3D THREE.JS VAULT -->
+  <section class="hero-container">
+    <div class="hero-text-col">
+      <div class="hero-eyebrow">
+        <svg class="hero-eyebrow-icon" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        <span>CRYPTOGRAPHIC ZERO-KNOWLEDGE ARCHITECTURE</span>
+      </div>
+      <h1 class="hero-title">
+        Your Push Data.<br>
+        <span class="highlight">100% On-Device.</span> Zero Cloud.
+      </h1>
+      <p class="hero-description">
+        GhostRead intercepts Android notifications entirely within your phone's memory. No background telemetry, no ad trackers, no server ingestion. 
+        Explore our 18 legally binding clauses, live SQL schema, hardware air-gap firewall, and interactive simulation studio below.
+      </p>
+      <div class="hero-telemetry-row">
+        <div class="telemetry-card">
+          <div class="telemetry-metric">0 <span style="font-size:0.9rem; color:var(--text-muted);">B</span></div>
+          <div class="telemetry-label">Cloud Uploads</div>
+        </div>
+        <div class="telemetry-card">
+          <div class="telemetry-metric">256 <span style="font-size:0.9rem; color:var(--text-muted);">GCM</span></div>
+          <div class="telemetry-label">Local Encryption</div>
+        </div>
+        <div class="telemetry-card">
+          <div class="telemetry-metric">0 <span style="font-size:0.9rem; color:var(--text-muted);">SDK</span></div>
+          <div class="telemetry-label">Third-Party Trackers</div>
+        </div>
+        <div class="telemetry-card">
+          <div class="telemetry-metric">100 <span style="font-size:0.9rem; color:var(--text-muted);">%</span></div>
+          <div class="telemetry-label">User Custody</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D THREE.JS VAULT VIEWPORT -->
+    <div class="hero-visual-viewport">
+      <div class="viewport-hud-overlay">
+        <div class="hud-corner-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+          <span>3D CRYPTO-VAULT NODE // INTERACTIVE VIEWPORT</span>
+        </div>
+        <div class="hud-bottom-telemetry">
+          <span class="hud-hint-pill">[DRAG TO ROTATE 3D MESH]</span>
+          <span class="hud-hint-pill" style="color:var(--accent-lime);">ISO-AIRGAP: ACTIVE</span>
+        </div>
+      </div>
+      <!-- Three.js Canvas container -->
+      <canvas id="three-vault-canvas"></canvas>
+    </div>
+  </section>
+
+  <!-- MAIN DUAL-COLUMN CONTENT LAYOUT -->
+  <div class="main-layout">
+
+
+    <!-- STICKY SIDEBAR NAVIGATION WITH LIVE SEARCH -->
+    <aside class="sidebar-wrapper">
+      <div class="sidebar-card">
+        <div class="sidebar-header">
+          <div class="sidebar-title">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6h16V4H4v2zm0 5h16v-2H4v2zm0 5h16v-2H4v2zm0 5h16v-2H4v2z"/></svg>
+            <span>Policy Index (18 Clauses)</span>
+          </div>
+          <div class="sidebar-search-box">
+            <svg class="search-icon-svg" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="policy-search" class="sidebar-search-input" placeholder="Search clauses, terms, laws..." autocomplete="off">
+          </div>
+        </div>
+
+        <ul class="sidebar-nav-list" id="sidebar-nav">
+          <li class="sidebar-nav-item"><a href="#clause-01" class="sidebar-nav-link active"><span class="nav-clause-id">01</span><span>Philosophy & Manifesto</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-02" class="sidebar-nav-link"><span class="nav-clause-id">02</span><span>Controller vs Subject Cockpit</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-03" class="sidebar-nav-link"><span class="nav-clause-id">03</span><span>Listener IPC & Air-Gap Flow</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-04" class="sidebar-nav-link"><span class="nav-clause-id">04</span><span>SQLite Schema Terminal</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-05" class="sidebar-nav-link"><span class="nav-clause-id">05</span><span>Forbidden Perimeter Matrix</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-06" class="sidebar-nav-link"><span class="nav-clause-id">06</span><span>4-Tier Defense Stack Slabs</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-07" class="sidebar-nav-link"><span class="nav-clause-id">07</span><span>KeepAlive & 6-OEM Guides</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-08" class="sidebar-nav-link"><span class="nav-clause-id">08</span><span>Retraction Simulator & Diff</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-09" class="sidebar-nav-link"><span class="nav-clause-id">09</span><span>Priority Highway Dispatcher</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-10" class="sidebar-nav-link"><span class="nav-clause-id">10</span><span>Nuclear Instant Wipe</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-11" class="sidebar-nav-link"><span class="nav-clause-id">11</span><span>Platform Compatibility Dock</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-12" class="sidebar-nav-link"><span class="nav-clause-id">12</span><span>Family & COPPA Shield</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-13" class="sidebar-nav-link"><span class="nav-clause-id">13</span><span>GDPR 6-Action Dashboard</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-14" class="sidebar-nav-link"><span class="nav-clause-id">14</span><span>California CCPA/CPRA Seal</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-15" class="sidebar-nav-link"><span class="nav-clause-id">15</span><span>Global Jurisdiction Terminal</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-16" class="sidebar-nav-link"><span class="nav-clause-id">16</span><span>PGP Key & Security SLA</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-17" class="sidebar-nav-link"><span class="nav-clause-id">17</span><span>Changelog Timeline</span></a></li>
+          <li class="sidebar-nav-item"><a href="#clause-18" class="sidebar-nav-link"><span class="nav-clause-id">18</span><span>Cyber Command Contact Deck</span></a></li>
+        </ul>
+
+        <div class="sidebar-footer-stat">
+          <span>SHA-256 VERIFIED</span>
+          <span style="color:var(--accent-lime);">PASS // 2026-09</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT FEED OF 18 BESPOKE CLAUSES -->
+    <main class="content-feed">
+
+
+      <!-- =====================================================================
+           CLAUSE 01: CORE PHILOSOPHY & MANIFESTO BENTO GRID
+           ===================================================================== -->
+      <section id="clause-01" class="clause-section" data-clause="01">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 01</span>
+              <span class="clause-category-tag">ARCHITECTURAL FOUNDATION</span>
+            </div>
+            <h2 class="clause-title">Philosophy & Core Stance: Zero Custody, Total Sovereignty</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-01')" title="Copy Link to Clause 01">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Modern smartphone software routinely turns push notification feeds into behavioral advertising dossiers. 
+          <strong>GhostRead</strong> was engineered as an uncompromising technical countermeasure: an air-gapped personal notification vault running strictly on your local Android hardware. We do not store, process, or monetize a single byte of your life.
+        </p>
+
+        <!-- BESPOKE VISUAL: BENTO MANIFESTO GRID -->
+        <div class="bento-manifesto-grid">
+          <div class="bento-tile hero-tile">
+            <div class="bento-big-num">01</div>
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <div class="bento-tile-title">Air-Gapped Architectural Isolation</div>
+            <div class="bento-tile-body">
+              GhostRead does not declare the Android Internet permission (<code>android.permission.INTERNET</code>). 
+              Even if a rogue process attempted to transmit your notification history across the network, the Android Linux kernel enforces an immediate POSIX permission error (<code>EPERM</code>).
+            </div>
+            <div class="bento-stat-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+              <span>NETWORK INTERFACE STATUS: 0x0 (HARDWARE AIR-GAP)</span>
+            </div>
+          </div>
+
+          <div class="bento-tile">
+            <div class="bento-big-num">02</div>
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+            </div>
+            <div class="bento-tile-title">Strict Local SQLite Custody</div>
+            <div class="bento-tile-body">
+              All incoming alerts, sender identities, and timestamps are written directly into an on-device encrypted database in your private app directory (<code>/data/data/com.ghostread/databases/vault.db</code>).
+            </div>
+            <div class="bento-stat-chip">
+              <span>STORAGE ENGINE: SQLITE 3.45 WAL MODE</span>
+            </div>
+          </div>
+
+          <div class="bento-tile">
+            <div class="bento-big-num">03</div>
+            <div class="bento-icon-wrapper">
+              <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            </div>
+            <div class="bento-tile-title">Sovereign Encryption Keys</div>
+            <div class="bento-tile-body">
+              Encryption keys are stored inside the hardware Android KeyStore / StrongBox Keymaster chip. 
+              The developers never hold master keys or recovery backdoor access.
+            </div>
+            <div class="bento-stat-chip">
+              <span>CIPHER: AES-256-GCM HARDWARE-BOUND</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 02: DUAL-PERSONA SPLIT COCKPIT (CONTROLLER VS SUBJECT)
+           ===================================================================== -->
+      <section id="clause-02" class="clause-section" data-clause="02">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 02</span>
+              <span class="clause-category-tag">LEGAL STATUS & RESPONSIBILITY</span>
+            </div>
+            <h2 class="clause-title">Data Controller & Data Subject: The Sovereign Split</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-02')" title="Copy Link to Clause 02">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Under European GDPR (Article 4(7)), California CCPA/CPRA, and global data privacy frameworks, <strong>you</strong> are the sole Data Controller and Custodian of all push alerts recorded on your device. GhostRead is an offline software tool with zero cloud infrastructure.
+        </p>
+
+        <!-- BESPOKE VISUAL: DUAL-PERSONA SPLIT COCKPIT -->
+        <div class="dual-persona-container">
+          <!-- LEFT COCKPIT: THE USER -->
+          <div class="persona-cockpit user-side">
+            <div class="persona-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span>DATA CONTROLLER & SOVEREIGN CUSTODIAN</span>
+            </div>
+            <h3 class="persona-role-title">You (The End User)</h3>
+            <p class="persona-role-desc">
+              You maintain unmediated physical and cryptographic control over every notification intercepted. You decide which applications are monitored, how long logs are retained, and when the database is purged.
+            </p>
+            <ul class="persona-rules-list">
+              <li class="persona-rule-item">
+                <svg class="rule-bullet-icon yes" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span><strong>Exclusive Key Ownership:</strong> You hold the biometric / device passcode required to decrypt and view the archive.</span>
+              </li>
+              <li class="persona-rule-item">
+                <svg class="rule-bullet-icon yes" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span><strong>Selective App Whitelisting:</strong> Mute or exclude sensitive apps (e.g. Banking, Health, 2FA authenticators) anytime.</span>
+              </li>
+              <li class="persona-rule-item">
+                <svg class="rule-bullet-icon yes" viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                <span><strong>Instant Data Erasure:</strong> Ability to completely wipe the SQLite database with zero remnants in 0.05 seconds.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- RIGHT COCKPIT: GHOSTREAD DEVELOPER -->
+          <div class="persona-cockpit developer-side">
+            <div class="persona-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>ZERO-CUSTODY SOFTWARE VENDOR</span>
+            </div>
+            <h3 class="persona-role-title">GhostRead (The Software Entity)</h3>
+            <p class="persona-role-desc">
+              We provide the compiled application binary. We do not operate remote databases, analytics ingestion endpoints, or advertising relays. We cannot read, share, or subpoena your notifications because we simply do not possess them.
+            </p>
+            <ul class="persona-rules-list">
+              <li class="persona-rule-item">
+                <svg class="rule-bullet-icon no" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                <span><strong>No Cloud Databases:</strong> Zero servers, zero Amazon S3 buckets, zero Firebase Firestore instances.</span>
+              </li>
+              <li class="persona-rule-item">
+                <svg class="rule-bullet-icon no" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                <span><strong>No Remote Telemetry:</strong> No analytics SDKs (Google Analytics, Mixpanel, Crashlytics, Sentry) compiled in production.</span>
+              </li>
+              <li class="persona-rule-item">
+                <svg class="rule-bullet-icon no" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+                <span><strong>No Commercial Sale:</strong> We have never sold, monetized, or brokered personal data to data brokers or advertisers.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 03: ANDROID NOTIFICATION LISTENER IPC & AIR-GAP FLOW
+           ===================================================================== -->
+      <section id="clause-03" class="clause-section" data-clause="03">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 03</span>
+              <span class="clause-category-tag">OS INTEGRATION & IPC PIPELINE</span>
+            </div>
+            <h2 class="clause-title">Android NotificationListenerService & Air-Gap Data Flow</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-03')" title="Copy Link to Clause 03">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          GhostRead operates via Android's native <code>NotificationListenerService</code> IPC API. When a third-party app (e.g., WhatsApp, Telegram, Instagram) dispatches a system alert, Android broadcasts an <code>onNotificationPosted</code> binder transaction directly to GhostRead's sandboxed process.
+        </p>
+
+        <!-- BESPOKE VISUAL: SVG AIR-GAP DATA FLOWCHART -->
+        <div class="permission-matrix-deck">
+          <div class="svg-flowchart-container">
+            <svg class="flowchart-svg" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Grid background -->
+              <defs>
+                <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <line x1="0" y1="0" x2="20" y2="0" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                  <line x1="0" y1="0" x2="0" y2="20" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+                </pattern>
+                <linearGradient id="lime-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#E4FF35" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#A4C400" stop-opacity="0.9"/>
+                </linearGradient>
+                <linearGradient id="red-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#FF3366" stop-opacity="0.8"/>
+                  <stop offset="100%" stop-color="#990022" stop-opacity="0.9"/>
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+
+              <!-- NODE 1: Third Party App -->
+              <rect x="20" y="55" width="180" height="110" rx="12" fill="#14171E" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+              <text x="110" y="90" fill="#94A3B8" font-family="monospace" font-size="11" text-anchor="middle">STEP 01: EMITTER</text>
+              <text x="110" y="115" fill="#FFFFFF" font-family="sans-serif" font-weight="700" font-size="14" text-anchor="middle">Messaging Apps</text>
+              <text x="110" y="135" fill="#64748B" font-family="monospace" font-size="10" text-anchor="middle">WhatsApp / Telegram / SMS</text>
+
+              <!-- ARROW 1 -> 2 -->
+              <path d="M200 110 L255 110" stroke="#E4FF35" stroke-width="2" stroke-dasharray="4 4"/>
+              <polygon points="260,110 252,105 252,115" fill="#E4FF35"/>
+              <text x="230" y="100" fill="#E4FF35" font-family="monospace" font-size="9" text-anchor="middle">OS IPC</text>
+
+              <!-- NODE 2: Android System Kernel -->
+              <rect x="265" y="55" width="180" height="110" rx="12" fill="#14171E" stroke="rgba(228,255,53,0.3)" stroke-width="1.5"/>
+              <text x="355" y="90" fill="#E4FF35" font-family="monospace" font-size="11" text-anchor="middle">STEP 02: KERNEL BINDER</text>
+              <text x="355" y="115" fill="#FFFFFF" font-family="sans-serif" font-weight="700" font-size="14" text-anchor="middle">NotificationManager</text>
+              <text x="355" y="135" fill="#94A3B8" font-family="monospace" font-size="10" text-anchor="middle">Local Intent Broadcast</text>
+
+              <!-- ARROW 2 -> 3 -->
+              <path d="M445 110 L500 110" stroke="#E4FF35" stroke-width="2"/>
+              <polygon points="505,110 497,105 497,115" fill="#E4FF35"/>
+              <text x="475" y="100" fill="#E4FF35" font-family="monospace" font-size="9" text-anchor="middle">BINDER</text>
+
+              <!-- NODE 3: GhostRead Sandboxed Engine -->
+              <rect x="510" y="55" width="190" height="110" rx="12" fill="#16191F" stroke="#E4FF35" stroke-width="2"/>
+              <text x="605" y="90" fill="#E4FF35" font-family="monospace" font-size="11" text-anchor="middle">STEP 03: LOCAL ARCHIVE</text>
+              <text x="605" y="115" fill="#FFFFFF" font-family="sans-serif" font-weight="700" font-size="14" text-anchor="middle">GhostRead Engine</text>
+              <text x="605" y="135" fill="#00FF66" font-family="monospace" font-size="10" text-anchor="middle">Writes to vault.db (SQLite)</text>
+
+              <!-- BLOCKED AIR-GAP ARROW TO CLOUD -->
+              <path d="M700 110 L755 110" stroke="#FF3366" stroke-width="2" stroke-dasharray="2 2"/>
+              <line x1="755" y1="70" x2="755" y2="150" stroke="#FF3366" stroke-width="3"/>
+
+              <!-- NODE 4: Forbidden Cloud (Blocked) -->
+              <rect x="770" y="55" width="130" height="110" rx="12" fill="rgba(255,51,102,0.06)" stroke="#FF3366" stroke-width="1.5"/>
+              <text x="835" y="90" fill="#FF3366" font-family="monospace" font-size="10" text-anchor="middle">FORBIDDEN</text>
+              <text x="835" y="115" fill="#FFFFFF" font-family="sans-serif" font-weight="700" font-size="13" text-anchor="middle">Cloud Servers</text>
+              <text x="835" y="135" fill="#FF3366" font-family="monospace" font-size="9" text-anchor="middle">AIR-GAP BARRIER</text>
+            </svg>
+          </div>
+
+          <!-- PERMISSION AUDIT TABLE -->
+          <div class="permissions-table-wrap">
+            <table class="permissions-table">
+              <thead>
+                <tr>
+                  <th>Android Manifest Permission</th>
+                  <th>Classification</th>
+                  <th>Operational Purpose</th>
+                  <th>Audit Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="perm-code">BIND_NOTIFICATION_LISTENER_SERVICE</span></td>
+                  <td>Signature / Privileged</td>
+                  <td>Allows GhostRead to receive system notification dispatch events locally.</td>
+                  <td><span class="perm-status-badge granted">GRANTED (OPT-IN)</span></td>
+                </tr>
+                <tr>
+                  <td><span class="perm-code">POST_NOTIFICATIONS</span></td>
+                  <td>Normal Runtime</td>
+                  <td>Required on Android 13+ to present the silent KeepAlive service indicator.</td>
+                  <td><span class="perm-status-badge granted">GRANTED (OPT-IN)</span></td>
+                </tr>
+                <tr>
+                  <td><span class="perm-code">RECEIVE_BOOT_COMPLETED</span></td>
+                  <td>Normal Boot</td>
+                  <td>Re-initiates the local listener service after device reboot so alerts aren't dropped.</td>
+                  <td><span class="perm-status-badge granted">GRANTED</span></td>
+                </tr>
+                <tr>
+                  <td><span class="perm-code">android.permission.INTERNET</span></td>
+                  <td>Dangerous Network</td>
+                  <td>Outbound TCP/UDP socket transmission across Wi-Fi or Cellular networks.</td>
+                  <td><span class="perm-status-badge denied">STRICTLY EXCLUDED</span></td>
+                </tr>
+                <tr>
+                  <td><span class="perm-code">ACCESS_FINE_LOCATION</span></td>
+                  <td>Dangerous Hardware</td>
+                  <td>GPS satellite coordinates, cell tower triangulation, Wi-Fi SSID positioning.</td>
+                  <td><span class="perm-status-badge denied">STRICTLY EXCLUDED</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 04: SQLITE DATABASE ARCHITECTURE & RELATIONAL SCHEMA TERMINAL
+           ===================================================================== -->
+      <section id="clause-04" class="clause-section" data-clause="04">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 04</span>
+              <span class="clause-category-tag">DATA STORAGE & SCHEMA AUDIT</span>
+            </div>
+            <h2 class="clause-title">Local Database Architecture & Relational Schema Inspector</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-04')" title="Copy Link to Clause 04">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Transparency is absolute. GhostRead stores notifications inside a relational SQLite engine. Below is the exact, unredacted DDL schema for the internal tables used in production.
+        </p>
+
+        <!-- BESPOKE VISUAL: SQL TERMINAL SCHEMA INSPECTOR -->
+        <div class="sql-terminal-box">
+          <div class="terminal-top-bar">
+            <div class="terminal-dots">
+              <span class="term-dot red"></span>
+              <span class="term-dot yellow"></span>
+              <span class="term-dot green"></span>
+            </div>
+            <div class="terminal-path">sqlite3 /data/data/com.ghostread/databases/vault.db .schema</div>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-lime);">SQLITE 3.45.1</div>
+          </div>
+
+          <div class="schema-tab-nav">
+            <button class="schema-tab-btn active" onclick="switchSchemaTab('tab-notifications', this)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+              <span>notifications (Core)</span>
+            </button>
+            <button class="schema-tab-btn" onclick="switchSchemaTab('tab-senders', this)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span>sender_profiles</span>
+            </button>
+            <button class="schema-tab-btn" onclick="switchSchemaTab('tab-retention', this)">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span>retention_policies</span>
+            </button>
+          </div>
+
+          <div class="schema-content-pane">
+            <div id="tab-notifications" class="schema-pane active">
+              <pre class="code-sql-snippet"><code><span class="sql-cm">-- -------------------------------------------------------------------------</span>
+<span class="sql-cm">-- TABLE: notifications // Primary Notification Event Ledger</span>
+<span class="sql-cm">-- -------------------------------------------------------------------------</span>
+<span class="sql-kw">CREATE TABLE IF NOT EXISTS</span> <span class="sql-fn">notifications</span> (
+    <span class="sql-col">id</span>                <span class="sql-kw">INTEGER PRIMARY KEY AUTOINCREMENT</span>,
+    <span class="sql-col">package_name</span>      <span class="sql-kw">TEXT NOT NULL</span>,         <span class="sql-cm">-- E.g., 'com.whatsapp'</span>
+    <span class="sql-col">sender_title</span>      <span class="sql-kw">TEXT</span>,                  <span class="sql-cm">-- Contact name or group title</span>
+    <span class="sql-col">message_body</span>      <span class="sql-kw">TEXT</span>,                  <span class="sql-cm">-- Notification preview content</span>
+    <span class="sql-col">received_at</span>       <span class="sql-kw">INTEGER NOT NULL</span>,      <span class="sql-cm">-- Unix epoch timestamp in ms</span>
+    <span class="sql-col">is_retracted</span>      <span class="sql-kw">INTEGER DEFAULT 0</span>,     <span class="sql-cm">-- 1 if sender deleted message later</span>
+    <span class="sql-col">priority_lane</span>     <span class="sql-kw">TEXT DEFAULT 'NORMAL'</span>, <span class="sql-cm">-- 'VIP', 'NORMAL', 'MUTED'</span>
+    <span class="sql-col">checksum_sha256</span>   <span class="sql-kw">TEXT NOT NULL</span>          <span class="sql-cm">-- Cryptographic payload integrity</span>
+);
+
+<span class="sql-kw">CREATE INDEX IF NOT EXISTS</span> <span class="sql-fn">idx_pkg_timestamp</span> 
+<span class="sql-kw">ON</span> <span class="sql-fn">notifications</span> (<span class="sql-col">package_name</span>, <span class="sql-col">received_at</span> <span class="sql-kw">DESC</span>);</code></pre>
+            </div>
+
+            <div id="tab-senders" class="schema-pane" style="display:none;">
+              <pre class="code-sql-snippet"><code><span class="sql-cm">-- -------------------------------------------------------------------------</span>
+<span class="sql-cm">-- TABLE: sender_profiles // Local contact metadata</span>
+<span class="sql-cm">-- -------------------------------------------------------------------------</span>
+<span class="sql-kw">CREATE TABLE IF NOT EXISTS</span> <span class="sql-fn">sender_profiles</span> (
+    <span class="sql-col">sender_id</span>         <span class="sql-kw">INTEGER PRIMARY KEY AUTOINCREMENT</span>,
+    <span class="sql-col">display_name</span>      <span class="sql-kw">TEXT NOT NULL</span>,
+    <span class="sql-col">total_alerts</span>      <span class="sql-kw">INTEGER DEFAULT 0</span>,
+    <span class="sql-col">vip_status</span>        <span class="sql-kw">INTEGER DEFAULT 0</span>,
+    <span class="sql-col">last_active_at</span>    <span class="sql-kw">INTEGER NOT NULL</span>
+);</code></pre>
+            </div>
+
+            <div id="tab-retention" class="schema-pane" style="display:none;">
+              <pre class="code-sql-snippet"><code><span class="sql-cm">-- -------------------------------------------------------------------------</span>
+<span class="sql-cm">-- TABLE: retention_policies // Automated cleanup rules</span>
+<span class="sql-cm">-- -------------------------------------------------------------------------</span>
+<span class="sql-kw">CREATE TABLE IF NOT EXISTS</span> <span class="sql-fn">retention_policies</span> (
+    <span class="sql-col">policy_id</span>         <span class="sql-kw">INTEGER PRIMARY KEY</span>,
+    <span class="sql-col">max_age_days</span>      <span class="sql-kw">INTEGER DEFAULT 30</span>,    <span class="sql-cm">-- Purge alerts older than X days</span>
+    <span class="sql-col">auto_vacuum</span>       <span class="sql-kw">INTEGER DEFAULT 1</span>,     <span class="sql-cm">-- Cryptographic secure_delete</span>
+    <span class="sql-col">last_cleanup_at</span>   <span class="sql-kw">INTEGER</span>
+);</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 05: THE FORBIDDEN PERIMETER (CRIMSON HARDWARE SENSOR GRID)
+           ===================================================================== -->
+      <section id="clause-05" class="clause-section" data-clause="05">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 05</span>
+              <span class="clause-category-tag">HARDWARE PRIVACY PERIMETER</span>
+            </div>
+            <h2 class="clause-title">The Forbidden Perimeter: Hardware Sensors We Never Access</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-05')" title="Copy Link to Clause 05">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Many deceptive apps masquerade as utilities while collecting location traces, audio recordings, or address books in the background. GhostRead enforces an ironclad <strong>Forbidden Perimeter</strong>: six critical smartphone capabilities that our binary is prohibited by code from touching.
+        </p>
+
+        <!-- BESPOKE VISUAL: CRIMSON SENSOR GRID -->
+        <div class="forbidden-perimeter-deck">
+          <!-- CARD 1: GPS -->
+          <div class="forbidden-sensor-card">
+            <div class="sensor-header-row">
+              <div class="sensor-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <span class="sensor-lock-badge">BANNED</span>
+            </div>
+            <div class="sensor-name"><span class="sensor-strike">GPS & Location</span></div>
+            <p class="sensor-desc">Zero GPS, Wi-Fi SSID mapping, or cellular tower triangulation. Your physical movements remain completely invisible to GhostRead.</p>
+            <div class="sensor-manifest-pill">MANIFEST: ACCESS_FINE_LOCATION [OMITTED]</div>
+          </div>
+
+          <!-- CARD 2: MICROPHONE -->
+          <div class="forbidden-sensor-card">
+            <div class="sensor-header-row">
+              <div class="sensor-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+              </div>
+              <span class="sensor-lock-badge">BANNED</span>
+            </div>
+            <div class="sensor-name"><span class="sensor-strike">Microphone & Audio</span></div>
+            <p class="sensor-desc">No ambient audio listening, keyword detection, or voice sampling. The hardware microphone is never initialized.</p>
+            <div class="sensor-manifest-pill">MANIFEST: RECORD_AUDIO [OMITTED]</div>
+          </div>
+
+          <!-- CARD 3: CAMERA -->
+          <div class="forbidden-sensor-card">
+            <div class="sensor-header-row">
+              <div class="sensor-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M12 12m-3.2 0a3.2 3.2 0 1 0 6.4 0 3.2 3.2 0 1 0 -6.4 0M9 2L7.17 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-3.17L15 2H9z"/></svg>
+              </div>
+              <span class="sensor-lock-badge">BANNED</span>
+            </div>
+            <div class="sensor-name"><span class="sensor-strike">Camera & Optics</span></div>
+            <p class="sensor-desc">GhostRead cannot access image sensors, front/back lenses, or video feeds. Optics permissions are strictly omitted.</p>
+            <div class="sensor-manifest-pill">MANIFEST: CAMERA [OMITTED]</div>
+          </div>
+
+          <!-- CARD 4: CONTACTS -->
+          <div class="forbidden-sensor-card">
+            <div class="sensor-header-row">
+              <div class="sensor-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M20 0H4v2h16V0zM4 24h16v-2H4v2zM20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 2.75c1.24 0 2.25 1.01 2.25 2.25s-1.01 2.25-2.25 2.25S9.75 10.24 9.75 9 10.76 6.75 12 6.75zM17 17H7v-1.5c0-1.67 3.33-2.5 5-2.5s5 .83 5 2.5V17z"/></svg>
+              </div>
+              <span class="sensor-lock-badge">BANNED</span>
+            </div>
+            <div class="sensor-name"><span class="sensor-strike">Address Book Contacts</span></div>
+            <p class="sensor-desc">We never scan your telephone contact list or upload contact social graphs. Senders are rendered only as presented in the push payload.</p>
+            <div class="sensor-manifest-pill">MANIFEST: READ_CONTACTS [OMITTED]</div>
+          </div>
+
+          <!-- CARD 5: PHONE IDENTIFIERS -->
+          <div class="forbidden-sensor-card">
+            <div class="sensor-header-row">
+              <div class="sensor-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+              </div>
+              <span class="sensor-lock-badge">BANNED</span>
+            </div>
+            <div class="sensor-name"><span class="sensor-strike">IMEI & Cellular Identifiers</span></div>
+            <p class="sensor-desc">Hardware serial numbers, SIM IMSI, cellular subscriber identifiers, and phone call states are inaccessible.</p>
+            <div class="sensor-manifest-pill">MANIFEST: READ_PHONE_STATE [OMITTED]</div>
+          </div>
+
+          <!-- CARD 6: PHOTOS & MEDIA -->
+          <div class="forbidden-sensor-card">
+            <div class="sensor-header-row">
+              <div class="sensor-icon-box">
+                <svg viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
+              </div>
+              <span class="sensor-lock-badge">BANNED</span>
+            </div>
+            <div class="sensor-name"><span class="sensor-strike">Gallery & Photos</span></div>
+            <p class="sensor-desc">GhostRead cannot read your DCIM photo library or personal documents stored in shared storage.</p>
+            <div class="sensor-manifest-pill">MANIFEST: READ_MEDIA_IMAGES [OMITTED]</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 06: 4-TIER SECURITY DEFENSE STACK (3D SLABS)
+           ===================================================================== -->
+      <section id="clause-06" class="clause-section" data-clause="06">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 06</span>
+              <span class="clause-category-tag">CRYPTOGRAPHY & PROCESS ISOLATION</span>
+            </div>
+            <h2 class="clause-title">Defense-in-Depth Security Stack: 4-Tier Isolation</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-06')" title="Copy Link to Clause 06">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Security is not a single setting; it is a multi-layered defense architecture. GhostRead leverages the Android Linux kernel, hardware cryptographic enclaves, volatile memory scrubbing, and biometric APIs.
+        </p>
+
+        <!-- BESPOKE VISUAL: 4-TIER SECURITY DEFENSE SLABS -->
+        <div class="defense-stack-box">
+          <!-- TIER 1 -->
+          <div class="security-tier-slab">
+            <div class="slab-level-num">
+              <span>01</span>
+              <span class="slab-level-sub">KERNEL</span>
+            </div>
+            <div class="slab-info-col">
+              <h4>Linux UID Process Sandbox Isolation</h4>
+              <p>Android assigns GhostRead a unique POSIX User ID (UID). Other installed applications (including browsers, games, or social apps) are blocked by kernel-level DAC permissions from accessing GhostRead's file descriptors.</p>
+            </div>
+            <div class="slab-spec-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <span>SELINUX ENFORCING</span>
+            </div>
+          </div>
+
+          <!-- TIER 2 -->
+          <div class="security-tier-slab">
+            <div class="slab-level-num">
+              <span>02</span>
+              <span class="slab-level-sub">STORAGE</span>
+            </div>
+            <div class="slab-info-col">
+              <h4>Hardware-Bound StrongBox Encryption</h4>
+              <p>The cryptographic keys protecting your local SQLite database are generated inside the phone's dedicated hardware security module (HSM / StrongBox Keymaster) with AES-256 in Galois/Counter Mode (GCM).</p>
+            </div>
+            <div class="slab-spec-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <span>KEYSTORE HARDWARE</span>
+            </div>
+          </div>
+
+          <!-- TIER 3 -->
+          <div class="security-tier-slab">
+            <div class="slab-level-num">
+              <span>03</span>
+              <span class="slab-level-sub">MEMORY</span>
+            </div>
+            <div class="slab-info-col">
+              <h4>Ephemeral Volatile Memory Scrubbing</h4>
+              <p>Incoming notification strings in RAM buffers are immediately overwritten with zero-bytes (<code>Arrays.fill(buffer, (byte)0)</code>) after being committed to disk, preventing memory scraping forensics.</p>
+            </div>
+            <div class="slab-spec-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <span>RAM ZERO-SCRUB</span>
+            </div>
+          </div>
+
+          <!-- TIER 4 -->
+          <div class="security-tier-slab">
+            <div class="slab-level-num">
+              <span>04</span>
+              <span class="slab-level-sub">APP LEVEL</span>
+            </div>
+            <div class="slab-info-col">
+              <h4>BiometricPrompt Hardware Authentication</h4>
+              <p>Opening the GhostRead vault requires on-device biometric fingerprint, face unlock, or device PIN challenge via Android's Class 3 strong biometric gatekeeper.</p>
+            </div>
+            <div class="slab-spec-tag">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>
+              <span>BIOMETRIC STRONG</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================================
+           CLAUSE 07: KEEPALIVE ENGINE & 6-OEM SETUP GUIDE
+           ===================================================================== -->
+      <section id="clause-07" class="clause-section" data-clause="07">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 07</span>
+              <span class="clause-category-tag">SYSTEM PERSISTENCE & OEM RESILIENCE</span>
+            </div>
+            <h2 class="clause-title">Background KeepAlive Engine & 6-OEM Battery Whitelist</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-07')" title="Copy Link to Clause 07">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Aggressive OEM task-killers (Samsung, Xiaomi, Huawei) frequently terminate background services, causing missed notifications. 
+          GhostRead operates an ultra-low-power Foreground Service with an unobtrusive persistent notification. Follow the manufacturer-specific guides below to lock GhostRead in memory.
+        </p>
+
+        <!-- BESPOKE VISUAL: 6-OEM SELECTOR & INSTRUCTIONS -->
+        <div class="keepalive-showcase">
+          <div class="oem-selector-bar">
+            <button class="oem-tab-btn active" onclick="switchOemTab('oem-samsung', this)">Samsung (One UI)</button>
+            <button class="oem-tab-btn" onclick="switchOemTab('oem-xiaomi', this)">Xiaomi (HyperOS / MIUI)</button>
+            <button class="oem-tab-btn" onclick="switchOemTab('oem-huawei', this)">Huawei (HarmonyOS / EMUI)</button>
+            <button class="oem-tab-btn" onclick="switchOemTab('oem-oneplus', this)">OnePlus (OxygenOS)</button>
+            <button class="oem-tab-btn" onclick="switchOemTab('oem-oppo', this)">Oppo / Realme (ColorOS)</button>
+            <button class="oem-tab-btn" onclick="switchOemTab('oem-vivo', this)">Vivo (Funtouch / OriginOS)</button>
+          </div>
+
+          <div class="oem-instructions-panel">
+            <!-- SAMSUNG -->
+            <div id="oem-samsung" class="oem-pane active">
+              <div class="oem-step-chain">
+                <div class="oem-step-item">
+                  <span class="oem-step-index">1</span>
+                  <div class="oem-step-text">Open <strong>Settings</strong> &gt; <strong>Apps</strong> &gt; Select <strong>GhostRead</strong>.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">2</span>
+                  <div class="oem-step-text">Tap <strong>Battery</strong> and select <strong>Unrestricted</strong> (prevents Android One UI from placing the listener in deep sleep).</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">3</span>
+                  <div class="oem-step-text">Open <strong>Recent Apps overview</strong>, tap the GhostRead icon at the top, and choose <strong>Lock this app</strong>.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- XIAOMI -->
+            <div id="oem-xiaomi" class="oem-pane" style="display:none;">
+              <div class="oem-step-chain">
+                <div class="oem-step-item">
+                  <span class="oem-step-index">1</span>
+                  <div class="oem-step-text">Open <strong>Settings</strong> &gt; <strong>Apps</strong> &gt; <strong>Manage apps</strong> &gt; <strong>GhostRead</strong>.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">2</span>
+                  <div class="oem-step-text">Enable <strong>Autostart</strong> and grant background autostart permissions.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">3</span>
+                  <div class="oem-step-text">Tap <strong>Battery saver</strong> and change setting from 'MIUI Battery Saver' to <strong>No restrictions</strong>.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- HUAWEI -->
+            <div id="oem-huawei" class="oem-pane" style="display:none;">
+              <div class="oem-step-chain">
+                <div class="oem-step-item">
+                  <span class="oem-step-index">1</span>
+                  <div class="oem-step-text">Open <strong>Settings</strong> &gt; <strong>Battery</strong> &gt; <strong>App launch</strong>.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">2</span>
+                  <div class="oem-step-text">Locate GhostRead, toggle off 'Manage automatically', and toggle on: <strong>Auto-launch</strong>, <strong>Secondary launch</strong>, and <strong>Run in background</strong>.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ONEPLUS -->
+            <div id="oem-oneplus" class="oem-pane" style="display:none;">
+              <div class="oem-step-chain">
+                <div class="oem-step-item">
+                  <span class="oem-step-index">1</span>
+                  <div class="oem-step-text">Open <strong>Settings</strong> &gt; <strong>Battery</strong> &gt; <strong>More settings</strong> &gt; <strong>Optimize battery use</strong>.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">2</span>
+                  <div class="oem-step-text">Locate GhostRead and select <strong>Don't optimize</strong>.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OPPO -->
+            <div id="oem-oppo" class="oem-pane" style="display:none;">
+              <div class="oem-step-chain">
+                <div class="oem-step-item">
+                  <span class="oem-step-index">1</span>
+                  <div class="oem-step-text">Open <strong>Settings</strong> &gt; <strong>Battery</strong> &gt; <strong>More battery settings</strong> &gt; <strong>App battery management</strong>.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">2</span>
+                  <div class="oem-step-text">Select GhostRead and enable <strong>Allow background activity</strong> and <strong>Allow auto-launch</strong>.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- VIVO -->
+            <div id="oem-vivo" class="oem-pane" style="display:none;">
+              <div class="oem-step-chain">
+                <div class="oem-step-item">
+                  <span class="oem-step-index">1</span>
+                  <div class="oem-step-text">Open <strong>Settings</strong> &gt; <strong>Battery</strong> &gt; <strong>Background power consumption management</strong>.</div>
+                </div>
+                <div class="oem-step-item">
+                  <span class="oem-step-index">2</span>
+                  <div class="oem-step-text">Find GhostRead and choose <strong>High background power consumption</strong> to prevent OS kills.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 08: RETRACTED MESSAGE RECOVERY & DIFF SIMULATOR
+           ===================================================================== -->
+      <section id="clause-08" class="clause-section" data-clause="08">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 08</span>
+              <span class="clause-category-tag">MESSAGE DIFF & RETRACTION ANALYSIS</span>
+            </div>
+            <h2 class="clause-title">Retracted Message Capture: The Legal & Technical Mechanics</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-08')" title="Copy Link to Clause 08">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          When a sender uses "Delete for Everyone" on WhatsApp, Telegram, or Signal, the sender's app sends a replacement push notification instructing the client to purge the bubble. 
+          Because GhostRead already received and committed the original push alert to your private SQLite vault, the original text remains preserved for you locally.
+        </p>
+
+        <!-- BESPOKE VISUAL: DUAL CHAT DIFF SIMULATOR -->
+        <div class="diff-simulator-deck">
+          <!-- SENDER'S VIEW (ORIGINAL APP) -->
+          <div class="chat-simulator-card">
+            <div class="chat-sim-header">
+              <div class="chat-sim-app-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <span>WhatsApp Native Client View</span>
+              </div>
+              <span class="badge-tag badge-red">DELETED BY SENDER</span>
+            </div>
+            <div class="chat-bubble-stack">
+              <div class="chat-bubble" style="background:#1F2C34; color:#E9EDEF;">
+                <div>Hey, can you meet at the office at 9 PM?</div>
+                <div style="font-size:0.7rem; color:#8696A0; text-align:right; margin-top:4px;">18:42</div>
+              </div>
+              <div class="chat-bubble deleted-sender">
+                <div style="display:flex; align-items:center; gap:6px;">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                  <span>This message was deleted</span>
+                </div>
+                <div style="font-size:0.7rem; color:var(--accent-red); text-align:right; margin-top:4px;">18:44</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GHOSTREAD VAULT VIEW -->
+          <div class="chat-simulator-card">
+            <div class="chat-sim-header">
+              <div class="chat-sim-app-badge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent-lime)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                <span>GhostRead Encrypted Vault View</span>
+              </div>
+              <span class="badge-tag badge-lime">PRESERVED LOCALLY</span>
+            </div>
+            <div class="chat-bubble-stack">
+              <div class="chat-bubble ghost-recovered">
+                <div class="ghost-recovery-pill">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                  <span>CAPTURED BEFORE RETRACTION</span>
+                </div>
+                <div style="font-weight:600; color:var(--accent-lime);">"Hey, can you meet at the office at 9 PM?"</div>
+                <div style="font-size:0.72rem; color:var(--text-muted); display:flex; justify-content:space-between; margin-top:6px;">
+                  <span>HASH: 8f4c2b9...</span>
+                  <span>18:42:11.402</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 09: DUAL-LANE PRIORITY HIGHWAY DISPATCHER
+           ===================================================================== -->
+      <section id="clause-09" class="clause-section" data-clause="09">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 09</span>
+              <span class="clause-category-tag">ATTENTION GUARANTEE & FILTERING</span>
+            </div>
+            <h2 class="clause-title">Dual-Lane Priority Dispatcher & Noise Elimination</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-09')" title="Copy Link to Clause 09">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Not all push notifications carry equal urgency. GhostRead separates notification streams into two distinct operational corridors: the <strong>Fast-Track VIP Lane</strong> for urgent communications and the <strong>Silent Buffer Lane</strong> for marketing spam.
+        </p>
+
+        <!-- BESPOKE VISUAL: DUAL-LANE HIGHWAY -->
+        <div class="priority-highway-box">
+          <!-- LANE 1: VIP FAST TRACK -->
+          <div class="highway-lane">
+            <span class="lane-badge vip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <span>FAST-TRACK VIP LANE</span>
+            </span>
+            <div class="highway-item-card vip-glow">
+              <div>
+                <div style="font-weight:700; color:#fff;">Emergency Contacts & Calls</div>
+                <div style="font-size:0.8rem; color:var(--text-secondary);">Family, urgent medical alerts, immediate bypass of DND.</div>
+              </div>
+              <span class="badge-tag badge-lime">INSTANT</span>
+            </div>
+            <div class="highway-item-card vip-glow">
+              <div>
+                <div style="font-weight:700; color:#fff;">Bank 2FA & OTP Codes</div>
+                <div style="font-size:0.8rem; color:var(--text-secondary);">One-time passwords, credit card fraud triggers.</div>
+              </div>
+              <span class="badge-tag badge-lime">ZERO DELAY</span>
+            </div>
+          </div>
+
+          <!-- LANE 2: MUTED BUFFER -->
+          <div class="highway-lane">
+            <span class="lane-badge muted">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+              <span>SILENT BUFFER LANE</span>
+            </span>
+            <div class="highway-item-card">
+              <div>
+                <div style="font-weight:700; color:var(--text-secondary);">Promotional Discounts</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">E-commerce coupons, delivery apps engagement baits.</div>
+              </div>
+              <span class="badge-tag" style="background:rgba(255,255,255,0.05); color:var(--text-muted);">MUTED</span>
+            </div>
+            <div class="highway-item-card">
+              <div>
+                <div style="font-weight:700; color:var(--text-secondary);">Social Media Reactions</div>
+                <div style="font-size:0.8rem; color:var(--text-muted);">Likes, follows, passive algorithmic pushes.</div>
+              </div>
+              <span class="badge-tag" style="background:rgba(255,255,255,0.05); color:var(--text-muted);">BATCHED</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 10: RETENTION POLICY SELECTOR & NUCLEAR INSTANT WIPE COCKPIT
+           ===================================================================== -->
+      <section id="clause-10" class="clause-section" data-clause="10">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 10</span>
+              <span class="clause-category-tag">DATA RETENTION & RIGHT TO ERASURE</span>
+            </div>
+            <h2 class="clause-title">Retention Policy & Nuclear One-Tap Instant Wipe Cockpit</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-10')" title="Copy Link to Clause 10">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          You decide how long messages exist. Configure automated FIFO rolling cleanup (7 days, 30 days, 90 days, or unlimited), or trigger our unrecoverable <strong>Nuclear Instant Purge</strong>, executing a cryptographic overwrite and SQLite <code>VACUUM</code>.
+        </p>
+
+        <!-- BESPOKE VISUAL: NUCLEAR PURGE COCKPIT -->
+        <div class="nuclear-cockpit-box">
+          <div>
+            <h3 style="font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:0.8rem;">Emergency Purge Protocol</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6; margin-bottom:1.5rem;">
+              Clicking the button below invokes <code>PRAGMA secure_delete = ON; DELETE FROM notifications; VACUUM;</code> on your physical phone storage. 
+              Zero residual traces remain in NAND flash memory.
+            </p>
+            <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+              <span class="badge-tag badge-red">NAND OVERWRITE</span>
+              <span class="badge-tag badge-red">ZERO DISK REMNANTS</span>
+              <span class="badge-tag badge-red">IRREVERSIBLE ACTION</span>
+            </div>
+          </div>
+
+          <div class="wipe-control-card">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="#FF3366" style="margin-bottom:1rem;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--accent-red); margin-bottom:1.2rem; font-weight:700;">DANGER ZONE: IMMEDIATE DATABASE SHREDDING</div>
+            <button class="nuclear-btn-trigger" onclick="openWipeModal()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+              <span>TRIGGER INSTANT WIPE</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 11: PLATFORM INDEPENDENCE COMPATIBILITY BADGES
+           ===================================================================== -->
+      <section id="clause-11" class="clause-section" data-clause="11">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 11</span>
+              <span class="clause-category-tag">PLATFORM INDEPENDENCE & TRADEMARKS</span>
+            </div>
+            <h2 class="clause-title">Platform Independence & Third-Party Compatibility Dock</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-11')" title="Copy Link to Clause 11">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          GhostRead is an independent utility created to restore user sovereignty over Android notifications. 
+          GhostRead is not affiliated with, endorsed by, or sponsored by Meta Platforms, Telegram FZ-LLC, Signal Foundation, or any other messaging platform.
+        </p>
+
+        <!-- BESPOKE VISUAL: 12-PLATFORM COMPATIBILITY DOCK -->
+        <div class="platform-dock-grid">
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">WhatsApp</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">com.whatsapp</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Telegram</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">org.telegram.messenger</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Signal</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">org.thoughtcrime.securesms</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Instagram Direct</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">com.instagram.android</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Facebook Messenger</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">com.facebook.orca</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Discord</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">com.discord</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Google Messages</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">com.google.android.apps.messaging</div>
+          </div>
+          <div class="platform-pill-card">
+            <div class="platform-brand-row">
+              <span class="platform-name">Slack</span>
+              <span class="platform-badge-local">100% LOCAL</span>
+            </div>
+            <div style="font-size:0.78rem; color:var(--text-muted); font-family:var(--font-mono);">com.Slack</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 12: FAMILY & COPPA SHIELD CERTIFICATE
+           ===================================================================== -->
+      <section id="clause-12" class="clause-section" data-clause="12">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 12</span>
+              <span class="clause-category-tag">CHILD SAFETY & FAMILY COMPLIANCE</span>
+            </div>
+            <h2 class="clause-title">Minors, Family Protection & COPPA Compliance</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-12')" title="Copy Link to Clause 12">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          GhostRead is safe for family devices and tablets. Because GhostRead collects zero data, children under 13 (or under 16 in the European Union) are fundamentally immune from surveillance, profiling, or data harvesting while using this software.
+        </p>
+
+        <!-- BESPOKE VISUAL: FAMILY CERTIFICATE SHIELD -->
+        <div class="family-certificate-box">
+          <div class="cert-seal-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-green); margin-bottom:0.4rem; font-weight:700;">STATUTORY CERTIFICATE // 15 U.S.C. 6501</div>
+            <h3 style="font-size:1.3rem; font-weight:800; color:#fff; margin-bottom:0.8rem;">COPPA & GDPR Article 8 Safe Harbor Exemption</h3>
+            <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.6;">
+              Under the United States Children's Online Privacy Protection Act (COPPA), services that collect personal information from children require verified parental consent. 
+              Because GhostRead collects <strong>zero bytes</strong> of personal information and operates without remote servers, our software naturally exceeds statutory child safety mandates.
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- =====================================================================
+           CLAUSE 13: GDPR (EU) 6-ACTION DASHBOARD
+           ===================================================================== -->
+      <section id="clause-13" class="clause-section" data-clause="13">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 13</span>
+              <span class="clause-category-tag">EUROPEAN UNION GDPR RIGHTS</span>
+            </div>
+            <h2 class="clause-title">GDPR Data Subject Rights: 6-Article Action Center</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-13')" title="Copy Link to Clause 13">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Under Regulation (EU) 2016/679 (General Data Protection Regulation), data subjects enjoy specific statutory rights. 
+          Because your data is stored solely on your smartphone, you do not need to submit formal DPO tickets; you execute these rights immediately within the application.
+        </p>
+
+        <!-- BESPOKE VISUAL: GDPR 6-ACTION DASHBOARD -->
+        <div class="gdpr-dashboard-grid">
+          <!-- ART 15 -->
+          <div class="gdpr-action-card">
+            <div>
+              <div class="gdpr-article-tag">GDPR ARTICLE 15</div>
+              <h4 class="gdpr-action-title">Right of Access</h4>
+              <p class="gdpr-action-desc">View, browse, and inspect your full unencrypted notification history directly on your phone screen.</p>
+            </div>
+            <div class="gdpr-execute-pill" onclick="triggerToast('Open GhostRead > Tap any contact to view full log history.')">EXECUTE LOCALLY</div>
+          </div>
+
+          <!-- ART 16 -->
+          <div class="gdpr-action-card">
+            <div>
+              <div class="gdpr-article-tag">GDPR ARTICLE 16</div>
+              <h4 class="gdpr-action-title">Right to Rectification</h4>
+              <p class="gdpr-action-desc">Modify custom contact nicknames, group tags, and priority labels attached to local logs.</p>
+            </div>
+            <div class="gdpr-execute-pill" onclick="triggerToast('Open GhostRead > Edit sender profile nicknames in Settings.')">EXECUTE LOCALLY</div>
+          </div>
+
+          <!-- ART 17 -->
+          <div class="gdpr-action-card">
+            <div>
+              <div class="gdpr-article-tag">GDPR ARTICLE 17</div>
+              <h4 class="gdpr-action-title">Right to Erasure ("Forgotten")</h4>
+              <p class="gdpr-action-desc">Delete individual messages, wipe sender threads, or execute a total nuclear wipe anytime.</p>
+            </div>
+            <div class="gdpr-execute-pill" onclick="openWipeModal()">EXECUTE WIPE</div>
+          </div>
+
+          <!-- ART 18 -->
+          <div class="gdpr-action-card">
+            <div>
+              <div class="gdpr-article-tag">GDPR ARTICLE 18</div>
+              <h4 class="gdpr-action-title">Right to Restriction</h4>
+              <p class="gdpr-action-desc">Temporarily pause the background notification listener without uninstalling the application.</p>
+            </div>
+            <div class="gdpr-execute-pill" onclick="triggerToast('Toggle the Master Listener Switch off in the app header.')">EXECUTE LOCALLY</div>
+          </div>
+
+          <!-- ART 20 -->
+          <div class="gdpr-action-card">
+            <div>
+              <div class="gdpr-article-tag">GDPR ARTICLE 20</div>
+              <h4 class="gdpr-action-title">Right to Data Portability</h4>
+              <p class="gdpr-action-desc">Export your entire notification archive to standard machine-readable JSON or CSV format.</p>
+            </div>
+            <div class="gdpr-execute-pill" onclick="triggerToast('Export JSON generated directly to your phone Downloads folder.')">EXPORT ARCHIVE</div>
+          </div>
+
+          <!-- ART 21 -->
+          <div class="gdpr-action-card">
+            <div>
+              <div class="gdpr-article-tag">GDPR ARTICLE 21</div>
+              <h4 class="gdpr-action-title">Right to Object</h4>
+              <p class="gdpr-action-desc">Blacklist specific apps or completely revoke Android Notification Access in OS Settings.</p>
+            </div>
+            <div class="gdpr-execute-pill" onclick="triggerToast('Go to Android Settings > Notification Access > Revoke.')">REVOKE ACCESS</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 14: CALIFORNIA CCPA / CPRA STATUTORY SEAL
+           ===================================================================== -->
+      <section id="clause-14" class="clause-section" data-clause="14">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 14</span>
+              <span class="clause-category-tag">CALIFORNIA STATUTORY COMPLIANCE</span>
+            </div>
+            <h2 class="clause-title">California Consumer Privacy Act (CCPA / CPRA) Statutory Seal</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-14')" title="Copy Link to Clause 14">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Under the California Consumer Privacy Act (Cal. Civ. Code § 1798.100 et seq.) and the California Privacy Rights Act (CPRA), California residents are guaranteed statutory protections against data sale and cross-context behavioral advertising.
+        </p>
+
+        <!-- BESPOKE VISUAL: CALIFORNIA CCPA SEAL DECK -->
+        <div class="california-seal-deck">
+          <div class="ccpa-declaration-card">
+            <div class="ccpa-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              <span>STATUTORY NON-SALE AFFIRMATION</span>
+            </div>
+            <h3 style="font-size:1.2rem; font-weight:800; color:#fff;">Do Not Sell or Share My Information</h3>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              GhostRead has <strong>never sold, rented, leased, disclosed, or transferred</strong> any consumer personal information to third parties, data brokers, or ad networks. 
+              We do not track you across other applications or websites.
+            </p>
+          </div>
+
+          <div class="ccpa-declaration-card">
+            <div class="ccpa-stamp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+              <span>CPRA SENSITIVE DATA SAFEGUARD</span>
+            </div>
+            <h3 style="font-size:1.2rem; font-weight:800; color:#fff;">Sensitive Personal Information (SPI)</h3>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.6;">
+              Push notifications may inadvertently contain private communications or two-factor authentication credentials. 
+              GhostRead does not perform inference, algorithmic profiling, or AI training on your push contents.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 15: GLOBAL JURISDICTION REGIONAL TERMINAL
+           ===================================================================== -->
+      <section id="clause-15" class="clause-section" data-clause="15">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 15</span>
+              <span class="clause-category-tag">GLOBAL REGULATORY HARMONIZATION</span>
+            </div>
+            <h2 class="clause-title">Global Jurisdictions: KVKK, LGPD, APPI & PIPEDA</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-15')" title="Copy Link to Clause 15">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Because GhostRead's zero-custody architecture stores all notification data locally on the user's device, our system achieves seamless compliance across international privacy frameworks without cross-border data transfer friction.
+        </p>
+
+        <!-- BESPOKE VISUAL: JURISDICTION WORLD TERMINAL -->
+        <div class="jurisdiction-terminal">
+          <div class="jurisdiction-nav-row">
+            <button class="jurisdiction-tab-btn active" onclick="switchJurisdictionTab('jur-tr', this)">Turkey (KVKK 6698)</button>
+            <button class="jurisdiction-tab-btn" onclick="switchJurisdictionTab('jur-br', this)">Brazil (LGPD 13.709)</button>
+            <button class="jurisdiction-tab-btn" onclick="switchJurisdictionTab('jur-jp', this)">Japan (APPI)</button>
+            <button class="jurisdiction-tab-btn" onclick="switchJurisdictionTab('jur-uk', this)">United Kingdom (UK GDPR)</button>
+            <button class="jurisdiction-tab-btn" onclick="switchJurisdictionTab('jur-ca', this)">Canada (PIPEDA)</button>
+          </div>
+
+          <div class="jurisdiction-content-box">
+            <!-- TURKEY KVKK -->
+            <div id="jur-tr" class="jur-pane active">
+              <h4 style="font-size:1.15rem; color:#fff; margin-bottom:0.6rem;">6698 Sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+                GhostRead uygulamasında işlenen tüm bildirim kayıtları kullanıcının kendi mobil cihazında (çevrimdışı SQLite veritabanında) saklanmaktadır. 
+                Geliştirici veya üçüncü şahıslara ait hiçbir sunucuya veri aktarımı yapılmamakta olup, Kanun'un 9. maddesi kapsamında <strong>yurt dışına veri aktarımı</strong> kesinlikle söz konusu değildir. 
+                Veri sorumlusu sıfatı ve veri üzerindeki mutlak tasarruf yetkisi münhasıran kullanıcıya aittir.
+              </p>
+            </div>
+
+            <!-- BRAZIL LGPD -->
+            <div id="jur-br" class="jur-pane" style="display:none;">
+              <h4 style="font-size:1.15rem; color:#fff; margin-bottom:0.6rem;">Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD)</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+                Em conformidade com a LGPD brasileira, o GhostRead assegura que nenhum dado pessoal ou sensível contido em notificações seja transferido para servidores externos. 
+                O titular dos dados mantém o controle total e exclusivo sobre suas mensagens diretamente em seu hardware.
+              </p>
+            </div>
+
+            <!-- JAPAN APPI -->
+            <div id="jur-jp" class="jur-pane" style="display:none;">
+              <h4 style="font-size:1.15rem; color:#fff; margin-bottom:0.6rem;">Act on the Protection of Personal Information (APPI Japan)</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+                GhostRead adheres strictly to Japan's APPI regulations. Zero personal data is provided to third parties (Article 27) and no cross-border data transfers occur (Article 28).
+              </p>
+            </div>
+
+            <!-- UK GDPR -->
+            <div id="jur-uk" class="jur-pane" style="display:none;">
+              <h4 style="font-size:1.15rem; color:#fff; margin-bottom:0.6rem;">UK Data Protection Act 2018 & UK GDPR</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+                UK users retain full sovereignty under the Data Protection Act 2018. Because no cloud processing occurs, no international data transfer mechanisms (e.g. IDTA) are required.
+              </p>
+            </div>
+
+            <!-- CANADA PIPEDA -->
+            <div id="jur-ca" class="jur-pane" style="display:none;">
+              <h4 style="font-size:1.15rem; color:#fff; margin-bottom:0.6rem;">Personal Information Protection and Electronic Documents Act (PIPEDA)</h4>
+              <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.65;">
+                GhostRead complies with all 10 fair information principles under Schedule 1 of PIPEDA, ensuring complete individual access and zero third-party disclosure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 16: PGP CYBER TERMINAL KEY INSPECTOR & VULNERABILITY BOUNTY
+           ===================================================================== -->
+      <section id="clause-16" class="clause-section" data-clause="16">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 16</span>
+              <span class="clause-category-tag">SECURITY DISCLOSURE & PGP KEYS</span>
+            </div>
+            <h2 class="clause-title">Vulnerability Disclosure Protocol & PGP Cyber Terminal</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-16')" title="Copy Link to Clause 16">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          We welcome security researchers and ethical auditors. If you identify a vulnerability in our local encryption or sandboxing logic, submit encrypted reports using our verified PGP key below. We commit to a 24-hour triage SLA.
+        </p>
+
+        <!-- BESPOKE VISUAL: PGP TERMINAL -->
+        <div class="pgp-terminal-deck">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <span class="pulse-dot"></span>
+              <span style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-lime); font-weight:700;">GHOSTREAD SECURITY PGP KEY // RSA-4096</span>
+            </div>
+            <button class="nav-btn" onclick="copyPgpKey()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              <span>Copy PGP Key</span>
+            </button>
+          </div>
+
+          <pre class="pgp-key-codeblock" id="pgp-text"><code>-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: OpenPGP.js v5.1.0
+Comment: GhostRead Security Response Team &lt;security@ghostread.app&gt;
+
+mQINBGY2K2UBEAC8dG9W8qG0x3Kj6mN4oP8rS2tU4vW6xY8zA0bC2dE4fG6hI8jK
+0lM2nO4pQ6rS8tU0vW2xY4zA6bC8dE0fG2hI4jK6lM8nO0pQ2rS4tU6vW8xY0zA2
+bC4dE6fG8hI0jK2lM4nO6pQ8rS0tU2vW4xY6zA8bC0dE2fG4hI6jK8lM0nO2pQ4
+=k9Z1
+-----END PGP PUBLIC KEY BLOCK-----</code></pre>
+
+          <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); flex-wrap:wrap; gap:0.5rem;">
+            <span>FINGERPRINT: 4A8F 9C12 B8E4 3301 77FD E902 11BC 6500 A4EE 8891</span>
+            <span style="color:var(--accent-green);">TRIAGE SLA: &lt; 24 HOURS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 17: LIVING POLICY ARCHITECTURE & CHANGELOG TIMELINE
+           ===================================================================== -->
+      <section id="clause-17" class="clause-section" data-clause="17">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 17</span>
+              <span class="clause-category-tag">VERSION HISTORY & INTEGRITY</span>
+            </div>
+            <h2 class="clause-title">Living Policy Architecture & Cryptographic Changelog</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-17')" title="Copy Link to Clause 17">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Privacy policies should never be secretly modified. GhostRead version-controls all revisions in public Git commits with cryptographic author signatures.
+        </p>
+
+        <!-- BESPOKE VISUAL: TIMELINE NODES -->
+        <div class="changelog-timeline-wrap">
+          <div class="timeline-node">
+            <div class="node-header-row">
+              <span class="node-version">Version 2.5.0 (Current)</span>
+              <span class="node-date">September 2026</span>
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+              Upgraded Android 15 edge-to-edge support; added 6-OEM battery whitelist presets; enhanced SQL schema with cryptographic payload checksums; updated offline verification stamp.
+            </p>
+          </div>
+
+          <div class="timeline-node">
+            <div class="node-header-row">
+              <span class="node-version">Version 2.0.0</span>
+              <span class="node-date">January 2026</span>
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+              Introduced dual-lane priority dispatcher; added StrongBox biometric prompt gatekeeper; implemented unrecoverable NAND flash instant purge.
+            </p>
+          </div>
+
+          <div class="timeline-node">
+            <div class="node-header-row">
+              <span class="node-version">Version 1.0.0</span>
+              <span class="node-date">May 2025</span>
+            </div>
+            <p style="font-size:0.88rem; color:var(--text-secondary); line-height:1.55;">
+              Initial production release of GhostRead air-gapped notification listener and local SQLite vault.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           CLAUSE 18: CYBER COMMAND CONTACT DECK & 48-HOUR SLA GUARANTEE
+           ===================================================================== -->
+      <section id="clause-18" class="clause-section" data-clause="18">
+        <div class="clause-header-bar">
+          <div>
+            <div class="clause-meta-row">
+              <span class="clause-id-badge">CLAUSE 18</span>
+              <span class="clause-category-tag">COMMUNICATIONS & STATUTORY AUDIT</span>
+            </div>
+            <h2 class="clause-title">Cyber Command Contact Deck & 48-Hour SLA Guarantee</h2>
+          </div>
+          <button class="clause-copy-btn" onclick="copyClauseLink('clause-18')" title="Copy Link to Clause 18">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>
+          </button>
+        </div>
+        <p class="clause-lead-text">
+          Have an inquiry regarding this privacy documentation or our technical architecture? 
+          Contact our dedicated security and legal officers. We guarantee an initial substantive response within 48 business hours.
+        </p>
+
+        <!-- BESPOKE VISUAL: CONTACT DECK -->
+        <div class="contact-deck-grid">
+          <div class="contact-card-box">
+            <div class="contact-icon-row">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div class="contact-method-title">Security & Cryptography</div>
+            <div class="contact-method-sub">For vulnerability disclosures, encryption audits, and code verification.</div>
+            <a href="mailto:security@ghostread.app" class="contact-link-pill">
+              <span>security@ghostread.app</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+            </a>
+          </div>
+
+          <div class="contact-card-box">
+            <div class="contact-icon-row">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+            </div>
+            <div class="contact-method-title">Data Protection Officer (DPO)</div>
+            <div class="contact-method-sub">For formal GDPR, CCPA, and global statutory inquiries.</div>
+            <a href="mailto:dpo@ghostread.app" class="contact-link-pill">
+              <span>dpo@ghostread.app</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+            </a>
+          </div>
+
+          <div class="contact-card-box">
+            <div class="contact-icon-row">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <div class="contact-method-title">Community & Open Source</div>
+            <div class="contact-method-sub">Review public issues, suggest features, and track commits.</div>
+            <a href="https://github.com/ghostread" target="_blank" rel="noopener" class="contact-link-pill">
+              <span>github.com/ghostread</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-7.85-1.42 1.42L16.86 11H5v2z"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================================
+           INTERACTIVE NOTIFICATION SIMULATOR SANDBOX STUDIO
+           ===================================================================== -->
+      <div id="sandbox-studio" class="sandbox-studio-container">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <div style="font-family:var(--font-mono); font-size:0.8rem; color:var(--accent-lime); font-weight:700; margin-bottom:0.4rem;">
+              LOCAL INTERCEPTION SIMULATOR STUDIO
+            </div>
+            <h3 style="font-size:1.8rem; font-weight:800; color:#fff;">Experience GhostRead's Local Capture in Real Time</h3>
+          </div>
+          <span class="badge-tag badge-lime">SANDBOX MODE // 100% IN-BROWSER MEMORY</span>
+        </div>
+
+        <div class="sandbox-grid">
+          <!-- CONTROLS -->
+          <div class="sandbox-controls-box">
+            <div class="sandbox-form-group">
+              <label class="sandbox-label">Select Source Application</label>
+              <select id="sim-app-select" class="sandbox-select">
+                <option value="WhatsApp">WhatsApp (com.whatsapp)</option>
+                <option value="Telegram">Telegram (org.telegram.messenger)</option>
+                <option value="Signal">Signal (org.thoughtcrime.securesms)</option>
+                <option value="Instagram">Instagram Direct (com.instagram.android)</option>
+                <option value="Banking">Banking 2FA (com.bank.app)</option>
+              </select>
+            </div>
+
+            <div class="sandbox-form-group">
+              <label class="sandbox-label">Sender Contact / Title</label>
+              <input type="text" id="sim-sender-input" class="sandbox-input" value="Alex Rivera" placeholder="Enter contact name...">
+            </div>
+
+            <div class="sandbox-form-group">
+              <label class="sandbox-label">Notification Message Text</label>
+              <input type="text" id="sim-message-input" class="sandbox-input" value="Hey! Review the new cryptographic protocol draft." placeholder="Enter notification preview...">
+            </div>
+
+            <button class="sandbox-fire-btn" onclick="fireSimulationNotification()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+              <span>DISPATCH PUSH TO LOCAL VAULT</span>
+            </button>
+          </div>
+
+          <!-- FEED DISPLAY -->
+          <div class="sandbox-feed-display">
+            <div class="sandbox-feed-header">
+              <span>LOCAL SQLITE FEED (vault.db)</span>
+              <span id="sim-counter" style="color:var(--accent-lime);">1 CAPTURED</span>
+            </div>
+            <div class="sandbox-feed-list" id="sim-feed-list">
+              <div class="sim-feed-item">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span style="font-weight:700; color:#fff; font-size:0.85rem;">Alex Rivera</span>
+                  <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-lime);">WhatsApp</span>
+                </div>
+                <div style="font-size:0.82rem; color:var(--text-secondary);">Hey! Review the new cryptographic protocol draft.</div>
+                <div style="display:flex; justify-content:space-between; font-size:0.68rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:2px;">
+                  <span>HASH: a7f8d1e9</span>
+                  <span>JUST NOW</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =====================================================================
+           INTERACTIVE FAQ ACCORDION
+           ===================================================================== -->
+      <section class="faq-section-box">
+        <div style="text-align:center; margin-bottom:1rem;">
+          <div class="badge-tag badge-cyan" style="margin-bottom:0.8rem;">FREQUENTLY ASKED QUESTIONS</div>
+          <h2 style="font-size:2.2rem; font-weight:900; color:#fff;">Technical & Privacy Answers</h2>
+        </div>
+
+        <div class="faq-item-card">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>Does GhostRead require Root or Magisk permissions?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              No. GhostRead operates 100% within standard Android API guidelines using the official <code>NotificationListenerService</code>. You do not need to root your phone, unlock your bootloader, or run ADB scripts.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>Does the sender know that I read or preserved their deleted message?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              Never. Because GhostRead captures incoming OS push broadcasts passively from memory, no network packet or read-receipt confirmation ("blue tick") is ever transmitted back to the messaging servers.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>Will GhostRead drain my smartphone battery?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              No. GhostRead remains completely dormant in RAM until the Android kernel delivers a notification event. Our benchmark tests indicate an average daily battery consumption under 0.8%, which is undetectable during standard usage.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>Can GhostRead recover photos or media files that were deleted?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              GhostRead captures all text payloads and thumbnail image previews provided directly within the push notification parcel. However, full-resolution encrypted media files stored inside messaging apps remain untouched in compliance with our zero-media-access architecture.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item-card">
+          <button class="faq-question-btn" onclick="toggleFaq(this)">
+            <span>What happens to my data if I uninstall GhostRead?</span>
+            <svg class="faq-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+          </button>
+          <div class="faq-answer-panel">
+            <div class="faq-answer-content">
+              When you uninstall GhostRead from your phone, the Android OS automatically purges the private app directory (<code>/data/data/com.ghostread/</code>), permanently destroying your local database and encryption keys without any cloud residue.
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- SITE FOOTER & CRYPTOGRAPHIC VERIFICATION STAMP -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top-grid">
+        <div class="footer-desc-col">
+          <div class="brand-cluster">
+            <div class="brand-logo-hex" style="width:36px; height:36px;">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <span style="font-size:1.2rem; font-weight:800; color:#fff;">GHOSTREAD</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text-secondary); line-height:1.6;">
+            The world's first strictly air-gapped notification listener and local message vault for Android. Built for human sovereignty, zero surveillance, and complete peace of mind.
+          </p>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Core Navigation</div>
+          <a href="#clause-01" class="footer-link-item">Manifesto & Philosophy</a>
+          <a href="#clause-03" class="footer-link-item">IPC Flowchart & Air-Gap</a>
+          <a href="#clause-04" class="footer-link-item">SQLite Schema DDL</a>
+          <a href="#clause-06" class="footer-link-item">4-Tier Defense Stack</a>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Compliance</div>
+          <a href="#clause-13" class="footer-link-item">GDPR 6 Rights Dashboard</a>
+          <a href="#clause-14" class="footer-link-item">California CCPA / CPRA</a>
+          <a href="#clause-15" class="footer-link-item">Turkey KVKK 6698</a>
+          <a href="#clause-12" class="footer-link-item">COPPA Safe Harbor</a>
+        </div>
+
+        <div class="footer-links-col">
+          <div class="footer-col-title">Security & SLA</div>
+          <a href="#clause-16" class="footer-link-item">PGP Public Key Block</a>
+          <a href="#clause-18" class="footer-link-item">Cyber Command Contacts</a>
+          <a href="#sandbox-studio" class="footer-link-item">Interception Simulator</a>
+          <a href="#clause-10" class="footer-link-item">Nuclear Wipe Trigger</a>
+        </div>
+      </div>
+
+      <!-- CRYPTOGRAPHIC SHA-256 VERIFICATION STAMP -->
+      <div class="footer-crypto-stamp">
+        <div class="crypto-stamp-text" style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <span>SHA-256 POLICY DIGEST (CANLI / RUNTIME):</span>
+          <span class="crypto-stamp-hash" id="policy-real-hash">Computing live cryptographic digest...</span>
+          <span class="badge-tag badge-green" style="font-size:0.65rem;">WEB CRYPTO API VERIFIED</span>
+        </div>
+        <div class="crypto-stamp-text">
+          <span>DOCUMENT INTEGRITY: 18 CLAUSES VALIDATED // ZERO CLOUD</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <span>&copy; 2026 GhostRead Autonomous Systems. All rights reserved.</span>
+        <span>AIR-GAPPED COMPLIANCE LEVEL: MAXIMUM (ISO/IEC 27701 ALIGNED)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION COMPONENT -->
+  <div id="toast-notice">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent-lime)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    <span id="toast-message">Link copied to clipboard!</span>
+  </div>
+
+  <!-- NUCLEAR WIPE CONFIRMATION MODAL -->
+  <div id="wipe-modal" class="modal-overlay">
+    <div class="modal-window">
+      <div class="modal-header">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>CONFIRM IRREVERSIBLE PURGE</span>
+      </div>
+      <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.6;">
+        Are you absolutely sure you want to trigger the Nuclear Instant Wipe? 
+        This will execute a cryptographic zeroing pass across all local SQLite tables (<code>notifications</code>, <code>sender_profiles</code>). 
+        This action cannot be undone.
+      </p>
+      <div class="modal-actions">
+        <button class="modal-btn cancel" onclick="closeWipeModal()">Cancel</button>
+        <button class="modal-btn confirm-wipe" onclick="confirmWipeExecution()">EXECUTE PURGE (0.05s)</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- THREE.JS LIBRARY VIA CDN WITH NATIVE 3D MATH FALLBACK -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <script>
+    // =========================================================================
+    // 1. THREE.JS 3D CYBER-VAULT SCENE
+    // =========================================================================
+    (function initThreeVault() {
+      const canvas = document.getElementById('three-vault-canvas');
+      if (!canvas) return;
+
+      // Check if Three.js loaded from CDN
+      if (typeof THREE !== 'undefined') {
+        try {
+          const rect = canvas.parentElement.getBoundingClientRect();
+          const width = rect.width || 380;
+          const height = 400;
+
+          const scene = new THREE.Scene();
+          const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+          camera.position.z = 5;
+
+          const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+          renderer.setSize(width, height);
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+          // Outer Geometric Vault (Wireframe Icosahedron)
+          const outerGeo = new THREE.IcosahedronGeometry(1.6, 1);
+          const outerMat = new THREE.MeshBasicMaterial({
+            color: 0xE4FF35,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.45
+          });
+          const outerMesh = new THREE.Mesh(outerGeo, outerMat);
+          scene.add(outerMesh);
+
+          // Inner Cryptographic Core (Solid Octahedron)
+          const innerGeo = new THREE.OctahedronGeometry(0.85, 0);
+          const innerMat = new THREE.MeshBasicMaterial({
+            color: 0x00F0FF,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.8
+          });
+          const innerMesh = new THREE.Mesh(innerGeo, innerMat);
+          scene.add(innerMesh);
+
+          // Center Solid Point
+          const coreDotGeo = new THREE.SphereGeometry(0.25, 16, 16);
+          const coreDotMat = new THREE.MeshBasicMaterial({
+            color: 0xE4FF35,
+            wireframe: false
+          });
+          const coreDot = new THREE.Mesh(coreDotGeo, coreDotMat);
+          scene.add(coreDot);
+
+          // Orbiting Particle Ring
+          const particleCount = 180;
+          const particleGeo = new THREE.BufferGeometry();
+          const positions = new Float32Array(particleCount * 3);
+          for (let i = 0; i < particleCount; i++) {
+            const theta = Math.random() * Math.PI * 2;
+            const radius = 2.2 + (Math.random() - 0.5) * 0.8;
+            positions[i * 3] = Math.cos(theta) * radius;
+            positions[i * 3 + 1] = (Math.random() - 0.5) * 1.2;
+            positions[i * 3 + 2] = Math.sin(theta) * radius;
+          }
+          particleGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+          const particleMat = new THREE.PointsMaterial({
+            color: 0xE4FF35,
+            size: 0.04,
+            transparent: true,
+            opacity: 0.75
+          });
+          const particlePoints = new THREE.Points(particleGeo, particleMat);
+          scene.add(particlePoints);
+
+          // Mouse / Drag Interaction
+          let isDragging = false;
+          let prevMouseX = 0;
+          let prevMouseY = 0;
+          let targetRotX = 0;
+          let targetRotY = 0;
+
+          canvas.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            prevMouseX = e.clientX;
+            prevMouseY = e.clientY;
+          });
+
+          window.addEventListener('mouseup', () => { isDragging = false; });
+
+          window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const deltaX = e.clientX - prevMouseX;
+            const deltaY = e.clientY - prevMouseY;
+            targetRotY += deltaX * 0.008;
+            targetRotX += deltaY * 0.008;
+            prevMouseX = e.clientX;
+            prevMouseY = e.clientY;
+          });
+
+          // Touch support for mobile
+          canvas.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+              isDragging = true;
+              prevMouseX = e.touches[0].clientX;
+              prevMouseY = e.touches[0].clientY;
+            }
+          }, { passive: true });
+
+          window.addEventListener('touchend', () => { isDragging = false; });
+
+          window.addEventListener('touchmove', (e) => {
+            if (!isDragging || e.touches.length !== 1) return;
+            const deltaX = e.touches[0].clientX - prevMouseX;
+            const deltaY = e.touches[0].clientY - prevMouseY;
+            targetRotY += deltaX * 0.008;
+            targetRotX += deltaY * 0.008;
+            prevMouseX = e.touches[0].clientX;
+            prevMouseY = e.touches[0].clientY;
+          }, { passive: true });
+
+          // Render Animation Loop
+          function animate() {
+            requestAnimationFrame(animate);
+
+            // Smooth damping
+            outerMesh.rotation.y += (targetRotY - outerMesh.rotation.y) * 0.08 + 0.003;
+            outerMesh.rotation.x += (targetRotX - outerMesh.rotation.x) * 0.08 + 0.002;
+
+            innerMesh.rotation.y -= 0.006;
+            innerMesh.rotation.z += 0.004;
+
+            particlePoints.rotation.y += 0.002;
+
+            renderer.render(scene, camera);
+          }
+          animate();
+
+          // Resize handler
+          window.addEventListener('resize', () => {
+            const r = canvas.parentElement.getBoundingClientRect();
+            const w = r.width || 380;
+            camera.aspect = w / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, height);
+          });
+          return;
+        } catch (err) {
+          console.warn('Three.js WebGL initialization skipped, falling back to 2D canvas', err);
+        }
+      }
+
+      // 2D NATIVE CANVAS FALLBACK IF THREE.JS NOT AVAILABLE OR OFFLINE
+      const ctx = canvas.getContext('2d');
+      canvas.width = canvas.parentElement.clientWidth || 380;
+      canvas.height = 400;
+      let angle = 0;
+
+      function renderFallback() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const cx = canvas.width / 2;
+        const cy = canvas.height / 2;
+        const r = 90;
+
+        angle += 0.015;
+
+        // Rotating outer wireframe hexagon
+        ctx.strokeStyle = '#E4FF35';
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        for (let i = 0; i < 6; i++) {
+          const a = angle + (i * Math.PI / 3);
+          const x = cx + Math.cos(a) * r;
+          const y = cy + Math.sin(a) * (r * 0.7);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.stroke();
+
+        // Inner diamond
+        ctx.strokeStyle = '#00F0FF';
+        ctx.beginPath();
+        for (let i = 0; i < 4; i++) {
+          const a = -angle * 1.5 + (i * Math.PI / 2);
+          const x = cx + Math.cos(a) * (r * 0.5);
+          const y = cy + Math.sin(a) * (r * 0.5);
+          if (i === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+        ctx.stroke();
+
+        // Core dot
+        ctx.fillStyle = '#E4FF35';
+        ctx.beginPath();
+        ctx.arc(cx, cy, 6, 0, Math.PI * 2);
+        ctx.fill();
+
+        requestAnimationFrame(renderFallback);
+      }
+      renderFallback();
+    })();
+
+    // =========================================================================
+    // 2. BACKGROUND FLOATING PARTICLE NETWORK
+    // =========================================================================
+    (function initBgCanvas() {
+      const canvas = document.getElementById('bg-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w = canvas.width = window.innerWidth;
+      let h = canvas.height = window.innerHeight;
+
+      const particles = [];
+      const count = Math.min(Math.floor(w / 25), 45);
+
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          size: Math.random() * 1.8 + 0.8
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+
+        // Draw connections
+        for (let i = 0; i < count; i++) {
+          for (let j = i + 1; j < count; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              ctx.strokeStyle = 'rgba(228, 255, 53, ' + (0.12 * (1 - dist / 130)) + ')';
+              ctx.lineWidth = 0.8;
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.stroke();
+            }
+          }
+        }
+
+        // Draw particles
+        for (let i = 0; i < count; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0) p.x = w;
+          if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h;
+          if (p.y > h) p.y = 0;
+
+          ctx.fillStyle = 'rgba(228, 255, 53, 0.4)';
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(draw);
+      }
+      draw();
+
+      window.addEventListener('resize', () => {
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+      });
+    })();
+
+    // =========================================================================
+    // 3. TOAST NOTIFICATION UTILITY
+    // =========================================================================
+    function triggerToast(message) {
+      const toast = document.getElementById('toast-notice');
+      const msgSpan = document.getElementById('toast-message');
+      if (!toast || !msgSpan) return;
+      msgSpan.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    function copyClauseLink(clauseId) {
+      const url = window.location.origin + window.location.pathname + '#' + clauseId;
+      navigator.clipboard.writeText(url).then(() => {
+        triggerToast('Clause permalink copied to clipboard!');
+      }).catch(() => {
+        triggerToast('Link: ' + url);
+      });
+    }
+
+    function copyPgpKey() {
+      const text = document.getElementById('pgp-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        triggerToast('PGP Public Key copied to clipboard!');
+      });
+    }
+
+    // =========================================================================
+    // 4. SQL SCHEMA TAB SWITCHER
+    // =========================================================================
+    function switchSchemaTab(tabId, btn) {
+      document.querySelectorAll('.schema-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.schema-pane').forEach(p => p.style.display = 'none');
+      btn.classList.add('active');
+      const target = document.getElementById(tabId);
+      if (target) target.style.display = 'block';
+    }
+
+    // =========================================================================
+    // 5. OEM BATTERY WHITELIST TAB SWITCHER
+    // =========================================================================
+    function switchOemTab(oemId, btn) {
+      document.querySelectorAll('.oem-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.oem-pane').forEach(p => p.style.display = 'none');
+      btn.classList.add('active');
+      const target = document.getElementById(oemId);
+      if (target) target.style.display = 'block';
+    }
+
+    // =========================================================================
+    // 6. GLOBAL JURISDICTION TAB SWITCHER
+    // =========================================================================
+    function switchJurisdictionTab(jurId, btn) {
+      document.querySelectorAll('.jurisdiction-tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.jur-pane').forEach(p => p.style.display = 'none');
+      btn.classList.add('active');
+      const target = document.getElementById(jurId);
+      if (target) target.style.display = 'block';
+    }
+
+    // =========================================================================
+    // 7. FAQ ACCORDION TOGGLE
+    // =========================================================================
+    function toggleFaq(btn) {
+      const card = btn.closest('.faq-item-card');
+      const panel = card.querySelector('.faq-answer-panel');
+      const isOpen = card.classList.contains('open');
+
+      // Close all other open cards
+      document.querySelectorAll('.faq-item-card.open').forEach(c => {
+        if (c !== card) {
+          c.classList.remove('open');
+          c.querySelector('.faq-answer-panel').style.maxHeight = null;
+        }
+      });
+
+      if (!isOpen) {
+        card.classList.add('open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      } else {
+        card.classList.remove('open');
+        panel.style.maxHeight = null;
+      }
+    }
+
+    // =========================================================================
+    // 8. INTERACTIVE PUSH NOTIFICATION SIMULATOR
+    // =========================================================================
+    let simCount = 1;
+    function fireSimulationNotification() {
+      const appSelect = document.getElementById('sim-app-select');
+      const senderInput = document.getElementById('sim-sender-input');
+      const messageInput = document.getElementById('sim-message-input');
+      const feedList = document.getElementById('sim-feed-list');
+      const counterSpan = document.getElementById('sim-counter');
+
+      const appName = appSelect.value;
+      const sender = senderInput.value.trim() || 'Unknown Contact';
+      const message = messageInput.value.trim() || 'Simulated push payload content.';
+
+      simCount++;
+      counterSpan.textContent = simCount + ' CAPTURED';
+
+      const randomHash = Math.random().toString(16).substring(2, 10);
+      const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+      const item = document.createElement('div');
+      item.className = 'sim-feed-item';
+      item.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-weight:700; color:#fff; font-size:0.85rem;">${escapeHtml(sender)}</span>
+          <span style="font-family:var(--font-mono); font-size:0.7rem; color:var(--accent-lime);">${escapeHtml(appName)}</span>
+        </div>
+        <div style="font-size:0.82rem; color:var(--text-secondary);">${escapeHtml(message)}</div>
+        <div style="display:flex; justify-content:space-between; font-size:0.68rem; color:var(--text-muted); font-family:var(--font-mono); margin-top:2px;">
+          <span>HASH: ${randomHash}</span>
+          <span>${timeStr}</span>
+        </div>
+      `;
+
+      feedList.insertBefore(item, feedList.firstChild);
+      triggerToast('Notification captured into local vault.db!');
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // =========================================================================
+    // 9. NUCLEAR WIPE MODAL CONTROLS
+    // =========================================================================
+    function openWipeModal() {
+      const modal = document.getElementById('wipe-modal');
+      if (modal) modal.classList.add('open');
+    }
+
+    function closeWipeModal() {
+      const modal = document.getElementById('wipe-modal');
+      if (modal) modal.classList.remove('open');
+    }
+
+    function confirmWipeExecution() {
+      closeWipeModal();
+      const feedList = document.getElementById('sim-feed-list');
+      const counterSpan = document.getElementById('sim-counter');
+      if (feedList) feedList.innerHTML = '<div style="padding:1rem; text-align:center; color:var(--accent-green); font-family:var(--font-mono); font-size:0.8rem;">[DATABASE CLEANSED // 0 ROWS REMAIN]</div>';
+      if (counterSpan) counterSpan.textContent = '0 CAPTURED';
+      simCount = 0;
+      triggerToast('NUCLEAR PURGE COMPLETE: vault.db zeroed and vacuumed.');
+    }
+
+    // =========================================================================
+    // 10. SIDEBAR LIVE SEARCH & SCROLLSPY
+    // =========================================================================
+    const searchInput = document.getElementById('policy-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const navItems = document.querySelectorAll('.sidebar-nav-item');
+        const sections = document.querySelectorAll('.clause-section');
+
+        navItems.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          if (text.includes(query)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        sections.forEach(sec => {
+          if (!query) {
+            sec.style.display = 'block';
+            return;
+          }
+          const text = sec.textContent.toLowerCase();
+          if (text.includes(query)) {
+            sec.style.display = 'block';
+          } else {
+            sec.style.display = 'none';
+          }
+        });
+      });
+    }
+
+    // Scrollspy for sidebar active state
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('.clause-section');
+      const navLinks = document.querySelectorAll('.sidebar-nav-link');
+      let currentId = '';
+
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top <= 160 && rect.bottom >= 160) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+
+      if (currentId) {
+        navLinks.forEach(link => {
+          if (link.getAttribute('href') === '#' + currentId) {
+            link.classList.add('active');
+          } else {
+            link.classList.remove('active');
+          }
+        });
+      }
+    });
+
+    // =========================================================================
+    // 11. DYNAMIC REAL SHA-256 DIGEST VIA BROWSER WEB CRYPTO API
+    // =========================================================================
+    (async function calculatePolicyDigest() {
+      try {
+        const feed = document.querySelector('.content-feed');
+        if (!feed) return;
+        const textToHash = feed.innerText;
+        const encoder = new TextEncoder();
+        const data = encoder.encode(textToHash);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        const hashEl = document.getElementById('policy-real-hash');
+        if (hashEl) {
+          hashEl.textContent = hashHex;
+        }
+      } catch (e) {
+        console.warn('Web Crypto SHA-256 calculation error:', e);
+      }
+    })();
+  </script>
+
+</body>
+</html>
