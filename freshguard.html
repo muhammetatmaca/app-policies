@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshGuard - Gizlilik Politikası | Privacy Policy</title>
+  <meta name="description" content="FreshGuard (TazeGard) mobil uygulaması resmi gizlilik politikası. VirelonSoft tarafından geliştirilmiştir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #1B56FF;
+      --primary-hover: #1240c9;
+      --secondary: #FFE800;
+      --accent-green: #15C638;
+      --accent-red: #FF2424;
+      --dark: #0F172A;
+      --border-dark: #000000;
+      --bg-canvas: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-muted: #64748B;
+      --shadow-neo: 4px 4px 0px #000000;
+      --shadow-neo-lg: 6px 6px 0px #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-canvas);
+      color: var(--dark);
+      line-height: 1.68;
+      -webkit-font-smoothing: antialiased;
+      scroll-behavior: smooth;
+    }
+
+    /* Top Wavy Pop Banner */
+    .top-banner {
+      background: linear-gradient(135deg, #1B56FF 0%, #0d38b8 100%);
+      color: #FFFFFF;
+      padding: 4.5rem 1.5rem 4rem;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 3px solid #000000;
+    }
+
+    .top-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      width: 260px;
+      height: 260px;
+      background: #FFE800;
+      border-radius: 50%;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .banner-container {
+      max-width: 1040px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .brand-sticker-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .sticker-badge {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.4rem 0.9rem;
+      background: #FFFFFF;
+      color: #000000;
+      border: 2px solid #000000;
+      box-shadow: 2px 2px 0px #000000;
+      border-radius: 6px;
+    }
+
+    .sticker-badge.yellow {
+      background: #FFE800;
+    }
+
+    .sticker-badge.green {
+      background: #15C638;
+      color: #FFFFFF;
+      text-shadow: 1px 1px 0px #000000;
+    }
+
+    .banner-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .banner-subtitle {
+      font-size: 1.125rem;
+      opacity: 0.92;
+      max-width: 720px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.9);
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .meta-item strong {
+      color: #FFE800;
+    }
+
+    /* Layout */
+    .main-wrapper {
+      max-width: 1040px;
+      margin: -2.5rem auto 4rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    @media (max-width: 860px) {
+      .main-wrapper {
+        grid-template-columns: 1fr;
+        margin-top: -1.5rem;
+      }
+    }
+
+    /* Sidebar Navigation */
+    .sidebar {
+      position: sticky;
+      top: 2rem;
+      height: fit-content;
+    }
+
+    .nav-card {
+      background: #FFFFFF;
+      border: 2.5px solid #000000;
+      border-radius: 12px;
+      box-shadow: var(--shadow-neo);
+      padding: 1.5rem;
+    }
+
+    .nav-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #000000;
+    }
+
+    .nav-list {
+      list-style: none;
+    }
+
+    .nav-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-list a {
+      display: block;
+      color: var(--dark);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.45rem 0.65rem;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .nav-list a:hover {
+      background: #FFE800;
+      color: #000000;
+      transform: translateX(4px);
+    }
+
+    .developer-card {
+      margin-top: 1.5rem;
+      background: #F1F5F9;
+      border: 2px solid #000000;
+      border-radius: 10px;
+      padding: 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    .developer-card h4 {
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    /* Content Area */
+    .content-area {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Quick Highlight Cards */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .highlight-box {
+      background: #FFFFFF;
+      border: 2.5px solid #000000;
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 3px 3px 0px #000000;
+    }
+
+    .highlight-icon {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .highlight-box h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .highlight-box p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Section Cards */
+    .policy-section {
+      background: #FFFFFF;
+      border: 2.5px solid #000000;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: var(--shadow-neo-lg);
+    }
+
+    .policy-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-bottom: 2px solid #F1F5F9;
+      padding-bottom: 0.75rem;
+    }
+
+    .policy-section p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    .policy-section ul {
+      margin: 0.75rem 0 1.25rem 1.5rem;
+      color: #334155;
+      font-size: 0.95rem;
+    }
+
+    .policy-section li {
+      margin-bottom: 0.5rem;
+    }
+
+    .callout-box {
+      background: #FFFBEB;
+      border-left: 5px solid #F59E0B;
+      border-top: 1.5px solid #000000;
+      border-right: 1.5px solid #000000;
+      border-bottom: 1.5px solid #000000;
+      padding: 1.1rem;
+      border-radius: 8px;
+      margin: 1.25rem 0;
+      font-size: 0.92rem;
+    }
+
+    .callout-box.blue {
+      background: #EFF6FF;
+      border-left-color: var(--primary);
+    }
+
+    .callout-box.green {
+      background: #F0FDF4;
+      border-left-color: var(--accent-green);
+    }
+
+    /* Table Styles */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #FFFFFF;
+      border: 2px solid #000000;
+    }
+
+    th, td {
+      padding: 0.85rem 1rem;
+      border: 1px solid #CBD5E1;
+      text-align: left;
+    }
+
+    th {
+      background: #0F172A;
+      color: #FFFFFF;
+      font-weight: 700;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    tr:nth-child(even) {
+      background: #F8FAFC;
+    }
+
+    /* Contact Box */
+    .contact-card {
+      background: #FFE800;
+      border: 3px solid #000000;
+      border-radius: 14px;
+      padding: 2.25rem;
+      box-shadow: var(--shadow-neo-lg);
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: #000000;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border: 2.5px solid #000000;
+      border-radius: 50px;
+      margin: 1.25rem 0;
+      text-decoration: none;
+      box-shadow: 3px 3px 0px #000000;
+      transition: all 0.15s ease;
+    }
+
+    .contact-email:hover {
+      transform: translateY(-2px);
+      box-shadow: 5px 5px 0px #000000;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      background: #0F172A;
+      color: #94A3B8;
+      font-size: 0.88rem;
+      border-top: 3px solid #000000;
+    }
+
+    footer a {
+      color: #FFE800;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .lang-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      background: #E2E8F0;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-left: 6px;
+    }
+
+    @media print {
+      body {
+        background: #FFFFFF;
+        color: #000000;
+      }
+      .sidebar, .top-banner::after {
+        display: none;
+      }
+      .main-wrapper {
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+      }
+      .policy-section {
+        box-shadow: none;
+        border: 1px solid #000000;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hero Header -->
+  <header class="top-banner">
+    <div class="banner-container">
+      <div class="brand-sticker-group">
+        <span class="sticker-badge yellow">✦ VIRELONSOFT</span>
+        <span class="sticker-badge">FRESHGUARD · TAZEGARD</span>
+        <span class="sticker-badge green">RESMİ GİZLİLİK POLİTİKASI</span>
+      </div>
+
+      <h1 class="banner-title">Gizlilik Politikası & Veri Güvenliği</h1>
+      <p class="banner-subtitle">
+        FreshGuard olarak kişisel mahremiyetinize ve veri güvenliğinize en üst düzeyde saygı duyuyoruz. 
+        Bu politika; uygulamanın verilerinizi nasıl işlediğini, sakladığını ve koruduğunu şeffaf bir şekilde açıklar.
+      </p>
+
+      <div class="meta-bar">
+        <div class="meta-item"><strong>Uygulama:</strong> FreshGuard (TazeGard)</div>
+        <div class="meta-item"><strong>Paket Kimliği:</strong> com.virelon.freshguard</div>
+        <div class="meta-item"><strong>Geliştirici / Şirket:</strong> VirelonSoft</div>
+        <div class="meta-item"><strong>Yürürlük Tarihi:</strong> 16 Eylül 2026</div>
+        <div class="meta-item"><strong>Uyum:</strong> Google Play · Apple App Store · KVKK · GDPR</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <div class="main-wrapper">
+    
+    <!-- Sticky Navigation Sidebar -->
+    <aside class="sidebar">
+      <div class="nav-card">
+        <div class="nav-title">İçindekiler / Index</div>
+        <ul class="nav-list">
+          <li><a href="#genel-bakis">1. Genel Bakış & İlkeler</a></li>
+          <li><a href="#toplanan-veriler">2. Hangi Veriler Toplanır?</a></li>
+          <li><a href="#cihaz-izinleri">3. Cihaz İzinleri & Bildirimler</a></li>
+          <li><a href="#veri-guvenligi">4. Veri Saklama & Güvenlik</a></li>
+          <li><a href="#ucuncu-taraflar">5. Üçüncü Taraf Servisler</a></li>
+          <li><a href="#cocuk-mahremiyeti">6. Çocukların Gizliliği</a></li>
+          <li><a href="#kullanici-haklari">7. Kullanıcı Hakları (KVKK/GDPR)</a></li>
+          <li><a href="#iletisim">8. İletişim & Destek</a></li>
+        </ul>
+      </div>
+
+      <div class="developer-card">
+        <h4>🏢 VirelonSoft</h4>
+        <p style="margin-bottom: 0.5rem; color: #475569;">Güvenilir ve modern mobil çözümler geliştiren bağımsız yazılım stüdyosu.</p>
+        <p><strong>E-posta:</strong><br><a href="mailto:muhammetatmaca79@gmail.com" style="color: #1B56FF; text-decoration: none; font-weight: 600;">muhammetatmaca79@gmail.com</a></p>
+      </div>
+    </aside>
+
+    <!-- Main Content Articles -->
+    <main class="content-area">
+
+      <!-- 4 Core Pillars Grid -->
+      <div class="highlights-grid">
+        <div class="highlight-box">
+          <div class="highlight-icon">🔒</div>
+          <h3>%100 Yerel Depolama</h3>
+          <p>Kayıt ettiğiniz ürün ve gıda verileri yalnızca cihazınızın hafızasında tutulur.</p>
+        </div>
+        <div class="highlight-box">
+          <div class="highlight-icon">🛡️</div>
+          <h3>Sıfır İzleme / Takipsiz</h3>
+          <p>Kişisel kimlik bilgisi, konum veya internet gezintiniz asla toplanmaz ya da satılmaz.</p>
+        </div>
+        <div class="highlight-box">
+          <div class="highlight-icon">🔔</div>
+          <h3>Yalnızca Zamanında Uyarı</h3>
+          <p>Cihaz bildirim izni yalnızca bozulmak üzere olan ürünleri hatırlatmak içindir.</p>
+        </div>
+        <div class="highlight-box">
+          <div class="highlight-icon">✨</div>
+          <h3>Hesap Zorunluluğu Yok</h3>
+          <p>Kayıt olmadan, e-posta veya parola girmeden anında güvenle kullanabilirsiniz.</p>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="genel-bakis" class="policy-section">
+        <h2>1. Genel Bakış & Temel İlkeler</h2>
+        <p>
+          Bu Gizlilik Politikası, <strong>VirelonSoft</strong> tarafından geliştirilen ve işletilen 
+          <strong>FreshGuard</strong> (Paket Adı: <code>com.virelon.freshguard</code>) mobil uygulamasının gizlilik uygulamalarını kapsar.
+        </p>
+        <p>
+          FreshGuard'ın ana felsefesi <strong>"Gizlilik Odaklı Tasarım" (Privacy by Design)</strong> ilkesine dayanmaktadır. 
+          Gıda israfını önleme, kiler/buzdolabı ve ilaç raf ömrü takibini sağlarken, kullanıcılarımızın kişisel yaşamına dair verileri sunuculara göndermeden, 
+          tamamen kullanıcının kendi cihazı üzerinde işlemek üzere mimarize edilmiştir.
+        </p>
+        <div class="callout-box green">
+          <strong>Önemli Güvence:</strong> FreshGuard uygulamasını kullanmak için isim, soyisim, telefon numarası veya e-posta adresi ile üye olmanız gerekmez. Uygulamayı indirdiğiniz andan itibaren doğrudan ve anonim olarak kullanabilirsiniz.
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="toplanan-veriler" class="policy-section">
+        <h2>2. Hangi Veriler İşlenir?</h2>
+        <p>
+          Uygulama işlevselliğinin eksiksiz çalışabilmesi adına yalnızca aşağıdaki veriler cihazınızda yerel olarak işlenir:
+        </p>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Veri Türü</th>
+                <th>Açıklama</th>
+                <th>Nerede Saklanır?</th>
+                <th>Üçüncü Tarafa Aktarılır mı?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Ürün Bilgileri</strong></td>
+                <td>Girdiğiniz ürün adı, seçtiğiniz kategori (süt, et, meyve vb.), son kullanma tarihi ve notlar.</td>
+                <td>Cihaz Yerel Hafızası (AsyncStorage)</td>
+                <td>❌ Hayır, aktarılmaz</td>
+              </tr>
+              <tr>
+                <td><strong>Uygulama Tercihleri</strong></td>
+                <td>Seçtiğiniz dil (20 dilden biri), tema varyantı ve bildirim saat tercihleri.</td>
+                <td>Cihaz Yerel Hafızası (AsyncStorage)</td>
+                <td>❌ Hayır, aktarılmaz</td>
+              </tr>
+              <tr>
+                <td><strong>Bildirim Kimlikleri</strong></td>
+                <td>İşletim sistemi tarafından zamanlanan uyarının iptal edilebilmesi için üretilen rastgele tanımlayıcı (ID).</td>
+                <td>Cihaz Yerel Hafızası</td>
+                <td>❌ Hayır, aktarılmaz</td>
+              </tr>
+              <tr>
+                <td><strong>Teknik Tanılama</strong></td>
+                <td>İşletim sistemi sürümü, cihaz modeli ve olası çökme hata logları.</td>
+                <td>Standart OS Sistem Logları</td>
+                <td>Sadece çökme anında anonim hata raporu olarak</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="cihaz-izinleri" class="policy-section">
+        <h2>3. Cihaz İzinleri & Sistem Bildirimleri</h2>
+        <p>
+          FreshGuard, işletim sistemiyle yalnızca temel görevini yerine getirebilmek için etkileşime girer:
+        </p>
+        <ul>
+          <li>
+            <strong>Bildirim İzni (<code>POST_NOTIFICATIONS</code> / UserNotifications):</strong> 
+            Eklediğiniz ürünlerin son kullanma tarihinden 1 gün önce ve son kullanım gününde size hatırlatıcı göndermek amacıyla kullanılır. 
+            Bu bildirimler cihazınızın yerel zamanlayıcısı (Local Notification Scheduler) tarafından tetiklenir; uzaktan sunucu tetikleyicisi kullanılmaz.
+          </li>
+          <li>
+            <strong>Titreşim & Dokunsal Geri Bildirim (Haptics):</strong> 
+            Ürün ekleme, silme ve kadran ayarlamalarında kullanıcı deneyimini zenginleştiren hafif titreşim efektleri sağlar.
+          </li>
+        </ul>
+        <div class="callout-box blue">
+          <strong>İzinleri Yönetme:</strong> Cihaz ayarlarınızdan (Ayarlar &gt; Uygulamalar &gt; FreshGuard &gt; Bildirimler) dilediğiniz an bildirim izinlerini açabilir veya kapatabilirsiniz.
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section id="veri-guvenligi" class="policy-section">
+        <h2>4. Veri Saklama, Koruma ve Silme</h2>
+        <p>
+          Tüm verileriniz işletim sisteminin sunduğu güvenli uygulama kum havuzu (Application Sandbox) içerisinde depolanır:
+        </p>
+        <ul>
+          <li>Diğer uygulamalar FreshGuard'ın yerel veritabanına erişemez.</li>
+          <li>Uygulamayı telefonunuzdan sildiğinizde, cihazınızda saklanan tüm ürünler ve geçmiş veriler geri döndürülemez şekilde anında silinir.</li>
+          <li>Uygulama içerisinden tek tek ürünleri silebilir veya kiler sepetinizi dilediğiniz zaman temizleyebilirsiniz.</li>
+        </ul>
+      </section>
+
+      <!-- Section 5 -->
+      <section id="ucuncu-taraflar" class="policy-section">
+        <h2>5. Üçüncü Taraf Kütüphaneler & Servisler</h2>
+        <p>
+          FreshGuard, güvenilir açık kaynaklı platform ve çerçeveler üzerine inşa edilmiştir:
+        </p>
+        <ul>
+          <li><strong>Expo & React Native:</strong> Temel uygulama çalışma ortamı.</li>
+          <li><strong>Expo Notifications:</strong> İşletim sistemi yerel bildirim motoru.</li>
+          <li><strong>AsyncStorage:</strong> Cihaz içi şifreli/güvenli anahtar-değer depolama birimi.</li>
+        </ul>
+        <p>
+          Uygulamamızda reklam ağı (AdMob vb.), kullanıcı davranışı takip araçları (Facebook Pixel, Adjust vb.) veya veri ticareti yapan herhangi bir üçüncü taraf veri toplayıcısı <strong>KESİNLİKLE BULUNMAMAKTADIR</strong>.
+        </p>
+      </section>
+
+      <!-- Section 6 -->
+      <section id="cocuk-mahremiyeti" class="policy-section">
+        <h2>6. Çocukların Gizliliği (COPPA Uyumlu)</h2>
+        <p>
+          FreshGuard, 13 yaşın (veya Avrupa Birliği ülkelerinde 16 yaşın) altındaki çocuklardan bilerek herhangi bir kişisel kimlik bilgisi toplamaz. 
+          Uygulama her yaştan kullanıcının güvenle evindeki gıdaları ve ilaçları takip edebileceği şekilde güvenli ve reklamsız olarak tasarlanmıştır.
+        </p>
+      </section>
+
+      <!-- Section 7 -->
+      <section id="kullanici-haklari" class="policy-section">
+        <h2>7. Yasal Haklarınız (KVKK & GDPR & CCPA)</h2>
+        <p>
+          Yürürlükteki veri koruma mevzuatları (Türkiye 6698 Sayılı KVKK, Avrupa Birliği GDPR ve Kaliforniya CCPA) uyarınca:
+        </p>
+        <ul>
+          <li>Verilerinizin nerede saklandığını öğrenme hakkına,</li>
+          <li>Tüm verilerinizi tek tuşla silme ve erişimi sonlandırma hakkına,</li>
+          <li>İşlenen verilerin düzeltilmesini talep etme hakkına sahipsiniz.</li>
+        </ul>
+        <p>
+          Uygulamamız verileri zaten tamamen sizin cihazınızda tuttuğu için bu haklar doğrudan sizin tam denetiminizdedir.
+        </p>
+      </section>
+
+      <!-- Section 8: Contact -->
+      <section id="iletisim" class="contact-card">
+        <h2>8. İletişim & Veri Sorumlusu</h2>
+        <p style="font-size: 1.05rem; color: #1E293B; max-width: 600px; margin: 0 auto;">
+          Gizlilik politikamız, veri güvenliği veya uygulamayla ilgili her türlü soru, öneri ve destek talebiniz için doğrudan geliştirici ekibimizle iletişime geçebilirsiniz:
+        </p>
+
+        <a href="mailto:muhammetatmaca79@gmail.com" class="contact-email">
+          ✉️ muhammetatmaca79@gmail.com
+        </a>
+
+        <div style="font-size: 0.92rem; color: #334155; font-weight: 600;">
+          Şirket / Stüdyo: <strong>VirelonSoft</strong><br>
+          Geliştirici Temsilcisi: <strong>Muhammet Atmaca</strong>
+        </div>
+      </section>
+
+      <!-- Section 9: English Summary for International App Store Compliance -->
+      <section class="policy-section" style="background: #F8FAFC; border-style: dashed;">
+        <h2>🌐 English Summary (For Google Play & App Store Reviewers)</h2>
+        <p>
+          <strong>Application Name:</strong> FreshGuard (Package: <code>com.virelon.freshguard</code>)<br>
+          <strong>Developer:</strong> VirelonSoft (<a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a>)
+        </p>
+        <p>
+          FreshGuard does <strong>not collect, transmit, or sell any personal information</strong> to external servers. 
+          All inventory items, dates, and preference data are saved strictly on the user's local device via AsyncStorage. 
+          The notification permission is utilized exclusively to schedule local on-device alarms prior to product expiration. 
+          Users can permanently erase all data at any moment simply by clearing the application cache or uninstalling the app.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Page Footer -->
+  <footer>
+    <div style="max-width: 1040px; margin: 0 auto;">
+      <p style="margin-bottom: 0.5rem;">
+        © 2026 <strong>VirelonSoft</strong> · FreshGuard (TazeGard). Tüm hakları saklıdır.
+      </p>
+      <p style="font-size: 0.8rem; opacity: 0.75;">
+        Paket: com.virelon.freshguard · İletişim: muhammetatmaca79@gmail.com
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
