@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - FootIQ | Virelonsoft</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #070B14;
+      --bg-surface: rgba(15, 23, 42, 0.75);
+      --bg-surface-hover: rgba(30, 41, 59, 0.85);
+      --accent-emerald: #10B981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.25);
+      --accent-cyan: #06B6D4;
+      --accent-cyan-glow: rgba(6, 182, 212, 0.2);
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(16, 185, 129, 0.3);
+      --card-radius: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: #E2E8F0;
+      line-height: 1.7;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Ambient Tactical Pitch Background & Stadium Lights */
+    .stadium-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(circle at 50% -10%, rgba(16, 185, 129, 0.18) 0%, transparent 60%),
+        radial-gradient(circle at 10% 30%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 60%),
+        linear-gradient(180deg, #070B14 0%, #0B1220 50%, #060A12 100%);
+    }
+
+    /* Subtle Tactical Pitch Lines Grid Pattern */
+    .pitch-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.12;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 48px 24px 80px 24px;
+    }
+
+    /* Header Nav / Brand */
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #10B981, #06B6D4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 22px;
+      color: #070B14;
+      box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    }
+
+    .brand-info h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      color: var(--text-main);
+    }
+
+    .brand-info p {
+      font-size: 12px;
+      color: var(--accent-emerald);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Language Toggle Switcher */
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 4px;
+      border-radius: 30px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: #FFFFFF;
+      color: #070B14;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hero Banner */
+    .hero-card {
+      background: var(--bg-surface);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--card-radius);
+      padding: 40px;
+      margin-bottom: 32px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(16, 185, 129, 0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: #34D399;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #10B981;
+      box-shadow: 0 0 8px #10B981;
+    }
+
+    .hero-title {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .hero-meta strong {
+      color: #FFFFFF;
+    }
+
+    /* Policy Content Cards */
+    .policy-section {
+      background: var(--bg-surface);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--card-radius);
+      padding: 32px;
+      margin-bottom: 24px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .policy-section:hover {
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .section-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 13px;
+      color: var(--accent-emerald);
+    }
+
+    .section-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .policy-section p {
+      font-size: 14.5px;
+      color: #CBD5E1;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section ul {
+      margin: 12px 0 16px 20px;
+      color: #CBD5E1;
+      font-size: 14.5px;
+    }
+
+    .policy-section li {
+      margin-bottom: 8px;
+      padding-left: 4px;
+    }
+
+    .policy-section li strong {
+      color: #FFFFFF;
+    }
+
+    /* Highlight Badges & Callouts */
+    .callout-box {
+      background: rgba(16, 185, 129, 0.08);
+      border-left: 3px solid var(--accent-emerald);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin: 16px 0;
+    }
+
+    .callout-box p {
+      font-size: 13.5px;
+      color: #E2E8F0;
+      margin: 0;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFFFFF;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* Contact Card */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--card-radius);
+      padding: 32px;
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .contact-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .contact-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FFFFFF;
+      color: #070B14;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(255, 255, 255, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    footer a {
+      color: var(--accent-emerald);
+      text-decoration: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .container {
+        padding: 24px 16px 60px 16px;
+      }
+      .hero-card {
+        padding: 24px 20px;
+      }
+      .hero-title {
+        font-size: 24px;
+      }
+      .policy-section {
+        padding: 24px 18px;
+      }
+      .header-nav {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .lang-switcher {
+        align-self: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="stadium-bg"></div>
+  <div class="pitch-grid"></div>
+
+  <div class="container">
+    <!-- Header Navigation -->
+    <header class="header-nav">
+      <div class="brand">
+        <div class="brand-logo">IQ</div>
+        <div class="brand-info">
+          <h1>FootIQ</h1>
+          <p>Virelonsoft Legal Center</p>
+        </div>
+      </div>
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+        <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
+      </div>
+    </header>
+
+    <!-- Hero Card -->
+    <section class="hero-card">
+      <div class="hero-badge" id="badge-compliance">GDPR & Google Play Family Policy Compliant</div>
+      <h2 class="hero-title" id="hero-title">Privacy Policy</h2>
+      <p id="hero-subtitle" style="color: #94A3B8; font-size: 15px;">
+        This Privacy Policy explains how <strong>Virelonsoft</strong> collects, stores, and protects your information when you use <strong>FootIQ: Football Logic Puzzles</strong> (<span class="badge-pill">com.virelon.futbolanaliz</span>).
+      </p>
+      <div class="hero-meta">
+        <div><span id="meta-developer-label">Developer:</span> <strong>Virelonsoft</strong></div>
+        <div><span id="meta-updated-label">Effective Date:</span> <strong>September 20, 2026</strong></div>
+        <div><span id="meta-contact-label">Official Contact:</span> <strong>muhammetatmaca79@gmail.com</strong></div>
+      </div>
+    </section>
+
+    <!-- CONTENT WRAPPER -->
+    <main id="policy-content">
+      <!-- 1. Overview -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">01</div>
+          <h3 class="section-title" id="sec-1-title">Introduction & Architecture Overview</h3>
+        </div>
+        <p id="sec-1-p1">
+          Welcome to <strong>FootIQ</strong> ("we", "our", or "the App"), proudly created and operated by <strong>Virelonsoft</strong>. We believe in absolute user privacy and data minimization.
+        </p>
+        <div class="callout-box">
+          <p id="sec-1-callout">
+            ⚡ <strong>100% Offline-First Design:</strong> FootIQ operates locally on your mobile device. The comprehensive football career graph, player database, and puzzle mechanics run inside a local, bundled SQLite database. We do NOT operate remote tracking servers, and we never sell your personal data.
+          </p>
+        </div>
+      </article>
+
+      <!-- 2. Data We Collect -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">02</div>
+          <h3 class="section-title" id="sec-2-title">Information We Collect & How It Is Used</h3>
+        </div>
+        <p id="sec-2-p1">
+          FootIQ collects only minimal, non-sensitive operational data strictly required to deliver the core game experience:
+        </p>
+        <ul id="sec-2-list">
+          <li><strong>Local Game Progress & High Scores:</strong> Solved mystery cases, highest streaks in Higher/Lower, solved 11 formations, and player badges are saved exclusively on your local device via encrypted SQLite/AsyncStorage.</li>
+          <li><strong>User Interface Preferences:</strong> Your chosen UI language (among the 20 supported languages), audio/haptics toggle, and pitch board preferences.</li>
+          <li><strong>Technical Diagnostics & Crash Logs:</strong> If a crash occurs, standard non-identifiable system diagnostics (such as device model, OS version, and stack trace) may be collected through Google Play Console services to help us debug and resolve errors.</li>
+        </ul>
+        <p id="sec-2-p2">
+          <strong>We Do NOT Collect:</strong> Names, postal addresses, phone numbers, contacts, microphone audio, GPS location, photos, financial payment information, or unique biometric identifiers.
+        </p>
+      </article>
+
+      <!-- 3. Permissions -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">03</div>
+          <h3 class="section-title" id="sec-3-title">Device Permissions</h3>
+        </div>
+        <p id="sec-3-p1">The App requests only strictly necessary permissions to deliver gameplay:</p>
+        <ul id="sec-3-list">
+          <li><strong>VIBRATE / HAPTICS:</strong> Provides tactile feedback when making correct pass connections, discovering clues, or completing tactical puzzles.</li>
+          <li><strong>INTERNET / NETWORK STATE:</strong> Used solely to check for database updates, verify store license status via Google Play Services, and download optional official player facepacks. The gameplay itself does not require continuous internet connectivity.</li>
+        </ul>
+      </article>
+
+      <!-- 4. Third-Party Services -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">04</div>
+          <h3 class="section-title" id="sec-4-title">Third-Party Services & SDKs</h3>
+        </div>
+        <p id="sec-4-p1">
+          The App utilizes reputable, industry-standard third-party frameworks:
+        </p>
+        <ul id="sec-4-list">
+          <li><strong>Google Play Services:</strong> Used for secure application distribution, verified app bundle updates, and crash analytics provided by Google LLC. (<a href="https://policies.google.com/privacy" target="_blank" style="color: #10B981;">Google Privacy Policy</a>)</li>
+          <li><strong>Expo & React Native:</strong> Open-source framework utilized to execute UI components and native bridging safely. (<a href="https://expo.dev/privacy" target="_blank" style="color: #10B981;">Expo Privacy Policy</a>)</li>
+        </ul>
+      </article>
+
+      <!-- 5. Children's Privacy -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">05</div>
+          <h3 class="section-title" id="sec-5-title">Children's Privacy (COPPA & Family Policy Compliance)</h3>
+        </div>
+        <p id="sec-5-p1">
+          FootIQ is a family-friendly educational sports logic puzzle game suitable for football fans of all ages. We strictly adhere to the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:
+        </p>
+        <ul id="sec-5-list">
+          <li>We do not knowingly collect, request, or store any personal data from children under 13 (or the applicable age in your jurisdiction).</li>
+          <li>The App contains no behavioral targeting, no aggressive user profiling, and no chat or communication features that expose young audiences to unknown parties.</li>
+          <li>If a parent or guardian becomes aware that their child has provided us with any information, please contact us at <strong>muhammetatmaca79@gmail.com</strong>, and we will promptly ensure any relevant diagnostic data is purged.</li>
+        </ul>
+      </article>
+
+      <!-- 6. Data Retention & Deletion -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">06</div>
+          <h3 class="section-title" id="sec-6-title">Data Retention, Security & Deletion Rights</h3>
+        </div>
+        <p id="sec-6-p1">
+          Because FootIQ maintains local-first storage, you have 100% control over your data:
+        </p>
+        <ul id="sec-6-list">
+          <li><strong>Immediate Data Deletion:</strong> You can completely and irreversibly wipe all high scores, streaks, settings, and progress by going to your device's <em>Settings &gt; Apps &gt; FootIQ &gt; Storage &gt; Clear Data</em>, or by uninstalling the app.</li>
+          <li><strong>Data Security:</strong> We implement rigorous security best practices. Local databases are sandbox-isolated by the Android operating system, preventing unauthorized third-party apps from accessing your FootIQ game records.</li>
+        </ul>
+      </article>
+
+      <!-- 7. GDPR & CCPA Rights -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">07</div>
+          <h3 class="section-title" id="sec-7-title">Your Rights (GDPR, CCPA & Global Regulations)</h3>
+        </div>
+        <p id="sec-7-p1">
+          Under European General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA), users possess the right to:
+        </p>
+        <ul id="sec-7-list">
+          <li>Request verification on whether any personal data is held.</li>
+          <li>Request deletion of any diagnostic traces held by developer consoles.</li>
+          <li>Opt-out of diagnostic sharing through device-level privacy settings.</li>
+        </ul>
+      </article>
+
+      <!-- 8. Updates to Policy -->
+      <article class="policy-section">
+        <div class="section-header">
+          <div class="section-num">08</div>
+          <h3 class="section-title" id="sec-8-title">Changes to This Privacy Policy</h3>
+        </div>
+        <p id="sec-8-p1">
+          We may update our Privacy Policy periodically to reflect new app features or regulatory modifications. Any changes will be posted on this page with an updated "Effective Date". Continued use of the application following updates constitutes acceptance of the modified terms.
+        </p>
+      </article>
+
+      <!-- Contact Section -->
+      <div class="contact-card">
+        <h3 class="contact-title" id="contact-title">Have Questions or Need Support?</h3>
+        <p class="contact-desc" id="contact-desc">
+          Virelonsoft is committed to transparent, responsive communication. If you have any inquiries regarding this policy or data safety, contact our privacy officer directly:
+        </p>
+        <a href="mailto:muhammetatmaca79@gmail.com?subject=FootIQ%20Privacy%20Inquiry" class="contact-btn">
+          ✉️ muhammetatmaca79@gmail.com
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 <strong>Virelonsoft</strong>. All rights reserved. • FootIQ: Football Logic Puzzles</p>
+      <p style="margin-top: 6px;">
+        Package: <code>com.virelon.futbolanaliz</code> • Developer: <strong>Virelonsoft</strong>
+      </p>
+    </footer>
+  </div>
+
+  <!-- Interactive Dual Language Switcher Script -->
+  <script>
+    const translations = {
+      en: {
+        badgeCompliance: "GDPR & Google Play Family Policy Compliant",
+        heroTitle: "Privacy Policy",
+        heroSubtitle: "This Privacy Policy explains how <strong>Virelonsoft</strong> collects, stores, and protects your information when you use <strong>FootIQ: Football Logic Puzzles</strong> (<code>com.virelon.futbolanaliz</code>).",
+        metaDev: "Developer:",
+        metaUpdated: "Effective Date:",
+        metaContact: "Official Contact:",
+        sec1Title: "Introduction & Architecture Overview",
+        sec1P1: "Welcome to <strong>FootIQ</strong> (\"we\", \"our\", or \"the App\"), proudly created and operated by <strong>Virelonsoft</strong>. We believe in absolute user privacy and data minimization.",
+        sec1Callout: "⚡ <strong>100% Offline-First Design:</strong> FootIQ operates locally on your mobile device. The comprehensive football career graph, player database, and puzzle mechanics run inside a local, bundled SQLite database. We do NOT operate remote tracking servers, and we never sell your personal data.",
+        sec2Title: "Information We Collect & How It Is Used",
+        sec2P1: "FootIQ collects only minimal, non-sensitive operational data strictly required to deliver the core game experience:",
+        sec2List: [
+          "<strong>Local Game Progress & High Scores:</strong> Solved mystery cases, highest streaks in Higher/Lower, solved 11 formations, and player badges are saved exclusively on your local device via encrypted SQLite/AsyncStorage.",
+          "<strong>User Interface Preferences:</strong> Your chosen UI language (among the 20 supported languages), audio/haptics toggle, and pitch board preferences.",
+          "<strong>Technical Diagnostics & Crash Logs:</strong> If a crash occurs, standard non-identifiable system diagnostics (such as device model, OS version, and stack trace) may be collected through Google Play Console services to help us debug and resolve errors."
+        ],
+        sec2P2: "<strong>We Do NOT Collect:</strong> Names, postal addresses, phone numbers, contacts, microphone audio, GPS location, photos, financial payment information, or unique biometric identifiers.",
+        sec3Title: "Device Permissions",
+        sec3P1: "The App requests only strictly necessary permissions to deliver gameplay:",
+        sec3List: [
+          "<strong>VIBRATE / HAPTICS:</strong> Provides tactile feedback when making correct pass connections, discovering clues, or completing tactical puzzles.",
+          "<strong>INTERNET / NETWORK STATE:</strong> Used solely to check for database updates, verify store license status via Google Play Services, and download optional official player facepacks. The gameplay itself does not require continuous internet connectivity."
+        ],
+        sec4Title: "Third-Party Services & SDKs",
+        sec4P1: "The App utilizes reputable, industry-standard third-party frameworks:",
+        sec4List: [
+          "<strong>Google Play Services:</strong> Used for secure application distribution, verified app bundle updates, and crash analytics provided by Google LLC. (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" style=\"color: #10B981;\">Google Privacy Policy</a>)",
+          "<strong>Expo & React Native:</strong> Open-source framework utilized to execute UI components and native bridging safely. (<a href=\"https://expo.dev/privacy\" target=\"_blank\" style=\"color: #10B981;\">Expo Privacy Policy</a>)"
+        ],
+        sec5Title: "Children's Privacy (COPPA & Family Policy Compliance)",
+        sec5P1: "FootIQ is a family-friendly educational sports logic puzzle game suitable for football fans of all ages. We strictly adhere to the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:",
+        sec5List: [
+          "We do not knowingly collect, request, or store any personal data from children under 13 (or the applicable age in your jurisdiction).",
+          "The App contains no behavioral targeting, no aggressive user profiling, and no chat or communication features that expose young audiences to unknown parties.",
+          "If a parent or guardian becomes aware that their child has provided us with any information, please contact us at <strong>muhammetatmaca79@gmail.com</strong>, and we will promptly ensure any relevant diagnostic data is purged."
+        ],
+        sec6Title: "Data Retention, Security & Deletion Rights",
+        sec6P1: "Because FootIQ maintains local-first storage, you have 100% control over your data:",
+        sec6List: [
+          "<strong>Immediate Data Deletion:</strong> You can completely and irreversibly wipe all high scores, streaks, settings, and progress by going to your device's <em>Settings &gt; Apps &gt; FootIQ &gt; Storage &gt; Clear Data</em>, or by uninstalling the app.",
+          "<strong>Data Security:</strong> We implement rigorous security best practices. Local databases are sandbox-isolated by the Android operating system, preventing unauthorized third-party apps from accessing your FootIQ game records."
+        ],
+        sec7Title: "Your Rights (GDPR, CCPA & Global Regulations)",
+        sec7P1: "Under European General Data Protection Regulation (GDPR) and California Consumer Privacy Act (CCPA), users possess the right to:",
+        sec7List: [
+          "Request verification on whether any personal data is held.",
+          "Request deletion of any diagnostic traces held by developer consoles.",
+          "Opt-out of diagnostic sharing through device-level privacy settings."
+        ],
+        sec8Title: "Changes to This Privacy Policy",
+        sec8P1: "We may update our Privacy Policy periodically to reflect new app features or regulatory modifications. Any changes will be posted on this page with an updated 'Effective Date'. Continued use of the application following updates constitutes acceptance of the modified terms.",
+        contactTitle: "Have Questions or Need Support?",
+        contactDesc: "Virelonsoft is committed to transparent, responsive communication. If you have any inquiries regarding this policy or data safety, contact our privacy officer directly:"
+      },
+      tr: {
+        badgeCompliance: "GDPR & Google Play Aile Politikası ile %100 Uyumlu",
+        heroTitle: "Gizlilik Politikası",
+        heroSubtitle: "Bu Gizlilik Politikası, <strong>FootIQ: Futbol Zeka Oyunları</strong> (<span class=\"badge-pill\">com.virelon.futbolanaliz</span>) uygulamasını kullandığınızda <strong>Virelonsoft</strong>'un verilerinizi nasıl işlediğini, sakladığını ve koruduğunu açıklamaktadır.",
+        metaDev: "Geliştirici:",
+        metaUpdated: "Yürürlük Tarihi:",
+        metaContact: "Resmi İletişim:",
+        sec1Title: "Giriş ve Mimari Genel Bakış",
+        sec1P1: "<strong>Virelonsoft</strong> tarafından geliştirilen <strong>FootIQ</strong> (\"biz\", \"uygulamamız\") dünyasına hoş geldiniz. Kullanıcı gizliliğine ve veri minimizasyonuna koşulsuz saygı duyuyoruz.",
+        sec1Callout: "⚡ <strong>%100 Çevrimdışı (Offline-First) Mimari:</strong> FootIQ tamamen cihazınızda yerel olarak çalışır. Futbol kariyer grafiği, oyuncu veritabanı ve tüm bulmaca motoru uygulamanın içinde yerleşik SQLite veritabanı üzerinde döner. Kişisel verilerinizi toplayan uzak sunucular barındırmayız ve verilerinizi asla satmayız.",
+        sec2Title: "Toplanan Bilgiler ve Kullanım Amacı",
+        sec2P1: "FootIQ, oyunun temel işlevlerini sağlamak için yalnızca en asgari düzeydeki yerel oyun verilerini işler:",
+        sec2List: [
+          "<strong>Yerel Oyun İlerlemesi ve Skorlar:</strong> Çözülen detektif vakaları, Yüksek/Düşük serileri, 11'i Tamamla kadroları ve kazanılan rozetler sadece cihazınızdaki yerel SQLite / AsyncStorage hafızasında saklanır.",
+          "<strong>Kullanıcı Tercihleri:</strong> Seçtiğiniz dil (20 dil desteği), titreşim (haptics) durumu ve saha tahtası görsel ayarları.",
+          "<strong>Teknik Teşhis ve Hata Raporları:</strong> Bir çökme durumunda, Google Play Console servisleri aracılığıyla sistem hatalarını çözebilmemiz adına kimlik bilgisi içermeyen standart hata günlükleri (cihaz modeli, Android sürümü vb.) toplanabilir."
+        ],
+        sec2P2: "<strong>Kesinlikle Toplanmayan Veriler:</strong> İsim, adres, telefon numarası, rehber, mikrofon sesi, GPS konumu, fotoğraflar veya kredi kartı/ödeme bilgileri asla toplanmaz.",
+        sec3Title: "Cihaz İzinleri",
+        sec3P1: "Uygulama, oyun akışını sağlamak için yalnızca zorunlu sistem izinlerini talep eder:",
+        sec3List: [
+          "<strong>TİTREŞİM (HAPTICS):</strong> Doğru pas bağlantıları kurarken, ipuçlarını açarken veya bulmacaları çözerken dokunsal geri bildirim sağlar.",
+          "<strong>İNTERNET VE AĞ DURUMU:</strong> Yalnızca veritabanı güncellemelerini denetlemek ve Google Play lisans doğrulaması gerçekleştirmek amacıyla kullanılır. Oyun deneyimi çevrimdışı oynanabilir."
+        ],
+        sec4Title: "Üçüncü Taraf Servisler ve SDK'lar",
+        sec4P1: "Uygulama, güvenilir ve endüstri standardı üçüncü taraf kütüphaneleri kullanır:",
+        sec4List: [
+          "<strong>Google Play Hizmetleri:</strong> Güvenli uygulama dağıtımı, uygulama güncellemesi ve hata analitiği için Google LLC altyapısı kullanılır. (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" style=\"color: #10B981;\">Google Gizlilik Politikası</a>)",
+          "<strong>Expo & React Native:</strong> Arayüz bileşenlerinin yerel hızda ve güvenle çalışmasını sağlayan açık kaynaklı altyapı. (<a href=\"https://expo.dev/privacy\" target=\"_blank\" style=\"color: #10B981;\">Expo Gizlilik Politikası</a>)"
+        ],
+        sec5Title: "Çocukların Gizliliği (COPPA ve Aile Politikası Uyumu)",
+        sec5P1: "FootIQ, her yaştan futbolsever için uygun, aile dostu bir zeka ve mantık oyunudur. <strong>COPPA</strong> kurallarına ve <strong>Google Play Aile Politikası</strong>'na harfiyen uymaktayız:",
+        sec5List: [
+          "13 yaşın altındaki (veya ilgili yasal yaştaki) çocuklardan bilerek ve isteyerek hiçbir kişisel bilgi toplamıyoruz.",
+          "Uygulama içinde çocukları tanımadıkları kişilerle temasa geçirecek sohbet, mesajlaşma veya profil paylaşım özellikleri yoktur.",
+          "Bir ebeveyn veya vasi, çocuğunun bize herhangi bir veri sunduğunu fark ederse <strong>muhammetatmaca79@gmail.com</strong> adresinden bize ulaşabilir; gerekli incelemeler derhal yapılır."
+        ],
+        sec6Title: "Veri Saklama, Güvenlik ve Silme Hakları",
+        sec6P1: "FootIQ yerel depolama modeliyle çalıştığından verileriniz üzerinde %100 söz hakkına sahipsiniz:",
+        sec6List: [
+          "<strong>Anında Veri Silme:</strong> Cihazınızın <em>Ayarlar &gt; Uygulamalar &gt; FootIQ &gt; Depolama &gt; Verileri Temizle</em> menüsünden veya uygulamayı telefonunuzdan kaldırarak tüm oyun kayıtlarınızı ve skorlarınızı anında ve kalıcı olarak silebilirsiniz.",
+          "<strong>Veri Güvenliği:</strong> Android işletim sisteminin sunduğu Sandbox (kum havuzu) izolasyonu sayesinde FootIQ verilerinize başka uygulamalar erişemez."
+        ],
+        sec7Title: "Yasal Haklarınız (KVKK, GDPR ve CCPA)",
+        sec7P1: "6698 sayılı KVKK ve Avrupa Birliği GDPR düzenlemeleri uyarınca kullanıcılarımız:",
+        sec7List: [
+          "Hakkında herhangi bir veri işlenip işlenmediğini öğrenme,",
+          "Geliştirici konsolundaki olası teşhis izlerinin silinmesini talep etme,",
+          "Cihaz ayarlarından teşhis verisi paylaşımını kapatma hakkına sahiptir."
+        ],
+        sec8Title: "Politika Değişiklikleri",
+        sec8P1: "Gizlilik politikamızı yeni oyun özellikleri veya yasal mevzuat değişiklikleri doğrultusunda güncelleyebiliriz. Her güncelleme bu sayfada 'Yürürlük Tarihi' belirtilerek yayınlanacaktır.",
+        contactTitle: "Sorularınız veya Destek İçin",
+        contactDesc: "Virelonsoft şeffaf ve hızlı iletişime önem verir. Bu politika veya veri güvenliğiyle ilgili her türlü sorunuz için doğrudan bize ulaşabilirsiniz:"
+      }
+    };
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      if (!t) return;
+
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+
+      document.getElementById('badge-compliance').innerHTML = t.badgeCompliance;
+      document.getElementById('hero-title').innerHTML = t.heroTitle;
+      document.getElementById('hero-subtitle').innerHTML = t.heroSubtitle;
+      document.getElementById('meta-developer-label').innerText = t.metaDev;
+      document.getElementById('meta-updated-label').innerText = t.metaUpdated;
+      document.getElementById('meta-contact-label').innerText = t.metaContact;
+
+      document.getElementById('sec-1-title').innerText = t.sec1Title;
+      document.getElementById('sec-1-p1').innerHTML = t.sec1P1;
+      document.getElementById('sec-1-callout').innerHTML = t.sec1Callout;
+
+      document.getElementById('sec-2-title').innerText = t.sec2Title;
+      document.getElementById('sec-2-p1').innerHTML = t.sec2P1;
+      document.getElementById('sec-2-p2').innerHTML = t.sec2P2;
+      renderList('sec-2-list', t.sec2List);
+
+      document.getElementById('sec-3-title').innerText = t.sec3Title;
+      document.getElementById('sec-3-p1').innerHTML = t.sec3P1;
+      renderList('sec-3-list', t.sec3List);
+
+      document.getElementById('sec-4-title').innerText = t.sec4Title;
+      document.getElementById('sec-4-p1').innerHTML = t.sec4P1;
+      renderList('sec-4-list', t.sec4List);
+
+      document.getElementById('sec-5-title').innerText = t.sec5Title;
+      document.getElementById('sec-5-p1').innerHTML = t.sec5P1;
+      renderList('sec-5-list', t.sec5List);
+
+      document.getElementById('sec-6-title').innerText = t.sec6Title;
+      document.getElementById('sec-6-p1').innerHTML = t.sec6P1;
+      renderList('sec-6-list', t.sec6List);
+
+      document.getElementById('sec-7-title').innerText = t.sec7Title;
+      document.getElementById('sec-7-p1').innerHTML = t.sec7P1;
+      renderList('sec-7-list', t.sec7List);
+
+      document.getElementById('sec-8-title').innerText = t.sec8Title;
+      document.getElementById('sec-8-p1').innerHTML = t.sec8P1;
+
+      document.getElementById('contact-title').innerText = t.contactTitle;
+      document.getElementById('contact-desc').innerText = t.contactDesc;
+    }
+
+    function renderList(elementId, items) {
+      const el = document.getElementById(elementId);
+      if (!el) return;
+      el.innerHTML = items.map(item => `<li>${item}</li>`).join('');
+    }
+  </script>
+</body>
+</html>
