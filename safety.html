@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Child Safety Standards & CSAE/CSAM Prevention Policy | SWANPULSE by Virelonsoft</title>
+  <meta name="description" content="Official Child Safety Standards, CSAE/CSAM zero-tolerance policy, in-app reporting procedures, and law enforcement escalation charter for SwanPulse by Virelonsoft.">
+  <meta name="author" content="Virelonsoft">
+  <meta name="contact" content="muhammetatmaca79@gmail.com">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SwanPulse Child Safety Standards & CSAE Prevention">
+  <meta property="og:description" content="Zero-tolerance policy against child sexual abuse and exploitation. Mandatory reporting to NCMEC and international law enforcement authorities.">
+  <meta property="og:site_name" content="SwanPulse by Virelonsoft">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-primary: #0ea5e9;
+      --brand-accent: #38bdf8;
+      --brand-rose: #f43f5e;
+      --brand-emerald: #10b981;
+      --brand-amber: #f59e0b;
+      
+      --bg-canvas: #07090e;
+      --bg-surface: #0e131f;
+      --bg-surface-elevated: #151c2e;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-rose: rgba(244, 63, 94, 0.4);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+
+      --font-body: 'Inter', sans-serif;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'Fira Code', monospace;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, rgba(244, 63, 94, 0.12), rgba(14, 165, 233, 0.1));
+      border: 1px solid var(--border-rose);
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 36px;
+      position: relative;
+    }
+
+    .badge-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: rgba(244, 63, 94, 0.18);
+      color: var(--brand-rose);
+      border: 1px solid rgba(244, 63, 94, 0.4);
+    }
+
+    .law-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: var(--bg-surface-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 14px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      transition: border-color 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--border-medium);
+    }
+
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card-title svg {
+      width: 22px;
+      height: 22px;
+      color: var(--brand-primary);
+    }
+
+    .card-title.danger svg {
+      color: var(--brand-rose);
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 16px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-primary);
+    }
+
+    .highlight-box {
+      background: var(--bg-surface-elevated);
+      border-left: 4px solid var(--brand-rose);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.92rem;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(99, 102, 241, 0.08));
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 36px;
+    }
+
+    .email-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #000;
+      border: 1px solid var(--brand-primary);
+      color: var(--brand-accent);
+      padding: 10px 18px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .email-chip:hover {
+      background: var(--brand-primary);
+      color: #fff;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 48px;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 24px;
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      .card, .header-banner, .contact-box { border: 1px solid #ccc !important; background: #fff !important; color: #000 !important; }
+      p, li, strong { color: #000 !important; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header Banner -->
+  <header class="header-banner">
+    <div class="badge-bar">
+      <span class="status-pill">Zero Tolerance Policy</span>
+      <span class="law-pill">Google Play CSAE Compliant</span>
+      <span class="law-pill">NCMEC CyberTipline Reporting</span>
+      <span class="law-pill">Version 2.4 (September 2026)</span>
+    </div>
+    <h1>Child Safety Standards & CSAE/CSAM Prevention Policy</h1>
+    <p class="subtitle">
+      Official public standards of <strong>Virelonsoft</strong> for <strong>SwanPulse : Social Media</strong>. 
+      This charter articulates our absolute zero-tolerance protocol regarding Child Sexual Abuse Material (CSAM), Child Sexual Exploitation and Abuse (CSAE), grooming prevention, and mandatory escalation to international law enforcement.
+    </p>
+  </header>
+
+  <!-- Section 1: Zero Tolerance -->
+  <section class="card">
+    <h2 class="card-title danger">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+      1. Zero-Tolerance Absolute Prohibition
+    </h2>
+    <p>
+      Virelonsoft maintains a strict, unconditional <strong>zero-tolerance policy</strong> against any form of child sexual abuse, exploitation, grooming, or child sexual abuse material (CSAM/CSAE). Any attempt to create, upload, solicit, distribute, transmit, or facilitate content depicting or referencing the exploitation of minors results in immediate and permanent account termination, cryptographic key revocation, asset purging, and mandatory reporting to criminal authorities.
+    </p>
+    <div class="highlight-box">
+      <strong>Prohibited Conduct Includes:</strong>
+      <ul style="margin-top:8px;">
+        <li>Any photographic, illustrative, digital, AI-generated, or synthetic depictions of child sexual abuse or exploitation.</li>
+        <li>Grooming behaviors, predatory communication, sexualized solicitation of minors, or age-inappropriate contact.</li>
+        <li>Sharing or linking to external domains, forums, or storage buckets hosting illicit or abusive material.</li>
+        <li>Financial exploitation or extortion targeting individuals under the legal age of majority.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 2: In-App Reporting Mechanisms -->
+  <section class="card">
+    <h2 class="card-title">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+      </svg>
+      2. In-App Reporting & Rapid Flagging Mechanisms
+    </h2>
+    <p>
+      SwanPulse equips all users with intuitive, accessible, and confidential reporting channels built directly into every post, profile, and conversation:
+    </p>
+    <ul>
+      <li><strong>Post-Level Reporting:</strong> Users can tap the options menu (three dots) on any pulse, image, or comment and select <em>"Report &gt; Child Safety Concern"</em>.</li>
+      <li><strong>Profile-Level Reporting:</strong> Suspicious accounts can be reported directly from the user profile card.</li>
+      <li><strong>Priority Escalation Queue:</strong> Any report categorized under child safety bypasses standard queues and is instantly flagged as <strong>Severity-1 Emergency</strong>, routed directly to designated safety personnel for immediate human review.</li>
+      <li><strong>Direct Confidential Helpline:</strong> Users, parents, and legal guardians can report emergency concerns directly via email at <a href="mailto:muhammetatmaca79@gmail.com" style="color:var(--brand-accent);">muhammetatmaca79@gmail.com</a>.</li>
+    </ul>
+  </section>
+
+  <!-- Section 3: Moderation & Immediate Action Protocols -->
+  <section class="card">
+    <h2 class="card-title">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+      3. Response Timelines & Enforcement SLA
+    </h2>
+    <p>
+      Upon receiving a notification or flagging an instance of potential CSAE/CSAM:
+    </p>
+    <ol>
+      <li><strong>Immediate Quarantine (&lt; 1 Hour):</strong> The reported content is immediately quarantined from all public and private feeds, and CDN distribution nodes are cleared.</li>
+      <li><strong>Forensic Preservation:</strong> Cryptographic hashes, IP access stamps, and relevant device metadata are preserved in an isolated, encrypted evidentiary vault for law enforcement inspection.</li>
+      <li><strong>Permanent Account Banishment:</strong> The offending account is permanently banned, and hardware device fingerprints are blacklisted to prevent re-registration.</li>
+    </ol>
+  </section>
+
+  <!-- Section 4: Mandatory Law Enforcement & NCMEC Escalation -->
+  <section class="card">
+    <h2 class="card-title danger">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+      4. Mandatory Law Enforcement & NCMEC Reporting
+    </h2>
+    <p>
+      In strict compliance with 18 U.S.C. § 2258A, EU Child Safety Directives, and Turkish Criminal Code (TCK Md. 226):
+    </p>
+    <p>
+      Virelonsoft fulfills all statutory duties to report any identified instances of Child Sexual Abuse Material (CSAM) and child exploitation to the <strong>National Center for Missing &amp; Exploited Children (NCMEC)</strong> via the automated <em>CyberTipline</em> portal. Furthermore, our legal department cooperates proactively with regional and international law enforcement agencies, including INTERPOL, Europol, and local cybercrime directorates (EGM Siber Suçlarla Mücadele).
+    </p>
+  </section>
+
+  <!-- Section 5: Designated Safety Contact -->
+  <section class="contact-box">
+    <h2 class="card-title">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      5. Designated Child Safety & Compliance Officer
+    </h2>
+    <p>
+      In accordance with Google Play Developer Child Safety Standards, Virelonsoft has appointed a designated safety contact knowledgeable in CSAM prevention, reporting protocols, and policy compliance:
+    </p>
+    <p style="margin-bottom:6px;">
+      <strong>Designated Legal Representative:</strong> Virelonsoft Child Protection Desk<br>
+      <strong>Responsible Officer:</strong> Muhammet Atmaca<br>
+      <strong>Dedicated Child Safety Channel:</strong>
+    </p>
+    <a href="mailto:muhammetatmaca79@gmail.com?subject=URGENT%3A%20Child%20Safety%20%26%20CSAE%20Report%20-%20SwanPulse" class="email-chip">
+      muhammetatmaca79@gmail.com
+    </a>
+    <p style="margin-top:14px; font-size:0.85rem; color:var(--text-muted);">
+      This channel is monitored continuously with an emergency response SLA under 24 hours.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Virelonsoft</strong>. SwanPulse : Social Media. All rights reserved.</p>
+    <p>Published in accordance with Google Play Child Safety Standards Policy (CSAE / CSAM Prevention).</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
