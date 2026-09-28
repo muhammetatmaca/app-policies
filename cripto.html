@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Developments // Privacy Policy — ColdPass by VirelonSoft</title>
+  <meta name="description" content="Official Privacy Policy and Sovereign Protocol for ColdPass, developed by VirelonSoft.">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="VirelonSoft">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ColdPass Privacy Policy — VirelonSoft">
+  <meta property="og:description" content="Sovereign, non-custodial Web3 multi-chain pass. Zero telemetry, zero private keys.">
+  <meta property="og:type" content="website">
+
+  <style>
+    /* -------------------------------------------------------------------------- */
+    /* DEVELOPMENTS.MEDIA REPLICA STYLESHEET                                      */
+    /* Modernist Swiss Typography, Massive Titles, Hand-Drawn Diagrams, Dashed Box*/
+    /* -------------------------------------------------------------------------- */
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --muted: #555555;
+      --dim: #888888;
+      --border-color: #000000;
+      --light-border: #e0e0e0;
+      --dashed-border: #000000;
+      --accent: #0052ff;
+      --font-grotesk: "Helvetica Neue", Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "Courier New", Courier, Menlo, monospace;
+      --padding-container: clamp(16px, 4vw, 48px);
+      --content-space: clamp(40px, 8vw, 96px);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      background-color: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-grotesk);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.25;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* DEVELOPMENTS.MEDIA FLOATING MENU BUTTON & OVERLAY                          */
+    /* -------------------------------------------------------------------------- */
+    .button#menu-toggle {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      width: 44px;
+      height: 44px;
+      background: #000000;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-grotesk);
+      font-weight: 700;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 1000;
+      border-radius: 50%;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+      user-select: none;
+    }
+
+    .button#menu-toggle:hover {
+      transform: scale(1.08);
+      background: #222222;
+    }
+
+    .top-right-badge {
+      position: fixed;
+      top: 28px;
+      right: 28px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      z-index: 900;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 6px 12px;
+      border: 1px solid var(--border-color);
+      backdrop-filter: blur(8px);
+    }
+
+    /* Fullscreen Slide-out Menu (Identical to developments.media drawer) */
+    #menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #000000;
+      color: #ffffff;
+      z-index: 950;
+      transform: translateY(-100%);
+      transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+      padding: clamp(32px, 6vw, 80px) clamp(24px, 5vw, 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #menu.open {
+      transform: translateY(0);
+    }
+
+    .menu__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+    }
+
+    .menu__logo-text {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    .menu__close-btn {
+      background: none;
+      border: 1px solid #ffffff;
+      color: #ffffff;
+      font-family: var(--font-mono);
+      padding: 6px 14px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .menu__close-btn:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    .menu__intro {
+      max-width: 760px;
+      font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+      line-height: 1.4;
+      margin-bottom: 48px;
+      color: #e0e0e0;
+    }
+
+    .menu__nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .menu__nav-item {
+      border-top: 1px solid #333333;
+      padding-top: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .menu__nav-item:hover a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .menu__nav-index {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #888888;
+    }
+
+    .menu__nav-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #cccccc;
+      text-transform: uppercase;
+    }
+
+    .menu__footer {
+      border-top: 1px solid #333333;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #888888;
+    }
+
+    /* -------------------------------------------------------------------------- */
+    /* DEVELOPMENTS.MEDIA SECTION INTERVIEW-SUMMARY ARCHITECTURE                  */
+    /* -------------------------------------------------------------------------- */
+    .section--interviews {
+      width: 100%;
+    }
+
+    .section--interview-summary {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: clamp(60px, 8vw, 100px) var(--padding-container);
+      position: relative;
+      border-bottom: 2px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    /* Section index (e.g., 01.) */
+    .interview__index {
+      font-family: var(--font-grotesk);
+      font-size: clamp(14px, 1.8vw, 20px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 4px;
+    }
+
+    /* Section Tagline */
+    .interview__tagline {
+      font-size: clamp(14px, 1.8vw, 22px);
+      font-weight: 400;
+      color: var(--muted);
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+
+    /* Massive Responsive Title (Developments.media flagship style) */
+    .interview__title {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .interview__title .responsive-text {
+      font-size: clamp(3.2rem, 11vw, 8.8rem);
+      font-weight: 900;
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      word-break: break-word;
+    }
+
+    /* The Iconic Hand-Drawn Sketch Box */
+    .interview__drawing {
+      position: relative;
+      display: inline-block;
+      margin: clamp(20px, 3.5vw, 36px) auto;
+      border: 1.5px dashed var(--dashed-border);
+      width: clamp(280px, 48vw, 540px);
+      height: clamp(140px, 24vw, 270px);
+      background: #fafafa;
+    }
+
+    .interview__drawing .drawing-canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 125%;
+      height: 125%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .interview__drawing svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      filter: contrast(1.15);
+    }
+
+    /* Developments Site Name Banner */
+    .interview__sitename {
+      font-size: clamp(2.4rem, 7.5vw, 5.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-transform: uppercase;
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+
+    /* Lower Editorial Summary */
+    .interview__footer {
+      max-width: 62ch;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .interview__footer__description {
+      font-size: clamp(11px, 1.25vw, 15px);
+      font-weight: 700;
+      line-height: 1.45;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+      color: #111111;
+    }
+
+    .interview__footer__date {
+      font-family: var(--font-mono);
+      font-size: clamp(10px, 1.1vw, 13px);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--dim);
+    }
+
+    /* Expand / Read Details Button */
+    .read-clause-btn {
+      margin-top: 18px;
+      display: inline-block;
+      border: 1px solid var(--border-color);
+      padding: 8px 18px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      background: #ffffff;
+      transition: all 0.2s ease;
+    }
+
+    .read-clause-btn:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    /* Clause Expanded Accordion / Panel */
+    .clause-drawer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      width: 100%;
+      max-width: 680px;
+      text-align: left;
+      margin-top: 16px;
+    }
+
+    .clause-drawer.expanded {
+      max-height: 1200px;
+    }
+
+    .clause-drawer-inner {
+      background: #f7f7f7;
+      border-left: 3px solid #000000;
+      padding: 24px;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #222222;
+    }
+
+    .clause-drawer-inner p {
+      margin-bottom: 12px;
+    }
+
+    .clause-drawer-inner ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    .clause-drawer-inner li {
+      margin-bottom: 6px;
+    }
+
+    /* Complete Legal Appendix Section */
+    .section--appendix {
+      background: #000000;
+      color: #ffffff;
+      padding: clamp(60px, 8vw, 120px) var(--padding-container);
+    }
+
+    .appendix-container {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .appendix-header {
+      border-bottom: 1px solid #333333;
+      padding-bottom: 28px;
+      margin-bottom: 48px;
+    }
+
+    .appendix-cat {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #888888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+
+    .appendix-title {
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+    }
+
+    .appendix-clause {
+      border-bottom: 1px solid #222222;
+      padding: 28px 0;
+    }
+
+    .appendix-clause h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+      display: flex;
+      gap: 12px;
+      align-items: baseline;
+    }
+
+    .appendix-clause h3 .clause-num {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: #888888;
+    }
+
+    .appendix-clause p {
+      color: #bbbbbb;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .appendix-clause ul {
+      margin-left: 20px;
+      color: #bbbbbb;
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    .appendix-clause li {
+      margin-bottom: 8px;
+    }
+
+    .appendix-clause a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Contact Card within Appendix */
+    .company-card {
+      background: #111111;
+      border: 1px solid #333333;
+      padding: 32px;
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      font-family: var(--font-mono);
+    }
+
+    .card-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card-label {
+      color: #777777;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    .card-val {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .card-val a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Final Editorial Footer */
+    .site-final-footer {
+      border-top: 1px solid #222222;
+      padding-top: 36px;
+      margin-top: 64px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: #666666;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Hand-drawn ink stroke simulation */
+    .hand-line {
+      stroke: #111111;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .hand-fill {
+      fill: #111111;
+    }
+
+    .hand-text {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      fill: #111111;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body page-type="home" data-id="home">
+
+  <!-- Floating developments.media round menu toggle button -->
+  <div class="button" id="menu-toggle" title="Open Document Index">D</div>
+
+  <div class="top-right-badge">
+    VIRELONSOFT // PRIVACY 2026
+  </div>
+
+  <!-- Fullscreen Developments.media Style Menu Drawer -->
+  <div id="menu">
+    <div class="menu__header">
+      <div class="menu__logo-text">COLDPASS // VIRELONSOFT</div>
+      <button class="menu__close-btn" id="menuClose">CLOSE [✕]</button>
+    </div>
+
+    <div class="menu__intro">
+      ColdPass is a slow-paced, sovereign Web3 multi-chain pass engineered by <strong>VirelonSoft</strong>. It operates entirely on-device, holding zero custodial private keys and executing direct on-chain RPC node queries.
+    </div>
+
+    <div class="menu__nav-grid">
+      <div class="menu__nav-item">
+        <span class="menu__nav-index">SECTION 01.</span>
+        <a href="#sec-01" class="menu__nav-title" onclick="toggleMenu()">Non-Custodial Pass</a>
+      </div>
+      <div class="menu__nav-item">
+        <span class="menu__nav-index">SECTION 02.</span>
+        <a href="#sec-02" class="menu__nav-title" onclick="toggleMenu()">Rotary Dial Switcher</a>
+      </div>
+      <div class="menu__nav-item">
+        <span class="menu__nav-index">SECTION 03.</span>
+        <a href="#sec-03" class="menu__nav-title" onclick="toggleMenu()">Direct RPC & Gas Radar</a>
+      </div>
+      <div class="menu__nav-item">
+        <span class="menu__nav-index">SECTION 04.</span>
+        <a href="#sec-04" class="menu__nav-title" onclick="toggleMenu()">Local Hardware Citadel</a>
+      </div>
+      <div class="menu__nav-item">
+        <span class="menu__nav-index">SECTION 05.</span>
+        <a href="#sec-05" class="menu__nav-title" onclick="toggleMenu()">Zero Telemetry Tracking</a>
+      </div>
+      <div class="menu__nav-item">
+        <span class="menu__nav-index">APPENDIX // 10.</span>
+        <a href="#appendix" class="menu__nav-title" onclick="toggleMenu()">Full Legal Clauses</a>
+      </div>
+    </div>
+
+    <div class="menu__footer">
+      <div>COMPANY: VIRELONSOFT</div>
+      <div>OFFICIAL EMAIL: <a href="mailto:muhammetatmaca79@gmail.com" style="color: #fff; text-decoration: underline;">muhammetatmaca79@gmail.com</a></div>
+      <div>© 2026 VIRELONSOFT. ALL RIGHTS RESERVED.</div>
+    </div>
+  </div>
+
+  <main class="section--interviews">
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 01: NON-CUSTODIAL CITADEL                                         -->
+    <!-- ========================================================================= -->
+    <section class="section section--interview-summary uppercase" id="sec-01">
+      <div class="interview__index">01.</div>
+      <div class="interview__tagline italic">Sovereign Architecture</div>
+      <div class="interview__title">
+        <div class="responsive-text">COLDPASS'S</div>
+      </div>
+
+      <!-- Hand-Drawn Diagram 1: Non-Custodial Citadel -->
+      <div class="interview__drawing">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sketchy Frame Title -->
+            <text x="270" y="24" text-anchor="middle" class="hand-text">A DRAWING OF A CLIENT-SIDE CITADEL</text>
+            
+            <!-- Hand-drawn User Hardware Box -->
+            <path d="M 45,60 C 95,58 175,62 195,60 C 197,95 194,145 195,160 C 145,162 85,158 45,160 C 43,125 46,85 45,60 Z" class="hand-line"/>
+            <text x="120" y="95" text-anchor="middle" class="hand-text">USER DEVICE</text>
+            <text x="120" y="115" text-anchor="middle" class="hand-text">[ 100% LOCAL ]</text>
+            <text x="120" y="135" text-anchor="middle" class="hand-text">ENCRYPTED PASS</text>
+
+            <!-- Hand-drawn Arrow to Local Storage -->
+            <path d="M 195,110 C 230,108 245,112 270,110" class="hand-line"/>
+            <path d="M 260,103 L 272,110 L 260,117" class="hand-line"/>
+
+            <!-- Hand-drawn Key & Lock -->
+            <path d="M 285,85 C 315,83 335,87 345,85 C 347,110 344,130 345,135 C 315,137 295,133 285,135 Z" class="hand-line" stroke-dasharray="4,3"/>
+            <text x="315" y="105" text-anchor="middle" class="hand-text">PUBLIC ID</text>
+            <text x="315" y="122" text-anchor="middle" class="hand-text">ONLY</text>
+
+            <!-- Crossed Arrow to Central Servers (Blocked) -->
+            <path d="M 345,110 C 385,108 405,112 430,110" class="hand-line"/>
+            <line x1="385" y1="95" x2="405" y2="125" class="hand-line" stroke-width="2.5" stroke="#cc0000"/>
+            <line x1="405" y1="95" x2="385" y2="125" class="hand-line" stroke-width="2.5" stroke="#cc0000"/>
+
+            <!-- Central Server Cloud with NO ACCESS -->
+            <path d="M 440,80 C 460,65 500,70 515,90 C 530,110 520,135 505,145 C 485,155 450,150 440,130 Z" class="hand-line"/>
+            <text x="478" y="105" text-anchor="middle" class="hand-text">SERVERS</text>
+            <text x="478" y="123" text-anchor="middle" class="hand-text">ZERO KEYS</text>
+
+            <!-- Lower Hand-drawn Annotations -->
+            <path d="M 120,170 C 140,210 240,225 380,215" class="hand-line"/>
+            <text x="270" y="240" text-anchor="middle" class="hand-text">« FORM FOLLOWS ABSOLUTE CRYPTOGRAPHIC INTEGRITY »</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="interview__sitename">DEVELOPMENTS</div>
+
+      <div class="interview__footer">
+        <div class="interview__footer__description">
+          COLDPASS IS A NON-CUSTODIAL WEB3 PASS. WE NEVER STORE, TRANSMIT, OR ASK FOR PRIVATE KEYS OR SEED PHRASES. ALL YOUR CREDENTIALS REMAIN STRICTLY LOCAL.
+        </div>
+        <div class="interview__footer__date">VIRELONSOFT • PARIS / ISTANBUL, SEP. 29 2026</div>
+        <button class="read-clause-btn" onclick="toggleClause('clause-01')">READ FULL CLAUSE [＋]</button>
+
+        <div class="clause-drawer" id="clause-01">
+          <div class="clause-drawer-inner">
+            <p><strong>Section 1.1 — Absolute Non-Custodial Architecture</strong></p>
+            <p>ColdPass, created by VirelonSoft, is strictly a non-custodial multi-chain identity pass. The software does not provide wallet hosting, asset custody, or off-chain key management services. At no time does VirelonSoft have custody, knowledge, or control over your private keys, seed phrases, or cryptocurrency assets.</p>
+            <p><strong>Section 1.2 — User Sovereignty</strong></p>
+            <p>You remain the sole and exclusive owner of your blockchain addresses. We possess zero administrative backdoor, zero centralized account locks, and zero ability to freeze or access your digital assets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 02: ROTARY DIAL MECHANISM                                         -->
+    <!-- ========================================================================= -->
+    <section class="section section--interview-summary uppercase" id="sec-02">
+      <div class="interview__index">02.</div>
+      <div class="interview__tagline italic">Analog Precision in a Serverless World</div>
+      <div class="interview__title">
+        <div class="responsive-text">ROTARY'S</div>
+      </div>
+
+      <!-- Hand-Drawn Diagram 2: Rotary Chain Switcher -->
+      <div class="interview__drawing">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg">
+            <text x="270" y="24" text-anchor="middle" class="hand-text">A DRAWING OF THE TACTILE ROTARY SWITCHER</text>
+            
+            <!-- Hand-drawn Dial Wheel -->
+            <circle cx="270" cy="135" r="75" class="hand-line"/>
+            <circle cx="270" cy="135" r="62" class="hand-line" stroke-dasharray="3,3"/>
+            <circle cx="270" cy="135" r="28" class="hand-line"/>
+            
+            <!-- Dial tick notches -->
+            <line x1="270" y1="60" x2="270" y2="72" class="hand-line"/>
+            <line x1="270" y1="210" x2="270" y2="198" class="hand-line"/>
+            <line x1="195" y1="135" x2="207" y2="135" class="hand-line"/>
+            <line x1="345" y1="135" x2="333" y2="135" class="hand-line"/>
+            
+            <!-- Chain Labels -->
+            <text x="270" y="140" text-anchor="middle" class="hand-text">ETH</text>
+            <text x="315" y="105" text-anchor="middle" class="hand-text">SOL</text>
+            <text x="315" y="175" text-anchor="middle" class="hand-text">BTC</text>
+            <text x="225" y="105" text-anchor="middle" class="hand-text">BASE</text>
+
+            <!-- Rotation Arrow Left & Right -->
+            <path d="M 180,90 C 160,115 160,155 180,180" class="hand-line" stroke-width="2"/>
+            <path d="M 175,80 L 182,92 L 190,82" class="hand-line"/>
+            <text x="120" y="140" text-anchor="middle" class="hand-text">1:1 HAPTIC</text>
+
+            <path d="M 360,180 C 380,155 380,115 360,90" class="hand-line" stroke-width="2"/>
+            <path d="M 365,190 L 358,178 L 350,188" class="hand-line"/>
+            <text x="430" y="140" text-anchor="middle" class="hand-text">INSTANT QR FLIP</text>
+
+            <text x="270" y="240" text-anchor="middle" class="hand-text">40+ CHAINS ACCESSIBLE IN SECONDS</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="interview__sitename">DEVELOPMENTS</div>
+
+      <div class="interview__footer">
+        <div class="interview__footer__description">
+          ROTATE THE WHEEL TO SEAMLESSLY SWITCH YOUR ACTIVE ON-CHAIN ADDRESS AND RECEIVING QR CODE. ZERO DATA TRANSFERS OR ANALYTICS ARE PRODUCED BY TURNING THE DIAL.
+        </div>
+        <div class="interview__footer__date">VIRELONSOFT • TACTICAL NAVIGATION SPECIFICATION</div>
+        <button class="read-clause-btn" onclick="toggleClause('clause-02')">READ FULL CLAUSE [＋]</button>
+
+        <div class="clause-drawer" id="clause-02">
+          <div class="clause-drawer-inner">
+            <p><strong>Section 2.1 — Ephemeral Interactive Navigation</strong></p>
+            <p>The rotary dial interface is rendered locally on your device hardware using native thread graphics. Rotating through blockchains (Ethereum, Solana, Bitcoin, Base, Polygon, Arbitrum, BSC, Tron) occurs purely in memory. No network packets or behavioral metrics are logged when you select or interact with a chain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 03: LIVE ON-CHAIN RPC & GAS                                       -->
+    <!-- ========================================================================= -->
+    <section class="section section--interview-summary uppercase" id="sec-03">
+      <div class="interview__index">03.</div>
+      <div class="interview__tagline italic">Verifiable On-Chain Truth</div>
+      <div class="interview__title">
+        <div class="responsive-text">ORACLE'S</div>
+      </div>
+
+      <!-- Hand-Drawn Diagram 3: Direct RPC Verification -->
+      <div class="interview__drawing">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg">
+            <text x="270" y="24" text-anchor="middle" class="hand-text">A DRAWING OF DIRECT BLOCKCHAIN RPC VERIFICATION</text>
+            
+            <!-- Device Box -->
+            <rect x="50" y="70" width="130" height="90" rx="4" class="hand-line"/>
+            <text x="115" y="105" text-anchor="middle" class="hand-text">COLDPASS</text>
+            <text x="115" y="125" text-anchor="middle" class="hand-text">[ CLIENT ]</text>
+            <text x="115" y="145" text-anchor="middle" class="hand-text">0.5 GWEI</text>
+
+            <!-- Direct Bi-Directional Arrows -->
+            <path d="M 180,105 C 235,100 295,100 350,105" class="hand-line"/>
+            <path d="M 340,98 L 352,105 L 340,112" class="hand-line"/>
+
+            <path d="M 350,125 C 295,130 235,130 180,125" class="hand-line"/>
+            <path d="M 190,118 L 178,125 L 190,132" class="hand-line"/>
+
+            <text x="265" y="88" text-anchor="middle" class="hand-text">eth_getBalance</text>
+            <text x="265" y="150" text-anchor="middle" class="hand-text">DIRECT RPC // 42 MS</text>
+
+            <!-- Remote RPC Node Box -->
+            <rect x="360" y="70" width="130" height="90" rx="4" class="hand-line"/>
+            <text x="425" y="105" text-anchor="middle" class="hand-text">ETHEREUM / SOL</text>
+            <text x="425" y="125" text-anchor="middle" class="hand-text">PUBLIC NODES</text>
+            <text x="425" y="145" text-anchor="middle" class="hand-text">MAINNET LIVE</text>
+
+            <text x="270" y="235" text-anchor="middle" class="hand-text">NO PROXIES • NO LOGGING • DIRECT ON-CHAIN TELEMETRY</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="interview__sitename">DEVELOPMENTS</div>
+
+      <div class="interview__footer">
+        <div class="interview__footer__description">
+          BALANCES AND ETHEREUM GAS PRICES ARE QUERIED DIRECTLY FROM PUBLIC RPC NODES. VIRELONSOFT OPERATES NO MIDDLEMAN PROXY SERVERS THAT INTERCEPT YOUR QUERIES.
+        </div>
+        <div class="interview__footer__date">VIRELONSOFT • MAINNET ORACLE DATA POLICY</div>
+        <button class="read-clause-btn" onclick="toggleClause('clause-03')">READ FULL CLAUSE [＋]</button>
+
+        <div class="clause-drawer" id="clause-03">
+          <div class="clause-drawer-inner">
+            <p><strong>Section 3.1 — Direct Node Connections</strong></p>
+            <p>When you view your balances or monitor the Gas Radar, ColdPass establishes a direct HTTPS connection from your device to decentralized, public RPC nodes (e.g., Ethereum PublicNode, BlastAPI, Solana Mainnet, Blockstream). VirelonSoft does not operate intermediary servers that log or catalog which addresses are being queried.</p>
+            <p><strong>Section 3.2 — Market Oracle Conversion</strong></p>
+            <p>USD portfolio conversions are fetched via public oracle APIs (such as CoinGecko). These queries carry zero personal identifier headers and contain solely token symbols.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 04: LOCAL HARDWARE CITADEL                                        -->
+    <!-- ========================================================================= -->
+    <section class="section section--interview-summary uppercase" id="sec-04">
+      <div class="interview__index">04.</div>
+      <div class="interview__tagline italic">Zero Tracking, Local Sandboxing</div>
+      <div class="interview__title">
+        <div class="responsive-text">CITADEL'S</div>
+      </div>
+
+      <!-- Hand-Drawn Diagram 4: Local Storage Citadel -->
+      <div class="interview__drawing">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg">
+            <text x="270" y="24" text-anchor="middle" class="hand-text">A DRAWING OF THE LOCAL SANDBOX ENCLAVE</text>
+            
+            <!-- Double Outline Citadel Vault -->
+            <rect x="70" y="60" width="400" height="130" rx="8" class="hand-line" stroke-width="2"/>
+            <rect x="80" y="70" width="380" height="110" rx="6" class="hand-line" stroke-dasharray="6,4"/>
+
+            <!-- Inside Citadel Elements -->
+            <rect x="100" y="88" width="95" height="70" class="hand-line"/>
+            <text x="147" y="118" text-anchor="middle" class="hand-text">ADDRESSES</text>
+            <text x="147" y="135" text-anchor="middle" class="hand-text">( 40+ CHAINS )</text>
+
+            <rect x="220" y="88" width="95" height="70" class="hand-line"/>
+            <text x="267" y="118" text-anchor="middle" class="hand-text">USER NOTES</text>
+            <text x="267" y="135" text-anchor="middle" class="hand-text">& ENS LABELS</text>
+
+            <rect x="340" y="88" width="95" height="70" class="hand-line"/>
+            <text x="387" y="118" text-anchor="middle" class="hand-text">LANG PREF</text>
+            <text x="387" y="135" text-anchor="middle" class="hand-text">( 20 DIALECTS )</text>
+
+            <text x="270" y="235" text-anchor="middle" class="hand-text">STRICTLY INACCESSIBLE OUTSIDE YOUR OPERATING SYSTEM SANDBOX</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="interview__sitename">DEVELOPMENTS</div>
+
+      <div class="interview__footer">
+        <div class="interview__footer__description">
+          YOUR ADDRESSES AND PREFERENCES RESIDE SOLELY IN YOUR PHONE'S APPLICATION ENCLAVE. DELETING THE APP PURGES 100% OF ALL RECORDED DATA PERMANENTLY.
+        </div>
+        <div class="interview__footer__date">VIRELONSOFT • LOCAL RETENTION MANIFESTO</div>
+        <button class="read-clause-btn" onclick="toggleClause('clause-04')">READ FULL CLAUSE [＋]</button>
+
+        <div class="clause-drawer" id="clause-04">
+          <div class="clause-drawer-inner">
+            <p><strong>Section 4.1 — Data Storage Boundary</strong></p>
+            <p>All wallet addresses, custom account titles, profile notes, and language settings are stored exclusively inside the React Native AsyncStorage container on your local device. Because VirelonSoft maintains no centralized database, we cannot recover or view your data, nor can we be subpoenaed for data we do not hold.</p>
+            <p><strong>Section 4.2 — Complete and Instant Erasure</strong></p>
+            <p>Under GDPR and CCPA regulations, you have the right to permanent erasure. You can remove individual addresses inside the app or uninstall ColdPass from your device, which instantaneously removes all files and caches from device storage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 05: DEVELOPER & SOVEREIGNTY COMMITMENT                            -->
+    <!-- ========================================================================= -->
+    <section class="section section--interview-summary uppercase" id="sec-05">
+      <div class="interview__index">05.</div>
+      <div class="interview__tagline italic">Corporate Stewardship</div>
+      <div class="interview__title">
+        <div class="responsive-text">VIRELON'S</div>
+      </div>
+
+      <!-- Hand-Drawn Diagram 5: Company Seal & Handshake -->
+      <div class="interview__drawing">
+        <div class="drawing-canvas">
+          <svg viewBox="0 0 540 270" xmlns="http://www.w3.org/2000/svg">
+            <text x="270" y="24" text-anchor="middle" class="hand-text">A DRAWING OF THE VIRELONSOFT COMPLIANCE SEAL</text>
+            
+            <!-- Sketchy Badge -->
+            <polygon points="270,55 355,80 395,160 355,220 270,230 185,220 145,160 185,80" class="hand-line"/>
+            
+            <!-- Inner Seal -->
+            <circle cx="270" cy="142" r="50" class="hand-line" stroke-dasharray="4,4"/>
+            <text x="270" y="125" text-anchor="middle" class="hand-text">VIRELONSOFT</text>
+            <text x="270" y="145" text-anchor="middle" class="hand-text">NON-CUSTODIAL</text>
+            <text x="270" y="165" text-anchor="middle" class="hand-text">APPROVED</text>
+
+            <text x="120" y="142" text-anchor="middle" class="hand-text">ZERO ADS</text>
+            <text x="420" y="142" text-anchor="middle" class="hand-text">ZERO TRACKERS</text>
+
+            <text x="270" y="255" text-anchor="middle" class="hand-text">DIRECT INQUIRIES: MUHAMMETATMACA79@GMAIL.COM</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="interview__sitename">DEVELOPMENTS</div>
+
+      <div class="interview__footer">
+        <div class="interview__footer__description">
+          VIRELONSOFT COMMITS TO COMPLETE FINANCIAL TRANSPARENCY, ZERO ADVERTISING SDKS, AND ZERO USER TRACKING IN ALL CURRENT AND FUTURE SOFTWARE RELEASES.
+        </div>
+        <div class="interview__footer__date">VIRELONSOFT • LEGAL CONTACT: MUHAMMETATMACA79@GMAIL.COM</div>
+        <a href="#appendix" class="read-clause-btn">READ COMPLETE LEGAL APPENDIX [↓]</a>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- SECTION 06: COMPLETE STATUTORY LEGAL APPENDIX                             -->
+    <!-- ========================================================================= -->
+    <section class="section section--appendix" id="appendix">
+      <div class="appendix-container">
+        
+        <div class="appendix-header">
+          <div class="appendix-cat">STATUTORY LEGAL CODE // GOOGLE PLAY & APPLE COMPLIANCE</div>
+          <h2 class="appendix-title">FULL PRIVACY POLICY</h2>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">01.</span> Scope & Purpose</h3>
+          <p>This Privacy Policy describes the policies and procedures of <strong>VirelonSoft</strong> regarding the collection, storage, and handling of information when you use the <strong>ColdPass</strong> mobile application on iOS and Android operating systems.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">02.</span> Non-Custodial Nature & Cryptographic Keys</h3>
+          <p>ColdPass does not generate, import, or store private keys, mnemonics, or recovery seeds. The application functions exclusively as an index and display pass for publicly verifiable blockchain wallet addresses. VirelonSoft has no technical access to any user assets.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">03.</span> Information We Do Not Collect</h3>
+          <p>We do not collect: legal names, physical addresses, email addresses, phone numbers, IP addresses, location data (GPS), device identifiers (IDFA/AAID), or analytical tracking events.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">04.</span> On-Device Storage</h3>
+          <p>User-provided public addresses and profile labels are stored locally in sandbox storage via React Native <code>AsyncStorage</code>. No remote server backup is established by VirelonSoft.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">05.</span> Blockchain & RPC Communications</h3>
+          <p>To provide real-time token balances and gas prices in Gwei, ColdPass transmits read-only JSON-RPC requests directly to decentralized public blockchain endpoints. These requests do not pass through VirelonSoft servers.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">06.</span> Third-Party Libraries & SDKs</h3>
+          <p>ColdPass does not embed third-party advertising SDKs, behavioral analytics suites, or telemetry trackers. Open-source libraries are audited to ensure no unwanted telemetry is introduced.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">07.</span> User Rights (GDPR & CCPA)</h3>
+          <p>You have the absolute right to view, modify, and delete your data at any time. Because data is stored on-device, deleting the application permanently and irreversibly erases all local data.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">08.</span> Children's Privacy</h3>
+          <p>ColdPass is not directed at children under 13. We do not knowingly collect personal data from minors.</p>
+        </div>
+
+        <div class="appendix-clause">
+          <h3><span class="clause-num">09.</span> Policy Updates</h3>
+          <p>We reserve the right to revise this policy to reflect application enhancements. Updates are published directly on this official page with an updated effective date.</p>
+        </div>
+
+        <div class="company-card">
+          <div class="card-item">
+            <span class="card-label">DEVELOPER COMPANY</span>
+            <span class="card-val">VirelonSoft</span>
+          </div>
+          <div class="card-item">
+            <span class="card-label">CONTACT EMAIL</span>
+            <span class="card-val"><a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a></span>
+          </div>
+          <div class="card-item">
+            <span class="card-label">APPLICATION NAME</span>
+            <span class="card-val">ColdPass (Web3 ID)</span>
+          </div>
+          <div class="card-item">
+            <span class="card-label">EFFECTIVE DATE</span>
+            <span class="card-val">September 29, 2026</span>
+          </div>
+        </div>
+
+        <div class="site-final-footer">
+          <div>© 2026 VIRELONSOFT. ALL RIGHTS RESERVED.</div>
+          <div>SWISS EDITORIAL ARCHITECTURE • REPLICA OF DEVELOPMENTS.MEDIA</div>
+          <div>INQUIRIES: <a href="mailto:muhammetatmaca79@gmail.com" style="color: #fff; text-decoration: underline;">muhammetatmaca79@gmail.com</a></div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Menu Drawer Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const menuClose = document.getElementById('menuClose');
+    const menu = document.getElementById('menu');
+
+    function toggleMenu() {
+      menu.classList.toggle('open');
+      if (menu.classList.contains('open')) {
+        menuToggle.textContent = '✕';
+      } else {
+        menuToggle.textContent = 'D';
+      }
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+    menuClose.addEventListener('click', toggleMenu);
+
+    // Clause Drawer Accordion
+    function toggleClause(id) {
+      const drawer = document.getElementById(id);
+      if (drawer) {
+        drawer.classList.toggle('expanded');
+      }
+    }
+  </script>
+</body>
+</html>
