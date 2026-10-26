@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası | KPSS Radar - Virelon Soft</title>
+  <style>
+    :root {
+      --bg: #0C0D11;
+      --card-bg: #14151C;
+      --border: #242533;
+      --accent: #E2FD38;
+      --text: #F4F4F6;
+      --text-muted: #9E9EA8;
+      --text-dim: #6B6B78;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+
+    .brand-badge {
+      display: inline-block;
+      background: rgba(226, 253, 56, 0.12);
+      border: 1px solid rgba(226, 253, 56, 0.35);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: -0.8px;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .meta-info {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-top: 36px;
+      margin-bottom: 14px;
+      letter-spacing: -0.4px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 18px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+
+    strong {
+      color: #FFFFFF;
+    }
+
+    .alert-box {
+      background: rgba(226, 253, 56, 0.06);
+      border: 1px solid rgba(226, 253, 56, 0.25);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 24px 0;
+    }
+
+    .alert-box p {
+      color: #E6E6EB;
+      margin-bottom: 0;
+      font-size: 14.5px;
+    }
+
+    .contact-card {
+      background: #191B24;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-top: 30px;
+    }
+
+    .contact-card p {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      margin-top: 48px;
+      padding-top: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand-badge">VİRELON SOFT • RESMÎ GİZLİLİK POLİTİKASI</div>
+      <h1>Gizlilik Politikası (Privacy Policy)</h1>
+      <div class="meta-info">
+        <strong>Uygulama:</strong> KPSS Radar: Kamu İlan Takip (<code>com.virelon.kpss</code>)<br>
+        <strong>Geliştirici:</strong> Virelon Soft<br>
+        <strong>Son Güncelleme:</strong> 26 Ekim 2026
+      </div>
+    </header>
+
+    <div class="alert-box">
+      <p><strong>Yasal Bilgilendirme ve Resmî Sorumluluk Reddi (Disclaimer):</strong><br>
+      KPSS Radar, Virelon Soft tarafından geliştirilmiş bağımsız bir kariyer ve ilan takip platformudur. Türkiye Cumhuriyeti Devleti'nin herhangi bir resmî kurumu, bakanlığı veya resmî organı ile doğrudan kurumsal veya idari bir bağı <strong>bulunmamaktadır</strong>. Uygulamada sunulan tüm kamu alım ve sınav ilanları; Resmî Gazete (resmigazete.gov.tr) ve Cumhurbaşkanlığı Kariyer Kapısı Kamu İlan Platformu (kamuilan.sbb.gov.tr) gibi herkese açık kamu kaynaklarından derlenmektedir.</p>
+    </div>
+
+    <h2>1. Genel Bakış ve Taahhüdümüz</h2>
+    <p>Virelon Soft ("Şirket", "biz" veya "bize") olarak, <strong>KPSS Radar: Kamu İlan Takip</strong> mobil uygulamasını kullanan adayların ve kullanıcıların gizliliğine en üst düzeyde saygı duyuyoruz. Bu Gizlilik Politikası metni; 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) ve Google Play Geliştirici Programı Politikaları gereğince kullanıcı haklarını ve veri işleme sınırlarını şeffaf bir şekilde açıklamak üzere hazırlanmıştır.</p>
+
+    <h2>2. Toplanan Veriler ve Kullanım Amacı</h2>
+    <p>KPSS Radar, kullanıcı dostu ve gizlilik odaklı bir mimariyle tasarlanmıştır. Uygulamanın temel işlevlerini yerine getirmek amacıyla yalnızca aşağıdaki veriler işlenir:</p>
+    <ul>
+      <li><strong>Yerel Tercihler ve KPSS Puanları:</strong> Uygulama içerisinde filtreleme yapabilmeniz amacıyla girdiğiniz KPSS puanları (P3, P93, P94) ve mezuniyet durumunuz (Lisans, Ön Lisans, Ortaöğretim) <strong>yalnızca cihazınızın yerel hafızasında (AsyncStorage)</strong> saklanır. Bu veriler harici herhangi bir sunucuya veya üçüncü tarafa iletilmez.</li>
+      <li><strong>Takip Listesi (Yer İmleri):</strong> Kaydettiğiniz kamu ilanları yerel cihaz belleğinde tutulur; böylece çevrimdışı olsanız dahi son başvuru tarihlerini ve sayaçları takip edebilirsiniz.</li>
+      <li><strong>Cihaz Bildirim İzni:</strong> İlanların son başvuru tarihleri yaklaşırken hatırlatıcı alabilmeniz ve Resmî Gazete gece bülteninden haberdar olabilmeniz için cihazınızın yerel bildirim sistemi (Local Notifications) kullanılır.</li>
+    </ul>
+
+    <h2>3. Üçüncü Taraflar ve Harici Bağlantılar</h2>
+    <p>Uygulama içerisinde her kamu ilanına ait resmî kılavuz (PDF) ve resmî e-Devlet başvuru portalı bağlantıları yer almaktadır. Bir bağlantıya tıklayarak harici resmî portallara (örneğin <code>kariyerkapisi.cbiko.gov.tr</code> veya ilgili bakanlığın resmî web sitesi) yönlendirildiğinizde, ilgili kurumların kendi gizlilik ve kullanım politikaları geçerli olur. Harici kurum sitelerinin veri işleme süreçlerinden Virelon Soft sorumlu tutulamaz.</p>
+
+    <h2>4. Çerezler ve İzleyiciler (Cookies & Tracking)</h2>
+    <p>KPSS Radar uygulaması kullanıcıları profillemez, kişiselleştirilmiş reklam hedeflemesi amacıyla üçüncü taraf reklam ağlarıyla gizli kimlik (Advertising ID) paylaşmaz ve sahte tıklama izleyicileri barındırmaz.</p>
+
+    <h2>5. Veri Güvenliği ve Saklama Süresi</h2>
+    <p>Uygulamada tutulan tüm kullanıcı tercihleri cihazınızın güvenli yerel depolama alanında şifreli olarak barındırılır. Uygulamayı sildiğinizde veya cihaz ayarlarından uygulama verilerini temizlediğinizde tüm yerel tercihleriniz kalıcı olarak imha edilir.</p>
+
+    <h2>6. Çocukların Gizliliği</h2>
+    <p>Uygulamamız kamu personeli ve memuriyet sınavlarına hazırlanan 18 yaş ve üzeri yetişkin kullanıcıları hedeflemektedir. 13 yaşından küçük çocuklara ait herhangi bir kişisel veri bilerek toplanmaz veya işlenmez.</p>
+
+    <h2>7. Haklarınız ve İletişim</h2>
+    <p>KVKK'nın 11. maddesi ve GDPR kapsamındaki haklarınız uyarınca; verilerinizin işlenip işlenmediğini öğrenme, silinmesini veya güncellenmesini talep etme hakkına sahipsiniz.</p>
+
+    <div class="contact-card">
+      <p><strong>Geliştirici & Veri Sorumlusu:</strong> Virelon Soft</p>
+      <p><strong>Resmî İletişim E-Posta:</strong> <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a></p>
+      <p><strong>Web & Portfolyo:</strong> <a href="https://virelon.com" target="_blank">virelon.com</a></p>
+      <p><strong>Paket Tanımlayıcı:</strong> <code>com.virelon.kpss</code></p>
+    </div>
+
+    <footer>
+      &copy; 2026 Virelon Soft. Tüm hakları saklıdır.
+    </footer>
+  </div>
+
+</body>
+</html>
