@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası · Vitray: Color by Number</title>
+<meta name="description" content="Vitray: Color by Number gizlilik politikası. Virelonsoft. / Privacy policy for Vitray: Color by Number by Virelonsoft.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0F1115">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#0F1115; --surface:#171A20; --raised:#20242C; --ink:#ECEEF2; --muted:#A2A9B5;
+  --outline:#2C313B; --lead:#05060A;
+  --ruby:#C2463C; --gold:#E8B04A; --cobalt:#2463B8; --sky:#3F8FD8; --teal:#2C9BA8; --jade:#3FA37C; --violet:#8A55C9; --amber:#E27A3F;
+  --glow:rgba(255,236,200,.10);
+  --maxw:1080px;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --ground:#E9EAEC; --surface:#F4F5F6; --raised:#FFFFFF; --ink:#15181D; --muted:#545B67; --outline:#CDD2D8; --lead:#1B1E24;
+    --glow:rgba(255,220,160,.25); --accent-ink:#9A6512;
+  }
+}
+:root[data-theme="light"]{
+  --ground:#E9EAEC; --surface:#F4F5F6; --raised:#FFFFFF; --ink:#15181D; --muted:#545B67; --outline:#CDD2D8; --lead:#1B1E24;
+  --glow:rgba(255,220,160,.25); --accent-ink:#9A6512;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+a{color:inherit; text-decoration-color:var(--gold); text-underline-offset:3px}
+a:hover{text-decoration-thickness:2px}
+
+/* ---------- vitray başlık ---------- */
+.hero{position:relative; overflow:hidden; isolation:isolate; border-bottom:1px solid var(--outline)}
+.hero svg.glass{position:absolute; inset:0; width:100%; height:100%; z-index:-2; opacity:.95}
+.hero::after{ /* camın ardındaki ışık, metni okunur kılan karartma */
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:
+    radial-gradient(60% 80% at 78% 30%, var(--glow), transparent 70%),
+    linear-gradient(90deg, var(--ground) 0%, color-mix(in srgb, var(--ground) 88%, transparent) 38%, color-mix(in srgb, var(--ground) 20%, transparent) 75%, transparent 100%);
+}
+.hero-inner{max-width:var(--maxw); margin:0 auto; padding:28px 24px 72px}
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:64px}
+.brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px}
+.brand .mark{width:40px; height:40px; border-radius:11px; overflow:hidden; box-shadow:0 0 0 1px rgba(255,255,255,.08), 0 6px 22px rgba(0,0,0,.35)}
+.brand small{display:block; font-weight:400; color:var(--muted); font-size:13px; line-height:1.2}
+.lang{display:inline-flex; padding:4px; border-radius:999px; background:color-mix(in srgb, var(--surface) 85%, transparent); border:1px solid var(--outline); backdrop-filter:blur(8px)}
+.lang button{all:unset; cursor:pointer; padding:7px 14px; border-radius:999px; font-size:14px; font-weight:600; color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink); color:var(--ground)}
+.lang button:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+.eyebrow{display:inline-flex; color:var(--accent-ink, var(--gold)); align-items:center; gap:8px; font-size:13px; font-weight:600; letter-spacing:.12em; text-transform:uppercase}
+.eyebrow::before{content:""; width:22px; height:2px; background:currentColor; border-radius:2px}
+h1{font-size:clamp(40px, 7vw, 76px); line-height:1.02; margin:14px 0 18px; font-weight:800; letter-spacing:-.02em; max-width:12ch}
+.lede{font-size:clamp(17px, 2.2vw, 20px); color:var(--muted); max-width:52ch; margin:0}
+.meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.chip{display:inline-flex; align-items:center; gap:8px; padding:8px 14px; border-radius:999px; background:color-mix(in srgb, var(--surface) 82%, transparent); border:1px solid var(--outline); font-size:14px; backdrop-filter:blur(8px)}
+.chip i{width:8px; height:8px; border-radius:2px 2px 0 0; display:inline-block}
+
+/* ---------- özet camlar ---------- */
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
+.panes{display:grid; grid-template-columns:repeat(4, 1fr); gap:14px; margin:-40px 0 56px; position:relative}
+.pane{
+  position:relative; background:var(--surface); border:1px solid var(--outline);
+  border-radius:120px 120px 14px 14px / 90px 90px 14px 14px; padding:56px 18px 20px; text-align:center; overflow:hidden;
+  box-shadow:0 20px 40px -24px rgba(0,0,0,.5);
+}
+.pane::before{ /* camın rengi */
+  content:""; position:absolute; left:50%; top:16px; width:44px; height:52px; transform:translateX(-50%);
+  border-radius:22px 22px 6px 6px; background:var(--c); box-shadow:0 0 0 3px var(--lead), 0 0 28px color-mix(in srgb, var(--c) 55%, transparent);
+}
+.pane b{display:block; margin-top:20px; font-size:16px; line-height:1.3}
+.pane span{display:block; color:var(--muted); font-size:14px; line-height:1.45; margin-top:6px}
+
+/* ---------- gövde ---------- */
+.layout{display:grid; grid-template-columns:240px 1fr; gap:48px; align-items:start; padding-bottom:40px}
+nav.toc{position:sticky; top:24px; font-size:14px}
+nav.toc p{margin:0 0 10px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:600}
+nav.toc ol{list-style:none; margin:0; padding:0; counter-reset:t; border-left:1px solid var(--outline)}
+nav.toc li{counter-increment:t}
+nav.toc a{display:flex; gap:10px; padding:7px 12px; text-decoration:none; color:var(--muted); border-left:2px solid transparent; margin-left:-1px}
+nav.toc a::before{content:counter(t, decimal-leading-zero); font-variant-numeric:tabular-nums; opacity:.6}
+nav.toc a:hover, nav.toc a.on{color:var(--ink); border-left-color:var(--gold)}
+article section{scroll-margin-top:24px; padding:34px 0; border-top:1px solid var(--outline)}
+article section:first-child{border-top:0; padding-top:0}
+h2{font-size:clamp(24px, 3vw, 30px); line-height:1.2; margin:0 0 14px; letter-spacing:-.01em; display:flex; align-items:center; gap:14px}
+h2 .n{flex:none; width:34px; height:40px; border-radius:17px 17px 5px 5px; display:grid; place-items:center; font-size:15px; font-weight:700; color:#fff; background:var(--c, var(--cobalt)); box-shadow:0 0 0 2.5px var(--lead)}
+h3{font-size:18px; margin:22px 0 6px}
+p{margin:0 0 12px}
+ul.list{margin:8px 0 14px; padding:0; list-style:none}
+ul.list li{position:relative; padding-left:26px; margin:8px 0}
+ul.list li::before{content:""; position:absolute; left:4px; top:.55em; width:10px; height:12px; border-radius:5px 5px 2px 2px; background:var(--c, var(--gold)); box-shadow:0 0 0 2px var(--lead)}
+.note{background:var(--surface); border:1px solid var(--outline); border-radius:16px; padding:16px 18px; margin:16px 0; color:var(--muted); font-size:15.5px}
+.note strong{color:var(--ink)}
+table{width:100%; border-collapse:separate; border-spacing:0; margin:12px 0 6px; font-size:15px; background:var(--surface); border:1px solid var(--outline); border-radius:16px; overflow:hidden}
+th, td{text-align:left; padding:12px 14px; vertical-align:top; border-bottom:1px solid var(--outline)}
+th{font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:600; background:var(--raised)}
+tr:last-child td{border-bottom:0}
+td:nth-child(-n+2){font-weight:600; white-space:nowrap}
+.contact{
+  display:grid; grid-template-columns:1fr auto; gap:20px; align-items:center; margin:8px 0 0;
+  padding:26px; border-radius:22px; background:
+  linear-gradient(135deg, color-mix(in srgb, var(--cobalt) 26%, var(--surface)), color-mix(in srgb, var(--violet) 18%, var(--surface)));
+  border:1px solid var(--outline);
+}
+.contact b{font-size:20px; display:block}
+.contact span{color:var(--muted)}
+.btn{display:inline-flex; align-items:center; gap:10px; padding:13px 20px; border-radius:14px; background:var(--ink); color:var(--ground); font-weight:700; text-decoration:none; white-space:nowrap}
+.btn:hover{transform:translateY(-1px)}
+footer{border-top:1px solid var(--outline); padding:28px 24px 40px; text-align:center; color:var(--muted); font-size:14px}
+footer .strip{display:flex; justify-content:center; gap:6px; margin-bottom:14px}
+footer .strip i{width:18px; height:22px; border-radius:9px 9px 3px 3px; box-shadow:0 0 0 2px var(--lead)}
+
+html[lang="tr"] [data-l="en"], html[lang="en"] [data-l="tr"]{display:none !important}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr; gap:8px}
+  nav.toc{position:static; margin-bottom:12px}
+  nav.toc ol{display:flex; flex-wrap:wrap; gap:6px; border:0}
+  nav.toc a{border:1px solid var(--outline); border-radius:999px; padding:6px 12px; margin:0}
+  nav.toc a.on{border-color:var(--gold)}
+  .panes{grid-template-columns:repeat(2, 1fr)}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .hero-inner{padding:20px 16px 64px}
+  .wrap{padding:0 16px}
+  .topbar{margin-bottom:44px}
+  .brand small{display:none}
+  .panes{gap:10px}
+  .pane{padding:52px 12px 16px}
+  .contact{grid-template-columns:1fr}
+  td:nth-child(-n+2){white-space:normal}
+  .hero svg.glass{opacity:.55}
+  .hero::after{background:linear-gradient(180deg, color-mix(in srgb, var(--ground) 70%, transparent), color-mix(in srgb, var(--ground) 88%, transparent))}
+}
+@media print{
+  .lang, nav.toc, .hero svg.glass{display:none}
+    body{background:#fff; color:#000}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <!-- Vitray zemin: kurşun derzli cam parçaları -->
+  <svg class="glass" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .06 0"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+      <radialGradient id="sun" cx="78%" cy="32%" r="55%"><stop offset="0" stop-color="#fff3d6" stop-opacity=".55"/><stop offset="1" stop-color="#fff3d6" stop-opacity="0"/></radialGradient>
+    </defs>
+    <g stroke="#05060A" stroke-width="7" stroke-linejoin="round">
+      <polygon points="560,0 700,0 660,120 560,90" fill="#1E3F82"/>
+      <polygon points="700,0 860,0 820,110 660,120" fill="#2463B8"/>
+      <polygon points="860,0 1010,0 980,130 820,110" fill="#3F8FD8"/>
+      <polygon points="1010,0 1200,0 1200,150 980,130" fill="#1E3F82"/>
+      <polygon points="560,90 660,120 640,250 540,230" fill="#2C9BA8"/>
+      <polygon points="660,120 820,110 800,230 640,250" fill="#8A55C9"/>
+      <polygon points="820,110 980,130 950,260 800,230" fill="#C2463C"/>
+      <polygon points="980,130 1200,150 1200,300 950,260" fill="#2463B8"/>
+      <polygon points="540,230 640,250 620,380 520,370" fill="#1E3F82"/>
+      <polygon points="640,250 800,230 790,360 620,380" fill="#E8B04A"/>
+      <polygon points="800,230 950,260 940,390 790,360" fill="#E27A3F"/>
+      <polygon points="950,260 1200,300 1200,420 940,390" fill="#3FA37C"/>
+      <polygon points="520,370 620,380 600,520 500,520" fill="#2C9BA8"/>
+      <polygon points="620,380 790,360 780,520 600,520" fill="#2463B8"/>
+      <polygon points="790,360 940,390 930,520 780,520" fill="#8A55C9"/>
+      <polygon points="940,390 1200,420 1200,520 930,520" fill="#1E3F82"/>
+      <!-- lale motifi -->
+      <path d="M865 150 L905 210 L945 150 L985 210 L1020 165 L1012 260 L975 320 L835 320 L798 260 L790 165 L825 210 Z" fill="#C2463C"/>
+      <path d="M905 170 Q905 250 905 315 Q880 250 905 170 Z M905 170 Q930 250 905 315" fill="#E8B04A"/>
+      <path d="M902 320 L908 320 L908 470 L902 470 Z" fill="#3FA37C"/>
+      <path d="M900 440 Q820 420 790 360 Q860 360 900 430 Z" fill="#3FA37C"/>
+      <path d="M910 440 Q990 420 1020 360 Q950 360 910 430 Z" fill="#2E7F5E"/>
+      <path d="M0 0 H560 L540 230 L520 520 H0 Z" fill="#14171d" stroke="none"/>
+    </g>
+    <rect width="1200" height="520" fill="url(#sun)"/>
+    <rect width="1200" height="520" filter="url(#grain)"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="topbar">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" fill="#1E3F82"/>
+          <g stroke="#05060A" stroke-width="1.6"><path d="M0 14 L14 10 L22 0 M14 10 L18 24 L0 28 M18 24 L40 20 M22 0 L28 12 L40 8 M28 12 L18 24 M18 24 L22 40 M30 28 L40 30 M18 24 L30 28 L28 40" fill="none"/></g>
+          <path d="M13 12 L17 17 L20 11 L23 17 L27 12 L26 20 L23 25 L17 25 L14 20 Z" fill="#C2463C" stroke="#05060A" stroke-width="1.2"/>
+          <path d="M19.4 25 h1.2 v10 h-1.2 Z" fill="#3FA37C"/>
+        </svg>
+        <div>Vitray: Color by Number<small>Virelonsoft</small></div>
+      </div>
+      <div class="lang" role="group" aria-label="Dil / Language">
+        <button type="button" data-set="tr" aria-pressed="true">TR</button>
+        <button type="button" data-set="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+
+    <span class="eyebrow"><span data-l="tr">Gizlilik Politikası</span><span data-l="en">Privacy Policy</span></span>
+    <h1><span data-l="tr">Camların ardında saklı bir şey yok.</span><span data-l="en">Nothing hidden behind the glass.</span></h1>
+    <p class="lede">
+      <span data-l="tr">Vitray hesap istemez. Boyamaların, serin ve ayarların yalnızca telefonunda durur. Uygulama ücretsizdir ve Google AdMob ile reklam gösterir; bu sayfa hangi verinin neden işlendiğini açıkça anlatır.</span>
+      <span data-l="en">Vitray needs no account. Your paintings, streak and settings stay on your phone. The app is free and shows ads through Google AdMob; this page explains clearly what data is processed and why.</span>
+    </p>
+    <div class="meta">
+      <span class="chip"><i style="background:var(--gold)"></i><span data-l="tr">Yürürlük: 4 Kasım 2026</span><span data-l="en">Effective: 4 November 2026</span></span>
+      <span class="chip"><i style="background:var(--sky)"></i>com.virelon.paintvitray</span>
+      <span class="chip"><i style="background:var(--jade)"></i>Android</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="panes" aria-label="Özet / Summary">
+    <div class="pane" style="--c:var(--jade)"><b data-l="tr">Hesap yok</b><b data-l="en">No account</b><span data-l="tr">Ad, e-posta veya şifre istemeyiz.</span><span data-l="en">We never ask for a name, email or password.</span></div>
+    <div class="pane" style="--c:var(--sky)"><b data-l="tr">Cihazda kalır</b><b data-l="en">Stays on device</b><span data-l="tr">İlerlemen sunucularımıza gönderilmez.</span><span data-l="en">Your progress is never sent to our servers.</span></div>
+    <div class="pane" style="--c:var(--gold)"><b data-l="tr">Reklam: AdMob</b><b data-l="en">Ads: AdMob</b><span data-l="tr">Reklam kimliği reklam sunmak için kullanılır.</span><span data-l="en">The advertising ID is used to serve ads.</span></div>
+    <div class="pane" style="--c:var(--ruby)"><b data-l="tr">Seçim senin</b><b data-l="en">Your choice</b><span data-l="tr">İzinleri ve reklam tercihini değiştirebilirsin.</span><span data-l="en">Change permissions and ad choices any time.</span></div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="İçindekiler / Contents">
+      <p data-l="tr">İçindekiler</p><p data-l="en">Contents</p>
+      <ol>
+        <li><a href="#kim"><span data-l="tr">Biz kimiz</span><span data-l="en">Who we are</span></a></li>
+        <li><a href="#cihaz"><span data-l="tr">Cihazda tutulanlar</span><span data-l="en">Stored on your device</span></a></li>
+        <li><a href="#reklam"><span data-l="tr">Reklamlar</span><span data-l="en">Advertising</span></a></li>
+        <li><a href="#izin"><span data-l="tr">İzinler</span><span data-l="en">Permissions</span></a></li>
+        <li><a href="#paylasim"><span data-l="tr">Paylaşım ve aktarım</span><span data-l="en">Sharing and transfers</span></a></li>
+        <li><a href="#cocuk"><span data-l="tr">Çocuklar</span><span data-l="en">Children</span></a></li>
+        <li><a href="#haklar"><span data-l="tr">Hakların</span><span data-l="en">Your rights</span></a></li>
+        <li><a href="#guvenlik"><span data-l="tr">Güvenlik ve saklama</span><span data-l="en">Security and retention</span></a></li>
+        <li><a href="#degisiklik"><span data-l="tr">Değişiklikler</span><span data-l="en">Changes</span></a></li>
+        <li><a href="#iletisim"><span data-l="tr">İletişim</span><span data-l="en">Contact</span></a></li>
+      </ol>
+    </nav>
+
+    <article>
+      <section id="kim" style="--c:var(--cobalt)">
+        <h2><span class="n">1</span><span data-l="tr">Biz kimiz</span><span data-l="en">Who we are</span></h2>
+        <p data-l="tr"><strong>Vitray: Color by Number</strong> (paket adı <code>com.virelon.paintvitray</code>) mobil uygulaması <strong>Virelonsoft</strong> tarafından geliştirilir ve yayımlanır. Bu politikada “biz” Virelonsoft’u, “uygulama” Vitray’i, “sen” uygulamayı kullanan kişiyi ifade eder. Kişisel verilerin işlenmesi bakımından veri sorumlusu Virelonsoft’tur.</p>
+        <p data-l="en"><strong>Vitray: Color by Number</strong> (package <code>com.virelon.paintvitray</code>) is developed and published by <strong>Virelonsoft</strong>. In this policy, “we” means Virelonsoft, “the app” means Vitray, and “you” means the person using it. Virelonsoft is the data controller for any personal data processed through the app.</p>
+      </section>
+
+      <section id="cihaz" style="--c:var(--sky)">
+        <h2><span class="n">2</span><span data-l="tr">Cihazında tutulanlar</span><span data-l="en">What stays on your device</span></h2>
+        <p data-l="tr">Oyunun çalışması için aşağıdaki bilgiler yalnızca telefonunun yerel depolamasında saklanır. Bunlar bize ya da başka bir sunucuya <strong>gönderilmez</strong>:</p>
+        <p data-l="en">To make the game work, the following is saved only in your phone’s local storage. It is <strong>never sent</strong> to us or to any other server:</p>
+        <ul class="list" style="--c:var(--sky)">
+          <li data-l="tr">Boyadığın camlar, bitirdiğin eserler ve bitiş tarihleri</li>
+          <li data-l="en">The panes you painted, works you finished and when</li>
+          <li data-l="tr">Boyama yaptığın günler (seri ve takvim için), günün vitrayı seçimi</li>
+          <li data-l="en">The days you painted (for streaks and the calendar) and the daily window</li>
+          <li data-l="tr">Kullandığın ipucu hakları ve açtığın eserler</li>
+          <li data-l="en">Hints used and works opened</li>
+          <li data-l="tr">Ayarların: ses, müzik, titreşim, dil, hatırlatma saati</li>
+          <li data-l="en">Your settings: sound, music, haptics, language, reminder time</li>
+        </ul>
+        <div class="note" data-l="tr"><strong>Silmek çok kolay:</strong> Ayarlar → “Tüm ilerlemeyi sıfırla” ile ilerlemeni silebilir, uygulamayı kaldırarak bu verilerin tamamını cihazından kaldırabilirsin. Senden hesap ya da kimlik bilgisi almadığımız için sunucumuzda silinecek bir kaydın yoktur.</div>
+        <div class="note" data-l="en"><strong>Deleting is easy:</strong> use Settings → “Reset all progress”, or uninstall the app to remove all of this data from your device. Because we collect no account or identity information, there is no record about you on our servers to delete.</div>
+      </section>
+
+      <section id="reklam" style="--c:var(--gold)">
+        <h2><span class="n">3</span><span data-l="tr">Reklamlar (Google AdMob)</span><span data-l="en">Advertising (Google AdMob)</span></h2>
+        <p data-l="tr">Uygulama ücretsizdir ve masraflarını reklamlarla karşılar. Reklamları <strong>Google AdMob</strong> (Google LLC / Google Ireland Ltd.) sunar. Uygulamada üç tür reklam vardır: ekranın altında sabit bir banner, bir eseri ilk açtığında ve bitirdiğinde gösterilen geçiş reklamı ve ipucu almak için kendi isteğinle izlediğin ödüllü reklam.</p>
+        <p data-l="en">The app is free and is funded by ads served by <strong>Google AdMob</strong> (Google LLC / Google Ireland Ltd.). There are three kinds: a fixed banner at the bottom of the screen, an interstitial shown when you first open and when you finish a work, and an optional rewarded ad you choose to watch for a hint.</p>
+        <h3 data-l="tr">AdMob’un işleyebileceği veriler</h3>
+        <h3 data-l="en">Data AdMob may process</h3>
+        <table>
+          <thead><tr><th data-l="tr">Veri</th><th data-l="en">Data</th><th data-l="tr">Amaç</th><th data-l="en">Purpose</th></tr></thead>
+          <tbody>
+            <tr><td data-l="tr">Reklam kimliği</td><td data-l="en">Advertising ID</td><td data-l="tr">Reklam sunma, sıklık sınırı, ölçüm; izin verdiysen kişiselleştirme</td><td data-l="en">Serving ads, frequency capping, measurement; personalisation if you consent</td></tr>
+            <tr><td data-l="tr">IP adresi ve yaklaşık konum</td><td data-l="en">IP address, approximate location</td><td data-l="tr">Bölgeye uygun reklam, dolandırıcılık önleme</td><td data-l="en">Region-appropriate ads, fraud prevention</td></tr>
+            <tr><td data-l="tr">Cihaz ve uygulama bilgileri</td><td data-l="en">Device and app information</td><td data-l="tr">Model, işletim sistemi, dil, uygulama sürümü; reklamın doğru gösterilmesi</td><td data-l="en">Model, OS, language, app version; rendering ads correctly</td></tr>
+            <tr><td data-l="tr">Reklam etkileşimleri</td><td data-l="en">Ad interactions</td><td data-l="tr">Gösterim, tıklama, izleme; raporlama ve ödül doğrulama</td><td data-l="en">Impressions, clicks, views; reporting and reward verification</td></tr>
+          </tbody>
+        </table>
+        <p data-l="tr">Bu veriler Google’ın kendi gizlilik politikasına tabidir: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a> ve <a href="https://policies.google.com/technologies/ads" rel="noopener">Google reklamları nasıl kullanır</a>.</p>
+        <p data-l="en">This data is governed by Google’s own policy: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener">how Google uses data in ads</a>.</p>
+        <h3 data-l="tr">İzin ve tercihlerin</h3>
+        <h3 data-l="en">Consent and your choices</h3>
+        <ul class="list" style="--c:var(--gold)">
+          <li data-l="tr">Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre’de, uygulama ilk açılışta Google’ın izin formunu (UMP) gösterir. İzin vermezsen yalnızca <strong>kişiselleştirilmemiş</strong> reklamlar istenir.</li>
+          <li data-l="en">In the EEA, UK and Switzerland the app shows Google’s consent form (UMP) on first launch. If you don’t consent, only <strong>non-personalised</strong> ads are requested.</li>
+          <li data-l="tr">Android’de <em>Ayarlar → Google → Reklamlar</em> bölümünden reklam kimliğini sıfırlayabilir veya silebilirsin.</li>
+          <li data-l="en">On Android, go to <em>Settings → Google → Ads</em> to reset or delete your advertising ID.</li>
+          <li data-l="tr">Ödüllü reklam isteğe bağlıdır; ilk 3 ipucu her eserde ücretsizdir.</li>
+          <li data-l="en">Rewarded ads are optional; the first 3 hints in every work are free.</li>
+        </ul>
+      </section>
+
+      <section id="izin" style="--c:var(--teal)">
+        <h2><span class="n">4</span><span data-l="tr">İzinler</span><span data-l="en">Permissions</span></h2>
+        <table>
+          <thead><tr><th data-l="tr">İzin</th><th data-l="en">Permission</th><th data-l="tr">Ne zaman, neden</th><th data-l="en">When and why</th></tr></thead>
+          <tbody>
+            <tr><td data-l="tr">Bildirimler</td><td data-l="en">Notifications</td><td data-l="tr">Yalnızca günlük hatırlatmayı açarsan istenir. Hatırlatmalar telefonunda planlanır; sunucudan gönderilmez.</td><td data-l="en">Only if you turn on the daily reminder. Reminders are scheduled on your phone, not sent from a server.</td></tr>
+            <tr><td data-l="tr">Fotoğraf / galeri</td><td data-l="en">Photos / gallery</td><td data-l="tr">Yalnızca bitirdiğin bir eseri galerine kaydetmek istediğinde, kaydetmek için. Galerindeki fotoğraflar okunmaz.</td><td data-l="en">Only when you save a finished work to your gallery, to write that image. Your photos are never read.</td></tr>
+            <tr><td data-l="tr">İnternet</td><td data-l="en">Internet</td><td data-l="tr">Reklamların yüklenmesi için. Boyama ilerlemen internete gönderilmez.</td><td data-l="en">To load ads. Your painting progress is never uploaded.</td></tr>
+            <tr><td data-l="tr">Titreşim</td><td data-l="en">Vibration</td><td data-l="tr">Boyarken dokunsal geri bildirim. Ayarlardan kapatılabilir.</td><td data-l="en">Haptic feedback while painting. Can be turned off in settings.</td></tr>
+            <tr><td data-l="tr">Reklam kimliği</td><td data-l="en">Advertising ID</td><td data-l="tr">AdMob reklamları için (bkz. Bölüm 3).</td><td data-l="en">For AdMob ads (see section 3).</td></tr>
+          </tbody>
+        </table>
+        <p data-l="tr">Kamera, mikrofon, rehber, hassas konum veya hesap bilgisi gibi izinler <strong>istenmez</strong>. Paylaş özelliği, seçtiğin uygulamaya yalnızca eserin görselini gönderir.</p>
+        <p data-l="en">We do <strong>not</strong> request camera, microphone, contacts, precise location or account access. The share feature sends only the image of your work to the app you choose.</p>
+      </section>
+
+      <section id="paylasim" style="--c:var(--violet)">
+        <h2><span class="n">5</span><span data-l="tr">Paylaşım ve uluslararası aktarım</span><span data-l="en">Sharing and international transfers</span></h2>
+        <p data-l="tr">Kişisel verilerini satmayız, kiralamayız ve pazarlama amacıyla kimseyle paylaşmayız. Verilere erişebilen tek üçüncü taraf, reklamları sunan Google AdMob’dur. Google verileri Türkiye dışındaki (ör. ABD ve AB) sunucularda işleyebilir; bu aktarımlar Google’ın uyguladığı standart sözleşme maddeleri gibi güvencelere tabidir. Yasal bir zorunluluk olursa yetkili makamlarla, yalnızca gerektiği ölçüde bilgi paylaşabiliriz.</p>
+        <p data-l="en">We do not sell, rent or share your personal data for marketing. The only third party that may access data is Google AdMob, which serves the ads. Google may process data on servers outside your country (e.g. in the US and EU) under safeguards such as Standard Contractual Clauses. We may disclose information to authorities only where required by law, and only as far as necessary.</p>
+      </section>
+
+      <section id="cocuk" style="--c:var(--amber)">
+        <h2><span class="n">6</span><span data-l="tr">Çocuklar</span><span data-l="en">Children</span></h2>
+        <p data-l="tr">Vitray herkesin keyifle oynayabileceği bir boyama oyunudur ancak <strong>13 yaşından küçük çocuklara yönelik değildir</strong>. 13 yaşından küçük çocuklardan bilerek kişisel veri toplamayız. Bir çocuğun uygulama üzerinden veri paylaştığını düşünüyorsan bize yaz; gerekli adımları hemen atarız.</p>
+        <p data-l="en">Vitray is a coloring game anyone can enjoy, but it is <strong>not directed at children under 13</strong>. We do not knowingly collect personal data from children under 13. If you believe a child has provided data through the app, contact us and we will act promptly.</p>
+      </section>
+
+      <section id="haklar" style="--c:var(--jade)">
+        <h2><span class="n">7</span><span data-l="tr">Hakların</span><span data-l="en">Your rights</span></h2>
+        <p data-l="tr">Bulunduğun yere göre (ör. Türkiye’de KVKK, Avrupa’da GDPR, Kaliforniya’da CCPA/CPRA) verilerine erişme, düzeltme, silme, işlemeye itiraz etme, işlemeyi kısıtlama ve verdiğin izni geri çekme hakların vardır. Uygulama senden doğrudan kimlik bilgisi almadığı için bu hakların çoğunu kendin, cihazından kullanabilirsin:</p>
+        <p data-l="en">Depending on where you live (e.g. KVKK in Türkiye, GDPR in Europe, CCPA/CPRA in California) you have rights to access, correct, delete, object to or restrict processing of your data, and to withdraw consent. Since the app collects no identity data directly, you can exercise most of these yourself on your device:</p>
+        <ul class="list" style="--c:var(--jade)">
+          <li data-l="tr">İlerlemeni sil: Ayarlar → Tüm ilerlemeyi sıfırla, ya da uygulamayı kaldır.</li>
+          <li data-l="en">Delete progress: Settings → Reset all progress, or uninstall the app.</li>
+          <li data-l="tr">Reklam tercihleri: reklam kimliğini sıfırla/sil; AB’deysen izin formunda seçimini yap.</li>
+          <li data-l="en">Ad choices: reset/delete your advertising ID; in the EU, choose in the consent form.</li>
+          <li data-l="tr">Google’ın tuttuğu reklam verileri için: <a href="https://myadcenter.google.com" rel="noopener">myadcenter.google.com</a>.</li>
+          <li data-l="en">For ad data held by Google: <a href="https://myadcenter.google.com" rel="noopener">myadcenter.google.com</a>.</li>
+        </ul>
+        <p data-l="tr">Başka bir talebin varsa aşağıdaki adresten bize yaz; en geç 30 gün içinde yanıt veririz. Ayrıca bulunduğun ülkedeki veri koruma otoritesine (Türkiye’de Kişisel Verileri Koruma Kurumu) şikâyette bulunma hakkın vardır.</p>
+        <p data-l="en">For any other request, email us at the address below; we reply within 30 days. You also have the right to complain to your local data protection authority.</p>
+      </section>
+
+      <section id="guvenlik" style="--c:var(--ruby)">
+        <h2><span class="n">8</span><span data-l="tr">Güvenlik ve saklama süresi</span><span data-l="en">Security and retention</span></h2>
+        <p data-l="tr">İlerlemen cihazında, Android’in uygulamaya özel korumalı depolamasında durur ve sen silene ya da uygulamayı kaldırana kadar saklanır. Reklam verileri Google’ın saklama politikalarına göre tutulur. Sunucularımızda senin hakkında bir kayıt tutmadığımız için bizim tarafımızda saklanan bir veri yoktur.</p>
+        <p data-l="en">Your progress lives in Android’s app-private storage on your device and is kept until you delete it or uninstall the app. Ad data is retained under Google’s policies. We keep no record about you on our servers, so nothing is stored on our side.</p>
+      </section>
+
+      <section id="degisiklik" style="--c:var(--sky)">
+        <h2><span class="n">9</span><span data-l="tr">Bu politikadaki değişiklikler</span><span data-l="en">Changes to this policy</span></h2>
+        <p data-l="tr">Uygulamaya yeni bir özellik ya da hizmet eklediğimizde bu sayfayı güncelleyebiliriz. Güncel sürüm her zaman bu adreste yayımlanır ve en üstteki yürürlük tarihi değişir. Önemli değişikliklerde uygulama içinde de bilgilendiririz.</p>
+        <p data-l="en">We may update this page when we add features or services. The current version is always published here with a new effective date at the top. For significant changes we will also let you know in the app.</p>
+      </section>
+
+      <section id="iletisim" style="--c:var(--gold)">
+        <h2><span class="n">10</span><span data-l="tr">İletişim</span><span data-l="en">Contact</span></h2>
+        <div class="contact">
+          <div>
+            <b>Virelonsoft</b>
+            <span data-l="tr">Gizlilikle ilgili her soru, talep veya şikâyet için:</span>
+            <span data-l="en">For any privacy question, request or complaint:</span><br>
+            <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a>
+          </div>
+          <a class="btn" href="mailto:muhammetatmaca79@gmail.com?subject=Vitray%20-%20Gizlilik%20%2F%20Privacy">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span data-l="tr">E-posta gönder</span><span data-l="en">Send email</span>
+          </a>
+        </div>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer>
+  <div class="strip" aria-hidden="true">
+    <i style="background:var(--ruby)"></i><i style="background:var(--gold)"></i><i style="background:var(--jade)"></i><i style="background:var(--teal)"></i><i style="background:var(--sky)"></i><i style="background:var(--cobalt)"></i><i style="background:var(--violet)"></i>
+  </div>
+  © 2026 Virelonsoft · Vitray: Color by Number ·
+  <span data-l="tr">Son güncelleme: 4 Kasım 2026</span><span data-l="en">Last updated: 4 November 2026</span>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btns = document.querySelectorAll('.lang button');
+  function set(l){
+    root.lang = l;
+    document.title = l === 'en' ? 'Privacy Policy · Vitray: Color by Number' : 'Gizlilik Politikası · Vitray: Color by Number';
+    btns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.dataset.set === l)); });
+    try { localStorage.setItem('vitray-lang', l); } catch (e) {}
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('vitray-lang'); } catch (e) {}
+  var q = new URLSearchParams(location.search).get('lang');
+  var nav = (navigator.language || '').slice(0, 2).toLowerCase();
+  set(q === 'en' || q === 'tr' ? q : saved || (nav === 'tr' ? 'tr' : 'en'));
+  btns.forEach(function(b){ b.addEventListener('click', function(){ set(b.dataset.set); }); });
+
+  // İçindekiler: görünen bölümü vurgula
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav.toc a'));
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if (e.isIntersecting) links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id); });
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    document.querySelectorAll('article section').forEach(function(s){ io.observe(s); });
+  }
+})();
+</script>
+</body>
+</html>
