@@ -434,7 +434,7 @@
       </p>
       <div class="hero-meta">
         <div><span id="meta-developer-label">Developer:</span> <strong>Virelonsoft</strong></div>
-        <div><span id="meta-updated-label">Effective Date:</span> <strong>September 20, 2026</strong></div>
+        <div><span id="meta-updated-label">Effective Date:</span> <strong>November 6, 2026</strong></div>
         <div><span id="meta-contact-label">Official Contact:</span> <strong>muhammetatmaca79@gmail.com</strong></div>
       </div>
     </section>
@@ -452,7 +452,7 @@
         </p>
         <div class="callout-box">
           <p id="sec-1-callout">
-            ⚡ <strong>100% Offline-First Design:</strong> FootIQ operates locally on your mobile device. The comprehensive football career graph, player database, and puzzle mechanics run inside a local, bundled SQLite database. We do NOT operate remote tracking servers, and we never sell your personal data.
+            ⚡ <strong>100% Offline-First Design:</strong> FootIQ operates locally on your mobile device. The comprehensive football career graph, player database, and puzzle mechanics run inside a local, bundled SQLite database. We do NOT operate remote tracking servers, and we never sell your personal data. The App is free and shows advertising provided by Google AdMob, which processes device data as described below.
           </p>
         </div>
       </article>
@@ -464,15 +464,16 @@
           <h3 class="section-title" id="sec-2-title">Information We Collect & How It Is Used</h3>
         </div>
         <p id="sec-2-p1">
-          FootIQ collects only minimal, non-sensitive operational data strictly required to deliver the core game experience:
+          FootIQ itself processes only minimal operational data for the core game experience. The Google AdMob SDK used to show ads may also collect the advertising data listed below:
         </p>
         <ul id="sec-2-list">
           <li><strong>Local Game Progress & High Scores:</strong> Solved mystery cases, highest streaks in Higher/Lower, solved 11 formations, and player badges are saved exclusively on your local device via encrypted SQLite/AsyncStorage.</li>
           <li><strong>User Interface Preferences:</strong> Your chosen UI language (among the 20 supported languages), audio/haptics toggle, and pitch board preferences.</li>
           <li><strong>Technical Diagnostics & Crash Logs:</strong> If a crash occurs, standard non-identifiable system diagnostics (such as device model, OS version, and stack trace) may be collected through Google Play Console services to help us debug and resolve errors.</li>
+          <li><strong>Advertising Data (Google AdMob):</strong> Android advertising ID, IP address and approximate location derived from it, ad interactions, app usage information, and device and diagnostic information. This data is used to deliver and measure ads, limit ad frequency, and prevent fraud.</li>
         </ul>
         <p id="sec-2-p2">
-          <strong>We Do NOT Collect:</strong> Names, postal addresses, phone numbers, contacts, microphone audio, GPS location, photos, financial payment information, or unique biometric identifiers.
+          <strong>We Do NOT Collect:</strong> Names, postal addresses, phone numbers, contacts, microphone audio, precise GPS location, photos, financial payment information, or unique biometric identifiers.
         </p>
       </article>
 
@@ -485,7 +486,7 @@
         <p id="sec-3-p1">The App requests only strictly necessary permissions to deliver gameplay:</p>
         <ul id="sec-3-list">
           <li><strong>VIBRATE / HAPTICS:</strong> Provides tactile feedback when making correct pass connections, discovering clues, or completing tactical puzzles.</li>
-          <li><strong>INTERNET / NETWORK STATE:</strong> Used solely to check for database updates, verify store license status via Google Play Services, and download optional official player facepacks. The gameplay itself does not require continuous internet connectivity.</li>
+          <li><strong>INTERNET / NETWORK STATE:</strong> Used to check for database updates, verify store license status via Google Play Services, download optional official player facepacks, and load ads. The gameplay itself does not require continuous internet connectivity.</li>
         </ul>
       </article>
 
@@ -511,11 +512,11 @@
           <h3 class="section-title" id="sec-5-title">Children's Privacy (COPPA & Family Policy Compliance)</h3>
         </div>
         <p id="sec-5-p1">
-          FootIQ is a family-friendly educational sports logic puzzle game suitable for football fans of all ages. We strictly adhere to the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:
+          FootIQ is a sports logic puzzle game intended for users aged 13 and over and is not directed to children under 13. We follow the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:
         </p>
         <ul id="sec-5-list">
           <li>We do not knowingly collect, request, or store any personal data from children under 13 (or the applicable age in your jurisdiction).</li>
-          <li>The App contains no behavioral targeting, no aggressive user profiling, and no chat or communication features that expose young audiences to unknown parties.</li>
+          <li>The App contains no chat or communication features that expose users to unknown parties. Ads are served by Google AdMob as described in the Third-Party Services section.</li>
           <li>If a parent or guardian becomes aware that their child has provided us with any information, please contact us at <strong>muhammetatmaca79@gmail.com</strong>, and we will promptly ensure any relevant diagnostic data is purged.</li>
         </ul>
       </article>
@@ -595,32 +596,34 @@
         metaContact: "Official Contact:",
         sec1Title: "Introduction & Architecture Overview",
         sec1P1: "Welcome to <strong>FootIQ</strong> (\"we\", \"our\", or \"the App\"), proudly created and operated by <strong>Virelonsoft</strong>. We believe in absolute user privacy and data minimization.",
-        sec1Callout: "⚡ <strong>100% Offline-First Design:</strong> FootIQ operates locally on your mobile device. The comprehensive football career graph, player database, and puzzle mechanics run inside a local, bundled SQLite database. We do NOT operate remote tracking servers, and we never sell your personal data.",
+        sec1Callout: "⚡ <strong>100% Offline-First Design:</strong> FootIQ operates locally on your mobile device. The comprehensive football career graph, player database, and puzzle mechanics run inside a local, bundled SQLite database. We do NOT operate remote tracking servers, and we never sell your personal data. The App is free and shows advertising provided by Google AdMob, which processes device data as described below.",
         sec2Title: "Information We Collect & How It Is Used",
-        sec2P1: "FootIQ collects only minimal, non-sensitive operational data strictly required to deliver the core game experience:",
+        sec2P1: "FootIQ itself processes only minimal operational data for the core game experience. The Google AdMob SDK used to show ads may also collect the advertising data listed below:",
         sec2List: [
           "<strong>Local Game Progress & High Scores:</strong> Solved mystery cases, highest streaks in Higher/Lower, solved 11 formations, and player badges are saved exclusively on your local device via encrypted SQLite/AsyncStorage.",
           "<strong>User Interface Preferences:</strong> Your chosen UI language (among the 20 supported languages), audio/haptics toggle, and pitch board preferences.",
-          "<strong>Technical Diagnostics & Crash Logs:</strong> If a crash occurs, standard non-identifiable system diagnostics (such as device model, OS version, and stack trace) may be collected through Google Play Console services to help us debug and resolve errors."
+          "<strong>Technical Diagnostics & Crash Logs:</strong> If a crash occurs, standard non-identifiable system diagnostics (such as device model, OS version, and stack trace) may be collected through Google Play Console services to help us debug and resolve errors.",
+          "<strong>Advertising Data (Google AdMob):</strong> Android advertising ID, IP address and approximate location derived from it, ad interactions, app usage information, and device and diagnostic information. This data is used to deliver and measure ads, limit ad frequency, and prevent fraud."
         ],
-        sec2P2: "<strong>We Do NOT Collect:</strong> Names, postal addresses, phone numbers, contacts, microphone audio, GPS location, photos, financial payment information, or unique biometric identifiers.",
+        sec2P2: "<strong>We Do NOT Collect:</strong> Names, postal addresses, phone numbers, contacts, microphone audio, precise GPS location, photos, financial payment information, or unique biometric identifiers.",
         sec3Title: "Device Permissions",
         sec3P1: "The App requests only strictly necessary permissions to deliver gameplay:",
         sec3List: [
           "<strong>VIBRATE / HAPTICS:</strong> Provides tactile feedback when making correct pass connections, discovering clues, or completing tactical puzzles.",
-          "<strong>INTERNET / NETWORK STATE:</strong> Used solely to check for database updates, verify store license status via Google Play Services, and download optional official player facepacks. The gameplay itself does not require continuous internet connectivity."
+          "<strong>INTERNET / NETWORK STATE:</strong> Used to check for database updates, verify store license status via Google Play Services, download optional official player facepacks, and load ads. The gameplay itself does not require continuous internet connectivity."
         ],
         sec4Title: "Third-Party Services & SDKs",
         sec4P1: "The App utilizes reputable, industry-standard third-party frameworks:",
         sec4List: [
           "<strong>Google Play Services:</strong> Used for secure application distribution, verified app bundle updates, and crash analytics provided by Google LLC. (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" style=\"color: #10B981;\">Google Privacy Policy</a>)",
+          "<strong>Google AdMob:</strong> Shows banner, full-screen, app-open and optional rewarded ads. Google and its partners may use the data listed above to deliver and measure ads. Users in the EEA, UK and Switzerland are asked for ad consent and can change it through <em>Ad privacy options</em> in the app's Settings screen. You can reset or delete your advertising ID in your device's settings. (<a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\" style=\"color: #10B981;\">How Google uses data from partner apps</a>)",
           "<strong>Expo & React Native:</strong> Open-source framework utilized to execute UI components and native bridging safely. (<a href=\"https://expo.dev/privacy\" target=\"_blank\" style=\"color: #10B981;\">Expo Privacy Policy</a>)"
         ],
         sec5Title: "Children's Privacy (COPPA & Family Policy Compliance)",
-        sec5P1: "FootIQ is a family-friendly educational sports logic puzzle game suitable for football fans of all ages. We strictly adhere to the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:",
+        sec5P1: "FootIQ is a sports logic puzzle game intended for users aged 13 and over and is not directed to children under 13. We follow the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>:",
         sec5List: [
           "We do not knowingly collect, request, or store any personal data from children under 13 (or the applicable age in your jurisdiction).",
-          "The App contains no behavioral targeting, no aggressive user profiling, and no chat or communication features that expose young audiences to unknown parties.",
+          "The App contains no chat or communication features that expose users to unknown parties. Ads are served by Google AdMob as described in the Third-Party Services section.",
           "If a parent or guardian becomes aware that their child has provided us with any information, please contact us at <strong>muhammetatmaca79@gmail.com</strong>, and we will promptly ensure any relevant diagnostic data is purged."
         ],
         sec6Title: "Data Retention, Security & Deletion Rights",
@@ -634,7 +637,8 @@
         sec7List: [
           "Request verification on whether any personal data is held.",
           "Request deletion of any diagnostic traces held by developer consoles.",
-          "Opt-out of diagnostic sharing through device-level privacy settings."
+          "Opt-out of diagnostic sharing through device-level privacy settings.",
+          "Withdraw or change ad consent, where it applies, through Ad privacy options in the app's Settings screen."
         ],
         sec8Title: "Changes to This Privacy Policy",
         sec8P1: "We may update our Privacy Policy periodically to reflect new app features or regulatory modifications. Any changes will be posted on this page with an updated 'Effective Date'. Continued use of the application following updates constitutes acceptance of the modified terms.",
@@ -650,29 +654,31 @@
         metaContact: "Resmi İletişim:",
         sec1Title: "Giriş ve Mimari Genel Bakış",
         sec1P1: "<strong>Virelonsoft</strong> tarafından geliştirilen <strong>FootIQ</strong> (\"biz\", \"uygulamamız\") dünyasına hoş geldiniz. Kullanıcı gizliliğine ve veri minimizasyonuna koşulsuz saygı duyuyoruz.",
-        sec1Callout: "⚡ <strong>%100 Çevrimdışı (Offline-First) Mimari:</strong> FootIQ tamamen cihazınızda yerel olarak çalışır. Futbol kariyer grafiği, oyuncu veritabanı ve tüm bulmaca motoru uygulamanın içinde yerleşik SQLite veritabanı üzerinde döner. Kişisel verilerinizi toplayan uzak sunucular barındırmayız ve verilerinizi asla satmayız.",
+        sec1Callout: "⚡ <strong>%100 Çevrimdışı (Offline-First) Mimari:</strong> FootIQ tamamen cihazınızda yerel olarak çalışır. Futbol kariyer grafiği, oyuncu veritabanı ve tüm bulmaca motoru uygulamanın içinde yerleşik SQLite veritabanı üzerinde döner. Kişisel verilerinizi toplayan uzak sunucular barındırmayız ve verilerinizi asla satmayız. Uygulama ücretsizdir ve Google AdMob tarafından sunulan reklamlar içerir; bu hizmet cihaz verilerini aşağıda açıklandığı şekilde işler.",
         sec2Title: "Toplanan Bilgiler ve Kullanım Amacı",
-        sec2P1: "FootIQ, oyunun temel işlevlerini sağlamak için yalnızca en asgari düzeydeki yerel oyun verilerini işler:",
+        sec2P1: "FootIQ'nun kendisi oyunun temel işlevleri için yalnızca asgari düzeyde yerel oyun verisi işler. Reklam göstermek için kullanılan Google AdMob SDK'sı aşağıdaki reklam verilerini de toplayabilir:",
         sec2List: [
           "<strong>Yerel Oyun İlerlemesi ve Skorlar:</strong> Çözülen detektif vakaları, Yüksek/Düşük serileri, 11'i Tamamla kadroları ve kazanılan rozetler sadece cihazınızdaki yerel SQLite / AsyncStorage hafızasında saklanır.",
           "<strong>Kullanıcı Tercihleri:</strong> Seçtiğiniz dil (20 dil desteği), titreşim (haptics) durumu ve saha tahtası görsel ayarları.",
-          "<strong>Teknik Teşhis ve Hata Raporları:</strong> Bir çökme durumunda, Google Play Console servisleri aracılığıyla sistem hatalarını çözebilmemiz adına kimlik bilgisi içermeyen standart hata günlükleri (cihaz modeli, Android sürümü vb.) toplanabilir."
+          "<strong>Teknik Teşhis ve Hata Raporları:</strong> Bir çökme durumunda, Google Play Console servisleri aracılığıyla sistem hatalarını çözebilmemiz adına kimlik bilgisi içermeyen standart hata günlükleri (cihaz modeli, Android sürümü vb.) toplanabilir.",
+          "<strong>Reklam Verileri (Google AdMob):</strong> Android reklam kimliği, IP adresi ve buradan çıkarılan yaklaşık konum, reklam etkileşimleri, uygulama kullanım bilgileri ile cihaz ve hata bilgileri. Bu veriler reklam sunmak ve ölçmek, reklam sıklığını sınırlamak ve kötüye kullanımı önlemek için kullanılır."
         ],
-        sec2P2: "<strong>Kesinlikle Toplanmayan Veriler:</strong> İsim, adres, telefon numarası, rehber, mikrofon sesi, GPS konumu, fotoğraflar veya kredi kartı/ödeme bilgileri asla toplanmaz.",
+        sec2P2: "<strong>Kesinlikle Toplanmayan Veriler:</strong> İsim, adres, telefon numarası, rehber, mikrofon sesi, hassas GPS konumu, fotoğraflar veya kredi kartı/ödeme bilgileri asla toplanmaz.",
         sec3Title: "Cihaz İzinleri",
         sec3P1: "Uygulama, oyun akışını sağlamak için yalnızca zorunlu sistem izinlerini talep eder:",
         sec3List: [
           "<strong>TİTREŞİM (HAPTICS):</strong> Doğru pas bağlantıları kurarken, ipuçlarını açarken veya bulmacaları çözerken dokunsal geri bildirim sağlar.",
-          "<strong>İNTERNET VE AĞ DURUMU:</strong> Yalnızca veritabanı güncellemelerini denetlemek ve Google Play lisans doğrulaması gerçekleştirmek amacıyla kullanılır. Oyun deneyimi çevrimdışı oynanabilir."
+          "<strong>İNTERNET VE AĞ DURUMU:</strong> Veritabanı güncellemelerini denetlemek, Google Play lisans doğrulaması yapmak ve reklamları yüklemek için kullanılır. Oyun çevrimdışı da oynanabilir."
         ],
         sec4Title: "Üçüncü Taraf Servisler ve SDK'lar",
         sec4P1: "Uygulama, güvenilir ve endüstri standardı üçüncü taraf kütüphaneleri kullanır:",
         sec4List: [
           "<strong>Google Play Hizmetleri:</strong> Güvenli uygulama dağıtımı, uygulama güncellemesi ve hata analitiği için Google LLC altyapısı kullanılır. (<a href=\"https://policies.google.com/privacy\" target=\"_blank\" style=\"color: #10B981;\">Google Gizlilik Politikası</a>)",
+          "<strong>Google AdMob:</strong> Banner, tam ekran, açılış ve isteğe bağlı ödüllü reklamlar gösterir. Google ve iş ortakları yukarıdaki verileri reklam sunmak ve ölçmek için kullanabilir. Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'deki kullanıcılardan reklam izni istenir; bu izin uygulamanın Ayarlar ekranındaki <em>Reklam gizlilik seçenekleri</em> bağlantısından değiştirilebilir. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilir veya silebilirsiniz. (<a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\" style=\"color: #10B981;\">Google'ın iş ortağı uygulamalarındaki veri kullanımı</a>)",
           "<strong>Expo & React Native:</strong> Arayüz bileşenlerinin yerel hızda ve güvenle çalışmasını sağlayan açık kaynaklı altyapı. (<a href=\"https://expo.dev/privacy\" target=\"_blank\" style=\"color: #10B981;\">Expo Gizlilik Politikası</a>)"
         ],
         sec5Title: "Çocukların Gizliliği (COPPA ve Aile Politikası Uyumu)",
-        sec5P1: "FootIQ, her yaştan futbolsever için uygun, aile dostu bir zeka ve mantık oyunudur. <strong>COPPA</strong> kurallarına ve <strong>Google Play Aile Politikası</strong>'na harfiyen uymaktayız:",
+        sec5P1: "FootIQ, 13 yaş ve üzeri kullanıcılar için tasarlanmış bir futbol zeka ve mantık oyunudur; 13 yaşın altındaki çocuklara yönelik değildir. <strong>COPPA</strong> kurallarına ve <strong>Google Play Aile Politikası</strong>'na uyarız:",
         sec5List: [
           "13 yaşın altındaki (veya ilgili yasal yaştaki) çocuklardan bilerek ve isteyerek hiçbir kişisel bilgi toplamıyoruz.",
           "Uygulama içinde çocukları tanımadıkları kişilerle temasa geçirecek sohbet, mesajlaşma veya profil paylaşım özellikleri yoktur.",
