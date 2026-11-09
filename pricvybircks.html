@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gizlilik Politikası / Privacy Policy - Tuğlacık (BrickToy) | VirelonSoft</title>
+  <meta name="description" content="Tuğlacık (BrickToy) Gizlilik Politikası ve Kullanıcı Hakları. VirelonSoft tarafından geliştirilmiştir.">
+  <style>
+    :root {
+      --primary: #FF5A5F;
+      --primary-hover: #E0484D;
+      --secondary: #0284C7;
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --border: #E2E8F0;
+      --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 24px 16px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 860px;
+      width: 100%;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      color: #FFFFFF;
+      padding: 40px 32px;
+      position: relative;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .company-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 9999px;
+      padding: 3px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: #FFFFFF;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(255, 90, 95, 0.4);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      color: #94A3B8;
+      font-size: 0.95rem;
+    }
+
+    /* Quick Highlight Box */
+    .quick-box {
+      margin: 32px;
+      background: #F0FDF4;
+      border: 1.5px solid #BBF7D0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .quick-icon {
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .quick-title {
+      font-weight: 700;
+      color: #166534;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    .quick-desc {
+      color: #15803D;
+      font-size: 0.9rem;
+    }
+
+    /* Content Body */
+    .content {
+      padding: 0 32px 40px;
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      color: #334155;
+      font-size: 0.98rem;
+    }
+
+    ul {
+      margin: 12px 0 16px 24px;
+      color: #334155;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 0.98rem;
+    }
+
+    .highlight-card {
+      background: #F8FAFC;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--secondary);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .contact-box {
+      background: #FEF2F2;
+      border: 1.5px solid #FEE2E2;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .contact-title {
+      font-weight: 700;
+      color: #991B1B;
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background: #F1F5F9;
+      padding: 24px 32px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 8px;
+      }
+      header {
+        padding: 28px 20px;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .quick-box {
+        margin: 20px;
+        padding: 16px;
+      }
+      .content {
+        padding: 0 20px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <div class="company-badge">🏢 VirelonSoft</div>
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btn-tr" onclick="setLang('tr')">Türkçe</button>
+          <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+        </div>
+      </div>
+      <h1 id="title">Gizlilik Politikası</h1>
+      <div class="subtitle" id="subtitle">Tuğlacık (BrickToy) · Son Güncelleme: 9 Kasım 2026</div>
+    </header>
+
+    <!-- HIZLI ÖZET BOX -->
+    <div class="quick-box" id="quick-box">
+      <div class="quick-icon">🛡️</div>
+      <div>
+        <div class="quick-title" id="qb-title">Gizliliğinize %100 Saygılı ve Güvenli</div>
+        <div class="quick-desc" id="qb-desc">Tuğlacık oyunu sizden hiçbir kişisel kimlik bilgisi (ad, e-posta, konum vb.) toplamaz. İlerlemeniz sadece cihazınızda saklanır ve oyun tamamen internetsiz (çevrimdışı) çalışabilir.</div>
+      </div>
+    </div>
+
+    <!-- DİL İÇERİKLERİ -->
+    <main class="content">
+
+      <!-- ================= TÜRKÇE İÇERİK ================= -->
+      <div id="content-tr">
+        <section>
+          <h2>1. Giriş ve Genel Bakış</h2>
+          <p><strong>VirelonSoft</strong> ("biz", "şirketimiz") olarak, mobil oyunumuz <strong>Tuğlacık</strong> ("BrickToy", "Uygulama") kullanıcılarının gizliliğini en yüksek standartlarda korumayı taahhüt ediyoruz.</p>
+          <p>Bu Gizlilik Politikası, uygulamamızı indirdiğinizde veya kullandığınızda hangi verilerin işlendiğini ve gizliliğinizin nasıl korunduğunu açıkça belirtmektedir. Amacımız; çocuklar, aileler ve her yaştan bulmaca severler için tamamen güvenli, reklamsız ve huzurlu bir oyun deneyimi sunmaktır.</p>
+        </section>
+
+        <section>
+          <h2>2. Toplanan Bilgiler ve Veri Kullanımı</h2>
+          <div class="highlight-card">
+            <strong>Kişisel Veri Toplanmaz:</strong> Uygulamamız adınız, soyadınız, telefon numaranız, e-posta adresiniz, IP adresiniz veya kesin GPS konumunuz gibi kişisel olarak tanımlanabilir bilgileri (PII) <strong>kesinlikle toplamaz, saklamaz veya üçüncü taraflarla paylaşmaz.</strong>
+          </div>
+          <p>Uygulamamız yalnızca oyunun sağlıklı çalışması için gerekli olan teknik ve yerel verileri kullanır:</p>
+          <ul>
+            <li><strong>Yerel Oyun İlerlemesi (Local Storage):</strong> Hangi modelleri tamamladığınız, kazandığınız yıldızlar, açık olan odalar ve ses ayarlarınız yalnızca cihazınızın kendi yerel hafızasında (AsyncStorage) tutulur. Bu veriler hiçbir sunucuya aktarılmaz.</li>
+            <li><strong>Cihaz Özellikleri (Donanım Seviyesi):</strong> 3D grafik motorunun (OpenGL / WebGL) cihazınızın ekran çözünürlüğüne ve grafik işlemcisine uygun kare hızında (FPS) çalışabilmesi için cihaz tarafından standart olarak işlenen geçici donanım parametreleridir.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Cihaz İzinleri ve İnternet Erişimi</h2>
+          <p>Tuğlacık, gereksiz hiçbir hassas cihaz izni talep etmez:</p>
+          <ul>
+            <li>❌ <strong>Kamera İzni:</strong> İstenmez.</li>
+            <li>❌ <strong>Mikrofon İzni:</strong> İstenmez.</li>
+            <li>❌ <strong>Kişiler / Rehber İzni:</strong> İstenmez.</li>
+            <li>❌ <strong>Konum İzni:</strong> İstenmez.</li>
+            <li>❌ <strong>Depolama Galeri Okuma İzni:</strong> İstenmez.</li>
+            <li>✅ <strong>İnternetsiz (Çevrimdışı) Çalışma:</strong> Uygulama tüm 600 modeli ve ses efektlerini kendi paketinde barındırır. Uçakta, seyahatte veya internetsiz herhangi bir ortamda sorunsuz oynanabilir.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Çocukların Gizliliği (COPPA & GDPR-K Uyumluluğu)</h2>
+          <p>Tuğlacık, aile dostu ve çocuklar için güvenli bir dijital oyun alanıdır. Amerika Birleşik Devletleri <strong>Çocukların Çevrimiçi Gizliliğini Koruma Yasası (COPPA)</strong> ve Avrupa Birliği <strong>Genel Veri Koruma Tüzüğü (GDPR Madde 8)</strong> ile tam uyumludur:</p>
+          <ul>
+            <li>13 yaşın (veya ilgili yargı bölgesinde 16 yaşın) altındaki çocuklardan bilerek veya isteyerek hiçbir kişisel bilgi toplamıyoruz.</li>
+            <li>Uygulama içinde davranışsal reklamcılık, kişiselleştirilmiş reklam veya kullanıcı profillemesi kesinlikle yer almaz.</li>
+            <li>Çocukların yabancılarla iletişim kurabileceği sohbet veya sosyal paylaşım modülleri bulunmamaktadır.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Üçüncü Taraf Hizmetleri ve Bağlantılar</h2>
+          <p>Uygulama, Google Play Store / Apple App Store altyapısı üzerinden indirilir. Mağaza platformları (Google LLC veya Apple Inc.), kendi gizlilik politikalarına tabi olarak standart mağaza indirme ve çökme raporlama istatistikleri sağlayabilir. Uygulama içinde yer alan video bağlantıları (YouTube tanıtım videoları) harici tarayıcınızda açılır ve YouTube'un kendi kullanım koşullarına tabidir.</p>
+        </section>
+
+        <section>
+          <h2>6. Veri Güvenliği ve Silme Hakkı</h2>
+          <p>Tüm oyun verileriniz yalnızca sizin cihazınızda depolandığından, uygulamanın verilerini tamamen silmek için cihazınızın Ayarlar menüsünden "Uygulama Verilerini Temizle" seçeneğini kullanabilir veya uygulamayı cihazınızdan kaldırabilirsiniz. Uygulama silindiğinde tüm yerel kayıtlar otomatik olarak tamamen yok olur.</p>
+        </section>
+
+        <section>
+          <h2>7. Politika Değişiklikleri</h2>
+          <p>Gizlilik politikamız zaman zaman güncellenebilir. Herhangi bir değişiklik durumunda güncel metin bu sayfada yayınlanacak ve "Son Güncelleme" tarihi revize edilecektir.</p>
+        </section>
+
+        <div class="contact-box">
+          <div class="contact-title">📬 İletişim Bilgileri</div>
+          <p>Gizlilik politikamız, oyunumuz veya haklarınızla ilgili her türlü soru, öneri ve geri bildirim için doğrudan geliştirici ekibimizle iletişime geçebilirsiniz:</p>
+          <p><strong>Geliştirici / Şirket:</strong> VirelonSoft</p>
+          <p><strong>E-posta:</strong> <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a></p>
+          <p><strong>Uygulama:</strong> Tuğlacık (BrickToy: 3D Brick Builder)</p>
+        </div>
+      </div>
+
+      <!-- ================= ENGLISH CONTENT ================= -->
+      <div id="content-en" style="display: none;">
+        <section>
+          <h2>1. Introduction & Overview</h2>
+          <p>At <strong>VirelonSoft</strong> ("we", "us", or "our"), we are deeply committed to protecting the privacy of everyone who plays our mobile game, <strong>Tuğlacık</strong> ("BrickToy", the "App").</p>
+          <p>This Privacy Policy outlines how your information is handled when you download and play our game. Our mission is to provide builders of all ages—including children and families—with a peaceful, safe, satisfying, and private 3D puzzle experience.</p>
+        </section>
+
+        <section>
+          <h2>2. Information Collection and Use</h2>
+          <div class="highlight-card">
+            <strong>Zero Personal Data Collection:</strong> We do <strong>NOT collect, store, transmit, or sell</strong> any personally identifiable information (PII) such as your name, email address, physical address, phone number, precise GPS location, or device identifiers.
+          </div>
+          <p>The App only uses essential local technical data necessary for gameplay functionality:</p>
+          <ul>
+            <li><strong>Local Game Progress (On-Device Storage):</strong> Your completed figures, earned stars, unlocked collection rooms, and audio preferences are stored exclusively on your device via standard local storage (AsyncStorage). This data is never transmitted to any external server.</li>
+            <li><strong>Hardware Rendering Metrics:</strong> Standard real-time parameters processed locally by your operating system and graphics engine (OpenGL/WebGL) to ensure smooth 60 FPS 3D turntable performance.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>3. Device Permissions & Offline Operation</h2>
+          <p>BrickToy respects your device and does NOT request intrusive permissions:</p>
+          <ul>
+            <li>❌ <strong>Camera Access:</strong> Not requested.</li>
+            <li>❌ <strong>Microphone Access:</strong> Not requested.</li>
+            <li>❌ <strong>Contacts / Address Book:</strong> Not requested.</li>
+            <li>❌ <strong>Location Tracking (GPS):</strong> Not requested.</li>
+            <li>❌ <strong>Photo Library Access:</strong> Not requested.</li>
+            <li>✅ <strong>100% Offline Functionality:</strong> All 600 models, textures, and sounds are pre-packaged within the app. You can play completely offline without an active internet connection.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Children’s Privacy (COPPA & GDPR-K Compliance)</h2>
+          <p>BrickToy is designed for families and complies strictly with the <strong>Children's Online Privacy Protection Act (COPPA)</strong> in the United States and the <strong>General Data Protection Regulation (GDPR Article 8)</strong> in the European Union:</p>
+          <ul>
+            <li>We do not knowingly collect personal information from children under the age of 13 (or 16 in applicable EU jurisdictions).</li>
+            <li>There are no behavioral advertisements, tracking SDKs, or user profiling algorithms in the App.</li>
+            <li>There are no chat rooms, public messaging features, or social networking capabilities where a child could communicate with others or disclose personal information.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Third-Party Services and Distribution</h2>
+          <p>The App is distributed via the Google Play Store and Apple App Store. These platform providers (Google LLC and Apple Inc.) may collect anonymized aggregated download and crash analytics governed by their respective privacy policies. Any promotional video links (such as our official YouTube trailers) open in your default browser and are subject to YouTube's terms of service.</p>
+        </section>
+
+        <section>
+          <h2>6. Data Security and User Deletion Rights</h2>
+          <p>Since your game progress resides strictly on your physical device, you have complete sovereignty over your data. You can permanently wipe all stored data at any time by clearing the App's storage via your device settings or by uninstalling the App.</p>
+        </section>
+
+        <section>
+          <h2>7. Changes to This Privacy Policy</h2>
+          <p>We may periodically update this Privacy Policy to reflect app enhancements or legal requirements. Any revisions will be posted on this page with an updated "Last Modified" date.</p>
+        </section>
+
+        <div class="contact-box">
+          <div class="contact-title">📬 Contact Us</div>
+          <p>If you have any questions, feedback, or inquiries regarding this Privacy Policy or your privacy rights, please reach out directly to our team:</p>
+          <p><strong>Developer / Studio:</strong> VirelonSoft</p>
+          <p><strong>Email:</strong> <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a></p>
+          <p><strong>Application:</strong> Tuğlacık (BrickToy: 3D Brick Builder)</p>
+        </div>
+      </div>
+
+    </main>
+
+    <footer>
+      © 2026 <strong>VirelonSoft</strong>. All rights reserved. · Tuğlacık / BrickToy
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      const btnTr = document.getElementById('btn-tr');
+      const btnEn = document.getElementById('btn-en');
+      const contentTr = document.getElementById('content-tr');
+      const contentEn = document.getElementById('content-en');
+      const title = document.getElementById('title');
+      const subtitle = document.getElementById('subtitle');
+      const qbTitle = document.getElementById('qb-title');
+      const qbDesc = document.getElementById('qb-desc');
+
+      if (lang === 'en') {
+        btnEn.classList.add('active');
+        btnTr.classList.remove('active');
+        contentTr.style.display = 'none';
+        contentEn.style.display = 'block';
+        title.textContent = 'Privacy Policy';
+        subtitle.textContent = 'BrickToy (Tuğlacık) · Last Updated: November 9, 2026';
+        qbTitle.textContent = '100% Safe, Secure & Privacy-First';
+        qbDesc.textContent = 'BrickToy collects zero personal data (no names, emails, or locations). Your progress is stored locally on your device, and the game runs 100% offline.';
+        document.documentElement.lang = 'en';
+      } else {
+        btnTr.classList.add('active');
+        btnEn.classList.remove('active');
+        contentTr.style.display = 'block';
+        contentEn.style.display = 'none';
+        title.textContent = 'Gizlilik Politikası';
+        subtitle.textContent = 'Tuğlacık (BrickToy) · Son Güncelleme: 9 Kasım 2026';
+        qbTitle.textContent = 'Gizliliğinize %100 Saygılı ve Güvenli';
+        qbDesc.textContent = 'Tuğlacık oyunu sizden hiçbir kişisel kimlik bilgisi (ad, e-posta, konum vb.) toplamaz. İlerlemeniz sadece cihazınızda saklanır ve oyun tamamen internetsiz (çevrimdışı) çalışabilir.';
+        document.documentElement.lang = 'tr';
+      }
+    }
+  </script>
+</body>
+</html>
