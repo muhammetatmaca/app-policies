@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BeatDrop · Privacy Policy</title>
+<meta name="description" content="Privacy Policy for BeatDrop, the say-it-on-beat challenge game by Virelonsoft.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+/*
+VOICE: playful but trustworthy; the same world as the BeatDrop store screenshots.
+IDEA: a sticker-covered page from the BeatDrop universe: sky, clouds, pink 3D headline, dark app cards.
+PICTURE: the hero headline as a 3D pink sticker word over a cloudy sky, with emoji stickers.
+COLOUR and TYPE: sky blue to pink; ink #0E0D14 cards; lime #C6FF3D accent; pink #ff4fb6 headline. Anton + Bricolage + Space Mono.
+LAYOUT: one centred column, summary bubbles first, then numbered-free sections in dark cards.
+*/
+:root{--ink:#0E0D14;--card:#18161F;--card2:#221F2B;--line:#2F2B3A;--text:#F4F2FA;--muted:#B5AFC4;--lime:#C6FF3D;--pink:#ff4fb6}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;color:var(--ink);font:17px/1.6 "Bricolage Grotesque",system-ui,sans-serif;overflow-x:clip;
+  background:linear-gradient(180deg,#9cc8ff 0%,#cfe0ff 30%,#f6d7f1 62%,#ffd0ea 100%) fixed}
+.clouds{position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(ellipse 260px 120px at 8% 8%,rgba(255,255,255,.95),transparent 70%),
+    radial-gradient(ellipse 320px 140px at 22% 4%,rgba(255,255,255,.85),transparent 70%),
+    radial-gradient(ellipse 300px 130px at 88% 12%,rgba(255,255,255,.9),transparent 70%),
+    radial-gradient(ellipse 380px 160px at 76% 96%,rgba(255,255,255,.9),transparent 70%),
+    radial-gradient(ellipse 360px 150px at 15% 98%,rgba(255,255,255,.85),transparent 70%),
+    radial-gradient(circle 260px at 90% 55%,rgba(255,180,222,.55),transparent 70%),
+    radial-gradient(circle 240px at 5% 45%,rgba(255,200,236,.5),transparent 70%)}
+main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:clamp(28px,5vw,64px) max(5vw,16px) 64px}
+
+.brand{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:28px}
+.brand svg{width:52px;height:52px;border-radius:14px;box-shadow:0 10px 24px rgba(30,20,60,.3)}
+.brand b{font:800 22px/1 "Bricolage Grotesque";letter-spacing:-.01em}
+.brand span{display:block;font:700 12px/1.4 "Space Mono",monospace;opacity:.7}
+
+.hero{position:relative;text-align:center;margin:0 0 36px}
+.hero h1{margin:0;font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.95;font-size:clamp(52px,11vw,104px);text-wrap:balance}
+.hero h1 .hi{display:inline-block;color:var(--pink);paint-order:stroke fill;-webkit-text-stroke:.1em #fff;transform:rotate(-2deg);
+  filter:drop-shadow(.025em 0 0 #c41b84) drop-shadow(-.025em 0 0 #c41b84) drop-shadow(0 .025em 0 #c41b84) drop-shadow(0 -.025em 0 #c41b84) drop-shadow(0 .06em 0 #8e0f5d)}
+.hero p{margin:18px auto 0;max-width:560px;font-weight:600}
+.sticker{position:absolute;font-size:clamp(40px,7vw,72px);line-height:1;
+  filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 12px 14px rgba(30,20,60,.25))}
+.s1{left:-6px;top:6px;transform:rotate(-14deg)}.s2{right:-4px;top:40%;transform:rotate(12deg)}
+@media(max-width:600px){.s1{left:-2px;top:-30px}.s2{right:0;top:-24px}}
+
+.meta{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:0 0 28px}
+.bubble{font:700 13px/1.3 "Space Mono",monospace;padding:10px 14px;border-radius:16px;background:linear-gradient(180deg,#2a2833,#111018);color:#fff;
+  border:1.5px solid rgba(255,255,255,.18);box-shadow:0 10px 22px rgba(30,20,60,.2)}
+.bubble.light{background:rgba(255,255,255,.92);color:var(--ink);border-color:var(--ink)}
+
+.lang{display:flex;justify-content:center;gap:8px;margin:0 0 28px}
+.lang a{font:700 14px "Space Mono",monospace;color:var(--ink);text-decoration:none;padding:10px 18px;border-radius:999px;background:var(--lime);border:2px solid var(--ink);box-shadow:3px 4px 0 var(--ink);min-height:44px;display:inline-flex;align-items:center}
+.lang a:focus-visible,a:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+
+.tldr{background:var(--lime);border:2.5px solid var(--ink);border-radius:24px;padding:22px 24px;box-shadow:6px 7px 0 var(--ink);margin:0 0 28px;transform:rotate(-.6deg)}
+.tldr h2{margin:0 0 8px;font:400 28px/1 Anton,sans-serif;text-transform:uppercase}
+.tldr ul{margin:0;padding-left:20px}
+.tldr li{margin:4px 0}
+
+.card{background:var(--ink);color:var(--text);border-radius:24px;padding:clamp(22px,4vw,34px);margin:0 0 18px;box-shadow:0 24px 48px rgba(25,15,60,.25);border:1px solid #2a2836}
+.card h2{margin:0 0 12px;font:800 23px/1.25 "Bricolage Grotesque";color:#fff}
+.card h3{margin:20px 0 6px;font:800 17px/1.3 "Bricolage Grotesque";color:var(--lime)}
+.card p,.card li{color:var(--muted)}
+.card strong{color:var(--text)}
+.card ul{padding-left:20px}
+.card a{color:var(--lime)}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:8px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--text);font-weight:800}
+td{color:var(--muted)}
+.scroll{overflow-x:auto}
+.contact{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.mail{font:700 15px "Space Mono",monospace;color:var(--ink)!important;background:var(--lime);padding:12px 18px;border-radius:999px;text-decoration:none;overflow-wrap:anywhere}
+footer{text-align:center;font:700 12px/1.6 "Space Mono",monospace;margin-top:32px;opacity:.75}
+section[lang="tr"]{margin-top:56px}
+.divider{display:flex;align-items:center;justify-content:center;margin:48px 0 20px}
+.divider h1{margin:0;font:400 clamp(44px,9vw,84px)/.95 Anton,sans-serif;text-transform:uppercase;text-align:center}
+@media(max-width:600px){table{font-size:13px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px}.stack td{display:flow-root;border:0;padding:3px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="clouds" aria-hidden="true"></div>
+<main>
+  <div class="brand">
+    <svg viewBox="0 0 108 108" aria-hidden="true"><defs>
+      <radialGradient id="ibg" cx="50%" cy="42%" r="70%"><stop offset="0" stop-color="#2a2340"/><stop offset=".6" stop-color="#15121f"/><stop offset="1" stop-color="#0b0a12"/></radialGradient>
+      <linearGradient id="ibar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1FFC4"/><stop offset=".35" stop-color="#C6FF3D"/><stop offset="1" stop-color="#7DBA12"/></linearGradient>
+      <linearGradient id="ipink" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffc2e6"/><stop offset=".4" stop-color="#ff4fb6"/><stop offset="1" stop-color="#b0156f"/></linearGradient></defs>
+      <rect width="108" height="108" fill="url(#ibg)"/>
+      <rect x="22" y="47" width="12" height="14" rx="6" fill="url(#ibar)"/><rect x="37" y="38" width="12" height="32" rx="6" fill="url(#ibar)"/>
+      <rect x="52" y="28" width="12" height="52" rx="6" fill="url(#ipink)"/><rect x="67" y="42" width="12" height="24" rx="6" fill="url(#ibar)"/>
+      <circle cx="58" cy="89" r="4.5" fill="#C6FF3D"/></svg>
+    <div><b>BeatDrop</b><span>by Virelonsoft</span></div>
+  </div>
+
+  <nav class="lang" aria-label="Language"><a href="#en">English</a><a href="#tr">Türkçe</a></nav>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <section id="en" lang="en">
+    <header class="hero">
+      <span class="sticker s1" aria-hidden="true">🔒</span><span class="sticker s2" aria-hidden="true">🎧</span>
+      <h1>Privacy <span class="hi">Policy</span></h1>
+      <p>This policy explains what information BeatDrop handles, why, and the choices you have.</p>
+    </header>
+    <div class="meta"><span class="bubble">Effective: 25 November 2026</span><span class="bubble light">App: BeatDrop (com.virelon.beatdrop)</span></div>
+
+    <div class="tldr">
+      <h2>The short version</h2>
+      <ul>
+        <li>No account and no sign-in. We never ask for your name, email or phone number.</li>
+        <li>No camera and no microphone. The app does not record your voice.</li>
+        <li>Your game progress and settings stay on your device.</li>
+        <li>The app shows ads. Our advertising partner, Google AdMob, may collect device data to show and measure ads.</li>
+      </ul>
+    </div>
+
+    <article class="card">
+      <h2>Who we are</h2>
+      <p>BeatDrop is developed and published by <strong>Virelonsoft</strong> ("we", "us"). Virelonsoft is responsible for this app. You can reach us at <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a>.</p>
+    </article>
+
+    <article class="card">
+      <h2>Information stored on your device</h2>
+      <p>To remember your progress, BeatDrop saves a small amount of data <strong>only on your device</strong>. It is not sent to us.</p>
+      <div class="scroll"><table class="stack"><thead><tr><th>Data</th><th>Why</th><th>Where</th></tr></thead><tbody>
+        <tr><td>Number of challenges you completed</td><td>Shown on the home screen</td><td>Your device only</td></tr>
+        <tr><td>Beat vibration on or off</td><td>Remembers your setting</td><td>Your device only</td></tr>
+      </tbody></table></div>
+      <p>Deleting the app or clearing its storage removes this data.</p>
+    </article>
+
+    <article class="card">
+      <h2>Advertising</h2>
+      <p>BeatDrop is free and supported by ads served by <strong>Google AdMob</strong>, a service of Google LLC. To show, limit and measure ads and to prevent fraud, AdMob may collect and process:</p>
+      <ul>
+        <li>Your device's advertising ID (Android Advertising ID)</li>
+        <li>Device and app information, such as model, operating system, language and app version</li>
+        <li>IP address and approximate location derived from it</li>
+        <li>Ad interactions, such as ads viewed or tapped, and diagnostic data</li>
+      </ul>
+      <p>Google processes this data under its own policies: <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from apps that use its services</a>.</p>
+      <h3>Your ad choices</h3>
+      <ul>
+        <li>Where required by law (for example in the EEA, UK and Switzerland), we ask for your consent before personalized ads are shown. You can change your choice at any time where the app offers this option.</li>
+        <li>You can reset or delete your advertising ID, or opt out of personalized ads, in your Android settings: <strong>Settings → Privacy → Ads</strong> (the exact path depends on your device).</li>
+        <li>If you opt out, you will still see ads, but they will be less relevant to you.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>Permissions</h2>
+      <ul>
+        <li><strong>Internet access:</strong> used to load ads.</li>
+        <li><strong>Vibration:</strong> used for the optional beat vibration. You can turn it off on the home screen.</li>
+      </ul>
+      <p>BeatDrop does not access your camera, microphone, contacts, photos or precise location.</p>
+    </article>
+
+    <article class="card">
+      <h2>Sharing</h2>
+      <p>When you tap <strong>Challenge a friend</strong>, Android's share menu opens with a short message. You choose the app and the recipient; we do not see or store what you share.</p>
+      <p>We do not sell your personal information. Apart from the advertising described above, we do not share data with third parties.</p>
+    </article>
+
+    <article class="card">
+      <h2>Children</h2>
+      <p>BeatDrop is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided personal information through the app, contact us and we will help remove it.</p>
+    </article>
+
+    <article class="card">
+      <h2>Your rights</h2>
+      <p>Depending on where you live (for example under the GDPR, the UK GDPR, KVKK in Türkiye or US state laws), you may have the right to access, correct or delete your personal data, and to object to or restrict its processing. Because we do not store personal data on our own servers, most requests concern data held by Google for advertising; you can manage it through the controls above and Google's tools. For any question, email us and we will reply within 30 days.</p>
+    </article>
+
+    <article class="card">
+      <h2>Security and retention</h2>
+      <p>Data stored on your device stays there until you delete the app or its data. Advertising data is retained by Google according to its policies.</p>
+    </article>
+
+    <article class="card">
+      <h2>Changes to this policy</h2>
+      <p>If we change this policy, we will update this page and the effective date above. Significant changes will be highlighted in the app or on its store listing.</p>
+    </article>
+
+    <article class="card">
+      <h2>Contact</h2>
+      <div class="contact"><a class="mail" href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a><span>Virelonsoft</span></div>
+    </article>
+  </section>
+
+  <!-- ===================== TÜRKÇE ===================== -->
+  <section id="tr" lang="tr">
+    <div class="divider"><h1>Gizlilik <span style="color:var(--pink);-webkit-text-stroke:.1em #fff;paint-order:stroke fill;display:inline-block;transform:rotate(-2deg)">Politikası</span></h1></div>
+    <div class="meta"><span class="bubble">Yürürlük tarihi: 25 Kasım 2026</span><span class="bubble light">Uygulama: BeatDrop (com.virelon.beatdrop)</span></div>
+
+    <div class="tldr">
+      <h2>Kısaca</h2>
+      <ul>
+        <li>Hesap ve giriş yok. Adını, e-postanı veya telefon numaranı asla istemeyiz.</li>
+        <li>Kamera ve mikrofon yok. Uygulama sesini kaydetmez.</li>
+        <li>Oyun ilerlemen ve ayarların cihazında kalır.</li>
+        <li>Uygulamada reklam gösterilir. Reklam ortağımız Google AdMob, reklamları göstermek ve ölçmek için cihaz verileri toplayabilir.</li>
+      </ul>
+    </div>
+
+    <article class="card">
+      <h2>Biz kimiz</h2>
+      <p>BeatDrop, <strong>Virelonsoft</strong> tarafından geliştirilir ve yayınlanır. Bu uygulamadan Virelonsoft sorumludur. Bize <a href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a> adresinden ulaşabilirsin.</p>
+    </article>
+
+    <article class="card">
+      <h2>Cihazında saklanan bilgiler</h2>
+      <p>BeatDrop ilerlemeni hatırlamak için az miktarda veriyi <strong>yalnızca cihazında</strong> saklar. Bu veriler bize gönderilmez.</p>
+      <div class="scroll"><table class="stack"><thead><tr><th>Veri</th><th>Neden</th><th>Nerede</th></tr></thead><tbody>
+        <tr><td>Tamamladığın challenge sayısı</td><td>Ana ekranda gösterilir</td><td>Yalnızca cihazında</td></tr>
+        <tr><td>Ritim titreşimi açık/kapalı</td><td>Ayarını hatırlar</td><td>Yalnızca cihazında</td></tr>
+      </tbody></table></div>
+      <p>Uygulamayı silmek veya verilerini temizlemek bu bilgileri kaldırır.</p>
+    </article>
+
+    <article class="card">
+      <h2>Reklamlar</h2>
+      <p>BeatDrop ücretsizdir ve Google LLC'nin bir hizmeti olan <strong>Google AdMob</strong> reklamlarıyla desteklenir. AdMob, reklamları göstermek, sınırlamak, ölçmek ve dolandırıcılığı önlemek için şunları toplayıp işleyebilir:</p>
+      <ul>
+        <li>Cihazının reklam kimliği (Android Reklam Kimliği)</li>
+        <li>Model, işletim sistemi, dil ve uygulama sürümü gibi cihaz ve uygulama bilgileri</li>
+        <li>IP adresi ve bundan çıkarılan yaklaşık konum</li>
+        <li>Görüntülenen veya dokunulan reklamlar gibi reklam etkileşimleri ve teşhis verileri</li>
+      </ul>
+      <p>Google bu verileri kendi politikalarına göre işler: <a href="https://policies.google.com/privacy?hl=tr" rel="noopener">Google Gizlilik Politikası</a> ve <a href="https://policies.google.com/technologies/partner-sites?hl=tr" rel="noopener">Google'ın, hizmetlerini kullanan uygulamalardan gelen bilgileri nasıl kullandığı</a>.</p>
+      <h3>Reklam tercihlerin</h3>
+      <ul>
+        <li>Yasanın gerektirdiği yerlerde (örneğin AEA, Birleşik Krallık ve İsviçre) kişiselleştirilmiş reklam göstermeden önce onayını isteriz. Uygulama bu seçeneği sunduğunda tercihini istediğin zaman değiştirebilirsin.</li>
+        <li>Reklam kimliğini sıfırlayabilir veya silebilir ya da kişiselleştirilmiş reklamları kapatabilirsin: <strong>Ayarlar → Gizlilik → Reklamlar</strong> (yol cihaza göre değişebilir).</li>
+        <li>Kapatsan da reklam görmeye devam edersin, ancak reklamlar sana daha az uygun olur.</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h2>İzinler</h2>
+      <ul>
+        <li><strong>İnternet erişimi:</strong> reklamları yüklemek için.</li>
+        <li><strong>Titreşim:</strong> isteğe bağlı ritim titreşimi için. Ana ekrandan kapatabilirsin.</li>
+      </ul>
+      <p>BeatDrop kamerana, mikrofonuna, rehberine, fotoğraflarına veya kesin konumuna erişmez.</p>
+    </article>
+
+    <article class="card">
+      <h2>Paylaşım</h2>
+      <p><strong>Arkadaşına meydan oku</strong> butonuna dokunduğunda Android'in paylaşım menüsü kısa bir mesajla açılır. Uygulamayı ve alıcıyı sen seçersin; paylaştığın içeriği görmeyiz ve saklamayız.</p>
+      <p>Kişisel bilgilerini satmayız. Yukarıda açıklanan reklamlar dışında verileri üçüncü taraflarla paylaşmayız.</p>
+    </article>
+
+    <article class="card">
+      <h2>Çocuklar</h2>
+      <p>BeatDrop 13 yaşın altındaki çocuklara yönelik değildir ve onlardan bilerek kişisel bilgi toplamayız. Bir çocuğun uygulama üzerinden kişisel bilgi verdiğini düşünüyorsan bize yaz, kaldırılmasına yardımcı olalım.</p>
+    </article>
+
+    <article class="card">
+      <h2>Hakların</h2>
+      <p>Yaşadığın yere göre (örneğin KVKK, GDPR, UK GDPR veya ABD eyalet yasaları) kişisel verilerine erişme, düzeltme, silme ve işlenmesine itiraz etme veya kısıtlama hakkın olabilir. Kişisel verileri kendi sunucularımızda saklamadığımız için taleplerin çoğu Google'ın reklam amacıyla tuttuğu verilerle ilgilidir; bunları yukarıdaki ayarlar ve Google'ın araçlarıyla yönetebilirsin. Her türlü sorun için bize e-posta gönder, 30 gün içinde yanıtlarız.</p>
+    </article>
+
+    <article class="card">
+      <h2>Güvenlik ve saklama süresi</h2>
+      <p>Cihazında saklanan veriler, uygulamayı veya verilerini silene kadar orada kalır. Reklam verileri Google tarafından kendi politikalarına göre saklanır.</p>
+    </article>
+
+    <article class="card">
+      <h2>Politika değişiklikleri</h2>
+      <p>Bu politikayı değiştirirsek bu sayfayı ve yukarıdaki yürürlük tarihini güncelleriz. Önemli değişiklikleri uygulamada veya mağaza sayfasında belirtiriz.</p>
+    </article>
+
+    <article class="card">
+      <h2>İletişim</h2>
+      <div class="contact"><a class="mail" href="mailto:muhammetatmaca79@gmail.com">muhammetatmaca79@gmail.com</a><span>Virelonsoft</span></div>
+    </article>
+  </section>
+
+  <footer>© 2026 Virelonsoft · BeatDrop</footer>
+</main>
+</body>
+</html>
